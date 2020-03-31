@@ -4,6 +4,7 @@ import com.intellij.lang.ASTNode
 import com.intellij.lang.FileASTNode
 import com.intellij.psi.PsiElement
 import com.stepanov.bbf.reduktor.executor.error.Error
+import org.jacoco.core.data.ExecutionDataStore
 import org.jetbrains.kotlin.psi.KtFile
 import org.jetbrains.kotlin.psi.KtPsiFactory
 
@@ -21,6 +22,10 @@ interface CompilerTestChecker {
     fun checkTest(text: String, pathToFile: String): Boolean
     fun checkTest(tree: List<ASTNode>): Boolean
 
+    fun getExecutionDataWithStatus(text: String): Pair<Boolean, ExecutionDataStore>
+    fun getExecutionDataWithStatus(text: String, pathToFile: String): Pair<Boolean, ExecutionDataStore>
+    fun getExecutionDataWithStatus(tree: List<ASTNode>): Pair<Boolean, ExecutionDataStore>
+
     fun getErrorInfo(): Error
     fun getErrorMessage(): String
 
@@ -33,4 +38,5 @@ interface CompilerTestChecker {
 
     var pathToFile: String
     var alreadyChecked: HashMap<Int, Boolean>
+    var alreadyCheckedCoverage: HashMap<Int, Pair<Boolean, ExecutionDataStore>?>
 }

@@ -4,13 +4,19 @@ import org.jetbrains.kotlin.psi.*
 import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
 import com.stepanov.bbf.bugfinder.util.getRandomVariableName
+import org.apache.log4j.Logger
 import java.util.*
 
 class ChangeConstants : Transformation() {
 
+    override val name = "ChangeConstants"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
+
     enum class Type { BOOLEAN, INTEGER, DOUBLE }
 
     override fun transform() {
+        log.debug("ChangeConstants mutations")
         val constants = file.getAllPSIChildrenOfType<KtConstantExpression>()
         val stringConstants = file.getAllPSIChildrenOfType<KtStringTemplateEntry>()
         constants.forEach {

@@ -7,3 +7,4 @@
 tmp/*.jar
 tmp/*.kt
 tmp/*.js
+tmp/*.exec

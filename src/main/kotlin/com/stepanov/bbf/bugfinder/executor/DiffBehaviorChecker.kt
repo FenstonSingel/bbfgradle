@@ -1,12 +1,16 @@
 package com.stepanov.bbf.bugfinder.executor
 
+import com.intellij.lang.ASTNode
 import com.stepanov.bbf.bugfinder.util.checkCompilingForAllBackends
 import com.stepanov.bbf.reduktor.executor.error.Error
 import org.apache.log4j.Logger
+import org.jacoco.core.data.ExecutionDataStore
 import org.jetbrains.kotlin.psi.KtPsiFactory
 import java.io.File
 
 class DiffBehaviorChecker(private val compilers: List<CommonCompiler>) : MultiCompilerCrashChecker(null) {
+
+    override val name = "DiffBehaviorChecker"
 
     private fun compileAndGetExecResult(): List<Pair<CommonCompiler, String>> {
         //Add main fun if need
@@ -80,8 +84,8 @@ class DiffBehaviorChecker(private val compilers: List<CommonCompiler>) : MultiCo
         return Error("")
     }
 
-
     val prevResults: MutableList<List<String>> = ArrayList()
 
     private val log = Logger.getLogger("bugFinderLogger")
+
 }

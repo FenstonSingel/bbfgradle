@@ -6,10 +6,17 @@ import org.jetbrains.kotlin.resolve.BindingContext
 import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import com.stepanov.bbf.bugfinder.util.generateDefValuesAsString
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
+import org.apache.log4j.Logger
 
 //TODO Add for map!!
 class ReinitProperties(private val context: BindingContext?) : Transformation() {
+
+    override val name = "ReinitProperties"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
+
     override fun transform() {
+        log.debug("ReinitProperties mutations")
         file.getAllPSIChildrenOfType<KtProperty>().forEach {
             val type =
                     if (it.hasInitializer()) {

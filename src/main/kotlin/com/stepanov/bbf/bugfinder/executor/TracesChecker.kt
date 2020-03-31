@@ -13,6 +13,8 @@ import java.io.FileWriter
 // Transformation is here only for PSIFactory
 class TracesChecker(private val compilers: List<CommonCompiler>) : Transformation() {
 
+    override val name = "TracesChecker"
+
     private object FalsePositivesTemplates {
         //Regex and replacing
         val exclErrorMessages = listOf(

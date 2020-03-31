@@ -3,11 +3,16 @@ package com.stepanov.bbf.bugfinder.mutator.transformations
 import org.jetbrains.kotlin.psi.KtExpression
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
 import com.stepanov.bbf.bugfinder.util.getRandomBoolean
+import org.apache.log4j.Logger
 
 class AddNotNullAssertions : Transformation() {
 
+    override val name = "AddNotNullAssertion"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
 
     override fun transform() {
+        log.debug("AddNotNullAssertions mutations")
         file.getAllPSIChildrenOfType<KtExpression>()
             .filter { getRandomBoolean(3) }
             .map { tryToAddNotNullAssertion(it) }

@@ -6,11 +6,17 @@ import org.jetbrains.kotlin.KtNodeTypes
 import org.jetbrains.kotlin.lexer.KtTokens
 import com.stepanov.bbf.bugfinder.util.getAllChildrenNodes
 import com.stepanov.bbf.bugfinder.util.getRandomBoolean
+import org.apache.log4j.Logger
 import java.util.*
 
 class ChangeOperators : Transformation() {
 
+    override val name = "ChangeOperators"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
+
     override fun transform() {
+        log.debug("ChangeOperators mutations")
         val operators = file.node.getAllChildrenNodes()
                 .filter { it.treeParent.elementType == KtNodeTypes.OPERATION_REFERENCE || it.elementType == KtTokens.DOT }
         operators.forEach {

@@ -1,6 +1,5 @@
 package com.stepanov.bbf.bugfinder.mutator.transformations
 
-import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import org.jetbrains.kotlin.lexer.KtTokens
 import org.jetbrains.kotlin.psi.KtClass
 import org.jetbrains.kotlin.psi.KtFunction
@@ -8,10 +7,17 @@ import org.jetbrains.kotlin.psi.KtModifierList
 import org.jetbrains.kotlin.psi.KtProperty
 import com.stepanov.bbf.bugfinder.util.getAllChildrenNodes
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
+import org.apache.log4j.Logger
 import java.util.*
 
 class ChangeModifiers : Transformation() {
+
+    override val name = "ChangeModifiers"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
+
     override fun transform() {
+        log.debug("ChangeModifiers mutations")
         for (i in 0..RANDOM_CONST) {
             val modifiersLists = file.getAllPSIChildrenOfType<KtModifierList>().filter { Random().nextBoolean() }
             for (modList in modifiersLists) {

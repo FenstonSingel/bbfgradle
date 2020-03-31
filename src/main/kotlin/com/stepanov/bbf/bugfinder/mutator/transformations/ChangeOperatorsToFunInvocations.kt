@@ -7,11 +7,17 @@ import org.jetbrains.kotlin.psi.KtBinaryExpression
 import org.jetbrains.kotlin.psi.KtExpression
 import org.jetbrains.kotlin.psi.KtUnaryExpression
 import com.stepanov.bbf.bugfinder.util.getAllPSIDFSChildrenOfType
+import org.apache.log4j.Logger
 import java.util.*
 
 class ChangeOperatorsToFunInvocations : Transformation() {
 
+    override val name = "ChangeOperatorsToFunInvocations"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
+
     override fun transform() {
+        log.debug("ChangeOperatorsToFunInvocations mutations")
         var oldText = file.text
         var newText: String
         while (true) {

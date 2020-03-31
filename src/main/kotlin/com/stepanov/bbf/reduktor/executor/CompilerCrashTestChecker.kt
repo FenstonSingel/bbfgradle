@@ -10,6 +10,7 @@ import com.stepanov.bbf.reduktor.util.getAllParentsWithoutNode
 import com.stepanov.bbf.reduktor.util.replaceThis
 import org.apache.log4j.Logger
 import org.bitbucket.cowwoc.diffmatchpatch.DiffMatchPatch
+import org.jacoco.core.data.ExecutionDataStore
 import org.jetbrains.kotlin.cli.common.messages.CompilerMessageLocation
 import org.jetbrains.kotlin.psi.KtFile
 import org.jetbrains.kotlin.psi.KtPsiFactory
@@ -193,6 +194,18 @@ open class CommonCompilerCrashTestChecker(private val backend: CommonBackend?) :
         return checkTest(text.toString())
     }
 
+    override fun getExecutionDataWithStatus(text: String): Pair<Boolean, ExecutionDataStore> {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun getExecutionDataWithStatus(text: String, pathToFile: String): Pair<Boolean, ExecutionDataStore> {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun getExecutionDataWithStatus(tree: List<ASTNode>): Pair<Boolean, ExecutionDataStore> {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
 
 //    private fun tryToCompileWithScript(): String {
 //        val p = ProcessBuilder("/bin/bash", "-c", "/home/stepanov/Kotlin/DynProj/test.sh").start()
@@ -288,5 +301,6 @@ open class CommonCompilerCrashTestChecker(private val backend: CommonBackend?) :
     private val patch = DiffMatchPatch()
     private val threshold = 0.5
     override var alreadyChecked = HashMap<Int, Boolean>()
+    override var alreadyCheckedCoverage = HashMap<Int, Pair<Boolean, ExecutionDataStore>?>()
 
 }

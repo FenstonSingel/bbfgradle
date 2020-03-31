@@ -6,11 +6,17 @@ import org.jetbrains.kotlin.psi.psiUtil.getCallNameExpression
 import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import com.stepanov.bbf.bugfinder.util.generateDefValuesAsString
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
+import org.apache.log4j.Logger
 
 class ChangeArgToAnotherValue : Transformation() {
 
+    override val name = "ChangeArgToAnotherValue"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
+
     //TODO For user classes
     override fun transform() {
+        log.debug("ChangeArgToAnotherValue mutations")
         file.getAllPSIChildrenOfType<KtNamedFunction>().forEach { f ->
             getAllInvocations(f).forEach { inv ->
                 inv.valueArguments.forEachIndexed { argInd, arg ->

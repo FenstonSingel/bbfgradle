@@ -4,12 +4,18 @@ import org.jetbrains.kotlin.psi.KtNamedFunction
 import com.stepanov.bbf.bugfinder.util.generateDefValuesAsString
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
 import com.stepanov.bbf.bugfinder.util.getRandomBoolean
+import org.apache.log4j.Logger
 
 
 class AddDefaultValueToArg : Transformation() {
 
+    override val name = "AddDefaultValueToArg"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
+
     //TODO MAYBE INIT AND REINIT SOME PROPERTIES
     override fun transform() {
+        log.debug("AddDefaultValueToArg mutations")
         file.getAllPSIChildrenOfType<KtNamedFunction>()
                 .asSequence()
                 .filter { it.valueParameters.size != 0 && getRandomBoolean(randomConst) }

@@ -8,11 +8,17 @@ import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import com.stepanov.bbf.bugfinder.util.getAllChildrenOfTheLevel
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
 import com.stepanov.bbf.bugfinder.util.getRandomBoolean
+import org.apache.log4j.Logger
 
 //Change extension to smth?
 class ChangeSmthToExtension : Transformation() {
 
+    override val name = "ChangeSmthToExtension"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
+
     override fun transform() {
+        log.debug("ChangeSmthToExtension mutations")
         file.getAllPSIChildrenOfType<KtProperty>()
                 .filter { it.parents.any { p -> p is KtClass } /*&& getRandomBoolean(2)*/ }
                 .forEach {

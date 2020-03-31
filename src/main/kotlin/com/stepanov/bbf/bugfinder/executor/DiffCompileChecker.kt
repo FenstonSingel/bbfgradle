@@ -1,10 +1,14 @@
 package com.stepanov.bbf.bugfinder.executor
 
+import com.intellij.lang.ASTNode
 import com.stepanov.bbf.reduktor.executor.error.Error
+import org.jacoco.core.data.ExecutionDataStore
 import org.jetbrains.kotlin.psi.KtPsiFactory
 import java.io.File
 
 class DiffCompileChecker(private val compilers: List<CommonCompiler>) : MultiCompilerCrashChecker(null) {
+
+    override val name = "DiffCompileChecker"
 
     override fun checkTest(text: String, pathToFile: String): Boolean {
         val preCheck = isAlreadyCheckedOrWrong(text)
@@ -30,4 +34,5 @@ class DiffCompileChecker(private val compilers: List<CommonCompiler>) : MultiCom
     override fun init(compilingPath: String, psiFactory: KtPsiFactory?): Error {
         return Error("")
     }
+
 }

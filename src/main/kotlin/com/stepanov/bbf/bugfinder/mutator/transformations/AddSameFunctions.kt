@@ -3,6 +3,7 @@ package com.stepanov.bbf.bugfinder.mutator.transformations
 import com.stepanov.bbf.reduktor.util.replaceThis
 import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import com.stepanov.bbf.bugfinder.util.*
+import org.apache.log4j.Logger
 import org.jetbrains.kotlin.psi.KtNamedFunction
 import org.jetbrains.kotlin.psi.KtParameter
 import org.jetbrains.kotlin.resolve.BindingContext
@@ -10,7 +11,12 @@ import java.util.*
 
 class AddSameFunctions(private val ctx: BindingContext) : Transformation() {
 
+    override val name = "AddSameFunctions"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
+
     override fun transform() {
+        log.debug("AddSameFunctions mutations")
         val functions = file.getAllPSIChildrenOfType<KtNamedFunction>().filter { Random().nextBoolean() }
         for (func in functions) {
             val retType = func.typeReference?.text ?: func.getType(ctx).toString()

@@ -1,7 +1,6 @@
 package com.stepanov.bbf.bugfinder.mutator.transformations
 
 import com.intellij.lang.ASTNode
-import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import org.jetbrains.kotlin.psi.psiUtil.parents
 import com.stepanov.bbf.bugfinder.util.getAllChildrenNodes
 import com.stepanov.bbf.bugfinder.util.replaceThis
@@ -10,10 +9,15 @@ import org.apache.log4j.Logger
 
 class ChangeRandomASTNodes : Transformation() {
 
+    override val name = "ChangeRandomASTNodes"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
+
     override fun transform() {
         val numOfSwaps = Random.nextInt(numOfSwaps.first, numOfSwaps.second)
-        for (i in 0 until numOfSwaps) {
-            log.debug("Swap $i of $numOfSwaps")
+        log.debug("ChangeRandomASTNodes mutations: $numOfSwaps swaps")
+        for (i in 1 .. numOfSwaps) {
+            log.debug("Swap №$i of $numOfSwaps")
             val children = file.node.getAllChildrenNodes()
             //Swap random nodes
             var randomNode1 = children[Random.nextInt(children.size)]
@@ -48,6 +52,5 @@ class ChangeRandomASTNodes : Transformation() {
         return randomNode2 to randomNode1
     }
 
-    val numOfSwaps = 50 to 1000
-    private val log = Logger.getLogger("mutatorLogger")
+    private val numOfSwaps = 40 to 50
 }

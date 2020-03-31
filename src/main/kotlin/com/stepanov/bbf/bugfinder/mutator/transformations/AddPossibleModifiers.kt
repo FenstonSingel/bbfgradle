@@ -8,11 +8,17 @@ import org.jetbrains.kotlin.psi.KtProperty
 import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import com.stepanov.bbf.bugfinder.util.getAllChildrenNodes
 import com.stepanov.bbf.bugfinder.util.getRandomBoolean
+import org.apache.log4j.Logger
 import java.util.*
 
 class AddPossibleModifiers : Transformation() {
 
+    override val name = "AddPossibleModifiers"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
+
     override fun transform() {
+        log.debug("AddPossibleModifiers mutations")
         val values = file.node.getAllChildrenNodes()
                 .asSequence()
                 .filter { it.elementType == KtNodeTypes.CLASS || it.elementType == KtNodeTypes.PROPERTY

@@ -3,12 +3,17 @@ package com.stepanov.bbf.bugfinder.mutator.transformations
 import org.jetbrains.kotlin.psi.*
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
 import com.stepanov.bbf.bugfinder.util.getRandomVariableName
+import org.apache.log4j.Logger
 import java.util.*
 
 class AddBlockToExpression : Transformation() {
 
+    override val name = "AddBlockToExpression"
+
+    private val log: Logger = Logger.getLogger("mutatorLogger")
 
     override fun transform() {
+        log.debug("AddBlockToExpression mutations")
         val expr = file.getAllPSIChildrenOfType<KtExpression>()
         expr.forEach {
             generateRandomBooleanExpression(it)?.let { blockExpr ->
