@@ -82,7 +82,7 @@ dependencies {
     //Serialization
     compile "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.14.0"
 
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_plugin_version}"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_version}"
     compile group: 'com.android.tools.external.com-intellij', name: 'intellij-core', version: '27.1.0-alpha10'
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-compiler', version: "${kotlin_version}"
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-compiler-embeddable', version: "${kotlin_version}"

@@ -7,7 +7,7 @@ import java.io.File
 import java.util.*
 
 
-const val COMMAND = "gradle runBBF"
+const val COMMAND = "./gradlew runBBF"
 val TIMEOUT_SEC = Properties()
     .also { it.load(File("bbf.conf").inputStream()) }
     .getProperty("BBF_TIMEOUT")?.toLongOrNull() ?: throw IllegalArgumentException("Can't init timeout value")
@@ -31,7 +31,7 @@ val TIMEOUT_SEC = Properties()
 
 const val pathToErrorLogs = "tmp/results/errorLogs"
 fun main(args: Array<String>) {
-    File("/home/stepanov/Kotlin/bbfgradle/bugsPerMinute.txt").writeText("""
+    File("bugsPerMinute.txt").writeText("""
 Bugs: 0
 Time: 0
 Bugs per minute: 0.0  
