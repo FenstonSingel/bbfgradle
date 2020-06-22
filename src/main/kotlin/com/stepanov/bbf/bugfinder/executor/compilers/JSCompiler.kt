@@ -7,6 +7,7 @@ import com.stepanov.bbf.bugfinder.executor.project.Project
 import com.stepanov.bbf.bugfinder.util.Stream
 import com.stepanov.bbf.bugfinder.util.copyFullJarImpl
 import com.stepanov.bbf.bugfinder.util.writeRuntimeToJar
+import com.stepanov.bbf.coverage.CompilerInstrumentation
 import org.jetbrains.kotlin.cli.common.arguments.K2JSCompilerArguments
 import org.jetbrains.kotlin.cli.js.K2JSCompiler
 import org.jetbrains.kotlin.config.Services
@@ -82,7 +83,10 @@ class JSCompiler(private val arguments: String = "") : CommonCompiler() {
         MsgCollector.clear()
         val threadPool = Executors.newCachedThreadPool()
         val futureExitCode = threadPool.submit {
+            CompilerInstrumentation.clearRecords()
+            CompilerInstrumentation.shouldProbesBeRecorded = true
             compiler.exec(MsgCollector, services, args)
+            CompilerInstrumentation.shouldProbesBeRecorded = false
         }
         var hasTimeout = false
         try {

@@ -8,6 +8,7 @@ import com.stepanov.bbf.bugfinder.executor.project.Project
 import com.stepanov.bbf.bugfinder.util.Stream
 import com.stepanov.bbf.bugfinder.util.copyFullJarImpl
 import com.stepanov.bbf.bugfinder.util.writeRuntimeToJar
+import com.stepanov.bbf.coverage.CompilerInstrumentation
 import com.stepanov.bbf.reduktor.executor.KotlincInvokeStatus
 import com.stepanov.bbf.reduktor.util.MsgCollector
 import org.apache.commons.io.FileUtils
@@ -94,7 +95,10 @@ open class JVMCompiler(open val arguments: String = "") : CommonCompiler() {
         MsgCollector.clear()
         val threadPool = Executors.newCachedThreadPool()
         val futureExitCode = threadPool.submit {
+            CompilerInstrumentation.clearRecords()
+            CompilerInstrumentation.shouldProbesBeRecorded = true
             compiler.exec(MsgCollector, services, args)
+            CompilerInstrumentation.shouldProbesBeRecorded = false
         }
         var hasTimeout = false
         try {

@@ -21,12 +21,8 @@ object CompilerInstrumentation {
     var instrumentationTimer = 0L
         private set
 
-    @JvmStatic fun startInstrumentationTimer() {
-        instrumentationTimer -= System.currentTimeMillis()
-    }
-
-    @JvmStatic fun pauseInstrumentationTimer() {
-        instrumentationTimer += System.currentTimeMillis()
+    @JvmStatic fun updateInstrumentationTimer(newTime: Long) {
+        instrumentationTimer += newTime
     }
 
     var performanceTimer = 0L
