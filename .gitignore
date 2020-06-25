@@ -1,10 +1,17 @@
-#Ignore folders
+# Main project's ignored files/folders
 /.idea
 /.gradle
 /build
+
+src/main/resources/kotlinc-instrumenter.jar
+
 /logs
 /tmp/lib
+tmp/trash
 tmp/*.jar
 tmp/*.kt
 tmp/*.js
-tmp/*.exec
+
+# Instrumenting Java agent's ignored files/folders
+/java-agent/.gradle
+/java-agent/build
