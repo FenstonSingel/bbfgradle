@@ -6,13 +6,11 @@ import com.stepanov.bbf.bugfinder.executor.CompilingResult
 import com.stepanov.bbf.bugfinder.util.Stream
 import com.stepanov.bbf.bugfinder.util.copyFullJarImpl
 import com.stepanov.bbf.bugfinder.util.writeRuntimeToJar
-import com.stepanov.bbf.coverage.extraction.CompilerInstrumentation
+import com.stepanov.bbf.coverage.CompilerInstrumentation
 import com.stepanov.bbf.reduktor.executor.KotlincInvokeStatus
 import com.stepanov.bbf.reduktor.util.MsgCollector
 import org.apache.commons.io.FileUtils
 import org.apache.log4j.Logger
-import org.jacoco.core.data.ExecutionDataStore
-import org.jacoco.core.data.SessionInfoStore
 import org.jetbrains.kotlin.cli.common.arguments.K2JVMCompilerArguments
 import org.jetbrains.kotlin.cli.common.messages.CompilerMessageLocation
 import org.jetbrains.kotlin.cli.jvm.K2JVMCompiler
@@ -61,46 +59,8 @@ class JVMCompiler(private val arguments: String = "") : CommonCompiler() {
 //        return if (analyzeErrorMessage(status)) CompilingResult(
 //            0,
 //            pathToCompiled
-//        ) else CompilingResult(-1, "")kotlin
+//        ) else CompilingResult(-1, "")
 //    }
-
-    override fun getExecutionDataWithStatus(pathToFile: String): Pair<Boolean, ExecutionDataStore> {
-        val trashDir = "tmp/trash/"
-        //Clean dir
-        if (File(trashDir).exists())
-            FileUtils.cleanDirectory(File(trashDir))
-        val args =
-            if (arguments.isEmpty())
-                "$pathToFile -d $trashDir".split(" ")
-            else
-                "$pathToFile $arguments -d $trashDir".split(" ")
-        val compiler = K2JVMCompiler()
-        val compilerArgs = K2JVMCompilerArguments().apply { K2JVMCompiler().parseArguments(args.toTypedArray(), this) }
-        if (CompilerArgs.classpath.isNotEmpty())
-            compilerArgs.classpath = CompilerArgs.classpath
-        else
-            compilerArgs.classpath =
-                "${CompilerArgs.jvmStdLibPaths.joinToString(
-                    postfix = ":",
-                    separator = ":"
-                )}:${System.getProperty("java.class.path")}"
-
-        compilerArgs.jdkHome = CompilerArgs.jdkHome
-        compilerArgs.jvmTarget = CompilerArgs.jvmTarget
-        IncrementalCompilation.setIsEnabledForJvm(true)
-
-        val services = Services.EMPTY
-        MsgCollector.clear()
-
-        CompilerInstrumentation.runtimeData.collect(ExecutionDataStore(), SessionInfoStore(), true)
-        CompilerInstrumentation.shouldClassesBeInstrumented = true
-        compiler.exec(MsgCollector, services, compilerArgs)
-        CompilerInstrumentation.shouldClassesBeInstrumented = false
-        val executionData = ExecutionDataStore()
-        CompilerInstrumentation.runtimeData.collect(executionData, SessionInfoStore(), false)
-
-        return MsgCollector.hasException to executionData
-    }
 
     override fun compile(path: String): CompilingResult {
         val threadPool = Executors.newCachedThreadPool()
@@ -129,7 +89,13 @@ class JVMCompiler(private val arguments: String = "") : CommonCompiler() {
         val services = Services.EMPTY
         MsgCollector.clear()
         val futureExitCode = threadPool.submit {
+            CompilerInstrumentation.clearRecords()
+            CompilerInstrumentation.shouldProbesBeRecorded = true
             compiler.exec(MsgCollector, services, compilerArgs)
+            CompilerInstrumentation.shouldProbesBeRecorded = false
+            println(CompilerInstrumentation.probes)
+            println(CompilerInstrumentation.instrumentationTimer)
+            println(CompilerInstrumentation.performanceTimer)
         }
         var hasTimeout = false
         try {
@@ -187,7 +153,13 @@ class JVMCompiler(private val arguments: String = "") : CommonCompiler() {
         val services = Services.EMPTY
         MsgCollector.clear()
         val futureExitCode = threadPool.submit {
+            CompilerInstrumentation.clearRecords()
+            CompilerInstrumentation.shouldProbesBeRecorded = true
             compiler.exec(MsgCollector, services, compilerArgs)
+            CompilerInstrumentation.shouldProbesBeRecorded = false
+            println(CompilerInstrumentation.probes)
+            println(CompilerInstrumentation.instrumentationTimer)
+            println(CompilerInstrumentation.performanceTimer)
         }
         var hasTimeout = false
         try {

@@ -4,14 +4,12 @@ import com.stepanov.bbf.bugfinder.executor.CommonCompiler
 import com.stepanov.bbf.bugfinder.executor.CompilerArgs
 import com.stepanov.bbf.bugfinder.executor.CompilingResult
 import com.stepanov.bbf.bugfinder.util.Stream
-import com.stepanov.bbf.coverage.extraction.CompilerInstrumentation
+import com.stepanov.bbf.coverage.CompilerInstrumentation
 import org.jetbrains.kotlin.cli.common.arguments.K2JSCompilerArguments
 import org.jetbrains.kotlin.cli.js.K2JSCompiler
 import org.jetbrains.kotlin.config.Services
 import com.stepanov.bbf.reduktor.executor.KotlincInvokeStatus
 import com.stepanov.bbf.reduktor.util.MsgCollector
-import org.jacoco.core.data.ExecutionDataStore
-import org.jacoco.core.data.SessionInfoStore
 import org.jetbrains.kotlin.cli.common.messages.CompilerMessageLocation
 import java.io.*
 import java.util.concurrent.Executors
@@ -39,29 +37,6 @@ class JSCompiler(private val arguments: String = "") : CommonCompiler() {
     override fun isCompilerBug(pathToFile: String) =
         tryToCompile(pathToFile).hasException
 
-    override fun getExecutionDataWithStatus(pathToFile: String): Pair<Boolean, ExecutionDataStore> {
-        File(pathToCompiled).delete()
-        MsgCollector.clear()
-        val args =
-            if (arguments.isEmpty())
-                "$pathToFile -libraries ${CompilerArgs.jsStdLibPaths.joinToString(":")} -output $pathToCompiled"
-            else
-                "$pathToFile $arguments -libraries ${CompilerArgs.jsStdLibPaths.joinToString(":")} -output $pathToCompiled"
-        val compiler = K2JSCompiler()
-        val compilerArgs =
-            K2JSCompilerArguments().apply { K2JSCompiler().parseArguments(args.split(" ").toTypedArray(), this) }
-        val services = Services.EMPTY
-
-        CompilerInstrumentation.runtimeData.collect(ExecutionDataStore(), SessionInfoStore(), true)
-        CompilerInstrumentation.shouldClassesBeInstrumented = true
-        compiler.exec(MsgCollector, services, compilerArgs)
-        CompilerInstrumentation.shouldClassesBeInstrumented = false
-        val executionData = ExecutionDataStore()
-        CompilerInstrumentation.runtimeData.collect(executionData, SessionInfoStore(), false)
-
-        return MsgCollector.hasException to executionData
-    }
-
     override fun compile(path: String): CompilingResult {
         File(pathToCompiled).delete()
         MsgCollector.clear()
@@ -76,7 +51,13 @@ class JSCompiler(private val arguments: String = "") : CommonCompiler() {
         val services = Services.EMPTY
         val threadPool = Executors.newCachedThreadPool()
         val futureExitCode = threadPool.submit {
+            CompilerInstrumentation.clearRecords()
+            CompilerInstrumentation.shouldProbesBeRecorded = true
             compiler.exec(MsgCollector, services, compilerArgs)
+            CompilerInstrumentation.shouldProbesBeRecorded = false
+            println(CompilerInstrumentation.probes)
+            println(CompilerInstrumentation.instrumentationTimer)
+            println(CompilerInstrumentation.performanceTimer)
         }
         var hasTimeout = false
         try {
@@ -118,7 +99,13 @@ class JSCompiler(private val arguments: String = "") : CommonCompiler() {
         val services = Services.EMPTY
         val threadPool = Executors.newCachedThreadPool()
         val futureExitCode = threadPool.submit {
+            CompilerInstrumentation.clearRecords()
+            CompilerInstrumentation.shouldProbesBeRecorded = true
             compiler.exec(MsgCollector, services, compilerArgs)
+            CompilerInstrumentation.shouldProbesBeRecorded = false
+            println(CompilerInstrumentation.probes)
+            println(CompilerInstrumentation.instrumentationTimer)
+            println(CompilerInstrumentation.performanceTimer)
         }
         var hasTimeout = false
         try {

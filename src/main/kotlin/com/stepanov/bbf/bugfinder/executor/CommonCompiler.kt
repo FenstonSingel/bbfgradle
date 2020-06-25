@@ -3,7 +3,6 @@ package com.stepanov.bbf.bugfinder.executor
 import com.stepanov.bbf.bugfinder.util.Stream
 import com.stepanov.bbf.reduktor.executor.KotlincInvokeStatus
 import org.apache.commons.exec.*
-import org.jacoco.core.data.ExecutionDataStore
 import org.jetbrains.kotlin.cli.common.messages.CompilerMessageLocation
 import org.jetbrains.kotlin.psi.KtFile
 import java.io.BufferedWriter
@@ -21,20 +20,9 @@ abstract class CommonCompiler {
     abstract fun tryToCompile(pathToFile: String): KotlincInvokeStatus
     abstract fun isCompilerBug(pathToFile: String): Boolean
     abstract fun exec(path: String, streamType: Stream = Stream.INPUT): String
-    abstract fun getExecutionDataWithStatus(pathToFile: String): Pair<Boolean, ExecutionDataStore>
 
     abstract val compilerInfo: String
     abstract val pathToCompiled: String
-
-    fun getExecutionData(pathToFile: String): ExecutionDataStore = getExecutionDataWithStatus(pathToFile).second
-    fun getExecutionDataIfNotABug(pathToFile: String): ExecutionDataStore? {
-        val potentialExecutionData = getExecutionDataWithStatus(pathToFile)
-        return if (!potentialExecutionData.first) potentialExecutionData.second else null
-    }
-    fun getExecutionDataIfABug(pathToFile: String): ExecutionDataStore? {
-        val potentialExecutionData = getExecutionDataWithStatus(pathToFile)
-        return if (potentialExecutionData.first) potentialExecutionData.second else null
-    }
 
     fun compile(file: KtFile): CompilingResult = compile(file.name)
     fun compileText(text: String): CompilingResult {

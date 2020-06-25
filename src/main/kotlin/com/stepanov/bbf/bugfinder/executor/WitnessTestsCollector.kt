@@ -6,6 +6,8 @@ import com.stepanov.bbf.bugfinder.manager.BugType
 import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation
 import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation.Companion.file
 import com.stepanov.bbf.bugfinder.util.BoundedSortedByModelElementSet
+import com.stepanov.bbf.coverage.CompilerInstrumentation
+import com.stepanov.bbf.coverage.ExecutionCoverage
 import com.stepanov.bbf.coverage.data.Coverage
 import com.stepanov.bbf.coverage.data.EntityType
 import com.stepanov.bbf.coverage.data.SegmentType
@@ -30,39 +32,45 @@ class WitnessTestsCollector(
         checker.pathToFile = file.name
     }
 
-    private val entityType = EntityType.METHODS
-    private val segmentType = SegmentType.METHODS
-
-    private val originalCoverage: Coverage
-    init {
-        val executionData = checker.getExecutionDataWithStatus(file.text).second
-        originalCoverage = CoverageComposer.composeFrom(executionData, entityType, segmentType, false)
+    private fun compile(text: String): Pair<Boolean, ExecutionCoverage?> {
+        val status = checker.checkTest(text)
+        var coverage: ExecutionCoverage? = null
+        if (!CompilerInstrumentation.isEmpty) {
+            coverage = ExecutionCoverage.createFromRecords()
+            CompilerInstrumentation.clearRecords()
+        }
+        return status to coverage
     }
 
-    private lateinit var tempCoverage: Coverage
+    // TODO Performance statistics (average per-compilation time and total isolation time).
+    // TODO Statistics on how useful every mutation is.
+
+    private val originalCoverage: ExecutionCoverage
+    init {
+        val (status, coverage) = compile(file.text)
+        if (!status || coverage == null) throw IllegalArgumentException("")
+        originalCoverage = coverage
+    }
+
+    // TODO Actual cosine similarity.
     private var tempCosineDistance: Double = 0.0
 
     override fun checkCompiling(file: KtFile): Boolean {
-        val executionDataWithStatus = checker.getExecutionDataWithStatus(file.text)
-        tempCoverage = CoverageComposer.composeFrom(executionDataWithStatus.second, entityType, segmentType, false)
-        tempCosineDistance = 1 - originalCoverage.cosineSimilarity(tempCoverage)
-        if (executionDataWithStatus.first) {
-            mutationStatistics
-                .getOrPut(Transformation.currentMutation) { MutationStatistics(Transformation.currentMutation) }
-                .failures += tempCosineDistance
-            failureDatabase.add(tempCoverage.copy())
-        } else {
-            mutationStatistics
-                .getOrPut(Transformation.currentMutation) { MutationStatistics(Transformation.currentMutation) }
-                .successes += tempCosineDistance
-            successDatabase.add(tempCoverage.copy())
+        val (status, coverage) = compile(file.text)
+        if (coverage != null) {
+            // tempCosineDistance = 1 - originalCoverage.cosineSimilarity(coverage)
+            if (status) {
+                bugDatabase.add(coverage.copy())
+            } else {
+                successDatabase.add(coverage.copy())
+            }
         }
         return false // This is fine, no bugs.
     }
 
     override fun checkTextCompiling(text: String): Boolean = checkCompiling(PSICreator("").getPSIForText(text, false))
 
-    private val failureDatabase = BoundedSortedByModelElementSet(
+    private val bugDatabase = BoundedSortedByModelElementSet(
         originalCoverage.copy(),
         100,
         Comparator { _, _ -> (tempCosineDistance * 10E7).toInt() },
@@ -76,21 +84,21 @@ class WitnessTestsCollector(
         isSortingReversed = false
     )
 
-    val mutantCoverages: MutantCoverages
-        get() {
-            val mutantCoverages = MutantCoverages()
-            mutantCoverages.original = originalCoverage
-            mutantCoverages.failureCoverages = failureDatabase.toMutableList()
-            mutantCoverages.successCoverages = successDatabase.toMutableList()
-            return mutantCoverages
-        }
-
-    val mutationStatistics = mutableMapOf<String, MutationStatistics>()
-
-    val failureCoverages: MutableList<Coverage>
-        get() = failureDatabase.toMutableList()
-
-    val successCoverages: MutableList<Coverage>
-        get() = successDatabase.toMutableList()
+//    val mutantCoverages: MutantCoverages
+//        get() {
+//            val mutantCoverages = MutantCoverages()
+//            mutantCoverages.original = originalCoverage
+//            mutantCoverages.failureCoverages = failureDatabase.toMutableList()
+//            mutantCoverages.successCoverages = successDatabase.toMutableList()
+//            return mutantCoverages
+//        }
+//
+//    val mutationStatistics = mutableMapOf<String, MutationStatistics>()
+//
+//    val failureCoverages: MutableList<Coverage>
+//        get() = failureDatabase.toMutableList()
+//
+//    val successCoverages: MutableList<Coverage>
+//        get() = successDatabase.toMutableList()
 
 }

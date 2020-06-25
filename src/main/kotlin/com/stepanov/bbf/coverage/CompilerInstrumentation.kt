@@ -8,6 +8,8 @@ object CompilerInstrumentation {
 
     val probes = mutableMapOf<String, Int>()
 
+    val isEmpty: Boolean get() = probes.isEmpty()
+
     @JvmStatic fun recordProbeExecution(id: String) {
         startPerformanceTimer()
 

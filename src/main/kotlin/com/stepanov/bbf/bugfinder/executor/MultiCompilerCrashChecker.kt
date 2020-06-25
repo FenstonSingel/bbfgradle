@@ -12,7 +12,6 @@ import com.stepanov.bbf.reduktor.util.getAllParentsWithoutNode
 import com.stepanov.bbf.reduktor.util.replaceThis
 import org.apache.log4j.Logger
 import org.bitbucket.cowwoc.diffmatchpatch.DiffMatchPatch
-import org.jacoco.core.data.ExecutionDataStore
 import org.jetbrains.kotlin.psi.KtFile
 import org.jetbrains.kotlin.psi.KtPsiFactory
 import java.io.File
@@ -115,14 +114,15 @@ open class MultiCompilerCrashChecker(private val compiler: CommonCompiler?) : Co
         val hash = text.hashCode()
         if (alreadyChecked.containsKey(hash)) {
             log.debug("ALREADY CHECKED!!!")
-            // TODO A null check might be necessary: a NPE was caught in the same place at isCoverageAlreadyCollected()
+            // TODO A null check *might* be necessary: a NPE was caught in the same place at a similar-looking function
             return true to alreadyChecked[hash]!!
         }
-        if (psiFactory.createFile(text).node.getAllChildrenNodes().any { it.psi is PsiErrorElement }) {
-            log.debug("Not correct syntax")
-            alreadyChecked[hash] = false
-            return true to false
-        }
+        // TODO This functionality should be abstracted away instead of commented in the future.
+//        if (psiFactory.createFile(text).node.getAllChildrenNodes().any { it.psi is PsiErrorElement }) {
+//            log.debug("Not correct syntax")
+//            alreadyChecked[hash] = false
+//            return true to false
+//        }
         return false to false
     }
 
@@ -163,44 +163,6 @@ open class MultiCompilerCrashChecker(private val compiler: CommonCompiler?) : Co
         return checkTest(text.toString())
     }
 
-    private fun isCoverageAlreadyCollected(text: String): Pair<Boolean, Pair<Boolean, ExecutionDataStore>?> {
-        val hash = text.hashCode()
-        if (alreadyCheckedCoverage.containsKey(hash)) {
-            log.debug("ALREADY CHECKED!!!")
-            return try {
-                true to alreadyCheckedCoverage[hash]!!
-            } catch (e: NullPointerException) {
-                false to null
-            }
-        }
-        return false to null
-    }
-
-    override fun getExecutionDataWithStatus(text: String): Pair<Boolean, ExecutionDataStore> = getExecutionDataWithStatus(text, pathToFile)
-
-    override fun getExecutionDataWithStatus(text: String, pathToFile: String): Pair<Boolean, ExecutionDataStore> {
-        val firstCheck = isCoverageAlreadyCollected(text)
-        if (firstCheck.first) return firstCheck.second!!
-        val oldText = File(pathToFile).bufferedReader().readText()
-        var writer = File(pathToFile).bufferedWriter()
-        writer.write(text)
-        writer.close()
-        val res = compiler!!.getExecutionDataWithStatus(pathToFile)
-        writer = File(pathToFile).bufferedWriter()
-        writer.write(oldText)
-        writer.close()
-        alreadyCheckedCoverage[text.hashCode()] = res
-        return res
-    }
-
-    override fun getExecutionDataWithStatus(tree: List<ASTNode>): Pair<Boolean, ExecutionDataStore> {
-        val text = StringBuilder()
-        for (el in tree)
-            text.append(el.text)
-        log.debug("Checking : $text")
-        return getExecutionDataWithStatus(text.toString())
-    }
-
     override fun init(compilingPath: String, psiFactory: KtPsiFactory?): Error {
         pathToFile = CompilerArgs.pathToTmpFile
         errs = compiler?.getErrorMessage(compilingPath) ?: ""
@@ -230,6 +192,5 @@ open class MultiCompilerCrashChecker(private val compiler: CommonCompiler?) : Co
     private val patch = DiffMatchPatch()
     private val threshold = 0.5
     override var alreadyChecked = HashMap<Int, Boolean>()
-    override var alreadyCheckedCoverage = HashMap<Int, Pair<Boolean, ExecutionDataStore>?>()
 
 }
