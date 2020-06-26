@@ -54,8 +54,7 @@ class WitnessTestsCollector(
         originalCoverage = coverage
     }
 
-    // TODO Actual cosine similarity.
-    private var tempCosineDistance: Double = 0.0
+        private var tempCosineDistance: Double = 0.0
 
     override fun checkCompiling(file: KtFile): Boolean {
         val (status, coverage) = compile(file.text)
@@ -65,7 +64,7 @@ class WitnessTestsCollector(
             totalPerformanceTime += performanceTime
             averagePerformanceTime += (performanceTime - averagePerformanceTime) / numberOfCompilations
 
-            // tempCosineDistance = 1 - originalCoverage.cosineSimilarity(coverage)
+            tempCosineDistance = 1 - originalCoverage.cosineSimilarity(coverage)
             if (status) {
                 bugDatabase.add(coverage.copy())
             } else {

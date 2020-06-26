@@ -4,8 +4,6 @@ import com.stepanov.bbf.bugfinder.executor.CompilerArgs
 import com.stepanov.bbf.bugfinder.executor.compilers.JSCompiler
 import com.stepanov.bbf.bugfinder.executor.compilers.JVMCompiler
 import com.stepanov.bbf.bugfinder.isolation.BugIsolator
-import com.stepanov.bbf.bugfinder.isolation.CollapsedMutationStatistics
-import com.stepanov.bbf.bugfinder.isolation.MutationStatistics
 import com.stepanov.bbf.bugfinder.manager.BugType
 import com.stepanov.bbf.bugfinder.util.BBFProperties
 import com.stepanov.bbf.bugfinder.util.FalsePositivesDeleter
