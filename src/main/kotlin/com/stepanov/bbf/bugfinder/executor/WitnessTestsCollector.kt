@@ -1,17 +1,10 @@
 package com.stepanov.bbf.bugfinder.executor
 
-import com.stepanov.bbf.bugfinder.isolation.MutantCoverages
-import com.stepanov.bbf.bugfinder.isolation.MutationStatistics
 import com.stepanov.bbf.bugfinder.manager.BugType
-import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation
 import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation.Companion.file
 import com.stepanov.bbf.bugfinder.util.BoundedSortedByModelElementSet
 import com.stepanov.bbf.coverage.CompilerInstrumentation
 import com.stepanov.bbf.coverage.ExecutionCoverage
-import com.stepanov.bbf.coverage.data.Coverage
-import com.stepanov.bbf.coverage.data.EntityType
-import com.stepanov.bbf.coverage.data.SegmentType
-import com.stepanov.bbf.coverage.extraction.CoverageComposer
 import com.stepanov.bbf.reduktor.parser.PSICreator
 import org.jetbrains.kotlin.psi.KtFile
 
@@ -19,6 +12,10 @@ class WitnessTestsCollector(
     bugType: BugType,
     compilers: List<CommonCompiler>
 ) : Checker() {
+
+    // list of things to note when porting the code to a refactored version
+    // TODO Compilation timeouts (deleted in this branch) are a potential problem in the future.
+    // TODO Check comments in MultiCompilerCrashCollector too.
 
     val checker = when (bugType) {
         BugType.BACKEND -> MultiCompilerCrashChecker(compilers.first())
@@ -94,21 +91,10 @@ class WitnessTestsCollector(
         isSortingReversed = false
     )
 
-//    val mutantCoverages: MutantCoverages
-//        get() {
-//            val mutantCoverages = MutantCoverages()
-//            mutantCoverages.original = originalCoverage
-//            mutantCoverages.failureCoverages = failureDatabase.toMutableList()
-//            mutantCoverages.successCoverages = successDatabase.toMutableList()
-//            return mutantCoverages
-//        }
-//
-//    val mutationStatistics = mutableMapOf<String, MutationStatistics>()
-//
-//    val failureCoverages: MutableList<Coverage>
-//        get() = failureDatabase.toMutableList()
-//
-//    val successCoverages: MutableList<Coverage>
-//        get() = successDatabase.toMutableList()
+    val bugCoverages: MutableList<ExecutionCoverage>
+        get() = bugDatabase.toMutableList()
+
+    val successCoverages: MutableList<ExecutionCoverage>
+        get() = successDatabase.toMutableList()
 
 }

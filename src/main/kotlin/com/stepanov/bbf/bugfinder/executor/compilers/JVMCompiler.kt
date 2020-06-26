@@ -88,30 +88,20 @@ class JVMCompiler(private val arguments: String = "") : CommonCompiler() {
 
         val services = Services.EMPTY
         MsgCollector.clear()
-        val futureExitCode = threadPool.submit {
-            CompilerInstrumentation.clearRecords()
-            CompilerInstrumentation.shouldProbesBeRecorded = true
-            compiler.exec(MsgCollector, services, compilerArgs)
-            CompilerInstrumentation.shouldProbesBeRecorded = false
-            println(CompilerInstrumentation.probes)
-            println(CompilerInstrumentation.instrumentationTimer)
-            println(CompilerInstrumentation.performanceTimer)
-        }
-        var hasTimeout = false
-        try {
-            futureExitCode.get(10L, TimeUnit.SECONDS)
-        } catch (ex: TimeoutException) {
-            hasTimeout = true
-            futureExitCode.cancel(true)
-        }
+
+        CompilerInstrumentation.clearRecords()
+        CompilerInstrumentation.shouldProbesBeRecorded = true
+        compiler.exec(MsgCollector, services, compilerArgs)
+        CompilerInstrumentation.shouldProbesBeRecorded = false
 
         val status = KotlincInvokeStatus(
-            MsgCollector.crashMessages.joinToString("\n") +
-                    MsgCollector.compileErrorMessages.joinToString("\n"),
-            !MsgCollector.hasCompileError,
-            MsgCollector.hasException,
-            hasTimeout
+                MsgCollector.crashMessages.joinToString("\n") +
+                        MsgCollector.compileErrorMessages.joinToString("\n"),
+                !MsgCollector.hasCompileError,
+                MsgCollector.hasException,
+                false
         )
+
         if (status.hasException || status.hasTimeout || !status.isCompileSuccess) return CompilingResult(-1, "")
         val res = File(pathToCompiled)
         val input = JarInputStream(File(tmpJar).inputStream())
@@ -152,31 +142,20 @@ class JVMCompiler(private val arguments: String = "") : CommonCompiler() {
 
         val services = Services.EMPTY
         MsgCollector.clear()
-        val futureExitCode = threadPool.submit {
-            CompilerInstrumentation.clearRecords()
-            CompilerInstrumentation.shouldProbesBeRecorded = true
-            compiler.exec(MsgCollector, services, compilerArgs)
-            CompilerInstrumentation.shouldProbesBeRecorded = false
-            println(CompilerInstrumentation.probes)
-            println(CompilerInstrumentation.instrumentationTimer)
-            println(CompilerInstrumentation.performanceTimer)
-        }
-        var hasTimeout = false
-        try {
-            futureExitCode.get(10L, TimeUnit.SECONDS)
-        } catch (ex: TimeoutException) {
-            hasTimeout = true
-            futureExitCode.cancel(true)
-        }
+
+        CompilerInstrumentation.clearRecords()
+        CompilerInstrumentation.shouldProbesBeRecorded = true
+        compiler.exec(MsgCollector, services, compilerArgs)
+        CompilerInstrumentation.shouldProbesBeRecorded = false
 
         val status = KotlincInvokeStatus(
-            MsgCollector.crashMessages.joinToString("\n") +
-                    MsgCollector.compileErrorMessages.joinToString("\n"),
-            !MsgCollector.hasCompileError,
-            MsgCollector.hasException,
-            hasTimeout,
-            MsgCollector.locations.toMutableList()
+                MsgCollector.crashMessages.joinToString("\n") +
+                        MsgCollector.compileErrorMessages.joinToString("\n"),
+                !MsgCollector.hasCompileError,
+                MsgCollector.hasException,
+                false
         )
+
         return status
     }
 

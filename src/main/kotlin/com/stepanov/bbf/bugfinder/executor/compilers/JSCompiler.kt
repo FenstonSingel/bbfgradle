@@ -49,30 +49,20 @@ class JSCompiler(private val arguments: String = "") : CommonCompiler() {
         val compilerArgs = K2JSCompilerArguments().apply { K2JSCompiler().parseArguments(args.toTypedArray(), this) }
         compilerArgs.libraries = CompilerArgs.jsStdLibPaths.joinToString(separator = ":")
         val services = Services.EMPTY
-        val threadPool = Executors.newCachedThreadPool()
-        val futureExitCode = threadPool.submit {
-            CompilerInstrumentation.clearRecords()
-            CompilerInstrumentation.shouldProbesBeRecorded = true
-            compiler.exec(MsgCollector, services, compilerArgs)
-            CompilerInstrumentation.shouldProbesBeRecorded = false
-            println(CompilerInstrumentation.probes)
-            println(CompilerInstrumentation.instrumentationTimer)
-            println(CompilerInstrumentation.performanceTimer)
-        }
-        var hasTimeout = false
-        try {
-            futureExitCode.get(10L, TimeUnit.SECONDS)
-        } catch (ex: TimeoutException) {
-            hasTimeout = true
-            futureExitCode.cancel(true)
-        }
+
+        CompilerInstrumentation.clearRecords()
+        CompilerInstrumentation.shouldProbesBeRecorded = true
+        compiler.exec(MsgCollector, services, compilerArgs)
+        CompilerInstrumentation.shouldProbesBeRecorded = false
+
         val status = KotlincInvokeStatus(
             MsgCollector.crashMessages.joinToString("\n") +
                     MsgCollector.compileErrorMessages.joinToString("\n"),
             !MsgCollector.hasCompileError,
             MsgCollector.hasException,
-            hasTimeout
+            false
         )
+
         return if (!status.hasException && !status.hasTimeout) {
             val oldStr = FileReader(File(pathToCompiled)).readText()
             val newStr = "const kotlin = require(\"${CompilerArgs.pathToJsKotlinLib}/kotlin.js\");\n\n$oldStr"
@@ -97,31 +87,20 @@ class JSCompiler(private val arguments: String = "") : CommonCompiler() {
         val compilerArgs =
             K2JSCompilerArguments().apply { K2JSCompiler().parseArguments(args.split(" ").toTypedArray(), this) }
         val services = Services.EMPTY
-        val threadPool = Executors.newCachedThreadPool()
-        val futureExitCode = threadPool.submit {
-            CompilerInstrumentation.clearRecords()
-            CompilerInstrumentation.shouldProbesBeRecorded = true
-            compiler.exec(MsgCollector, services, compilerArgs)
-            CompilerInstrumentation.shouldProbesBeRecorded = false
-            println(CompilerInstrumentation.probes)
-            println(CompilerInstrumentation.instrumentationTimer)
-            println(CompilerInstrumentation.performanceTimer)
-        }
-        var hasTimeout = false
-        try {
-            futureExitCode.get(10L, TimeUnit.SECONDS)
-        } catch (ex: TimeoutException) {
-            hasTimeout = true
-            futureExitCode.cancel(true)
-        }
+
+        CompilerInstrumentation.clearRecords()
+        CompilerInstrumentation.shouldProbesBeRecorded = true
+        compiler.exec(MsgCollector, services, compilerArgs)
+        CompilerInstrumentation.shouldProbesBeRecorded = false
+
         val status = KotlincInvokeStatus(
-            MsgCollector.crashMessages.joinToString("\n") +
-                    MsgCollector.compileErrorMessages.joinToString("\n"),
-            !MsgCollector.hasCompileError,
-            MsgCollector.hasException,
-            hasTimeout,
-            MsgCollector.locations.toMutableList()
+                MsgCollector.crashMessages.joinToString("\n") +
+                        MsgCollector.compileErrorMessages.joinToString("\n"),
+                !MsgCollector.hasCompileError,
+                MsgCollector.hasException,
+                false
         )
+
         File(pathToCompiled).delete()
         return status
     }
