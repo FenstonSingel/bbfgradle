@@ -9,6 +9,12 @@ import org.jetbrains.kotlin.resolve.BindingContext
 
 object BugIsolator {
 
+    var totalPerformanceTime = 0L
+        private set
+    var averagePerformanceTime = 0L
+        private set
+    var numberOfCompilations = 0L
+        private set
     var totalIsolationTime = 0L
         private set
     var averageIsolationTime = 0L
@@ -30,6 +36,10 @@ object BugIsolator {
         numberOfIsolations++
         totalIsolationTime += isolationTime
         averageIsolationTime += (isolationTime - averageIsolationTime) / numberOfIsolations
+
+        numberOfCompilations += collector.numberOfCompilations
+        totalPerformanceTime += collector.totalPerformanceTime
+        averagePerformanceTime += (collector.averagePerformanceTime - averagePerformanceTime) / numberOfIsolations
     }
 
     private fun mutate(context: BindingContext?) {
