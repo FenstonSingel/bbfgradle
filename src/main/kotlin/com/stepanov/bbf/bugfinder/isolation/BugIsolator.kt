@@ -9,13 +9,27 @@ import org.jetbrains.kotlin.resolve.BindingContext
 
 object BugIsolator {
 
+    var totalIsolationTime = 0L
+        private set
+    var averageIsolationTime = 0L
+        private set
+    var numberOfIsolations = 0L
+        private set
+
     fun isolate(path: String, bugType: BugType) {
+        var isolationTime = -System.currentTimeMillis()
+
         val creator = PSICreator("")
         val file = creator.getPSIForFile(path)
         Transformation.file = file
         val collector = WitnessTestsCollector(bugType, listOf(JVMCompiler("-Xnew-inference")))
         Transformation.checker = collector
         mutate(creator.ctx)
+
+        isolationTime += System.currentTimeMillis()
+        numberOfIsolations++
+        totalIsolationTime += isolationTime
+        averageIsolationTime += (isolationTime - averageIsolationTime) / numberOfIsolations
     }
 
     private fun mutate(context: BindingContext?) {

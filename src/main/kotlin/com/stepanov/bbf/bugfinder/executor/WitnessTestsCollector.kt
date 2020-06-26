@@ -32,23 +32,28 @@ class WitnessTestsCollector(
         checker.pathToFile = file.name
     }
 
+    var totalPerformanceTime = 0L
+        private set
+    var averagePerformanceTime = 0L
+        private set
+    var numberOfCompilations = 0L
+        private set
+
+    // TODO Statistics on how useful every mutation is.
+
     private fun compile(text: String): Pair<Boolean, ExecutionCoverage?> {
         val status = checker.checkTest(text)
         var coverage: ExecutionCoverage? = null
         if (!CompilerInstrumentation.isEmpty) {
             coverage = ExecutionCoverage.createFromRecords()
-            CompilerInstrumentation.clearRecords()
         }
         return status to coverage
     }
 
-    // TODO Performance statistics (average per-compilation time and total isolation time).
-    // TODO Statistics on how useful every mutation is.
-
     private val originalCoverage: ExecutionCoverage
     init {
         val (status, coverage) = compile(file.text)
-        if (!status || coverage == null) throw IllegalArgumentException("")
+        if (!status || coverage == null) throw IllegalArgumentException("A project should contain a bug in order to isolate it.")
         originalCoverage = coverage
     }
 
@@ -58,6 +63,11 @@ class WitnessTestsCollector(
     override fun checkCompiling(file: KtFile): Boolean {
         val (status, coverage) = compile(file.text)
         if (coverage != null) {
+            numberOfCompilations++
+            val performanceTime = CompilerInstrumentation.performanceTimer
+            totalPerformanceTime += performanceTime
+            averagePerformanceTime += (performanceTime - averagePerformanceTime) / numberOfCompilations
+
             // tempCosineDistance = 1 - originalCoverage.cosineSimilarity(coverage)
             if (status) {
                 bugDatabase.add(coverage.copy())
