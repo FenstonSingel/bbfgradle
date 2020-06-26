@@ -12,7 +12,6 @@ import com.stepanov.bbf.coverage.analysis.Ochiai2RankingFormula
 import com.stepanov.bbf.coverage.analysis.OchiaiRankingFormula
 import com.stepanov.bbf.coverage.analysis.RankedEntityList
 import com.stepanov.bbf.coverage.data.EntityStatisticsSet
-import com.stepanov.bbf.coverage.extraction.CoverageComposer
 import com.stepanov.bbf.coverage.util.*
 import net.sourceforge.argparse4j.ArgumentParsers
 import net.sourceforge.argparse4j.impl.Arguments
