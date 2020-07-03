@@ -8,7 +8,7 @@ class ExecutionCoverage(val storage: Map<String, Int>) : Iterable<Map.Entry<Stri
 
     companion object {
         fun createFromRecords(): ExecutionCoverage {
-            return ExecutionCoverage(CompilerInstrumentation.probes.toMap())
+            return ExecutionCoverage(CompilerInstrumentation.entryProbes.toMap())
         }
     }
 

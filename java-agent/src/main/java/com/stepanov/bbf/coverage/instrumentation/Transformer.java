@@ -40,7 +40,7 @@ public class Transformer implements ClassFileTransformer {
         byte[] classFileCopy = Arrays.copyOf(classFile, classFile.length);
         ClassReader classReader = new ClassReader(classFileCopy);
         ClassWriter classWriter = new ClassWriter(classReader, ClassWriter.COMPUTE_MAXS);
-        MethodInstrumenter instrumenter = new MethodInstrumenter(classWriter); // choose necessary implementation
+        BranchInstrumenter instrumenter = new BranchInstrumenter(classWriter); // choose necessary implementation
         classReader.accept(instrumenter, 0);
         byte[] newClassFile = classWriter.toByteArray();
 

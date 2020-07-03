@@ -8,7 +8,8 @@ fun run(code: () -> Unit) {
     CompilerInstrumentation.shouldProbesBeRecorded = true
     code()
     CompilerInstrumentation.shouldProbesBeRecorded = false
-    println(CompilerInstrumentation.probes)
+    println(CompilerInstrumentation.entryProbes)
+    println(CompilerInstrumentation.branchProbes)
     println("Instrumentation time: ${CompilerInstrumentation.instrumentationTimer}")
     println("Performance time: ${CompilerInstrumentation.performanceTimer}")
 }
