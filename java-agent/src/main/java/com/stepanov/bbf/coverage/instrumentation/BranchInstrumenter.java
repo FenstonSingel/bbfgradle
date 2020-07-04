@@ -5,6 +5,9 @@ import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
+import java.util.Map;
+import java.util.HashMap;
+
 import static org.objectweb.asm.Opcodes.ASM7;
 
 public class BranchInstrumenter extends ClassVisitor {
@@ -14,6 +17,28 @@ public class BranchInstrumenter extends ClassVisitor {
     }
 
     private String className = "";
+
+    private static final Map<Integer, String> opcodeToStr = new HashMap<>();
+    static {
+        opcodeToStr.put(Opcodes.IFNULL, "IFNULL");
+        opcodeToStr.put(Opcodes.IFNONNULL, "IFNONNULL");
+        opcodeToStr.put(Opcodes.IFEQ, "IFEQ");
+        opcodeToStr.put(Opcodes.IFNE, "IFNE");
+        opcodeToStr.put(Opcodes.IFLT, "IFLT");
+        opcodeToStr.put(Opcodes.IFLE, "IFLE");
+        opcodeToStr.put(Opcodes.IFGT, "IFGT");
+        opcodeToStr.put(Opcodes.IFGE, "IFGE");
+        opcodeToStr.put(Opcodes.IF_ACMPEQ, "IF_ACMPEQ");
+        opcodeToStr.put(Opcodes.IF_ACMPNE, "IF_ACMPNE");
+        opcodeToStr.put(Opcodes.IF_ICMPEQ, "IF_ICMPEQ");
+        opcodeToStr.put(Opcodes.IF_ICMPNE, "IF_ICMPNE");
+        opcodeToStr.put(Opcodes.IF_ICMPLT, "IF_ICMPLT");
+        opcodeToStr.put(Opcodes.IF_ICMPLE, "IF_ICMPLE");
+        opcodeToStr.put(Opcodes.IF_ICMPGT, "IF_ICMPGT");
+        opcodeToStr.put(Opcodes.IF_ICMPGE, "IF_ICMPGE");
+        opcodeToStr.put(Opcodes.TABLESWITCH, "TABLESWITCH");
+        opcodeToStr.put(Opcodes.LOOKUPSWITCH, "LOOKUPSWITCH");
+    }
 
     @Override
     public void visit(int version,
@@ -36,20 +61,26 @@ public class BranchInstrumenter extends ClassVisitor {
     {
         MethodVisitor defaultMethodVisitor = cv.visitMethod(access, name, descriptor, signature, exceptions);
         return new MethodVisitor(ASM7, defaultMethodVisitor) {
-            private int insnCounter = 0;
+            private final Map<Integer, Integer> insnCounter = new HashMap<>();
+
+            private String getInsnId(int opcode) {
+                return className + ":" + name + descriptor + ":" + opcodeToStr.get(opcode) + insnCounter.get(opcode);
+            }
 
             @Override
             public void visitJumpInsn(int opcode, Label label) {
+                if (opcode != Opcodes.GOTO && opcode != Opcodes.JSR) {
+                    insnCounter.merge(opcode, 1, Integer::sum);
+                }
                 switch (opcode) {
                     case Opcodes.IFNULL:
                     case Opcodes.IFNONNULL:
                         mv.visitInsn(Opcodes.DUP);
-                        mv.visitLdcInsn(className + ":" + name + descriptor);
-                        mv.visitLdcInsn(insnCounter);
+                        mv.visitLdcInsn(getInsnId(opcode));
                         mv.visitMethodInsn(Opcodes.INVOKESTATIC,
                                 "com/stepanov/bbf/coverage/CompilerInstrumentation",
                                 "recordUnaryRefCmp",
-                                "(Ljava/lang/Object;Ljava/lang/String;I)V",
+                                "(Ljava/lang/Object;Ljava/lang/String;)V",
                                 false
                         );
                         break;
@@ -60,25 +91,23 @@ public class BranchInstrumenter extends ClassVisitor {
                     case Opcodes.IFGT:
                     case Opcodes.IFGE:
                         mv.visitInsn(Opcodes.DUP);
-                        mv.visitLdcInsn(className + ":" + name + descriptor);
-                        mv.visitLdcInsn(insnCounter);
+                        mv.visitLdcInsn(getInsnId(opcode));
                         mv.visitLdcInsn(opcode);
                         mv.visitMethodInsn(Opcodes.INVOKESTATIC,
                                 "com/stepanov/bbf/coverage/CompilerInstrumentation",
                                 "recordUnaryIntCmp",
-                                "(ILjava/lang/String;II)V",
+                                "(ILjava/lang/String;I)V",
                                 false
                         );
                         break;
                     case Opcodes.IF_ACMPEQ:
                     case Opcodes.IF_ACMPNE:
                         mv.visitInsn(Opcodes.DUP2);
-                        mv.visitLdcInsn(className + ":" + name + descriptor);
-                        mv.visitLdcInsn(insnCounter);
+                        mv.visitLdcInsn(getInsnId(opcode));
                         mv.visitMethodInsn(Opcodes.INVOKESTATIC,
                                 "com/stepanov/bbf/coverage/CompilerInstrumentation",
                                 "recordBinaryRefCmp",
-                                "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;I)V",
+                                "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;)V",
                                 false
                         );
                         break;
@@ -89,19 +118,21 @@ public class BranchInstrumenter extends ClassVisitor {
                     case Opcodes.IF_ICMPGT:
                     case Opcodes.IF_ICMPGE:
                         mv.visitInsn(Opcodes.DUP2);
-                        mv.visitLdcInsn(className + ":" + name + descriptor);
-                        mv.visitLdcInsn(insnCounter);
+                        mv.visitLdcInsn(getInsnId(opcode));
                         mv.visitLdcInsn(opcode);
                         mv.visitMethodInsn(Opcodes.INVOKESTATIC,
                                 "com/stepanov/bbf/coverage/CompilerInstrumentation",
                                 "recordBinaryIntCmp",
-                                "(IILjava/lang/String;II)V",
+                                "(IILjava/lang/String;I)V",
                                 false
                         );
                         break;
-                }
-                if (opcode != Opcodes.GOTO && opcode != Opcodes.JSR) {
-                    insnCounter++;
+                    case Opcodes.TABLESWITCH:
+                        // TODO recordTableSwitch()
+                        break;
+                    case Opcodes.LOOKUPSWITCH:
+                        // TODO recordLookUpSwitch()
+                        break;
                 }
                 super.visitJumpInsn(opcode, label);
             }

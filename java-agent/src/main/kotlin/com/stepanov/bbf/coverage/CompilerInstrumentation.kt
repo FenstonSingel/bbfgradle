@@ -11,7 +11,7 @@ object CompilerInstrumentation {
 
     val entryProbes = mutableMapOf<String, Int>()
 
-    val branchProbes = mutableMapOf<String, MutableMap<Int, MutableMap<Int, Int>>>()
+    val branchProbes = mutableMapOf<String, MutableMap<Int, Int>>()
 
     val isEmpty: Boolean get() = entryProbes.isEmpty() && branchProbes.isEmpty()
 
@@ -23,73 +23,68 @@ object CompilerInstrumentation {
         pausePerformanceTimer()
     }
 
-    private fun recordBranchExecution(method_id: String, insn_id: Int, result: Int) {
-        if (method_id in branchProbes) {
-            val methodBranchProbes = branchProbes[method_id]!!
-            if (insn_id in methodBranchProbes) {
-                val probeResults = methodBranchProbes[insn_id]!!
-                probeResults.merge(result, 1) { previous, one -> previous + one }
-            } else {
-                methodBranchProbes[insn_id] = mutableMapOf(result to 1)
-            }
+    private fun recordBranchExecution(insn_id: String, result: Int) {
+        if (insn_id in branchProbes) {
+            val probeResults = branchProbes[insn_id]!!
+            probeResults.merge(result, 1) { previous, one -> previous + one }
         } else {
-            branchProbes[method_id] = mutableMapOf(insn_id to mutableMapOf(result to 1))
+            branchProbes[insn_id] = mutableMapOf(result to 1)
         }
     }
 
-    @JvmStatic fun recordUnaryRefCmp(a: Any?, method_id: String, insn_id: Int) {
+    @JvmStatic fun recordUnaryRefCmp(a: Any?, insn_id: String) {
         startPerformanceTimer()
         if (shouldProbesBeRecorded) {
             val result = if (a == null) 0 else 1
-            recordBranchExecution(method_id, insn_id, result)
+            recordBranchExecution(insn_id, result)
         }
         pausePerformanceTimer()
     }
 
-    @JvmStatic fun recordBinaryRefCmp(a: Any, b: Any, method_id: String, insn_id: Int) {
+    @JvmStatic fun recordBinaryRefCmp(a: Any, b: Any, insn_id: String) {
         startPerformanceTimer()
         if (shouldProbesBeRecorded) {
             val result = if (a !== b) 0 else 1
-            recordBranchExecution(method_id, insn_id, result)
+            recordBranchExecution(insn_id, result)
         }
         pausePerformanceTimer()
     }
 
-    @JvmStatic fun recordUnaryIntCmp(a: Int, method_id: String, insn_id: Int, opcode: Int) {
+    @JvmStatic fun recordUnaryIntCmp(a: Int, insn_id: String, opcode: Int) {
         startPerformanceTimer()
         if (shouldProbesBeRecorded) {
             val result = if (when (opcode) {
-                Opcodes.IFEQ -> a == 0
-                Opcodes.IFNE -> a != 0
-                Opcodes.IFLT -> a < 0
-                Opcodes.IFLE -> a <= 0
-                Opcodes.IFGT -> a > 0
-                Opcodes.IFGE -> a >= 0
-                else -> throw IllegalArgumentException("An inappropriate opcode was provided.")
-            }) 1 else 0
-            recordBranchExecution(method_id, insn_id, result)
+                        Opcodes.IFEQ -> a == 0
+                        Opcodes.IFNE -> a != 0
+                        Opcodes.IFLT -> a < 0
+                        Opcodes.IFLE -> a <= 0
+                        Opcodes.IFGT -> a > 0
+                        Opcodes.IFGE -> a >= 0
+                        else -> throw IllegalArgumentException("An inappropriate opcode was provided.")
+                    }) 1 else 0
+            recordBranchExecution(insn_id, result)
         }
         pausePerformanceTimer()
     }
 
-    @JvmStatic fun recordBinaryIntCmp(a: Int, b: Int, method_id: String, insn_id: Int, opcode: Int) {
+    @JvmStatic fun recordBinaryIntCmp(a: Int, b: Int, insn_id: String, opcode: Int) {
         startPerformanceTimer()
         if (shouldProbesBeRecorded) {
             val result = if (when (opcode) {
-                Opcodes.IF_ICMPEQ -> a == b
-                Opcodes.IF_ICMPNE -> a != b
-                Opcodes.IF_ICMPLT -> a < b
-                Opcodes.IF_ICMPLE -> a <= b
-                Opcodes.IF_ICMPGT -> a > b
-                Opcodes.IF_ICMPGE -> a >= b
-                else -> throw IllegalArgumentException("An inappropriate opcode was provided.")
-            }) 1 else 0
-            recordBranchExecution(method_id, insn_id, result)
+                        Opcodes.IF_ICMPEQ -> a == b
+                        Opcodes.IF_ICMPNE -> a != b
+                        Opcodes.IF_ICMPLT -> a < b
+                        Opcodes.IF_ICMPLE -> a <= b
+                        Opcodes.IF_ICMPGT -> a > b
+                        Opcodes.IF_ICMPGE -> a >= b
+                        else -> throw IllegalArgumentException("An inappropriate opcode was provided.")
+                    }) 1 else 0
+            recordBranchExecution(insn_id, result)
         }
         pausePerformanceTimer()
     }
 
-    @JvmStatic fun recordLookUpSwitch() {
+    @JvmStatic fun recordTableSwitch() {
         startPerformanceTimer()
         if (shouldProbesBeRecorded) {
             // TODO
@@ -97,7 +92,7 @@ object CompilerInstrumentation {
         pausePerformanceTimer()
     }
 
-    @JvmStatic fun recordTableSwitch() {
+    @JvmStatic fun recordLookUpSwitch() {
         startPerformanceTimer()
         if (shouldProbesBeRecorded) {
             // TODO
