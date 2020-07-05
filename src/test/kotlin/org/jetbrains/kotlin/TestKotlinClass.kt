@@ -1,5 +1,9 @@
 package org.jetbrains.kotlin
 
+enum class TestingTableSwtich {
+    ONE, TWO, THREE;
+}
+
 class TestKotlinClass {
 
     fun foo(int: Int) {
@@ -8,6 +12,11 @@ class TestKotlinClass {
         }
         if (int >= 10000) {
             2 + 2
+        }
+        when (int) {
+            42 -> 3 + 3
+            720 -> 4 + 4
+            else -> 5 + 5
         }
     }
 
@@ -18,6 +27,10 @@ class TestKotlinClass {
         val a = int!! + 5
         if (int === a) {
             1 + 1
+        }
+        when (TestingTableSwtich.values()[int % 3]) {
+            TestingTableSwtich.ONE -> 3 + 3
+            else -> 6 + 6
         }
     }
 

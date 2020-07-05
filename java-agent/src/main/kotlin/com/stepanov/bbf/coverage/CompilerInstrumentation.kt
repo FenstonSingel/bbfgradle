@@ -11,7 +11,7 @@ object CompilerInstrumentation {
 
     val entryProbes = mutableMapOf<String, Int>()
 
-    val branchProbes = mutableMapOf<String, MutableMap<Int, Int>>()
+    val branchProbes = mutableMapOf<String, MutableMap<String, Int>>()
 
     val isEmpty: Boolean get() = entryProbes.isEmpty() && branchProbes.isEmpty()
 
@@ -23,7 +23,7 @@ object CompilerInstrumentation {
         pausePerformanceTimer()
     }
 
-    private fun recordBranchExecution(insn_id: String, result: Int) {
+    private fun recordBranchExecution(insn_id: String, result: String) {
         if (insn_id in branchProbes) {
             val probeResults = branchProbes[insn_id]!!
             probeResults.merge(result, 1) { previous, one -> previous + one }
@@ -35,7 +35,7 @@ object CompilerInstrumentation {
     @JvmStatic fun recordUnaryRefCmp(a: Any?, insn_id: String) {
         startPerformanceTimer()
         if (shouldProbesBeRecorded) {
-            val result = if (a == null) 0 else 1
+            val result = if (a == null) "A" else "B"
             recordBranchExecution(insn_id, result)
         }
         pausePerformanceTimer()
@@ -44,7 +44,7 @@ object CompilerInstrumentation {
     @JvmStatic fun recordBinaryRefCmp(a: Any, b: Any, insn_id: String) {
         startPerformanceTimer()
         if (shouldProbesBeRecorded) {
-            val result = if (a !== b) 0 else 1
+            val result = if (a !== b) "A" else "B"
             recordBranchExecution(insn_id, result)
         }
         pausePerformanceTimer()
@@ -61,7 +61,7 @@ object CompilerInstrumentation {
                         Opcodes.IFGT -> a > 0
                         Opcodes.IFGE -> a >= 0
                         else -> throw IllegalArgumentException("An inappropriate opcode was provided.")
-                    }) 1 else 0
+                    }) "A" else "B"
             recordBranchExecution(insn_id, result)
         }
         pausePerformanceTimer()
@@ -78,24 +78,40 @@ object CompilerInstrumentation {
                         Opcodes.IF_ICMPGT -> a > b
                         Opcodes.IF_ICMPGE -> a >= b
                         else -> throw IllegalArgumentException("An inappropriate opcode was provided.")
-                    }) 1 else 0
+                    }) "A" else "B"
             recordBranchExecution(insn_id, result)
         }
         pausePerformanceTimer()
     }
 
-    @JvmStatic fun recordTableSwitch() {
+    private val tableSwitches = mutableMapOf<String, Pair<Int, Int>>()
+
+    @JvmStatic fun rememberTableSwitch(insn_id: String, min: Int, max: Int) {
+        tableSwitches[insn_id] = min to max
+    }
+
+    @JvmStatic fun recordTableSwitch(key: Int, insn_id: String) {
         startPerformanceTimer()
         if (shouldProbesBeRecorded) {
-            // TODO
+            val (min, max) = tableSwitches[insn_id]!!
+            val result = if (key < min || key > max) "DFLT" else key.toString()
+            recordBranchExecution(insn_id, result)
         }
         pausePerformanceTimer()
     }
 
-    @JvmStatic fun recordLookUpSwitch() {
+    private val lookupSwitches = mutableMapOf<String, IntArray>()
+
+    @JvmStatic fun rememberLookupSwitch(insn_id: String, keys: IntArray) {
+        lookupSwitches[insn_id] = keys
+    }
+
+    @JvmStatic fun recordLookupSwitch(key: Int, insn_id: String) {
         startPerformanceTimer()
         if (shouldProbesBeRecorded) {
-            // TODO
+            val keys = lookupSwitches[insn_id]!!
+            val result = if (key in keys) key.toString() else "DFLT"
+            recordBranchExecution(insn_id, result)
         }
         pausePerformanceTimer()
     }

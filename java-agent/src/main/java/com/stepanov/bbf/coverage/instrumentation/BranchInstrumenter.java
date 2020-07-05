@@ -1,5 +1,6 @@
 package com.stepanov.bbf.coverage.instrumentation;
 
+import com.stepanov.bbf.coverage.CompilerInstrumentation;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
@@ -127,14 +128,40 @@ public class BranchInstrumenter extends ClassVisitor {
                                 false
                         );
                         break;
-                    case Opcodes.TABLESWITCH:
-                        // TODO recordTableSwitch()
-                        break;
-                    case Opcodes.LOOKUPSWITCH:
-                        // TODO recordLookUpSwitch()
-                        break;
                 }
                 super.visitJumpInsn(opcode, label);
+            }
+
+            @Override
+            public void visitTableSwitchInsn(int min, int max, Label dflt, Label... labels) {
+                insnCounter.merge(Opcodes.TABLESWITCH, 1, Integer::sum);
+                String insn_id = getInsnId(Opcodes.TABLESWITCH);
+                CompilerInstrumentation.rememberTableSwitch(insn_id, min, max);
+                mv.visitInsn(Opcodes.DUP);
+                mv.visitLdcInsn(insn_id);
+                mv.visitMethodInsn(Opcodes.INVOKESTATIC,
+                        "com/stepanov/bbf/coverage/CompilerInstrumentation",
+                        "recordTableSwitch",
+                        "(ILjava/lang/String;)V",
+                        false
+                );
+                super.visitTableSwitchInsn(min, max, dflt, labels);
+            }
+
+            @Override
+            public void visitLookupSwitchInsn(Label dflt, int[] keys, Label... labels) {
+                insnCounter.merge(Opcodes.LOOKUPSWITCH, 1, Integer::sum);
+                String insn_id = getInsnId(Opcodes.LOOKUPSWITCH);
+                CompilerInstrumentation.rememberLookupSwitch(insn_id, keys);
+                mv.visitInsn(Opcodes.DUP);
+                mv.visitLdcInsn(insn_id);
+                mv.visitMethodInsn(Opcodes.INVOKESTATIC,
+                        "com/stepanov/bbf/coverage/CompilerInstrumentation",
+                        "recordLookupSwitch",
+                        "(ILjava/lang/String;)V",
+                        false
+                );
+                mv.visitLookupSwitchInsn(dflt, keys, labels);
             }
         };
     }
