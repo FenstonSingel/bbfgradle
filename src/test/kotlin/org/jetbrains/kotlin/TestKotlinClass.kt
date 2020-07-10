@@ -1,6 +1,6 @@
 package org.jetbrains.kotlin
 
-enum class TestingTableSwtich {
+enum class TestingTableSwitch {
     ONE, TWO, THREE, FOUR;
 }
 
@@ -28,9 +28,9 @@ class TestKotlinClass {
         if (int === a) {
             1 + 1
         }
-        when (TestingTableSwtich.values()[int % 4]) {
-            TestingTableSwtich.ONE -> 3 + 3
-            TestingTableSwtich.TWO -> 4 + 4
+        when (TestingTableSwitch.values()[int % 4]) {
+            TestingTableSwitch.ONE -> 3 + 3
+            TestingTableSwitch.TWO -> 4 + 4
             else -> 6 + 6
         }
     }
