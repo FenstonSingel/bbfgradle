@@ -3,12 +3,14 @@ package com.stepanov.bbf.coverage
 import kotlinx.serialization.Serializable
 import kotlin.math.sqrt
 
+// TODO Delete the code after dealing with tests.
+
 @Serializable
 class ExecutionCoverage(val storage: Map<String, Int>) : Iterable<Map.Entry<String, Int>> {
 
     companion object {
         fun createFromRecords(): ExecutionCoverage {
-            return ExecutionCoverage(CompilerInstrumentation.entryProbes.toMap())
+            return ExecutionCoverage(CompilerInstrumentation.methodProbes.toMap())
         }
     }
 

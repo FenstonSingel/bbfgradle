@@ -1,17 +1,25 @@
 package com.stepanov.bbf
 
 import com.stepanov.bbf.coverage.CompilerInstrumentation
+import com.stepanov.bbf.coverage.ProgramCoverage
 import org.jetbrains.kotlin.TestKotlinClass
 
 fun run(code: () -> Unit) {
     CompilerInstrumentation.clearRecords()
+
     CompilerInstrumentation.shouldProbesBeRecorded = true
     code()
     CompilerInstrumentation.shouldProbesBeRecorded = false
-    println(CompilerInstrumentation.entryProbes)
-    println(CompilerInstrumentation.branchProbes)
+
+    val coverage = ProgramCoverage.createFromProbes()
+    val entities = coverage.entities()
+    for (entity in entities) {
+        println("$entity: ${coverage[entity]}")
+    }
+
     println("Instrumentation time: ${CompilerInstrumentation.instrumentationTimer}")
     println("Performance time: ${CompilerInstrumentation.performanceTimer}")
+    println()
 }
 
 fun main() {

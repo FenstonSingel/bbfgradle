@@ -9,16 +9,16 @@ object CompilerInstrumentation {
 
     @JvmStatic var shouldProbesBeRecorded: Boolean = false
 
-    val entryProbes = mutableMapOf<String, Int>()
+    val methodProbes = mutableMapOf<String, Int>()
 
     val branchProbes = mutableMapOf<String, MutableMap<String, Int>>()
 
-    val isEmpty: Boolean get() = entryProbes.isEmpty() && branchProbes.isEmpty()
+    val isEmpty: Boolean get() = methodProbes.isEmpty() && branchProbes.isEmpty()
 
     @JvmStatic fun recordMethodExecution(id: String) {
         startPerformanceTimer()
         if (shouldProbesBeRecorded) {
-            entryProbes.merge(id, 1) { previous, one -> previous + one }
+            methodProbes.merge(id, 1) { previous, one -> previous + one }
         }
         pausePerformanceTimer()
     }
@@ -41,7 +41,7 @@ object CompilerInstrumentation {
         pausePerformanceTimer()
     }
 
-    @JvmStatic fun recordBinaryRefCmp(a: Any, b: Any, insn_id: String) {
+    @JvmStatic fun recordBinaryRefCmp(a: Any?, b: Any?, insn_id: String) {
         startPerformanceTimer()
         if (shouldProbesBeRecorded) {
             val result = if (a !== b) "A" else "B"
@@ -135,7 +135,7 @@ object CompilerInstrumentation {
     }
 
     fun clearRecords() {
-        entryProbes.clear()
+        methodProbes.clear()
         branchProbes.clear()
         performanceTimer = 0L
     }

@@ -1,7 +1,7 @@
 package org.jetbrains.kotlin
 
 enum class TestingTableSwtich {
-    ONE, TWO, THREE;
+    ONE, TWO, THREE, FOUR;
 }
 
 class TestKotlinClass {
@@ -28,8 +28,9 @@ class TestKotlinClass {
         if (int === a) {
             1 + 1
         }
-        when (TestingTableSwtich.values()[int % 3]) {
+        when (TestingTableSwtich.values()[int % 4]) {
             TestingTableSwtich.ONE -> 3 + 3
+            TestingTableSwtich.TWO -> 4 + 4
             else -> 6 + 6
         }
     }

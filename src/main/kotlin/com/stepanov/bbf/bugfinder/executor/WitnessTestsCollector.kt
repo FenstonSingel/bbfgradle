@@ -4,7 +4,7 @@ import com.stepanov.bbf.bugfinder.manager.BugType
 import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation.Companion.file
 import com.stepanov.bbf.bugfinder.util.BoundedSortedByModelElementSet
 import com.stepanov.bbf.coverage.CompilerInstrumentation
-import com.stepanov.bbf.coverage.ExecutionCoverage
+import com.stepanov.bbf.coverage.ProgramCoverage
 import com.stepanov.bbf.reduktor.parser.PSICreator
 import org.jetbrains.kotlin.psi.KtFile
 
@@ -38,16 +38,16 @@ class WitnessTestsCollector(
 
     // TODO Statistics on how useful every mutation is.
 
-    private fun compile(text: String): Pair<Boolean, ExecutionCoverage?> {
+    private fun compile(text: String): Pair<Boolean, ProgramCoverage?> {
         val status = checker.checkTest(text)
-        var coverage: ExecutionCoverage? = null
+        var coverage: ProgramCoverage? = null
         if (!CompilerInstrumentation.isEmpty) {
-            coverage = ExecutionCoverage.createFromRecords()
+            coverage = ProgramCoverage.createFromProbes()
         }
         return status to coverage
     }
 
-    private val originalCoverage: ExecutionCoverage
+    private val originalCoverage: ProgramCoverage
     init {
         val (status, coverage) = compile(file.text)
         if (!status || coverage == null) throw IllegalArgumentException("A project should contain a bug in order to isolate it.")
@@ -90,10 +90,10 @@ class WitnessTestsCollector(
         isSortingReversed = false
     )
 
-    val bugCoverages: MutableList<ExecutionCoverage>
+    val bugCoverages: MutableList<ProgramCoverage>
         get() = bugDatabase.toMutableList()
 
-    val successCoverages: MutableList<ExecutionCoverage>
+    val successCoverages: MutableList<ProgramCoverage>
         get() = successDatabase.toMutableList()
 
 }
