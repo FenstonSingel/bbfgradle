@@ -4,6 +4,8 @@ import com.stepanov.bbf.coverage.CompilerInstrumentation
 import com.stepanov.bbf.coverage.ProgramCoverage
 import org.jetbrains.kotlin.TestKotlinClass
 
+// TODO Better and automated Java agemt tests.
+
 fun run(code: () -> Unit) {
     CompilerInstrumentation.clearRecords()
 

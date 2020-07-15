@@ -5,13 +5,15 @@ import kotlin.math.sqrt
 interface ProgramCoverage {
 
     companion object {
-        fun entities(vararg coverages: ProgramCoverage): Set<String> {
+        fun entities(coverages: Iterable<ProgramCoverage>): Set<String> {
             val result = mutableSetOf<String>()
             for (coverage in coverages) {
                 result += coverage.entities()
             }
             return result
         }
+
+        fun entities(vararg coverages: ProgramCoverage): Set<String> = entities(coverages.toList())
 
         fun createFromProbes(): ProgramCoverage {
             return if (CompilerInstrumentation.methodProbes.isNotEmpty()) {

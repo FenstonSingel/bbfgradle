@@ -1,5 +1,6 @@
 package com.stepanov.bbf.bugfinder.executor
 
+import com.stepanov.bbf.bugfinder.isolation.ExecutionStatistics
 import com.stepanov.bbf.bugfinder.manager.BugType
 import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation.Companion.file
 import com.stepanov.bbf.bugfinder.util.BoundedSortedByModelElementSet
@@ -74,7 +75,8 @@ class WitnessTestsCollector(
         return false // This is fine, no bugs.
     }
 
-    override fun checkTextCompiling(text: String): Boolean = checkCompiling(PSICreator("").getPSIForText(text, false))
+    override fun checkTextCompiling(text: String): Boolean =
+            checkCompiling(PSICreator("").getPSIForText(text, false))
 
     private val bugDatabase = BoundedSortedByModelElementSet(
         originalCoverage.copy(),
@@ -90,10 +92,7 @@ class WitnessTestsCollector(
         isSortingReversed = false
     )
 
-    val bugCoverages: MutableList<ProgramCoverage>
-        get() = bugDatabase.toMutableList()
-
-    val successCoverages: MutableList<ProgramCoverage>
-        get() = successDatabase.toMutableList()
+    val executionStatistics: ExecutionStatistics
+        get() = ExecutionStatistics.compose(originalCoverage, bugDatabase.toList(), successDatabase.toList())
 
 }

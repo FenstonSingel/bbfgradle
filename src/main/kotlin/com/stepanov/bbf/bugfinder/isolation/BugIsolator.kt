@@ -22,7 +22,7 @@ object BugIsolator {
     var numberOfIsolations = 0L
         private set
 
-    fun isolate(path: String, bugType: BugType) {
+    fun isolate(path: String, bugType: BugType, formula: RankingFormula): RankedProgramEntities {
         var isolationTime = -System.currentTimeMillis()
 
         val creator = PSICreator("")
@@ -32,6 +32,9 @@ object BugIsolator {
         Transformation.checker = collector
         mutate(creator.ctx)
 
+        val executionStatistics = collector.executionStatistics
+        val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, formula)
+
         isolationTime += System.currentTimeMillis()
         numberOfIsolations++
         totalIsolationTime += isolationTime
@@ -40,6 +43,8 @@ object BugIsolator {
         numberOfCompilations += collector.numberOfCompilations
         totalPerformanceTime += collector.totalPerformanceTime
         averagePerformanceTime += (collector.averagePerformanceTime - averagePerformanceTime) / numberOfIsolations
+
+        return rankedProgramEntities
     }
 
     private fun mutate(context: BindingContext?) {
