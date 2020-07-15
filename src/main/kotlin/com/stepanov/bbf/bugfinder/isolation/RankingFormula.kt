@@ -1,6 +1,12 @@
 package com.stepanov.bbf.bugfinder.isolation
 
+import com.stepanov.bbf.bugfinder.isolation.formulas.TarantulaRankingFormula
+
 interface RankingFormula {
+
+    companion object {
+        val defaultFormula: RankingFormula = TarantulaRankingFormula
+    }
 
     fun calculate(values: EntityExecutionStatistics): Double =
             calculate(

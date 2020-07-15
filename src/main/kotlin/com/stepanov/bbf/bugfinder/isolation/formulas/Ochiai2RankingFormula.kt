@@ -7,7 +7,7 @@ object Ochiai2RankingFormula : RankingFormula {
 
     override fun calculate(ef: Double, sf: Double, es: Double, ss: Double): Double {
         val result = (ef * ss) / sqrt((ef + es) * (ef + sf) * (ss + sf) * (ss + es))
-        // TODO Think a bit more on how to handle NaNs. Maybe try switching to more stable helper formula?
+        // TODO Think a bit more on how to handle NaNs. Maybe try switching to more stable "default" formula?
         return if (result.isNaN()) -1.0 else result
     }
 

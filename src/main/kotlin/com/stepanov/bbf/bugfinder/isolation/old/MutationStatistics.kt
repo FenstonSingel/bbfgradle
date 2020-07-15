@@ -1,4 +1,4 @@
-package com.stepanov.bbf.bugfinder.isolation
+package com.stepanov.bbf.bugfinder.isolation.old
 
 //import com.stepanov.bbf.coverage.util.Format
 //import kotlinx.serialization.Serializable

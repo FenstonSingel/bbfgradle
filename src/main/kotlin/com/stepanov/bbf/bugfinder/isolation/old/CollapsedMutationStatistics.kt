@@ -1,4 +1,4 @@
-package com.stepanov.bbf.bugfinder.isolation
+package com.stepanov.bbf.bugfinder.isolation.old
 
 //class CollapsedMutationStatistics() {
 //

@@ -1,4 +1,4 @@
-package com.stepanov.bbf.bugfinder.isolation
+package com.stepanov.bbf.bugfinder.isolation.old
 
 class MutablePair<A, B>(
      var first: A,

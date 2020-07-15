@@ -1,13 +1,8 @@
-package com.stepanov.bbf.coverage.util
-
-import com.stepanov.bbf.bugfinder.isolation.MutantCoverages
-import com.stepanov.bbf.coverage.data.Coverage
-import kotlinx.serialization.json.*
-import kotlinx.serialization.cbor.Cbor
-import kotlinx.serialization.list
-import java.io.File
+package com.stepanov.bbf.coverage
 
 // TODO Serialization of a new implementation format.
+
+//import com.stepanov.bbf.coverage.data.Coverage
 
 //private val json = Json(JsonConfiguration.Stable)
 //private val cbor = Cbor()
