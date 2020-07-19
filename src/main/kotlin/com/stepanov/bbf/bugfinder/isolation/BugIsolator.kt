@@ -25,6 +25,32 @@ object BugIsolator {
     var numberOfIsolations = 0L
         private set
 
+    private val bugDistributionPerMutation = mutableMapOf<String, Long>()
+    private val successDistributionPerMutation = mutableMapOf<String, Long>()
+
+    val codeSampleDistributionPerMutation: Map<String, Pair<Double, Double>>
+        get() {
+            val mutations = (bugDistributionPerMutation.keys + successDistributionPerMutation.keys).toSet()
+            val totalBugs = totalFailingCodeSamples
+            val totalSuccesses = totalPassingCodeSamples
+            val distribution = mutableMapOf<String, Pair<Double, Double>>()
+            for (mutation in mutations) {
+                val createdBugs = (bugDistributionPerMutation[mutation] ?: 0).toDouble()
+                val createdSuccesses = (successDistributionPerMutation[mutation] ?: 0).toDouble()
+                distribution[mutation] = createdBugs / totalBugs to createdSuccesses / totalSuccesses
+            }
+            return distribution
+        }
+
+    val totalFailingCodeSamples: Long
+        get() = bugDistributionPerMutation.values.fold(0L) { acc, x -> acc + x }
+    val totalPassingCodeSamples: Long
+        get() = successDistributionPerMutation.values.fold(0L) { acc, x -> acc + x }
+    var meanFailingCodeSamples = 0L
+        private set
+    var meanPassingCodeSamples = 0L
+        private set
+
     fun isolate(path: String, bugType: BugType, formula: RankingFormula = rankingFormula): RankedProgramEntities {
         var isolationTime = -System.currentTimeMillis()
 
@@ -38,7 +64,7 @@ object BugIsolator {
         val executionStatistics = collector.executionStatistics
         val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, formula)
 
-        // Time performance statistics.
+        // Performance statistics.
 
         isolationTime += System.currentTimeMillis()
         numberOfIsolations++
@@ -49,16 +75,48 @@ object BugIsolator {
         totalInstrPerformanceTime += collector.totalInstrPerformanceTime
         meanInstrPerformanceTime += (collector.meanInstrPerformanceTime - meanInstrPerformanceTime) / numberOfIsolations
 
+        var createdBugs = 0L
+        var createdSuccesses = 0L
+        collector.bugDistributionPerMutation.forEach { (key, value) ->
+            bugDistributionPerMutation.merge(key, value) { old, new -> old + new }
+            createdBugs += value
+        }
+        collector.successDistributionPerMutation.forEach { (key, value) ->
+            successDistributionPerMutation.merge(key, value) { old, new -> old + new }
+            createdSuccesses += value
+        }
+        meanFailingCodeSamples += (createdBugs - meanFailingCodeSamples) / numberOfIsolations
+        meanPassingCodeSamples += (createdSuccesses - meanPassingCodeSamples) / numberOfIsolations
+
         return rankedProgramEntities
     }
 
     private fun mutate(context: BindingContext?) {
-        val mutations = listOf(
-            AddBlockToExpression(),
-            ChangeRandomLines(),
-            ChangeRandomASTNodes(),
-            ChangeRandomASTNodesFromAnotherTrees()
+        val mutations = mutableListOf(
+                AddBlockToExpression(),
+                AddBracketsToExpression(),
+                AddDefaultValueToArg(),
+                AddNotNullAssertions(),
+                AddNullabilityTransformer(),
+                AddPossibleModifiers(),
+                AddReifiedToType(),
+                ChangeArgToAnotherValue(),
+                ChangeConstants(),
+                ChangeModifiers(),
+                ChangeOperators(),
+                ChangeOperatorsToFunInvocations(),
+                ChangeRandomASTNodes(),
+                ChangeRandomASTNodesFromAnotherTrees(),
+                ChangeRandomLines(),
+                ChangeReturnValueToConstant(),
+                ChangeSmthToExtension(),
+                ChangeVarToNull(),
+                RemoveRandomLines()
         )
+        if (context != null) {
+            mutations += AddSameFunctions(context)
+            mutations += ReinitProperties(context)
+        }
         for (mutation in mutations) {
             executeMutation(mutation)
         }

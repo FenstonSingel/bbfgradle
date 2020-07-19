@@ -2,6 +2,7 @@ package com.stepanov.bbf.bugfinder.executor
 
 import com.stepanov.bbf.bugfinder.isolation.ExecutionStatistics
 import com.stepanov.bbf.bugfinder.manager.BugType
+import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation
 import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation.Companion.file
 import com.stepanov.bbf.bugfinder.util.BoundedSortedByModelElementSet
 import com.stepanov.bbf.coverage.CompilerInstrumentation
@@ -37,7 +38,8 @@ class WitnessTestsCollector(
     var numberOfCompilations = 0L
         private set
 
-    // TODO Statistics on how useful every mutation is.
+    val bugDistributionPerMutation = mutableMapOf<String, Long>()
+    val successDistributionPerMutation = mutableMapOf<String, Long>()
 
     private fun compile(text: String): Pair<Boolean, ProgramCoverage?> {
         val status = checker.checkTest(text)
@@ -60,10 +62,18 @@ class WitnessTestsCollector(
     override fun checkCompiling(file: KtFile): Boolean {
         val (status, coverage) = compile(file.text)
         if (coverage != null) {
+            // Time performance statistics.
             numberOfCompilations++
             val performanceTime = CompilerInstrumentation.instrumentationPerformanceTime
             totalInstrPerformanceTime += performanceTime
             meanInstrPerformanceTime += (performanceTime - meanInstrPerformanceTime) / numberOfCompilations
+
+            // Mutation usefulness statistics.
+            if (status) {
+                bugDistributionPerMutation.merge(Transformation.currentMutation, 1) { previous, one -> previous + one }
+            } else {
+                successDistributionPerMutation.merge(Transformation.currentMutation, 1) { previous, one -> previous + one }
+            }
 
             tempCosineDistance = 1 - originalCoverage.cosineSimilarity(coverage)
             if (status) {
