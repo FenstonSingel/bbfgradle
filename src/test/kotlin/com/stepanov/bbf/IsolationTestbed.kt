@@ -8,36 +8,30 @@ import org.apache.log4j.PropertyConfigurator
 
 fun main() {
 
-    val formula = Ochiai2RankingFormula
-
     PropertyConfigurator.configure("src/main/resources/bbfLog4j.properties")
     PropertyConfigurator.configure("src/main/resources/reduktorLog4j.properties")
 
-    BugIsolator.isolate(
-            "/home/fenstonsingel/kotlin-samples/set-a/3/BACKEND_bhugqgy_FILE.kt",
-            BugType.BACKEND, formula
-    )
+    BugIsolator.rankingFormula = Ochiai2RankingFormula
 
 
-    println("Isolations: ${BugIsolator.numberOfIsolations}")
-    println("Total isolation time: ${BugIsolator.totalIsolationTime}")
-    println("Average isolation time: ${BugIsolator.averageIsolationTime}")
-    println("Compilations: ${BugIsolator.numberOfCompilations}")
-    println("Time spent on instrumentation: ${CompilerInstrumentation.instrumentationTimer}")
-    println("Total coverage recording time: ${BugIsolator.totalPerformanceTime}")
-    println("Average coverage recording time: ${BugIsolator.averagePerformanceTime}")
-
-    BugIsolator.isolate(
-            "/home/fenstonsingel/kotlin-samples/set-a/3/BACKEND_pytmh.kt",
-            BugType.BACKEND, formula
-    )
+    BugIsolator.isolate("/home/fenstonsingel/kotlin-samples/set-a/3/BACKEND_bhugqgy_FILE.kt", BugType.BACKEND)
 
     println("Isolations: ${BugIsolator.numberOfIsolations}")
     println("Total isolation time: ${BugIsolator.totalIsolationTime}")
-    println("Average isolation time: ${BugIsolator.averageIsolationTime}")
+    println("Average isolation time: ${BugIsolator.meanIsolationTime}")
     println("Compilations: ${BugIsolator.numberOfCompilations}")
-    println("Time spent on instrumentation: ${CompilerInstrumentation.instrumentationTimer}")
-    println("Total coverage recording time: ${BugIsolator.totalPerformanceTime}")
-    println("Average coverage recording time: ${BugIsolator.averagePerformanceTime}")
+    println("Time spent on instrumentation: ${CompilerInstrumentation.timeSpentOnInstrumentation}")
+    println("Total coverage recording time: ${BugIsolator.totalInstrPerformanceTime}")
+    println("Average coverage recording time: ${BugIsolator.meanInstrPerformanceTime}")
+
+    BugIsolator.isolate("/home/fenstonsingel/kotlin-samples/set-a/3/BACKEND_pytmh.kt", BugType.BACKEND)
+
+    println("Isolations: ${BugIsolator.numberOfIsolations}")
+    println("Total isolation time: ${BugIsolator.totalIsolationTime}")
+    println("Average isolation time: ${BugIsolator.meanIsolationTime}")
+    println("Compilations: ${BugIsolator.numberOfCompilations}")
+    println("Time spent on instrumentation: ${CompilerInstrumentation.timeSpentOnInstrumentation}")
+    println("Total coverage recording time: ${BugIsolator.totalInstrPerformanceTime}")
+    println("Average coverage recording time: ${BugIsolator.meanInstrPerformanceTime}")
 
 }

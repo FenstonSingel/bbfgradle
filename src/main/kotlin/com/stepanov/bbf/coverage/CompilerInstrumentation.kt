@@ -16,11 +16,11 @@ object CompilerInstrumentation {
     val isEmpty: Boolean get() = methodProbes.isEmpty() && branchProbes.isEmpty()
 
     @JvmStatic fun recordMethodExecution(id: String) {
-        startPerformanceTimer()
+        startInstrumentationPerformanceTimer()
         if (shouldProbesBeRecorded) {
             methodProbes.merge(id, 1) { previous, one -> previous + one }
         }
-        pausePerformanceTimer()
+        pauseInstrumentationPerformanceTimer()
     }
 
     private fun recordBranchExecution(insn_id: String, result: String) {
@@ -33,25 +33,25 @@ object CompilerInstrumentation {
     }
 
     @JvmStatic fun recordUnaryRefCmp(a: Any?, insn_id: String) {
-        startPerformanceTimer()
+        startInstrumentationPerformanceTimer()
         if (shouldProbesBeRecorded) {
             val result = if (a == null) "A" else "B"
             recordBranchExecution(insn_id, result)
         }
-        pausePerformanceTimer()
+        pauseInstrumentationPerformanceTimer()
     }
 
     @JvmStatic fun recordBinaryRefCmp(a: Any?, b: Any?, insn_id: String) {
-        startPerformanceTimer()
+        startInstrumentationPerformanceTimer()
         if (shouldProbesBeRecorded) {
             val result = if (a !== b) "A" else "B"
             recordBranchExecution(insn_id, result)
         }
-        pausePerformanceTimer()
+        pauseInstrumentationPerformanceTimer()
     }
 
     @JvmStatic fun recordUnaryIntCmp(a: Int, insn_id: String, opcode: Int) {
-        startPerformanceTimer()
+        startInstrumentationPerformanceTimer()
         if (shouldProbesBeRecorded) {
             val result = if (when (opcode) {
                         Opcodes.IFEQ -> a == 0
@@ -64,11 +64,11 @@ object CompilerInstrumentation {
                     }) "A" else "B"
             recordBranchExecution(insn_id, result)
         }
-        pausePerformanceTimer()
+        pauseInstrumentationPerformanceTimer()
     }
 
     @JvmStatic fun recordBinaryIntCmp(a: Int, b: Int, insn_id: String, opcode: Int) {
-        startPerformanceTimer()
+        startInstrumentationPerformanceTimer()
         if (shouldProbesBeRecorded) {
             val result = if (when (opcode) {
                         Opcodes.IF_ICMPEQ -> a == b
@@ -81,7 +81,7 @@ object CompilerInstrumentation {
                     }) "A" else "B"
             recordBranchExecution(insn_id, result)
         }
-        pausePerformanceTimer()
+        pauseInstrumentationPerformanceTimer()
     }
 
     private val tableSwitches = mutableMapOf<String, Pair<Int, Int>>()
@@ -91,13 +91,13 @@ object CompilerInstrumentation {
     }
 
     @JvmStatic fun recordTableSwitch(key: Int, insn_id: String) {
-        startPerformanceTimer()
+        startInstrumentationPerformanceTimer()
         if (shouldProbesBeRecorded) {
             val (min, max) = tableSwitches[insn_id]!!
             val result = if (key < min || key > max) "DFLT" else key.toString()
             recordBranchExecution(insn_id, result)
         }
-        pausePerformanceTimer()
+        pauseInstrumentationPerformanceTimer()
     }
 
     private val lookupSwitches = mutableMapOf<String, IntArray>()
@@ -107,37 +107,37 @@ object CompilerInstrumentation {
     }
 
     @JvmStatic fun recordLookupSwitch(key: Int, insn_id: String) {
-        startPerformanceTimer()
+        startInstrumentationPerformanceTimer()
         if (shouldProbesBeRecorded) {
             val keys = lookupSwitches[insn_id]!!
             val result = if (key in keys) key.toString() else "DFLT"
             recordBranchExecution(insn_id, result)
         }
-        pausePerformanceTimer()
+        pauseInstrumentationPerformanceTimer()
     }
 
-    var instrumentationTimer = 0L
+    var timeSpentOnInstrumentation = 0L
         private set
 
-    @JvmStatic fun updateInstrumentationTimer(newTime: Long) {
-        instrumentationTimer += newTime
+    @JvmStatic fun increaseTimeSpentOnInstrumentation(newTime: Long) {
+        timeSpentOnInstrumentation += newTime
     }
 
-    var performanceTimer = 0L
+    var instrumentationPerformanceTime = 0L
         private set
 
-    private fun startPerformanceTimer() {
-        performanceTimer -= System.currentTimeMillis()
+    private fun startInstrumentationPerformanceTimer() {
+        instrumentationPerformanceTime -= System.currentTimeMillis()
     }
 
-    private fun pausePerformanceTimer() {
-        performanceTimer += System.currentTimeMillis()
+    private fun pauseInstrumentationPerformanceTimer() {
+        instrumentationPerformanceTime += System.currentTimeMillis()
     }
 
     fun clearRecords() {
         methodProbes.clear()
         branchProbes.clear()
-        performanceTimer = 0L
+        instrumentationPerformanceTime = 0L
     }
 
 }

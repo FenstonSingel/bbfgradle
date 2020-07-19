@@ -28,12 +28,12 @@ public class Transformer implements ClassFileTransformer {
         long startTime = System.currentTimeMillis();
 
         if (!CompilerInstrumentation.getShouldClassesBeInstrumented()) {
-            CompilerInstrumentation.updateInstrumentationTimer(System.currentTimeMillis() - startTime);
+            CompilerInstrumentation.increaseTimeSpentOnInstrumentation(System.currentTimeMillis() - startTime);
             return null;
         }
 
         if (!isClassRelevant(className)) {
-            CompilerInstrumentation.updateInstrumentationTimer(System.currentTimeMillis() - startTime);
+            CompilerInstrumentation.increaseTimeSpentOnInstrumentation(System.currentTimeMillis() - startTime);
             return null;
         }
 
@@ -47,7 +47,7 @@ public class Transformer implements ClassFileTransformer {
         classReader.accept(instrumenter, 0);
         byte[] newClassFile = classWriter.toByteArray();
 
-        CompilerInstrumentation.updateInstrumentationTimer(System.currentTimeMillis() - startTime);
+        CompilerInstrumentation.increaseTimeSpentOnInstrumentation(System.currentTimeMillis() - startTime);
         return newClassFile;
     }
 

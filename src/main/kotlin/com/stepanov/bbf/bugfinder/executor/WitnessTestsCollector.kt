@@ -30,9 +30,9 @@ class WitnessTestsCollector(
         checker.pathToFile = file.name
     }
 
-    var totalPerformanceTime = 0L
+    var totalInstrPerformanceTime = 0L
         private set
-    var averagePerformanceTime = 0L
+    var meanInstrPerformanceTime = 0L
         private set
     var numberOfCompilations = 0L
         private set
@@ -61,9 +61,9 @@ class WitnessTestsCollector(
         val (status, coverage) = compile(file.text)
         if (coverage != null) {
             numberOfCompilations++
-            val performanceTime = CompilerInstrumentation.performanceTimer
-            totalPerformanceTime += performanceTime
-            averagePerformanceTime += (performanceTime - averagePerformanceTime) / numberOfCompilations
+            val performanceTime = CompilerInstrumentation.instrumentationPerformanceTime
+            totalInstrPerformanceTime += performanceTime
+            meanInstrPerformanceTime += (performanceTime - meanInstrPerformanceTime) / numberOfCompilations
 
             tempCosineDistance = 1 - originalCoverage.cosineSimilarity(coverage)
             if (status) {

@@ -19,8 +19,8 @@ fun run(code: () -> Unit) {
         println("$entity: ${coverage[entity]}")
     }
 
-    println("Instrumentation time: ${CompilerInstrumentation.instrumentationTimer}")
-    println("Performance time: ${CompilerInstrumentation.performanceTimer}")
+    println("Instrumentation time: ${CompilerInstrumentation.timeSpentOnInstrumentation}")
+    println("Performance time: ${CompilerInstrumentation.instrumentationPerformanceTime}")
     println()
 }
 
