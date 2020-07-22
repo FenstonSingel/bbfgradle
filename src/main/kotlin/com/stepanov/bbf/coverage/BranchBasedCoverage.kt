@@ -2,7 +2,6 @@ package com.stepanov.bbf.coverage
 
 import kotlinx.serialization.Serializable
 
-// TODO method-level analogue
 @Serializable
 class BranchBasedCoverage(private val branchProbes: Map<String, BranchProbesResults>) : ProgramCoverage {
 
@@ -43,8 +42,6 @@ class BranchBasedCoverage(private val branchProbes: Map<String, BranchProbesResu
         return probeResults[probeName]
     }
 
-    override fun copy(): ProgramCoverage {
-        return BranchBasedCoverage(branchProbes.toMap())
-    }
+    override fun copy(): ProgramCoverage = BranchBasedCoverage(branchProbes.toMap())
 
 }

@@ -24,7 +24,7 @@ interface ProgramCoverage {
         }
 
         private fun createFromMethodProbes(): ProgramCoverage {
-            TODO("method-level analogue")
+            return MethodBasedCoverage(CompilerInstrumentation.methodProbes.toMap())
         }
 
         private fun createFromBranchProbes(): ProgramCoverage {

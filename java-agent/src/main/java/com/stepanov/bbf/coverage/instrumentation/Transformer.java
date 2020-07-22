@@ -72,7 +72,7 @@ public class Transformer implements ClassFileTransformer {
         // A necessary implementation has to be manually configured here.
 
         MethodInstrumenter instrumenter = new MethodInstrumenter(classWriter);
-        // BranchInstrumenter instrumenter = new BranchInstrumenter(classWriter);
+//        BranchInstrumenter instrumenter = new BranchInstrumenter(classWriter);
 
         classReader.accept(instrumenter, ClassReader.EXPAND_FRAMES);
         return classWriter.toByteArray();
