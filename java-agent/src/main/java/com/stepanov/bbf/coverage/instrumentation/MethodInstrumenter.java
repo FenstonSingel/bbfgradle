@@ -40,7 +40,7 @@ public class MethodInstrumenter extends ClassVisitor {
                 mv.visitLdcInsn(className + ":" + name + descriptor);
                 mv.visitMethodInsn(INVOKESTATIC,
                         "com/stepanov/bbf/coverage/CompilerInstrumentation",
-                        "recordProbeExecution",
+                        "recordMethodExecution",
                         "(Ljava/lang/String;)V",
                         false
                 );
