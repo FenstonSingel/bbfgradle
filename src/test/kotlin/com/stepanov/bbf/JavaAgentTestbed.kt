@@ -4,7 +4,7 @@ import com.stepanov.bbf.coverage.CompilerInstrumentation
 import com.stepanov.bbf.coverage.ProgramCoverage
 import org.jetbrains.kotlin.TestKotlinClass
 
-// TODO Better and automated Java agemt tests.
+// TODO Better and automated Java agent tests.
 
 fun run(code: () -> Unit) {
     CompilerInstrumentation.clearRecords()
@@ -14,7 +14,7 @@ fun run(code: () -> Unit) {
     CompilerInstrumentation.shouldProbesBeRecorded = false
 
     val coverage = ProgramCoverage.createFromProbes()
-    val entities = coverage.entities()
+    val entities = ProgramCoverage.entities(coverage)
     for (entity in entities) {
         println("$entity: ${coverage[entity]}")
     }

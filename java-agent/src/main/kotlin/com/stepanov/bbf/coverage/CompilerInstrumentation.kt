@@ -5,6 +5,12 @@ import kotlin.IllegalArgumentException
 
 object CompilerInstrumentation {
 
+    enum class CoverageType {
+        METHOD, BRANCH;
+    }
+
+    @JvmStatic var coverageType: CoverageType = CoverageType.METHOD
+
     @JvmStatic var shouldClassesBeInstrumented: Boolean = true
 
     @JvmStatic var shouldProbesBeRecorded: Boolean = false
@@ -13,7 +19,19 @@ object CompilerInstrumentation {
 
     val branchProbes = mutableMapOf<String, MutableMap<String, Int>>()
 
-    val isEmpty: Boolean get() = methodProbes.isEmpty() && branchProbes.isEmpty()
+    val isEmpty: Boolean get() =
+        when (coverageType) {
+            CoverageType.METHOD -> methodProbes.isEmpty()
+            CoverageType.BRANCH -> branchProbes.isEmpty()
+        }
+
+    fun clearRecords() {
+        when (coverageType) {
+            CoverageType.METHOD -> methodProbes.clear()
+            CoverageType.BRANCH -> branchProbes.clear()
+        }
+        instrumentationPerformanceTime = 0L
+    }
 
     @JvmStatic fun recordMethodExecution(id: String) {
         startInstrumentationPerformanceTimer()
@@ -132,12 +150,6 @@ object CompilerInstrumentation {
 
     private fun pauseInstrumentationPerformanceTimer() {
         instrumentationPerformanceTime += System.currentTimeMillis()
-    }
-
-    fun clearRecords() {
-        methodProbes.clear()
-        branchProbes.clear()
-        instrumentationPerformanceTime = 0L
     }
 
 }

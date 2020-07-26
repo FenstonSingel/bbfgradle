@@ -12,7 +12,7 @@ class ExecutionStatistics(val storage: Map<String, EntityExecutionStatistics>) {
                 bugCoverages: Iterable<ProgramCoverage>,
                 successCoverages: Iterable<ProgramCoverage>
         ): ExecutionStatistics {
-            val entities = origCoverage.entities()
+            val entities = ProgramCoverage.entities(origCoverage)
             val result = mutableMapOf<String, EntityExecutionStatistics>()
             for (entity in entities) {
                 var (execsInFails, skipsInFails) = origCoverage[entity]

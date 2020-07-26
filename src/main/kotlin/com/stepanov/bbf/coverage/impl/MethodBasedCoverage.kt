@@ -1,5 +1,6 @@
-package com.stepanov.bbf.coverage
+package com.stepanov.bbf.coverage.impl
 
+import com.stepanov.bbf.coverage.ProgramCoverage
 import kotlinx.serialization.Serializable
 
 @Serializable

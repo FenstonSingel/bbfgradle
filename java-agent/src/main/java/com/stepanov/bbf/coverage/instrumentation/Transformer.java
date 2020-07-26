@@ -1,12 +1,11 @@
 package com.stepanov.bbf.coverage.instrumentation;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.lang.instrument.ClassFileTransformer;
 import java.security.ProtectionDomain;
 import java.util.Arrays;
 import java.util.List;
 import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
 import com.stepanov.bbf.coverage.CompilerInstrumentation;
 
@@ -43,39 +42,25 @@ public class Transformer implements ClassFileTransformer {
 
         byte[] classFileCopy = Arrays.copyOf(classFile, classFile.length);
         ClassReader classReader = new ClassReader(classFileCopy);
-
-        byte[] newClassFile = performTransformation(classReader);
-        CompilerInstrumentation.increaseTimeSpentOnInstrumentation(System.currentTimeMillis() - startTime);
-        return newClassFile;
-    }
-
-    public byte[] transform(String className) throws IOException {
-        long startTime = System.currentTimeMillis();
-
-        if (isTransformationUnnecessary(className)) {
-            CompilerInstrumentation.increaseTimeSpentOnInstrumentation(System.currentTimeMillis() - startTime);
-            return null;
-        }
-
-        InputStream resource = ClassLoader.getSystemResourceAsStream(className + ".class");
-        if (resource == null) throw new IOException(String.format("Class %s was not loaded.", className));
-        ClassReader classReader = new ClassReader(resource);
-
-        byte[] newClassFile = performTransformation(classReader);
-        CompilerInstrumentation.increaseTimeSpentOnInstrumentation(System.currentTimeMillis() - startTime);
-        return newClassFile;
-    }
-
-    private byte[] performTransformation(ClassReader classReader) {
         ClassWriter classWriter = new ClassWriter(classReader, ClassWriter.COMPUTE_MAXS);
 
-        // A necessary implementation has to be manually configured here.
-
-        MethodInstrumenter instrumenter = new MethodInstrumenter(classWriter);
-//        BranchInstrumenter instrumenter = new BranchInstrumenter(classWriter);
+        ClassVisitor instrumenter;
+        switch (CompilerInstrumentation.getCoverageType()) {
+            case METHOD:
+                instrumenter = new MethodInstrumenter(classWriter);
+                break;
+            case BRANCH:
+                instrumenter = new BranchInstrumenter(classWriter);
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + CompilerInstrumentation.getCoverageType());
+        }
 
         classReader.accept(instrumenter, ClassReader.EXPAND_FRAMES);
-        return classWriter.toByteArray();
+        byte[] newClassFile = classWriter.toByteArray();
+
+        CompilerInstrumentation.increaseTimeSpentOnInstrumentation(System.currentTimeMillis() - startTime);
+        return newClassFile;
     }
 
 }

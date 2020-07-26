@@ -1,25 +1,26 @@
 package com.stepanov.bbf.coverage
 
+import com.stepanov.bbf.coverage.impl.BranchBasedCoverage
+import com.stepanov.bbf.coverage.impl.MethodBasedCoverage
 import kotlin.math.sqrt
 
 interface ProgramCoverage {
 
     companion object {
-        fun entities(coverages: Iterable<ProgramCoverage>): Set<String> {
+        fun entities(coverages: Iterable<ProgramCoverage>): List<String> {
             val result = mutableSetOf<String>()
             for (coverage in coverages) {
                 result += coverage.entities()
             }
-            return result
+            return result.toList()
         }
 
-        fun entities(vararg coverages: ProgramCoverage): Set<String> = entities(coverages.toList())
+        fun entities(vararg coverages: ProgramCoverage): List<String> = entities(coverages.toList())
 
         fun createFromProbes(): ProgramCoverage {
-            return if (CompilerInstrumentation.methodProbes.isNotEmpty()) {
-                createFromMethodProbes()
-            } else {
-                createFromBranchProbes()
+            return when (CompilerInstrumentation.coverageType) {
+                CompilerInstrumentation.CoverageType.METHOD -> createFromMethodProbes()
+                CompilerInstrumentation.CoverageType.BRANCH -> createFromBranchProbes()
             }
         }
 
