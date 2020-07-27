@@ -10,7 +10,7 @@ interface ProgramCoverage {
         fun entities(coverages: Iterable<ProgramCoverage>): List<String> {
             val result = mutableSetOf<String>()
             for (coverage in coverages) {
-                result += coverage.entities()
+                result += coverage.entities
             }
             return result.toList()
         }
@@ -38,11 +38,13 @@ interface ProgramCoverage {
         }
     }
 
-    fun entities(): Set<String>
+    val entities: Set<String>
 
     operator fun get(name: String): Pair<Int, Int>
 
     fun copy(): ProgramCoverage
+
+    val isEmpty: Boolean get() = entities().isEmpty()
 
     fun cosineSimilarity(other: ProgramCoverage): Double {
         var dotProduct = 0.0

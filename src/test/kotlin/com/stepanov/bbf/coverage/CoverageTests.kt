@@ -1,4 +1,4 @@
-package com.stepanov.bbf
+package com.stepanov.bbf.coverage
 
 class CoverageTests {
 

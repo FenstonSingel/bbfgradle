@@ -16,6 +16,7 @@ dependencies {
     implementation "org.ow2.asm:asm-commons:8.0.1"
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.jetbrains.kotlin', name: 'kotlin-test'
 }
 
 compileKotlin {
@@ -35,3 +36,5 @@ jar {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
 }
+
+jar.dependsOn test

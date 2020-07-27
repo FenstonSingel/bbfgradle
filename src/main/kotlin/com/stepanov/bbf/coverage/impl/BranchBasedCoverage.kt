@@ -25,15 +25,16 @@ class BranchBasedCoverage(private val branchProbes: Map<String, BranchProbesResu
         operator fun iterator() = results.iterator()
     }
 
-    override fun entities(): Set<String> {
-        val result = mutableSetOf<String>()
-        for ((branchName, probeResults) in branchProbes) {
-            for ((probeName, _) in probeResults) {
-                result += "$branchName#$probeName"
+    override val entities: Set<String>
+        get() {
+            val result = mutableSetOf<String>()
+            for ((branchName, probeResults) in branchProbes) {
+                for ((probeName, _) in probeResults) {
+                    result += "$branchName#$probeName"
+                }
             }
+            return result
         }
-        return result
-    }
 
     override fun get(name: String): Pair<Int, Int> {
         val breakPoint = name.indexOf("#")
@@ -44,5 +45,20 @@ class BranchBasedCoverage(private val branchProbes: Map<String, BranchProbesResu
     }
 
     override fun copy(): ProgramCoverage = BranchBasedCoverage(branchProbes.toMap())
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as BranchBasedCoverage
+
+        if (branchProbes != other.branchProbes) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return branchProbes.hashCode()
+    }
 
 }
