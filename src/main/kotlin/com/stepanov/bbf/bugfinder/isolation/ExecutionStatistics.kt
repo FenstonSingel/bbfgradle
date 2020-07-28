@@ -14,6 +14,7 @@ class ExecutionStatistics(val storage: Map<String, EntityExecutionStatistics>) {
         ): ExecutionStatistics {
             val entities = ProgramCoverage.entities(origCoverage)
             val result = mutableMapOf<String, EntityExecutionStatistics>()
+            // TODO It *might* be helpful to use the same number of failing and passing coverages.
             for (entity in entities) {
                 var (execsInFails, skipsInFails) = origCoverage[entity]
                 for (bugCoverage in bugCoverages) {

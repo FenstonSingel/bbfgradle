@@ -4,6 +4,9 @@ import com.stepanov.bbf.coverage.instrumentation.Transformer
 import org.junit.Test
 import kotlin.test.*
 
+/* These tests do very little: they simply check if *any* changes were or were not done.
+ * However, they are at least able to throw exceptions, unlike the ones where Java agent is
+ * used as a, well, Java agent. */
 class MinimalChecks {
 
     @Test

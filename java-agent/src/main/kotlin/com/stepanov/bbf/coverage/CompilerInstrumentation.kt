@@ -3,6 +3,8 @@ package com.stepanov.bbf.coverage
 import org.objectweb.asm.Opcodes
 import kotlin.IllegalArgumentException
 
+// TODO Create some sort of verification that both CompilerInstrumentation files are identical.
+// (or, alternatively, come up with a solution that doesn't require having two identical source files)
 object CompilerInstrumentation {
 
     enum class CoverageType {
@@ -10,6 +12,8 @@ object CompilerInstrumentation {
     }
 
     @JvmStatic var coverageType: CoverageType = CoverageType.METHOD
+
+    // TODO Create a way to switch between two hypothetical coverage capture modes painlessly.
 
     @JvmStatic var shouldClassesBeInstrumented: Boolean = true
 

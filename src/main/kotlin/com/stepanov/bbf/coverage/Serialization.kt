@@ -1,6 +1,6 @@
 package com.stepanov.bbf.coverage
 
-// TODO Serialization of a new implementation format.
+// TODO Serialization of a new coverage implementation.
 
 //import com.stepanov.bbf.coverage.data.Coverage
 

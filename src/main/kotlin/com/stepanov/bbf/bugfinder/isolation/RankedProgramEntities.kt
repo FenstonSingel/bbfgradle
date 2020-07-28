@@ -26,4 +26,10 @@ class RankedProgramEntities(val storage: Map<String, Double>, private val isRank
             .sortedWith( Comparator { a, b -> compare(a, b) } )
     }
 
+    // TODO Write tests for this function.
+    // TODO Write a function calculating cosine distance.
+
+    // TODO Write tests for this function.
+    // TODO Write a function calculating Kendall's tau function.
+
 }

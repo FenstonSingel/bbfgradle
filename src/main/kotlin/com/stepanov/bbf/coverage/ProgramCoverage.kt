@@ -38,6 +38,8 @@ interface ProgramCoverage {
         }
     }
 
+    // In most cases it is probably more preferable to use ProgramCoverage.entities(),
+    // even if there is only one coverage object to use it on.
     val entities: Set<String>
 
     operator fun get(name: String): Pair<Int, Int>
@@ -46,6 +48,7 @@ interface ProgramCoverage {
 
     val isEmpty: Boolean get() = entities().isEmpty()
 
+    // TODO Write tests for this function.
     fun cosineSimilarity(other: ProgramCoverage): Double {
         var dotProduct = 0.0
         var firstNormSquared = 0.0
