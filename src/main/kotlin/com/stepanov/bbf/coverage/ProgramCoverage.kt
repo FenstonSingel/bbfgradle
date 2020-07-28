@@ -48,7 +48,6 @@ interface ProgramCoverage {
 
     val isEmpty: Boolean get() = entities().isEmpty()
 
-    // TODO Write tests for this function.
     fun cosineSimilarity(other: ProgramCoverage): Double {
         var dotProduct = 0.0
         var firstNormSquared = 0.0
@@ -63,12 +62,16 @@ interface ProgramCoverage {
             firstNormSquared += firstNumberOfExecutions * firstNumberOfExecutions
             secondNormSquared += secondNumberOfExecutions * secondNumberOfExecutions
 
-            val firstNumberOfSkips = this[entity].second.toDouble()
-            val secondNumberOfSkips = other[entity].second.toDouble()
+            /* It is most probably unwise to artificially increase the dimensionality of the vector space.
+             * However, maybe it would be more beneficial if we find
+             * a way to assign good weights to instances of entities being "skipped". */
 
-            dotProduct += firstNumberOfSkips * secondNumberOfSkips
-            firstNormSquared += firstNumberOfSkips * firstNumberOfSkips
-            secondNormSquared += secondNumberOfSkips * secondNumberOfSkips
+            // val firstNumberOfSkips = if (firstNumberOfExecutions == 0.0) secondNumberOfExecutions else 0.0
+            // val secondNumberOfSkips = if (secondNumberOfExecutions == 0.0) firstNumberOfExecutions else 0.0
+
+            // dotProduct += firstNumberOfSkips * secondNumberOfSkips
+            // firstNormSquared += firstNumberOfSkips * firstNumberOfSkips
+            // secondNormSquared += secondNumberOfSkips * secondNumberOfSkips
         }
 
         return dotProduct / (sqrt(firstNormSquared) * sqrt(secondNormSquared))

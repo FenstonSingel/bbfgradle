@@ -37,10 +37,21 @@ fun main() {
     BugIsolator.rankingFormula = Ochiai2RankingFormula
 
 
-    BugIsolator.isolate("/home/fenstonsingel/kotlin-samples/set-a/3/BACKEND_bhugqgy_FILE.kt", BugType.BACKEND)
+    val ranking1 = BugIsolator.isolate("/home/fenstonsingel/kotlin-samples/set-a/3/BACKEND_bhugqgy_FILE.kt", BugType.BACKEND)
     statistics()
 
-    BugIsolator.isolate("/home/fenstonsingel/kotlin-samples/set-a/3/BACKEND_pytmh.kt", BugType.BACKEND)
+    val ranking2 = BugIsolator.isolate("/home/fenstonsingel/kotlin-samples/set-a/6/BACKEND_dooqtxk_FILE.kt", BugType.BACKEND)
     statistics()
+
+    println(ranking1.cosineSimilarity(ranking2))
+    println()
+    println()
+
+    val ranking3 = BugIsolator.isolate("/home/fenstonsingel/kotlin-samples/set-a/3/BACKEND_pytmh.kt", BugType.BACKEND)
+    statistics()
+
+    println(ranking1.cosineSimilarity(ranking3))
+    println()
+    println()
 
 }

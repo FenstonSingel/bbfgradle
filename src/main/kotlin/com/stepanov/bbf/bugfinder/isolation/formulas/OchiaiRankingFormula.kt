@@ -6,7 +6,7 @@ import kotlin.math.sqrt
 object OchiaiRankingFormula : RankingFormula {
 
     override fun calculate(ef: Double, sf: Double, es: Double, ss: Double): Double =
-        ef / sqrt((ef + es) * (ef + sf))
+            ef / sqrt((ef + es) * (ef + sf))
 
     override val isRankDescending = true
 

@@ -2,6 +2,7 @@ package com.stepanov.bbf.bugfinder.isolation
 
 import kotlinx.serialization.Serializable
 import kotlin.Comparator
+import kotlin.math.sqrt
 
 @Serializable
 class RankedProgramEntities(val storage: Map<String, Double>, private val isRankDescending: Boolean) {
@@ -26,8 +27,23 @@ class RankedProgramEntities(val storage: Map<String, Double>, private val isRank
             .sortedWith( Comparator { a, b -> compare(a, b) } )
     }
 
-    // TODO Write tests for this function.
-    // TODO Write a function calculating cosine distance.
+    fun cosineSimilarity(other: RankedProgramEntities): Double {
+        var dotProduct = 0.0
+        var firstNormSquared = 0.0
+        var secondNormSquared = 0.0
+
+        val entities = (this.storage.keys.toSet() + other.storage.keys.toSet()).toList()
+        for (entity in entities) {
+            val first = this.storage[entity] ?: 0.0
+            val second = other.storage[entity] ?: 0.0
+
+            dotProduct += first * second
+            firstNormSquared += first * first
+            secondNormSquared += second * second
+        }
+
+        return dotProduct / (sqrt(firstNormSquared) * sqrt(secondNormSquared))
+    }
 
     // TODO Write tests for this function.
     // TODO Write a function calculating Kendall's tau function.
