@@ -7,26 +7,48 @@ import com.stepanov.bbf.bugfinder.manager.BugType
 import com.stepanov.bbf.bugfinder.mutator.transformations.*
 import com.stepanov.bbf.reduktor.parser.PSICreator
 import org.jetbrains.kotlin.resolve.BindingContext
+import kotlin.math.sqrt
 
 object BugIsolator {
 
     var rankingFormula: RankingFormula = Ochiai2RankingFormula
 
-    var totalInstrPerformanceTime = 0L
-        private set
-    var meanInstrPerformanceTime = 0L
-        private set
-    var numberOfCompilations = 0L
-        private set
-    var totalIsolationTime = 0L
-        private set
-    var meanIsolationTime = 0L
-        private set
+    private val isolationTimes = mutableListOf<Long>()
     var numberOfIsolations = 0L
         private set
 
-    private val bugDistributionPerMutation = mutableMapOf<String, Long>()
-    private val successDistributionPerMutation = mutableMapOf<String, Long>()
+    val totalIsolationTime: Long get() = isolationTimes.sum()
+    val meanIsolationTime: Long get() = totalIsolationTime / numberOfIsolations
+    val isolationTimeSD: Long
+        get() {
+            val mean = meanIsolationTime
+            val sum = isolationTimes.fold(0L) { acc, l -> acc + (l - mean) * (l - mean) }.toDouble()
+            return sqrt(sum / if (numberOfIsolations == 1L) numberOfIsolations else numberOfIsolations - 1).toLong()
+        }
+    val minIsolationTime: Long get() = isolationTimes.min() ?: 0
+    val maxIsolationTime: Long get() = isolationTimes.max() ?: 0
+
+    private val instrPerformanceTimes = mutableListOf<Long>()
+    var numberOfCompilations = 0L
+        private set
+
+    val totalInstrPerformanceTime: Long get() = instrPerformanceTimes.sum()
+    val meanInstrPerformanceTime: Long get() = totalInstrPerformanceTime / numberOfCompilations
+
+    private val bugDistributionPerMutation = mutableMapOf<String, Pair<Long, Long>>()
+    private val successDistributionPerMutation = mutableMapOf<String, Pair<Long, Long>>()
+
+    val codeSampleQualityPerMutation: Map<String, Pair<Long, Long>>
+        get() {
+            val mutations = (bugDistributionPerMutation.keys + successDistributionPerMutation.keys).toSet()
+            val distribution = mutableMapOf<String, Pair<Long, Long>>()
+            for (mutation in mutations) {
+                val (cosDistSumF, numOfFails) = bugDistributionPerMutation[mutation] ?: -1L to 1L
+                val (cosDistSumP, numOfPasses) = successDistributionPerMutation[mutation] ?: -1L to 1L
+                distribution[mutation] = cosDistSumF / numOfFails to cosDistSumP / numOfPasses
+            }
+            return distribution
+        }
 
     val codeSampleDistributionPerMutation: Map<String, Pair<Double, Double>>
         get() {
@@ -35,24 +57,41 @@ object BugIsolator {
             val totalSuccesses = totalPassingCodeSamples
             val distribution = mutableMapOf<String, Pair<Double, Double>>()
             for (mutation in mutations) {
-                val createdBugs = (bugDistributionPerMutation[mutation] ?: 0).toDouble()
-                val createdSuccesses = (successDistributionPerMutation[mutation] ?: 0).toDouble()
+                val createdBugs = (bugDistributionPerMutation[mutation]?.second ?: 0).toDouble()
+                val createdSuccesses = (successDistributionPerMutation[mutation]?.second ?: 0).toDouble()
                 distribution[mutation] = createdBugs / totalBugs to createdSuccesses / totalSuccesses
             }
             return distribution
         }
 
-    val totalFailingCodeSamples: Long
-        get() = bugDistributionPerMutation.values.fold(0L) { acc, x -> acc + x }
-    val totalPassingCodeSamples: Long
-        get() = successDistributionPerMutation.values.fold(0L) { acc, x -> acc + x }
-    var meanFailingCodeSamples = 0L
-        private set
-    var meanPassingCodeSamples = 0L
-        private set
+    val totalFailingCodeSamples: Long get() = bugDistributionPerMutation.values.fold(0L) { acc, (_, x) -> acc + x }
+    val meanFailingCodeSamples: Long get() = totalFailingCodeSamples / numberOfIsolations.toInt()
+
+    val totalPassingCodeSamples: Long get() = successDistributionPerMutation.values.fold(0L) { acc, (_, x) -> acc + x }
+    val meanPassingCodeSamples: Long get() = totalPassingCodeSamples / numberOfIsolations.toInt()
+
+    private fun updateStatistics(collector: WitnessTestsCollector, time: Long) {
+        isolationTimes += time
+        numberOfIsolations++
+
+        instrPerformanceTimes += collector.instrPerformanceTimes
+        numberOfCompilations += collector.numberOfCompilations
+
+        collector.bugDistributionPerMutation.forEach { (key, value) ->
+            bugDistributionPerMutation.merge(key, value) {
+                (oldSum, oldNum), (newSum, newNum) -> oldSum + newSum to oldNum + newNum
+            }
+        }
+        collector.successDistributionPerMutation.forEach { (key, value) ->
+            successDistributionPerMutation.merge(key, value) {
+                (oldSum, oldNum), (newSum, newNum) -> oldSum + newSum to oldNum + newNum
+            }
+        }
+    }
+
 
     fun isolate(path: String, bugType: BugType, formula: RankingFormula = rankingFormula): RankedProgramEntities {
-        var isolationTime = -System.currentTimeMillis()
+        val timerStart = -System.currentTimeMillis()
 
         val creator = PSICreator("")
         val file = creator.getPSIForFile(path)
@@ -64,29 +103,7 @@ object BugIsolator {
         val executionStatistics = collector.executionStatistics
         val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, formula)
 
-        // Performance statistics.
-
-        isolationTime += System.currentTimeMillis()
-        numberOfIsolations++
-        totalIsolationTime += isolationTime
-        meanIsolationTime += (isolationTime - meanIsolationTime) / numberOfIsolations
-
-        numberOfCompilations += collector.numberOfCompilations
-        totalInstrPerformanceTime += collector.totalInstrPerformanceTime
-        meanInstrPerformanceTime += (collector.meanInstrPerformanceTime - meanInstrPerformanceTime) / numberOfIsolations
-
-        var createdBugs = 0L
-        var createdSuccesses = 0L
-        collector.bugDistributionPerMutation.forEach { (key, value) ->
-            bugDistributionPerMutation.merge(key, value) { old, new -> old + new }
-            createdBugs += value
-        }
-        collector.successDistributionPerMutation.forEach { (key, value) ->
-            successDistributionPerMutation.merge(key, value) { old, new -> old + new }
-            createdSuccesses += value
-        }
-        meanFailingCodeSamples += (createdBugs - meanFailingCodeSamples) / numberOfIsolations
-        meanPassingCodeSamples += (createdSuccesses - meanPassingCodeSamples) / numberOfIsolations
+        updateStatistics(collector, timerStart + System.currentTimeMillis())
 
         return rankedProgramEntities
     }

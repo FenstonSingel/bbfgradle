@@ -31,18 +31,16 @@ class WitnessTestsCollector(
         checker.pathToFile = file.name
     }
 
-    var totalInstrPerformanceTime = 0L
-        private set
-    var meanInstrPerformanceTime = 0L
-        private set
+    private val _instrPerformanceTimes = mutableListOf<Long>()
+    val instrPerformanceTimes: List<Long> get() = _instrPerformanceTimes.toList()
     var numberOfCompilations = 0L
         private set
 
-    val bugDistributionPerMutation = mutableMapOf<String, Long>()
-    val successDistributionPerMutation = mutableMapOf<String, Long>()
+    val bugDistributionPerMutation = mutableMapOf<String, Pair<Long, Long>>()
+    val successDistributionPerMutation = mutableMapOf<String, Pair<Long, Long>>()
 
     private fun compile(text: String): Pair<Boolean, ProgramCoverage?> {
-        val status = checker.checkTest(text)
+        val status = checker.checkTest(text, "tmp/tmp.kt")
         var coverage: ProgramCoverage? = null
         if (!CompilerInstrumentation.isEmpty) {
             coverage = ProgramCoverage.createFromProbes()
@@ -57,25 +55,23 @@ class WitnessTestsCollector(
         originalCoverage = coverage
     }
 
-        private var tempCosineDistance: Double = 0.0
+    private var tempCosineDistance: Double = 0.0
 
     override fun checkCompiling(file: KtFile): Boolean {
         val (status, coverage) = compile(file.text)
         if (coverage != null) {
             // Time performance statistics.
+            _instrPerformanceTimes += CompilerInstrumentation.instrumentationPerformanceTime
             numberOfCompilations++
-            val performanceTime = CompilerInstrumentation.instrumentationPerformanceTime
-            totalInstrPerformanceTime += performanceTime
-            meanInstrPerformanceTime += (performanceTime - meanInstrPerformanceTime) / numberOfCompilations
-
-            // Mutation usefulness statistics.
-            if (status) {
-                bugDistributionPerMutation.merge(Transformation.currentMutation, 1) { previous, one -> previous + one }
-            } else {
-                successDistributionPerMutation.merge(Transformation.currentMutation, 1) { previous, one -> previous + one }
-            }
 
             tempCosineDistance = 1 - originalCoverage.cosineSimilarity(coverage)
+
+            // Mutation usefulness statistics.
+            (if (status) bugDistributionPerMutation else successDistributionPerMutation)
+                    .merge(Transformation.currentMutation, (tempCosineDistance * 10E7).toLong() to 1L) {
+                        (prevSum, prevNum), (newCD, one) -> prevSum + newCD to prevNum + one
+                    }
+
             if (status) {
                 bugDatabase.add(coverage.copy())
             } else {
