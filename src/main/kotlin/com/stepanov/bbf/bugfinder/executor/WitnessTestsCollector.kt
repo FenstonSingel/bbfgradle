@@ -91,12 +91,16 @@ class WitnessTestsCollector(
         isSortingReversed = true
     )
 
+    val numberOfBugs get() = bugDatabase.size
+
     private val successDatabase = BoundedSortedByModelElementSet(
         originalCoverage.copy(),
         100,
         Comparator { _, _ -> (tempCosineDistance * 10E7).toInt() },
         isSortingReversed = false
     )
+
+    val numberOfSuccesses get() = successDatabase.size
 
     val executionStatistics: ExecutionStatistics
         get() = ExecutionStatistics.compose(originalCoverage, bugDatabase.toList(), successDatabase.toList())

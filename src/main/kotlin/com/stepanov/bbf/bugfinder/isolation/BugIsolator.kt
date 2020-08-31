@@ -70,6 +70,11 @@ object BugIsolator {
     val totalPassingCodeSamples: Long get() = successDistributionPerMutation.values.fold(0L) { acc, (_, x) -> acc + x }
     val meanPassingCodeSamples: Long get() = totalPassingCodeSamples / numberOfIsolations.toInt()
 
+    var lastNumberOfFailingMutants: Int = 0
+        private set
+    var lastNumberOfPassingMutants: Int = 0
+        private set
+
     private fun updateStatistics(collector: WitnessTestsCollector, time: Long) {
         isolationTimes += time
         numberOfIsolations++
@@ -87,6 +92,9 @@ object BugIsolator {
                 (oldSum, oldNum), (newSum, newNum) -> oldSum + newSum to oldNum + newNum
             }
         }
+
+        lastNumberOfFailingMutants = collector.numberOfBugs
+        lastNumberOfPassingMutants = collector.numberOfSuccesses
     }
 
 

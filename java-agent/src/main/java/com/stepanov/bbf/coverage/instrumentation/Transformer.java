@@ -11,16 +11,21 @@ import com.stepanov.bbf.coverage.CompilerInstrumentation;
 
 public class Transformer implements ClassFileTransformer {
 
-    // TODO Look into blocking more supposedly auxiliary packages.
-    List<String> blocklist = Arrays.asList("cli");
+    // TODO Look into blocking (even) more supposedly auxiliary packages.
+    List<String> blocklist = Arrays.asList("cli", "diagnostics", "utils", "container");
+//    List<String> allowlist = Arrays.asList("backend", "frontend", "fir");
 
     private boolean isTransformationUnnecessary(String className) {
         if (!CompilerInstrumentation.getShouldClassesBeInstrumented()) return true;
         if (!className.startsWith("org/jetbrains/kotlin/")) return true;
+        List<String> tokens = Arrays.asList(className.split("[/$]"));
         for (String blockedEntry : blocklist) {
-            // TODO It **might** be better to break className into a set of '/'-separated substrings.
-            if (className.contains(blockedEntry)) return true;
+            if (tokens.contains(blockedEntry)) return true;
         }
+//        for (String allowedEntry : allowlist) {
+//            if (tokens.contains(allowedEntry)) return false;
+//        }
+//        return true;
         return false;
     }
 
