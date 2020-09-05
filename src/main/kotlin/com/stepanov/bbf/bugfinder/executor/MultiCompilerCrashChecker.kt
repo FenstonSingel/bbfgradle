@@ -142,12 +142,14 @@ open class MultiCompilerCrashChecker(private val compiler: CommonCompiler?) : Co
 //            alreadyChecked[hash] = false
 //            return false
 //        }
-        val oldText = File(pathToFile).bufferedReader().readText()
-        var writer = File(pathToFile).bufferedWriter()
+        val file = File(pathToFile)
+        if (!file.exists()) file.createNewFile()
+        val oldText = file.bufferedReader().readText()
+        var writer = file.bufferedWriter()
         writer.write(text)
         writer.close()
         val res = compiler!!.isCompilerBug(pathToFile)
-        writer = File(pathToFile).bufferedWriter()
+        writer = file.bufferedWriter()
         writer.write(oldText)
         writer.close()
         alreadyChecked[text.hashCode()] = res

@@ -43,8 +43,8 @@ fun statistics() {
 }
 
 val coverageType = "${CompilerInstrumentation.coverageType}"
-const val set = "set-a-1"
-const val tag = "$set-isolationResult-0"
+const val set = "set-b-1"
+const val tag = "$set-isolationResultWithKendall-1"
 
 const val rankingsPath = "/home/fenstonsingel/isolation-stats/results"
 
@@ -67,11 +67,20 @@ fun main() {
     PropertyConfigurator.configure("src/main/resources/reduktorLog4j.properties")
 
     println("Current coverage: ${CompilerInstrumentation.coverageType}")
+
+//    numerateDataSet(File("/home/fenstonsingel/kotlin-samples/$set/"))
+
     compareRankings(
-            File("/home/fenstonsingel/kotlin-samples/$set/"),
-            "/home/fenstonsingel/isolation-stats/comparisons/$coverageType/$tag.log"
+        File("/home/fenstonsingel/kotlin-samples/$set/"),
+        "/home/fenstonsingel/isolation-stats/comparisons/$coverageType/$tag.log",
+        true
     )
-    //checkStability(File("/home/fenstonsingel/kotlin-samples/stability-tests/"), 10, 10)
+
+//    checkStability(
+//        File("/home/fenstonsingel/kotlin-samples/$set/"),
+//        75, 3,
+//        "/home/fenstonsingel/isolation-stats/comparisons/$coverageType/$tag.log"
+//    )
 
 }
 
@@ -79,7 +88,7 @@ data class Sample(val group: Int, val number: Int) {
     override fun toString(): String = "$group/$number"
 }
 
-fun compareRankings(file: File, outputPath: String) {
+fun compareRankings(file: File, outputPath: String, isKendall: Boolean = false) {
     val regex = Regex("""(\d+)/([^/]+)\.kt${'$'}""")
     val rankings = mutableMapOf<Sample, RankedProgramEntities>()
     file.walk().sortedBy { it.absolutePath }.forEach {
@@ -101,7 +110,10 @@ fun compareRankings(file: File, outputPath: String) {
     for ((sample1, ranking1) in rankings) {
         for ((sample2, ranking2) in rankings) {
             if (sample1 != sample2 && comparisons.find { (s1, s2, _) -> s1 == sample2 && s2 == sample1 } == null) {
-                comparisons += Triple(sample1, sample2, ranking1.cosineSimilarity(ranking2))
+                comparisons += Triple(
+                    sample1, sample2,
+                    if (isKendall) ranking1.kendallTauDistance(ranking2).toDouble() else ranking1.cosineSimilarity(ranking2)
+                )
             }
         }
     }
@@ -116,20 +128,27 @@ fun compareRankings(file: File, outputPath: String) {
     }
 }
 
-// TODO update file management
-fun checkStability(file: File, numberOfSamples: Int, numberOfIterations: Int) {
+fun checkStability(file: File, numberOfSamples: Int, numberOfIterations: Int, outputPath: String) {
     val regex = Regex("""/([^/]+)\.kt${'$'}""")
     val comparisons = mutableMapOf<String, List<Double>>()
+    val allFailingMutants = mutableMapOf<String, List<Int>>()
+    val allPassingMutants = mutableMapOf<String, List<Int>>()
     file.walk().filter { it.isFile }.toList().shuffled().take(numberOfSamples).forEach { sample ->
         val sourceFilePath = sample.absolutePath
         val matchResult = regex.find(sourceFilePath)
         if (matchResult != null) {
             val rankings = mutableListOf<RankedProgramEntities>()
+            val failingMutants = mutableListOf<Int>()
+            val passingMutants = mutableListOf<Int>()
             for (x in 0 until numberOfIterations) {
-                rankings += BugIsolator.isolate(sourceFilePath, BugType.BACKEND)
+                val ranking = BugIsolator.isolate(sourceFilePath, BugType.BACKEND)
+                isolationStats("${sample.parentFile.name}/${sample.nameWithoutExtension}/$x", ranking)
                 logger.debug("finished isolating $sourceFilePath")
                 logger.debug("")
                 statistics()
+                rankings += ranking
+                failingMutants += BugIsolator.lastNumberOfFailingMutants
+                passingMutants += BugIsolator.lastNumberOfPassingMutants
             }
             val localComparisons = mutableListOf<Double>()
             for (i in 0 until rankings.size) {
@@ -138,18 +157,27 @@ fun checkStability(file: File, numberOfSamples: Int, numberOfIterations: Int) {
                 }
             }
             comparisons[sourceFilePath] = localComparisons
+            allFailingMutants[sourceFilePath] = failingMutants
+            allPassingMutants[sourceFilePath] = passingMutants
         }
     }
     statistics()
-    println("Current coverage: ${CompilerInstrumentation.coverageType}")
-    println()
-    for ((path, comparisonsList) in comparisons) {
-        println(path)
-        println("Mean similarity value: ${comparisonsList.average()}")
-        println("Min similarity value: ${comparisonsList.min()}")
-        println("Max similarity value: ${comparisonsList.max()}")
-        println("Similarity value's range: ${comparisonsList.max()!! - comparisonsList.min()!!}")
-        println()
+    File(outputPath.substringBeforeLast('/')).mkdirs()
+    File(outputPath).printWriter().use { writer ->
+        writer.println("Current coverage: ${CompilerInstrumentation.coverageType}")
+        writer.println()
+        for ((path, comparisonsList) in comparisons) {
+            writer.println(path)
+            writer.println("Numbers of failing mutants: ${allFailingMutants[path]}")
+            writer.println("Average number of failing mutants: ${allFailingMutants[path]!!.average()}")
+            writer.println("Numbers of passing mutants: ${allPassingMutants[path]}")
+            writer.println("Average number of passing mutants: ${allPassingMutants[path]!!.average()}")
+            writer.println("Mean similarity value: ${comparisonsList.average()}")
+            writer.println("Min similarity value: ${comparisonsList.min()}")
+            writer.println("Max similarity value: ${comparisonsList.max()}")
+            writer.println("Similarity value's range: ${comparisonsList.max()!! - comparisonsList.min()!!}")
+            writer.println()
+        }
     }
 }
 
