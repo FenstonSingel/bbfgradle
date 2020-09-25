@@ -10,7 +10,6 @@ import com.stepanov.bbf.reduktor.util.getAllParentsWithoutNode
 import com.stepanov.bbf.reduktor.util.replaceThis
 import org.apache.log4j.Logger
 import org.bitbucket.cowwoc.diffmatchpatch.DiffMatchPatch
-import org.jacoco.core.data.ExecutionDataStore
 import org.jetbrains.kotlin.cli.common.messages.CompilerMessageLocation
 import org.jetbrains.kotlin.psi.KtFile
 import org.jetbrains.kotlin.psi.KtPsiFactory

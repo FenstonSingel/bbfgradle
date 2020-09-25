@@ -2,7 +2,6 @@ package com.stepanov.bbf.bugfinder.executor
 
 import com.intellij.lang.ASTNode
 import com.stepanov.bbf.reduktor.executor.error.Error
-import org.jacoco.core.data.ExecutionDataStore
 import org.jetbrains.kotlin.psi.KtPsiFactory
 import java.io.File
 

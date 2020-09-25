@@ -20,7 +20,6 @@ class ChangeRandomASTNodesFromAnotherTrees : Transformation() {
         val nodes = file.node.getAllChildrenNodes().filter { it.elementType !in NodeCollector.excludes }
         log.debug("ChangeRandomASTNodesFromAnotherTrees mutations: $randConst tries")
         for (i in 1 .. randConst) {
-            log.debug("Try №$i of $randConst")
             val randomNode = nodes[Random.nextInt(0, nodes.size - 1)]
             //Searching nodes of same type in another files
             val line = File("database.txt").bufferedReader().lines()

@@ -17,7 +17,6 @@ class ChangeRandomASTNodes : Transformation() {
         val numOfSwaps = Random.nextInt(numOfSwaps.first, numOfSwaps.second)
         log.debug("ChangeRandomASTNodes mutations: $numOfSwaps swaps")
         for (i in 1 .. numOfSwaps) {
-            log.debug("Swap №$i of $numOfSwaps")
             val children = file.node.getAllChildrenNodes()
             //Swap random nodes
             var randomNode1 = children[Random.nextInt(children.size)]

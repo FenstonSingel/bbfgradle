@@ -42,7 +42,6 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.14.0"
-    compile group: 'org.jacoco', name: 'org.jacoco.core', version: '0.8.5'
     compile group: 'com.android.tools.external.com-intellij', name: 'intellij-core', version: '26.5.0'
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-compiler', version: "${kotlinVersion}"
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-compiler-embeddable', version: "${kotlinVersion}"
@@ -50,6 +49,9 @@ dependencies {
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-js', version: "${kotlinVersion}"
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-test-js', version: "${kotlinVersion}"
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: "${kotlinVersion}"
+
+    implementation "org.ow2.asm:asm:8.0.1"
+    implementation "org.ow2.asm:asm-commons:8.0.1"
 
     //Reduktor
     compile "commons-io:commons-io:2.6"

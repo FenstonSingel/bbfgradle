@@ -6,6 +6,7 @@ import com.stepanov.bbf.bugfinder.isolation.formulas.Ochiai2RankingFormula
 import com.stepanov.bbf.bugfinder.manager.BugType
 import com.stepanov.bbf.bugfinder.mutator.transformations.*
 import com.stepanov.bbf.reduktor.parser.PSICreator
+import org.apache.log4j.Logger
 import org.jetbrains.kotlin.resolve.BindingContext
 import kotlin.math.sqrt
 
@@ -98,15 +99,23 @@ object BugIsolator {
     }
 
 
-    fun isolate(path: String, bugType: BugType, formula: RankingFormula = rankingFormula): RankedProgramEntities {
+    fun isolate(path: String, bugType: BugType, formula: RankingFormula = rankingFormula): RankedProgramEntities? {
         val timerStart = -System.currentTimeMillis()
 
         val creator = PSICreator("")
         val file = creator.getPSIForFile(path)
         Transformation.file = file
-        val collector = WitnessTestsCollector(bugType, listOf(JVMCompiler("-Xnew-inference")))
+
+        val collector: WitnessTestsCollector?
+        try {
+            collector = WitnessTestsCollector(bugType, listOf(JVMCompiler()))
+        } catch (e: NoBugFoundException) {
+            logger.debug(e.message)
+            return null
+        }
+
         Transformation.checker = collector
-        mutate(creator.ctx)
+            mutate(creator.ctx, collector)
 
         val executionStatistics = collector.executionStatistics
         val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, formula)
@@ -116,7 +125,7 @@ object BugIsolator {
         return rankedProgramEntities
     }
 
-    private fun mutate(context: BindingContext?) {
+    private fun mutate(context: BindingContext?, collector: WitnessTestsCollector) {
         val mutations = mutableListOf(
                 AddBlockToExpression(),
                 AddBracketsToExpression(),
@@ -143,7 +152,12 @@ object BugIsolator {
             mutations += ReinitProperties(context)
         }
         for (mutation in mutations) {
-            executeMutation(mutation)
+            collector.clearOverallCounters()
+            try {
+                executeMutation(mutation)
+            } catch (e: ExcessiveMutationException) {
+                logger.debug(e.message)
+            }
         }
     }
 
@@ -151,5 +165,7 @@ object BugIsolator {
         Transformation.currentMutation = t.name
         t.transform()
     }
+
+    private val logger: Logger = Logger.getLogger("isolationTestbedLogger")
 
 }
