@@ -119,157 +119,108 @@ class TransformationManager(private val ktFiles: List<KtFile>) {
         var oldRes = file.text
 //            DeleteComments(CCTC).transform(rFile)
 
-        while (true) {
-            if (ReduKtorProperties.getPropAsBoolean("TRANSFORMATIONS") == true) {
-                RemoveSuperTypeList(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY RemoveSuperTypeList = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER RemoveSuperTypeList ${rFile.text != oldRes}")
-                SimplifyControlExpression(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY SimplifyControlExpression = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER SimplifyControlExpression ${rFile.text != oldRes}")
-                SimplifyFunAndProp(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY SimplifyFunAndProp = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER SimplifyFunAndProp ${rFile.text != oldRes}")
-                ReplaceBlockExpressionToBody(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY ReplaceBlockExpressionToBody = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER ReplaceBlockExpressionToBody ${rFile.text != oldRes}")
-                SimplifyWhen(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY SimplifyWhen = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER SimplifyWhen ${rFile.text != oldRes}")
-                ReturnValueToVoid(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY ReturnValueToVoid = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER ReturnValueToVoid ${rFile.text != oldRes}")
-                ElvisOperatorSimplifier(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY ElvisOperatorSimplifier = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER ElvisOperatorSimplifier ${rFile.text != oldRes}")
-                TryCatchDeleter(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY TryCatchDeleter = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER TryCatchDeleter ${rFile.text != oldRes}")
-                SimplifyIf(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY SimplifyIf = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER SimplifyIf ${rFile.text != oldRes}")
-                SimplifyFor(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY SimplifyFor = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER SimplifyFor ${rFile.text != oldRes}")
-                //SimplifyLambdaExpression(rFile, CCTC).transform()
-//                log.debug("VERIFY SimplifyLambdaExpression = ${checker.checkTest(rFile.text)}")
-//                log.debug("CHANGES AFTER SimplifyLambdaExpression ${rFile.text != oldRes}")
-                RemoveInheritance(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY RemoveInheritance = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER RemoveInheritance ${rFile.text != oldRes}")
-                SimplifyInheritance(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY SimplifyInheritance = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER SimplifyInheritance ${rFile.text != oldRes}")
-                SimplifyConstructor(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("CHANGES AFTER SimplifyConstructor = ${rFile.text != oldRes}")
-                log.debug("VERIFY TRYCATCH = ${checker.checkTest(rFile.text)}")
-                ReturnValueToConstant(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("CHANGES AFTER ReturnValueToConstant = ${rFile.text != oldRes}")
-                SimplifyBlockExpression(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("CHANGES AFTER SimplifyBlockExpression = ${rFile.text != oldRes}")
-                log.debug("VERIFY SimplifyBlockExpression = ${checker.checkTest(rFile.text)}")
-                SimplifyStringConstants(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY SimplifyStringConstants = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER SimplifyStringConstants ${rFile.text != oldRes}")
-            }
-            if (ReduKtorProperties.getPropAsBoolean("SLICING") == true) {
-                var errorInfo = checker.getErrorInfo()
-                log.debug("ERROR INFO = $errorInfo")
-                Slicer(rFile, checker)
-                    .computeSlice(errorInfo.line, Slicer.Level.INTRAPROCEDURAL)
-                log.debug("VERIFY INTREPR = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER INTREPR ${rFile.text != oldRes}")
-                errorInfo = checker.reinit()
-                Slicer(rFile, checker)
-                    .computeSlice(errorInfo.line, Slicer.Level.FUNCTION)
-                log.debug("VERIFY FUNC = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER FUNC ${rFile.text != oldRes}")
-                errorInfo = checker.reinit()
-                Slicer(rFile, checker)
-                    .computeSlice(errorInfo.line, Slicer.Level.CLASS)
-                log.debug("CHANGES AFTER CLASS ${rFile.text != oldRes}")
-                log.debug("VERIFY CLASS = ${checker.checkTest(rFile.text)}")
-            }
-            if (ReduKtorProperties.getPropAsBoolean("TRANSFORMATIONS") == true) {
-//                //Get context
-                File(rFile.name).writeText(rFile.text)
-                val creator = PSICreator("")
-                rFile = creator.getPSIForFile(rFile.name, true)
-                if (creator.ctx != null) {
-                    MinorSimplifyings(rFile, checker, creator.ctx!!).transform()
-                    rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                    log.debug("VERIFY MinorSimplifyings = ${checker.checkTest(rFile.text)}")
-                    log.debug("CHANGES AFTER MinorSimplifyings ${rFile.text != oldRes}")
-                }
-                RemoveParameterFromDeclaration(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY RemoveParameterFromDeclaration = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER RemoveParameterFromDeclaration ${rFile.text != oldRes}")
-                FunInliner(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY FunInliner = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER FunInliner ${rFile.text != oldRes}")
-                ReplaceArgOnTODO(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("VERIFY ReplaceArgOnTODO = ${checker.checkTest(rFile.text)}")
-                log.debug("CHANGES AFTER ReplaceArgOnTODO ${rFile.text != oldRes}")
-                val newText = PeepholePasses(rFile.text, checker, false).transform()
-                log.debug("CHANGES AFTER PEEPHOLE ${newText != oldRes}")
-                log.debug("VERIFY PEEPHOLE = ${checker.checkTest(newText)}")
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, newText)
-                log.debug("UPDATED ${checker.checkTest(rFile.text)}")
-                ConstructionsDeleter(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("CHANGES AFTER EMPTY ${rFile.text != oldRes}")
-                log.debug("VERIFY EMPTY = ${checker.checkTest(rFile.text)}")
-            }
-            if (ReduKtorProperties.getPropAsBoolean("FASTREDUCE") == true) {
-                PSIReducer(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("CHANGES AFTER FASTREDUCE ${rFile.text != oldRes}")
-                log.debug("VERIFY FASTREDUCE = ${checker.checkTest(rFile.text)}")
-            }
-            if (ReduKtorProperties.getPropAsBoolean("HDD") == true) {
-                val HDD = HierarchicalDeltaDebugger(rFile.node, checker)
-                HDD.hdd()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("CHANGES AFTER HDD ${rFile.text != oldRes}")
-                log.debug("VERIFY HDD = ${checker.checkTest(rFile.text)}")
-            }
-            if (ReduKtorProperties.getPropAsBoolean("TRANSFORMATIONS") == true) {
-                EqualityMapper(rFile, checker).transform()
-                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-                log.debug("CHANGES AFTER EqualityMapper ${rFile.text != oldRes}")
-                log.debug("VERIFY EqualityMapper = ${checker.checkTest(rFile.text)}")
-            }
-            RemoveWhitespaces(rFile, checker).transform()
+        fun performTransformation(name: String, action: () -> Unit) {
+            if (Thread.interrupted()) throw InterruptedException()
+            action()
             rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
-            log.debug("CURRENT RESULT = ${rFile.text}")
-            if (rFile.text.filterNot { it.isWhitespace() } == oldRes.filterNot { it.isWhitespace() }) {
-                //if (rFile.text.filterNot { it == '\n' } == oldRes.filterNot { it == '\n' }) {
-                break
+            log.debug("VERIFY $name = ${checker.checkTest(rFile.text)}")
+            log.debug("CHANGES AFTER $name ${rFile.text != oldRes}")
+        }
+
+        fun performTransformations(list: List<Pair<String, () -> Unit>>) {
+            for ((name, action) in list) {
+                performTransformation(name, action)
             }
-            oldRes = rFile.text
+        }
+
+        while (true) {
+            var isInterrupted = false
+            try {
+                if (ReduKtorProperties.getPropAsBoolean("TRANSFORMATIONS") == true) {
+                    val commonTransformations = listOf(
+                        "RemoveSuperTypeList" to { RemoveSuperTypeList(rFile, checker).transform() },
+                        "SimplifyControlExpression" to { SimplifyControlExpression(rFile, checker).transform() },
+                        "SimplifyFunAndProp" to { SimplifyFunAndProp(rFile, checker).transform() },
+                        "ReplaceBlockExpressionToBody" to { ReplaceBlockExpressionToBody(rFile, checker).transform() },
+                        "SimplifyWhen" to { SimplifyWhen(rFile, checker).transform() },
+                        "ReturnValueToVoid" to { ReturnValueToVoid(rFile, checker).transform() },
+                        "ElvisOperatorSimplifier" to { ElvisOperatorSimplifier(rFile, checker).transform() },
+                        "TryCatchDeleter" to { TryCatchDeleter(rFile, checker).transform() },
+                        "SimplifyIf" to { SimplifyIf(rFile, checker).transform() },
+                        "SimplifyFor" to { SimplifyFor(rFile, checker).transform() },
+                        "RemoveInheritance" to { RemoveInheritance(rFile, checker).transform() },
+                        "SimplifyInheritance" to { SimplifyInheritance(rFile, checker).transform() },
+                        "SimplifyConstructor" to { SimplifyConstructor(rFile, checker).transform() },
+                        "ReturnValueToConstant" to { ReturnValueToConstant(rFile, checker).transform() },
+                        "SimplifyBlockExpression" to { SimplifyBlockExpression(rFile, checker).transform() },
+                        "SimplifyStringConstants" to { SimplifyStringConstants(rFile, checker).transform() },
+                        "RemoveParameterFromDeclaration" to {
+                            RemoveParameterFromDeclaration(rFile, checker).transform()
+                        },
+                        "FunInliner" to { FunInliner(rFile, checker).transform() },
+                        "ReplaceArgOnTODO" to { ReplaceArgOnTODO(rFile, checker).transform() },
+                        "ConstructionsDeleter" to { ConstructionsDeleter(rFile, checker).transform() },
+                        "EqualityMapper" to { EqualityMapper(rFile, checker).transform() }
+                    )
+                    performTransformations(commonTransformations)
+
+                    File(rFile.name).writeText(rFile.text)
+                    val creator = PSICreator("")
+                    rFile = creator.getPSIForFile(rFile.name, true)
+                    if (creator.ctx != null) {
+                        performTransformation("MinorSimplifyings") {
+                            MinorSimplifyings(rFile, checker, creator.ctx!!).transform()
+                        }
+                    }
+
+                    if (Thread.interrupted()) throw InterruptedException()
+                    val newText = PeepholePasses(rFile.text, checker, false).transform()
+                    log.debug("CHANGES AFTER PEEPHOLE ${newText != oldRes}")
+                    log.debug("VERIFY PEEPHOLE = ${checker.checkTest(newText)}")
+                    rFile = KtPsiFactory(rFile.project).createFile(rFile.name, newText)
+                    log.debug("UPDATED ${checker.checkTest(rFile.text)}")
+                }
+                if (ReduKtorProperties.getPropAsBoolean("SLICING") == true) {
+                    var errorInfo = checker.getErrorInfo()
+                    log.debug("ERROR INFO = $errorInfo")
+                    val slicingTransformations = listOf(
+                        "INTRAPROCEDURAL" to {
+                            Slicer(rFile, checker).computeSlice(errorInfo.line, Slicer.Level.INTRAPROCEDURAL)
+                        },
+                        "FUNCTION" to {
+                            errorInfo = checker.reinit()
+                            Slicer(rFile, checker).computeSlice(errorInfo.line, Slicer.Level.FUNCTION)
+                        },
+                        "CLASS" to {
+                            errorInfo = checker.reinit()
+                            Slicer(rFile, checker).computeSlice(errorInfo.line, Slicer.Level.CLASS)
+                        }
+                    )
+                    performTransformations(slicingTransformations)
+                }
+                if (ReduKtorProperties.getPropAsBoolean("FASTREDUCE") == true) {
+                    performTransformation("FASTREDUCE") { PSIReducer(rFile, checker).transform() }
+                }
+                if (ReduKtorProperties.getPropAsBoolean("HDD") == true) {
+                    performTransformation("HDD") { HierarchicalDeltaDebugger(rFile.node, checker).hdd() }
+                }
+            } catch (e: InterruptedException) {
+                isInterrupted = true
+            } finally {
+                RemoveWhitespaces(rFile, checker).transform()
+                rFile = KtPsiFactory(rFile.project).createFile(rFile.name, rFile.text)
+                log.debug("CURRENT RESULT = ${rFile.text}")
+                if (rFile.text.filterNot { it.isWhitespace() } == oldRes.filterNot { it.isWhitespace() }) {
+                    //if (rFile.text.filterNot { it == '\n' } == oldRes.filterNot { it == '\n' }) {
+                    break
+                }
+                oldRes = rFile.text
+                if (isInterrupted) break
+            }
         }
         log.debug("VERIFY = ${checker.checkTest(rFile.text)}")
         log.debug("RESULT: ${rFile.text}")
-//        SAVING
+//      SAVING
         if (!isProject && ReduKtorProperties.getPropAsBoolean("SAVE_RESULT") == true) {
             File(pathToSave.toString().substringBeforeLast('/')).mkdirs()
             val writer = PrintWriter(pathToSave.toString())

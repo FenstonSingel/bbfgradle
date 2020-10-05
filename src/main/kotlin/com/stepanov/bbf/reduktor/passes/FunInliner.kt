@@ -10,6 +10,7 @@ import org.jetbrains.kotlin.psi.KtCallExpression
 import org.jetbrains.kotlin.psi.KtFile
 import org.jetbrains.kotlin.psi.KtNamedFunction
 import org.jetbrains.kotlin.psi.KtPsiFactory
+import org.jetbrains.kotlin.psi.psiUtil.parents
 
 class FunInliner(private val file: KtFile, private val checker: CompilerTestChecker) {
 
@@ -17,6 +18,8 @@ class FunInliner(private val file: KtFile, private val checker: CompilerTestChec
         val funcs = file.getAllPSIChildrenOfType<KtNamedFunction>()
         for (f in funcs) {
             for (c in f.getAllPSIChildrenOfType<KtCallExpression>()) {
+                val parentFun = c.parents.firstOrNull { it is KtNamedFunction } ?: continue
+                if (parentFun != f) continue
                 val calledFunc = funcs.filter { c.calleeExpression?.text == it.name }
                 if (calledFunc.size == 1) {
                     val called = calledFunc.first()
