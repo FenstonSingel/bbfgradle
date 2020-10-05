@@ -1,5 +1,6 @@
 package com.stepanov.bbf.bugfinder.mutator.transformations
 
+import com.stepanov.bbf.bugfinder.isolation.ExcessiveMutationException
 import org.jetbrains.kotlin.psi.KtExpression
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
 import com.stepanov.bbf.bugfinder.util.getRandomBoolean
@@ -23,6 +24,7 @@ class AddNotNullAssertions : Transformation() {
             val newExp = psiFactory.createExpressionIfPossible("${exp.text}!!") ?: return
             checker.replacePSINodeIfPossible(file, exp, newExp)
         } catch (e: Exception) {
+            if (e is ExcessiveMutationException) throw e
             return
         }
     }

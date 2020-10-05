@@ -1,5 +1,6 @@
 package com.stepanov.bbf.bugfinder.isolation
 
+import com.stepanov.bbf.bugfinder.executor.CommonCompiler
 import com.stepanov.bbf.bugfinder.executor.WitnessTestsCollector
 import com.stepanov.bbf.bugfinder.executor.compilers.JVMCompiler
 import com.stepanov.bbf.bugfinder.isolation.formulas.Ochiai2RankingFormula
@@ -99,7 +100,12 @@ object BugIsolator {
     }
 
 
-    fun isolate(path: String, bugType: BugType, formula: RankingFormula = rankingFormula): RankedProgramEntities? {
+    fun isolate(
+        path: String,
+        bugType: BugType,
+        compilers: List<CommonCompiler> = listOf(JVMCompiler()),
+        formula: RankingFormula = rankingFormula
+    ): RankedProgramEntities? {
         val timerStart = -System.currentTimeMillis()
 
         val creator = PSICreator("")
@@ -108,14 +114,14 @@ object BugIsolator {
 
         val collector: WitnessTestsCollector?
         try {
-            collector = WitnessTestsCollector(bugType, listOf(JVMCompiler()))
+            collector = WitnessTestsCollector(bugType, compilers)
         } catch (e: NoBugFoundException) {
             logger.debug(e.message)
             return null
         }
 
         Transformation.checker = collector
-            mutate(creator.ctx, collector)
+        mutate(creator.ctx, collector)
 
         val executionStatistics = collector.executionStatistics
         val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, formula)
@@ -156,6 +162,8 @@ object BugIsolator {
             try {
                 executeMutation(mutation)
             } catch (e: ExcessiveMutationException) {
+                logger.debug(e.message)
+            } catch (e: Throwable) {
                 logger.debug(e.message)
             }
         }
