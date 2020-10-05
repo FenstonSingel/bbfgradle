@@ -15,7 +15,7 @@ class HierarchicalDeltaDebugger(private val tree: FileASTNode, private val check
     fun hdd(maxLevel: Int = Int.MAX_VALUE) {
         log.debug("Starting to reduce ${tree.text}")
         var nodes = tree.getAllChildrenOfCurLevel().toList()
-        while (nodes.isNotEmpty() || level > maxLevel) {
+        while (!Thread.interrupted() && (nodes.isNotEmpty() || level > maxLevel)) {
             log.debug("Cur level is $level \n")
             val minconfig = ddmin(nodes.toList())
             log.debug("MINCONFIG = ${minconfig.map { it }}")

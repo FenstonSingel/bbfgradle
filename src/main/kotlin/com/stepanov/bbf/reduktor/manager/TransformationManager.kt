@@ -202,7 +202,7 @@ class TransformationManager(private val ktFiles: List<KtFile>) {
                     performTransformation("FASTREDUCE") { PSIReducer(rFile, checker).transform() }
                 }
                 if (ReduKtorProperties.getPropAsBoolean("HDD") == true) {
-                    performTransformation("HDD") { HierarchicalDeltaDebugger(rFile.node, checker).hdd() }
+                    performTransformation("HDD") { HierarchicalDeltaDebugger(rFile.node, checker).hdd(200) }
                 }
             } catch (e: InterruptedException) {
                 isInterrupted = true
