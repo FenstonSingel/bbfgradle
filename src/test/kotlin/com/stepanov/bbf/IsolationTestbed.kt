@@ -2,12 +2,15 @@ package com.stepanov.bbf
 
 import com.stepanov.bbf.bugfinder.Reducer
 import com.stepanov.bbf.bugfinder.executor.MultiCompilerCrashChecker
+import com.stepanov.bbf.bugfinder.executor.WitnessTestsCollector
 import com.stepanov.bbf.bugfinder.executor.compilers.JVMCompiler
 import com.stepanov.bbf.bugfinder.isolation.BugIsolator
 import com.stepanov.bbf.bugfinder.isolation.RankedProgramEntities
+import com.stepanov.bbf.bugfinder.isolation.formulas.OchiaiRankingFormula
 import com.stepanov.bbf.bugfinder.manager.BugType
 import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation
 import com.stepanov.bbf.coverage.CompilerInstrumentation
+import com.stepanov.bbf.coverage.ProgramCoverage
 import com.stepanov.bbf.reduktor.parser.PSICreator
 import org.apache.log4j.Logger
 import org.apache.log4j.PropertyConfigurator
@@ -27,12 +30,13 @@ fun main() {
 
     Transformation.file = PSICreator("").getPSIForFile("tmp/check_tmp.kt")
 
-    majorAttributes = listOf("stacktraces")
-    minorAttributes = listOf("basic", "revamped")
-
+    reduceMode = true
+    ProgramCoverage.shouldCoverageBeBinary = true
+    WitnessTestsCollector.databaseCapacity = 200
+    BugIsolator.rankingFormula = OchiaiRankingFormula
     evaluateOnDataset(
-        ::fetchErrorData,
-        ::compareStacktraces
+        ::isolateBug,
+        ::compareIsolationRankings
     )
 
 //    reduceMode = false
@@ -58,10 +62,14 @@ fun main() {
 val logger: Logger = Logger.getLogger("isolationTestbedLogger")
 
 val coverageType = CompilerInstrumentation.coverageType.name.toLowerCase()
+val binaryCoverageTag: String get() = if (ProgramCoverage.shouldCoverageBeBinary) "binary" else "non-binary"
+val reductionTag: String get() = if (reduceMode) "reduced" else "not-reduced"
+val mutantCapacityTag: String get() = "${WitnessTestsCollector.databaseCapacity}-mutants"
+val formulaTag: String get() = BugIsolator.rankingFormula.name
 
-const val set = "set-a-1"
-var majorAttributes = listOf("stacktraces")
-var minorAttributes = listOf(coverageType)
+const val set = "ground-truth"
+val majorAttributes get() = listOf("fault-localization")
+val minorAttributes get() = listOf(coverageType, binaryCoverageTag, reductionTag, mutantCapacityTag, formulaTag)
 val tag: String get() = "$set/${majorAttributes.joinToString("-")}/${minorAttributes.joinToString("-")}"
 
 const val samplesPath = "/home/ruban/kotlin-samples"

@@ -3,7 +3,7 @@ package com.stepanov.bbf.bugfinder.isolation
 import com.stepanov.bbf.bugfinder.executor.CommonCompiler
 import com.stepanov.bbf.bugfinder.executor.WitnessTestsCollector
 import com.stepanov.bbf.bugfinder.executor.compilers.JVMCompiler
-import com.stepanov.bbf.bugfinder.isolation.formulas.Ochiai2RankingFormula
+import com.stepanov.bbf.bugfinder.isolation.formulas.*
 import com.stepanov.bbf.bugfinder.manager.BugType
 import com.stepanov.bbf.bugfinder.mutator.transformations.*
 import com.stepanov.bbf.reduktor.parser.PSICreator
@@ -13,7 +13,7 @@ import kotlin.math.sqrt
 
 object BugIsolator {
 
-    var rankingFormula: RankingFormula = Ochiai2RankingFormula
+    var rankingFormula: RankingFormula = OchiaiRankingFormula
 
     private val isolationTimes = mutableListOf<Long>()
     var numberOfIsolations = 0L

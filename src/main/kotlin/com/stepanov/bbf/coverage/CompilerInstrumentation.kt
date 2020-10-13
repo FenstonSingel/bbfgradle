@@ -11,8 +11,6 @@ object CompilerInstrumentation {
 
     @JvmStatic var coverageType: CoverageType = CoverageType.METHOD
 
-    @JvmStatic var shouldClassesBeInstrumented: Boolean = true
-
     @JvmStatic var shouldProbesBeRecorded: Boolean = false
 
     val methodProbes = mutableMapOf<String, Int>()

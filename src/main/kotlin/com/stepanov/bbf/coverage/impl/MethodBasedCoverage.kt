@@ -8,13 +8,9 @@ class MethodBasedCoverage(private val methodProbes: Map<String, Int>) : ProgramC
 
     override val entities: Set<String> get() = methodProbes.keys
 
-    override fun get(name: String): Pair<Int, Int> {
+    override fun get(name: String): Pair<Int, Int>? {
         val probe = methodProbes[name]
-        return if (probe != null) {
-            probe to 0
-        } else {
-            0 to 1
-        }
+        return probe?.let { (if (ProgramCoverage.shouldCoverageBeBinary) 1 else probe) to 0 }
     }
 
     override fun copy(): ProgramCoverage = MethodBasedCoverage(methodProbes.toMap())

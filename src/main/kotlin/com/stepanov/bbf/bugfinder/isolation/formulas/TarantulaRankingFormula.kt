@@ -4,6 +4,8 @@ import com.stepanov.bbf.bugfinder.isolation.RankingFormula
 
 object TarantulaRankingFormula : RankingFormula {
 
+    override val name = "Tarantula"
+
     override fun calculate(ef: Double, sf: Double, es: Double, ss: Double): Double =
             (ef / (ef + sf)) / (ef / (ef + sf) + es / (es + ss))
 

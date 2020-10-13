@@ -5,6 +5,8 @@ import kotlin.math.sqrt
 
 object Ochiai2RankingFormula : RankingFormula {
 
+    override val name = "Ochiai2"
+
     override fun calculate(ef: Double, sf: Double, es: Double, ss: Double): Double {
         val result = (ef * ss) / sqrt((ef + es) * (ef + sf) * (ss + sf) * (ss + es))
         /* This formula has some potential troubles with division by zero.

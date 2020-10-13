@@ -7,6 +7,8 @@ import kotlin.math.sqrt
 interface ProgramCoverage {
 
     companion object {
+        var shouldCoverageBeBinary = true
+
         fun entities(coverages: Iterable<ProgramCoverage>): List<String> {
             val result = mutableSetOf<String>()
             for (coverage in coverages) {
@@ -42,7 +44,7 @@ interface ProgramCoverage {
     // even if there is only one coverage object to use it on.
     val entities: Set<String>
 
-    operator fun get(name: String): Pair<Int, Int>
+    operator fun get(name: String): Pair<Int, Int>?
 
     fun copy(): ProgramCoverage
 
@@ -55,8 +57,8 @@ interface ProgramCoverage {
 
         val entities = entities(this, other)
         for (entity in entities) {
-            val firstNumberOfExecutions = this[entity].first.toDouble()
-            val secondNumberOfExecutions = other[entity].first.toDouble()
+            val firstNumberOfExecutions = this[entity]?.first?.toDouble() ?: 0.0
+            val secondNumberOfExecutions = other[entity]?.first?.toDouble() ?: 0.0
 
             dotProduct += firstNumberOfExecutions * secondNumberOfExecutions
             firstNormSquared += firstNumberOfExecutions * firstNumberOfExecutions

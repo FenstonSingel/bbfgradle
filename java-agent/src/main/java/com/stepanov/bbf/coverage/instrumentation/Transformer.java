@@ -16,7 +16,6 @@ public class Transformer implements ClassFileTransformer {
 //    List<String> allowlist = Arrays.asList("backend", "frontend", "fir");
 
     private boolean isTransformationUnnecessary(String className) {
-        if (!CompilerInstrumentation.getShouldClassesBeInstrumented()) return true;
         if (!className.startsWith("org/jetbrains/kotlin/")) return true;
         List<String> tokens = Arrays.asList(className.split("[/$]"));
         for (String blockedEntry : blocklist) {
@@ -59,6 +58,7 @@ public class Transformer implements ClassFileTransformer {
                 instrumenter = new BranchInstrumenter(classWriter);
                 break;
             default:
+                CompilerInstrumentation.increaseTimeSpentOnInstrumentation(System.currentTimeMillis() - startTime);
                 throw new IllegalStateException("Unexpected value: " + CompilerInstrumentation.getCoverageType());
         }
 

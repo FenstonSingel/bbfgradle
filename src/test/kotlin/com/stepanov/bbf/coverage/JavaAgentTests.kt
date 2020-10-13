@@ -7,7 +7,8 @@ import org.jetbrains.kotlin.fir.RelevantTestKlass
 import org.jetbrains.not.kotlin.UselessTestKlass
 import kotlin.test.assertEquals
 
-fun main() {
+
+fun performTests() {
     when (CompilerInstrumentation.coverageType) {
         CompilerInstrumentation.CoverageType.METHOD -> {
             checkRecords(
@@ -74,6 +75,14 @@ fun main() {
             o.testTableSwitchCoverage(i)
         }
     }
+}
+
+fun main() {
+    ProgramCoverage.shouldCoverageBeBinary = false
+    performTests()
+
+    ProgramCoverage.shouldCoverageBeBinary = true
+    performTests()
 
     println("All tests for instrumentation Java agent have been passed!")
 }
@@ -89,7 +98,17 @@ private fun getCoverage(code: () -> Unit): ProgramCoverage {
 }
 
 private fun checkRecords(expected: ProgramCoverage, code: () -> Unit) {
+    println("expected:")
+    for (entity in expected.entities) {
+        println("$entity: ${expected[entity]}")
+    }
+    println()
     val actual = getCoverage(code)
+    println("actual:")
+    for (entity in actual.entities) {
+        println("$entity: ${actual[entity]}")
+    }
+    println()
     assertEquals(expected, actual)
 }
 

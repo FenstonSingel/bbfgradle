@@ -4,6 +4,8 @@ import com.stepanov.bbf.bugfinder.isolation.RankingFormula
 
 object ORankingFormula : RankingFormula {
 
+    override val name = "O"
+
     override fun calculate(ef: Double, sf: Double, es: Double, ss: Double): Double =
             if (sf > 0) 0.0 else ss
 

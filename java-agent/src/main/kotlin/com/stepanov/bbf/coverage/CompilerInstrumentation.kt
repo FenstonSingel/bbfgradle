@@ -13,10 +13,6 @@ object CompilerInstrumentation {
 
     @JvmStatic var coverageType: CoverageType = CoverageType.METHOD
 
-    // TODO Create a way to switch between two hypothetical coverage capture modes painlessly.
-
-    @JvmStatic var shouldClassesBeInstrumented: Boolean = true
-
     @JvmStatic var shouldProbesBeRecorded: Boolean = false
 
     val methodProbes = mutableMapOf<String, Int>()
@@ -76,14 +72,14 @@ object CompilerInstrumentation {
         val timerStart = System.currentTimeMillis()
         if (shouldProbesBeRecorded) {
             val result = if (when (opcode) {
-                        Opcodes.IFEQ -> a == 0
-                        Opcodes.IFNE -> a != 0
-                        Opcodes.IFLT -> a < 0
-                        Opcodes.IFLE -> a <= 0
-                        Opcodes.IFGT -> a > 0
-                        Opcodes.IFGE -> a >= 0
-                        else -> throw IllegalArgumentException("An inappropriate opcode was provided.")
-                    }) "A" else "B"
+                    Opcodes.IFEQ -> a == 0
+                    Opcodes.IFNE -> a != 0
+                    Opcodes.IFLT -> a < 0
+                    Opcodes.IFLE -> a <= 0
+                    Opcodes.IFGT -> a > 0
+                    Opcodes.IFGE -> a >= 0
+                    else -> throw IllegalArgumentException("An inappropriate opcode was provided.")
+                }) "A" else "B"
             recordBranchExecution(insn_id, result)
         }
         updateInstrumentationPerformanceTimer(System.currentTimeMillis() - timerStart)
@@ -93,14 +89,14 @@ object CompilerInstrumentation {
         val timerStart = System.currentTimeMillis()
         if (shouldProbesBeRecorded) {
             val result = if (when (opcode) {
-                        Opcodes.IF_ICMPEQ -> a == b
-                        Opcodes.IF_ICMPNE -> a != b
-                        Opcodes.IF_ICMPLT -> a < b
-                        Opcodes.IF_ICMPLE -> a <= b
-                        Opcodes.IF_ICMPGT -> a > b
-                        Opcodes.IF_ICMPGE -> a >= b
-                        else -> throw IllegalArgumentException("An inappropriate opcode was provided.")
-                    }) "A" else "B"
+                    Opcodes.IF_ICMPEQ -> a == b
+                    Opcodes.IF_ICMPNE -> a != b
+                    Opcodes.IF_ICMPLT -> a < b
+                    Opcodes.IF_ICMPLE -> a <= b
+                    Opcodes.IF_ICMPGT -> a > b
+                    Opcodes.IF_ICMPGE -> a >= b
+                    else -> throw IllegalArgumentException("An inappropriate opcode was provided.")
+                }) "A" else "B"
             recordBranchExecution(insn_id, result)
         }
         updateInstrumentationPerformanceTimer(System.currentTimeMillis() - timerStart)

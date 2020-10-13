@@ -19,6 +19,9 @@ class BranchBasedCoverage(private val branchProbes: Map<String, BranchProbesResu
 
         operator fun get(name: String): Pair<Int, Int> {
             val execs = results[name] ?: 0
+            if (ProgramCoverage.shouldCoverageBeBinary) {
+                return if (execs != 0) 1 to 0 else 0 to 1
+            }
             return execs to total - execs
         }
 
@@ -36,11 +39,11 @@ class BranchBasedCoverage(private val branchProbes: Map<String, BranchProbesResu
             return result
         }
 
-    override fun get(name: String): Pair<Int, Int> {
+    override fun get(name: String): Pair<Int, Int>? {
         val breakPoint = name.indexOf("#")
         val branchName = name.substring(0, breakPoint)
         val probeName = name.substring(breakPoint + 1, name.length)
-        val probeResults = branchProbes[branchName] ?: return 0 to 1
+        val probeResults = branchProbes[branchName] ?: return null
         return probeResults[probeName]
     }
 

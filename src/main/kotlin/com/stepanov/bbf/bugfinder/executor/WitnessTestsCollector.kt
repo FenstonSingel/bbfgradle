@@ -18,6 +18,11 @@ class WitnessTestsCollector(
     compilers: List<CommonCompiler>
 ) : Checker() {
 
+    companion object {
+        var databaseCapacity = 200
+        val maxMutationIterations get() = databaseCapacity / 2
+    }
+
     // list of things to note when porting the code to a refactored version
     // TODO Compilation timeouts (deleted in this branch) are a potential problem in the future.
     // TODO Check comments in MultiCompilerCrashCollector too.
@@ -92,9 +97,6 @@ class WitnessTestsCollector(
 
     override fun checkTextCompiling(text: String): Boolean =
             checkCompiling(PSICreator("").getPSIForText(text, false))
-
-    private val databaseCapacity = 100
-    private val maxMutationIterations = 2 * databaseCapacity
 
     private var overallMutants = 0
 

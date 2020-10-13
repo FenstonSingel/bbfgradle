@@ -1,13 +1,9 @@
 package com.stepanov.bbf.bugfinder.isolation
 
-import com.stepanov.bbf.bugfinder.isolation.formulas.TarantulaRankingFormula
-
 // TODO Implement more formulas.
 interface RankingFormula {
 
-    companion object {
-        val defaultFormula: RankingFormula = TarantulaRankingFormula
-    }
+    val name: String
 
     operator fun invoke(values: EntityExecutionStatistics): Double =
             calculate(
