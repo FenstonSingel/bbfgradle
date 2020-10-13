@@ -93,7 +93,7 @@ class WitnessTestsCollector(
     override fun checkTextCompiling(text: String): Boolean =
             checkCompiling(PSICreator("").getPSIForText(text, false))
 
-    private val databaseCapacity = 50
+    private val databaseCapacity = 100
     private val maxMutationIterations = 2 * databaseCapacity
 
     private var overallMutants = 0

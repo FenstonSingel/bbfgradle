@@ -20,7 +20,7 @@ object BugIsolator {
         private set
 
     val totalIsolationTime: Long get() = isolationTimes.sum()
-    val meanIsolationTime: Long get() = totalIsolationTime / numberOfIsolations
+    val meanIsolationTime: Long get() = if (numberOfIsolations != 0L) totalIsolationTime / numberOfIsolations else 0L
     val isolationTimeSD: Long
         get() {
             val mean = meanIsolationTime
@@ -35,7 +35,8 @@ object BugIsolator {
         private set
 
     val totalInstrPerformanceTime: Long get() = instrPerformanceTimes.sum()
-    val meanInstrPerformanceTime: Long get() = totalInstrPerformanceTime / numberOfCompilations
+    val meanInstrPerformanceTime: Long get() =
+        if (numberOfCompilations != 0L) totalInstrPerformanceTime / numberOfCompilations else 0L
 
     private val bugDistributionPerMutation = mutableMapOf<String, Pair<Long, Long>>()
     private val successDistributionPerMutation = mutableMapOf<String, Pair<Long, Long>>()
@@ -67,10 +68,12 @@ object BugIsolator {
         }
 
     val totalFailingCodeSamples: Long get() = bugDistributionPerMutation.values.fold(0L) { acc, (_, x) -> acc + x }
-    val meanFailingCodeSamples: Long get() = totalFailingCodeSamples / numberOfIsolations.toInt()
+    val meanFailingCodeSamples: Long get() =
+        if (numberOfIsolations != 0L) totalFailingCodeSamples / numberOfIsolations.toInt() else 0
 
     val totalPassingCodeSamples: Long get() = successDistributionPerMutation.values.fold(0L) { acc, (_, x) -> acc + x }
-    val meanPassingCodeSamples: Long get() = totalPassingCodeSamples / numberOfIsolations.toInt()
+    val meanPassingCodeSamples: Long get() =
+        if (numberOfIsolations != 0L) totalPassingCodeSamples / numberOfIsolations.toInt() else 0
 
     var lastNumberOfFailingMutants: Int = 0
         private set

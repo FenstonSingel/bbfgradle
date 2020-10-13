@@ -6,65 +6,17 @@ import com.stepanov.bbf.bugfinder.executor.compilers.JVMCompiler
 import com.stepanov.bbf.bugfinder.isolation.BugIsolator
 import com.stepanov.bbf.bugfinder.isolation.RankedProgramEntities
 import com.stepanov.bbf.bugfinder.manager.BugType
+import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation
 import com.stepanov.bbf.coverage.CompilerInstrumentation
+import com.stepanov.bbf.reduktor.parser.PSICreator
 import org.apache.log4j.Logger
 import org.apache.log4j.PropertyConfigurator
+import org.bitbucket.cowwoc.diffmatchpatch.DiffMatchPatch
 import java.io.File
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.TimeoutException
 import kotlin.collections.*
-
-val logger: Logger = Logger.getLogger("isolationTestbedLogger")
-
-fun statistics() {
-    logger.debug("")
-    logger.debug("Isolations: ${BugIsolator.numberOfIsolations}")
-    logger.debug("Total isolation time: ${BugIsolator.totalIsolationTime}")
-    logger.debug("Average isolation time: ${BugIsolator.meanIsolationTime}")
-    logger.debug("Isolation time's standard deviation: ${BugIsolator.isolationTimeSD}")
-    logger.debug("Minimum isolation time: ${BugIsolator.minIsolationTime}")
-    logger.debug("Maximum isolation time: ${BugIsolator.maxIsolationTime}")
-    logger.debug("")
-    logger.debug("Compilations: ${BugIsolator.numberOfCompilations}")
-    logger.debug("Time spent on instrumentation: ${CompilerInstrumentation.timeSpentOnInstrumentation}")
-    logger.debug("Total coverage recording time: ${BugIsolator.totalInstrPerformanceTime}")
-    logger.debug("Average coverage recording time: ${BugIsolator.meanInstrPerformanceTime}")
-    logger.debug("")
-    logger.debug("Total failing code samples generated: ${BugIsolator.totalFailingCodeSamples}")
-    logger.debug("Average failing code samples generated: ${BugIsolator.meanFailingCodeSamples}")
-    logger.debug("Total passing code samples generated: ${BugIsolator.totalPassingCodeSamples}")
-    logger.debug("Average passing code samples generated: ${BugIsolator.meanPassingCodeSamples}")
-    logger.debug("")
-    logger.debug("Distribution of samples per mutation:")
-    BugIsolator.codeSampleDistributionPerMutation.toSortedMap().forEach { key, (bugsRatio, successesRatio) ->
-        logger.debug("   $key: %.2f%% fails and %.2f%% passes".format(bugsRatio * 100, successesRatio * 100))
-    }
-    logger.debug("Quality of samples per mutation:")
-    BugIsolator.codeSampleQualityPerMutation.toSortedMap().forEach { key, (bugsAvgDist, successesAvgDist) ->
-        logger.debug("   $key: $bugsAvgDist avg. fail cosDist and $successesAvgDist avg. pass cosDist")
-    }
-    logger.debug("")
-}
-
-val coverageType = "${CompilerInstrumentation.coverageType}"
-const val set = "ground-truth"
-const val tag = "$set-evaluation-w-reducing"
-
-const val rankingsPath = "/home/fenstonsingel/isolation-stats/results"
-
-fun isolationStats(name: String, ranking: RankedProgramEntities) {
-    val fileName = "$rankingsPath/${CompilerInstrumentation.coverageType}/$tag/$name.log"
-    File(fileName.substringBeforeLast('/')).mkdirs()
-    File(fileName).printWriter().use { writer ->
-        writer.println("failing mutants: ${BugIsolator.lastNumberOfFailingMutants}")
-        writer.println("passing mutants: ${BugIsolator.lastNumberOfPassingMutants}")
-        writer.println()
-        for ((entity, rank) in ranking.toList()) {
-            writer.println("$entity - $rank")
-        }
-    }
-}
 
 fun main() {
 
@@ -73,318 +25,464 @@ fun main() {
 
     println("Current coverage: ${CompilerInstrumentation.coverageType}")
 
-//    numerateDataSet(File("/home/fenstonsingel/kotlin-samples/$set/"))
+    Transformation.file = PSICreator("").getPSIForFile("tmp/check_tmp.kt")
 
-    compareRankings(
-        File("/home/fenstonsingel/kotlin-samples/$set/"),
-        "/home/fenstonsingel/isolation-stats/comparisons/$coverageType/$tag.log",
-        reduceMode = true
+    majorAttributes = listOf("stacktraces")
+    minorAttributes = listOf("basic", "revamped")
+
+    evaluateOnDataset(
+        ::fetchErrorData,
+        ::compareStacktraces
     )
 
-//    checkStability(
-//        File("/home/fenstonsingel/kotlin-samples/$set/"),
-//        75, 3,
-//        "/home/fenstonsingel/isolation-stats/comparisons/$coverageType/$tag.log"
+//    reduceMode = false
+//    majorAttributes = listOf("fault-localization")
+//    minorAttributes = listOf(coverageType)
+//
+//    evaluateOnDataset(
+//        ::isolateBug,
+//        ::compareIsolationRankings
+//    )
+//
+//    reduceMode = true
+//    majorAttributes = listOf("fault-localization")
+//    minorAttributes = listOf(coverageType, "reduction")
+//
+//    evaluateOnDataset(
+//        ::isolateBug,
+//        ::compareIsolationRankings
 //    )
 
 }
 
+val logger: Logger = Logger.getLogger("isolationTestbedLogger")
+
+val coverageType = CompilerInstrumentation.coverageType.name.toLowerCase()
+
+const val set = "set-a-1"
+var majorAttributes = listOf("stacktraces")
+var minorAttributes = listOf(coverageType)
+val tag: String get() = "$set/${majorAttributes.joinToString("-")}/${minorAttributes.joinToString("-")}"
+
+const val samplesPath = "/home/ruban/kotlin-samples"
+const val outputPath = "/home/ruban/isolation-statistics"
+const val resultsPath = "$outputPath/results"
+
+const val rankingsPath = "$outputPath/rankings"
+
+fun printIsolationGlobalStatistics(log: (String) -> Unit) {
+    log("Isolations: ${BugIsolator.numberOfIsolations}")
+    log("Total isolation time: ${BugIsolator.totalIsolationTime}")
+    log("Average isolation time: ${BugIsolator.meanIsolationTime}")
+    log("Isolation time's standard deviation: ${BugIsolator.isolationTimeSD}")
+    log("Minimum isolation time: ${BugIsolator.minIsolationTime}")
+    log("Maximum isolation time: ${BugIsolator.maxIsolationTime}")
+    log("")
+    log("Compilations: ${BugIsolator.numberOfCompilations}")
+    log("Time spent on instrumentation: ${CompilerInstrumentation.timeSpentOnInstrumentation}")
+    log("Total coverage recording time: ${BugIsolator.totalInstrPerformanceTime}")
+    log("Average coverage recording time: ${BugIsolator.meanInstrPerformanceTime}")
+    log("")
+    log("Total failing code samples generated: ${BugIsolator.totalFailingCodeSamples}")
+    log("Average failing code samples generated: ${BugIsolator.meanFailingCodeSamples}")
+    log("Total passing code samples generated: ${BugIsolator.totalPassingCodeSamples}")
+    log("Average passing code samples generated: ${BugIsolator.meanPassingCodeSamples}")
+    log("")
+    log("Distribution of samples per mutation:")
+    BugIsolator.codeSampleDistributionPerMutation.toSortedMap().forEach { key, (bugsRatio, successesRatio) ->
+        log("   $key: %.2f%% fails and %.2f%% passes".format(bugsRatio * 100, successesRatio * 100))
+    }
+    log("")
+    log("Quality of samples per mutation:")
+    BugIsolator.codeSampleQualityPerMutation.toSortedMap().forEach { key, (bugsAvgDist, successesAvgDist) ->
+        log("   $key: $bugsAvgDist avg. fail dist and $successesAvgDist avg. pass dist")
+    }
+}
+
+// should be called as soon as the ranking was acquired
+fun RankedProgramEntities.saveIsolationResults(name: String) {
+    val fileName = "$rankingsPath/$tag/$name.ranking"
+    File(fileName.substringBeforeLast('/')).mkdirs()
+    File(fileName).printWriter().use { writer ->
+        writer.println("failing mutants: ${BugIsolator.lastNumberOfFailingMutants}")
+        writer.println("passing mutants: ${BugIsolator.lastNumberOfPassingMutants}")
+        writer.println()
+        for ((entity, rank) in toList()) {
+            writer.println("$entity - $rank")
+        }
+    }
+}
+
+fun getCompiler() = JVMCompiler("-Xnew-inference")
+
+fun checkBugPresence(text: String): Boolean =
+    MultiCompilerCrashChecker(getCompiler()).checkTest(text, "tmp/check_tmp.kt")
+
 data class Sample(val group: String, val number: Int) {
     override fun toString(): String = "$group/$number"
 }
+class Comparison(val first: Sample, val second: Sample, val similarity: Double) {
+    override fun toString(): String = "$first to $second: $similarity"
+}
+class Group(val innerComparisons: MutableList<Comparison> = mutableListOf(),
+            val outerComparisons: MutableList<Comparison> = mutableListOf()) {
+    override fun toString(): String =
+        "inner: \n${innerComparisons.joinToString("\n")}\nouter: \n${outerComparisons.joinToString("\n")}"
+}
 
-fun compareRankings(file: File, outputPath: String, reduceMode: Boolean = false) {
-    val regex = Regex("""([^/]+)/([^/]+)\.kt${'$'}""")
-    val rankings = mutableMapOf<Sample, RankedProgramEntities>()
+val regex = Regex("""([^/]+)/([^/]+)\.kt${'$'}""")
 
+fun <T> evaluateOnDataset(
+    evaluateSample: (String) -> T?,
+    compareSamples: (T, T) -> Double
+) {
+    val noBugs = mutableListOf<String>()
+    val unevaluated = mutableListOf<String>()
+
+    val results = mutableListOf<Pair<Sample, T>>()
+    val comparisons = mutableListOf<Comparison>()
+    val groups = mutableMapOf<String, Group>()
+
+    File("$resultsPath/$tag.log".substringBeforeLast('/')).mkdirs()
     fun intermediateResults() {
-        statistics()
-        val comparisons = mutableListOf<Triple<Sample, Sample, Double>>()
-        for ((sample1, ranking1) in rankings) {
-            for ((sample2, ranking2) in rankings) {
-                if (sample1 != sample2 && comparisons.find { (s1, s2, _) -> s1 == sample2 && s2 == sample1 } == null) {
-                    comparisons += Triple(sample1, sample2, ranking1.cosineSimilarity(ranking2))
-                }
-            }
-        }
-        var uniquesComparisons = 0
-        var duplicatesComparisons = 0
-        var uniquesDivergence = 0.0
-        var duplicatesDivergence = 0.0
-        val threshold = 0.8
-        var uniquesDivRelativeToT = 0
-        var duplicatesDivRelativeToT = 0
-        var firstUniques: Int? = null
-        var firstUniquesValue = 0.0
-        var lastDuplicates: Int? = null
-        var lastDuplicatesValue = 0.0
-        File(outputPath.substringBeforeLast('/')).mkdirs()
-        File(outputPath).printWriter().use { writer ->
-            var index = 1
-            for ((sample1, sample2, similarity) in comparisons.sortedByDescending { (_, _, ranking) -> ranking }) {
-                writer.print("$sample1 to $sample2: $similarity ")
-                if (sample1.group == sample2.group) {
-                    writer.println("(DUPLICATES)")
-                    ++duplicatesComparisons
-                    lastDuplicates = index
-                    lastDuplicatesValue = similarity
-                    duplicatesDivergence += 1 - similarity
-                    if (similarity <= threshold) ++duplicatesDivRelativeToT
-                } else {
-                    writer.println()
-                    ++uniquesComparisons
-                    if (firstUniques == null) {
-                        firstUniques = index
-                        firstUniquesValue = similarity
-                    }
-                    uniquesDivergence += similarity
-                    if (similarity > threshold) ++uniquesDivRelativeToT
-                }
-                ++index
+        File("$resultsPath/$tag.log").printWriter().use { writer ->
+            for (comparison in comparisons) {
+                writer.print(comparison)
+                if (comparison.first.group == comparison.second.group) writer.print(" (duplicates)")
+                writer.println()
             }
             writer.println()
-            writer.println("Current coverage: ${CompilerInstrumentation.coverageType}")
-            writer.println("Worst-ranked duplicates: $lastDuplicates")
-            writer.println("(value: $lastDuplicatesValue)")
-            writer.println("Worst-ranked uniques: $firstUniques")
-            writer.println("(value: $firstUniquesValue)")
-            writer.println("Range of mixed entries: ${(firstUniques?.let { lastDuplicates?.minus(it) }) ?: "none"}")
-            writer.println("Absolute duplicates divergence: $duplicatesDivergence")
-            writer.println("(normalized: ${duplicatesDivergence / duplicatesComparisons})")
-            writer.println("Absolute uniques divergence: $uniquesDivergence")
-            writer.println("(normalized: ${uniquesDivergence / uniquesComparisons})")
-            writer.println("Duplicates divergence relative to $threshold: $duplicatesDivRelativeToT")
-            writer.println("(normalized: ${duplicatesDivRelativeToT.toDouble() / duplicatesComparisons})")
-            writer.println("Uniques divergence relative to $threshold: $uniquesDivRelativeToT")
-            writer.println("(normalized: ${uniquesDivRelativeToT.toDouble() / uniquesComparisons})")
-            writer.println("Total divergence: ${duplicatesDivergence + uniquesDivergence}")
-            writer.println("(normalized: ${(duplicatesDivergence + uniquesDivergence) / (duplicatesComparisons + uniquesComparisons)})")
+            writer.println()
+            for ((id, group) in groups) writer.println("$id\n$group\n")
+            writer.println()
+            printIsolationGlobalStatistics { writer.println(it) }
         }
     }
 
-    val unreducedFiles = mutableListOf<String>()
-    val filesWithNoBugs = mutableListOf<String>()
-    val fuckedUpFiles = mutableListOf<String>()
-    file.walk().sortedBy { it.absolutePath }.forEach {
-        val sourceFilePath = it.absolutePath
-        val matchResult = regex.find(sourceFilePath)
-        if (matchResult != null) {
-            val ids = matchResult.groupValues
-            val sample = Sample(ids[1], ids[2].toInt())
-            val compiler = JVMCompiler("")
-            File("tmp/tmp.kt").writeText(File(sourceFilePath).readText())
+    File("$samplesPath/$set")
+        .walk().sortedBy { it.absolutePath }
+        .forEach {
+            val sourceFilePath = it.absolutePath
+            regex.find(sourceFilePath)?.let { matchResult ->
+                val sampleID = matchResult.groupValues
+                val sample = Sample(sampleID[1], sampleID[2].toInt())
+                if (!checkBugPresence(File(sourceFilePath).readText())) {
+                    logger.debug("$sourceFilePath has to have bugs in order to work with it")
+                    logger.debug("")
+                    noBugs += sample.toString()
+                    return@let
+                }
+                val evaluation = evaluateSample(sourceFilePath)
+                evaluation?.let {
+                    results.forEach { (oldSample, oldEvaluation) ->
+                        val comparison = Comparison(sample, oldSample, compareSamples(evaluation, oldEvaluation))
+                        comparisons += comparison
+                        if (sample.group == oldSample.group) {
+                            groups.getOrPut(sample.group) { Group() }.innerComparisons += comparison
+                        } else {
+                            groups.getOrPut(sample.group) { Group() }.outerComparisons += comparison
+                            groups.getOrPut(oldSample.group) { Group() }.outerComparisons += comparison
 
-            if (reduceMode) {
-                try {
-                    File("tmp/reduce_tmp.kt").writeText(File(sourceFilePath).readText())
-                    val executor = Executors.newSingleThreadExecutor()
-                    logger.debug("started reducing $sourceFilePath")
-                    val future = executor.submit {
-                        Reducer.reduce("tmp/reduce_tmp.kt", compiler)
-                    }
-                    try {
-                        future.get(20, TimeUnit.MINUTES)
-                    } catch (e: TimeoutException) {
-                        logger.debug("timeout!!")
-                        future.cancel(true)
-                        executor.shutdownNow()
-                        while (true) {
-                            try {
-                                if (executor.awaitTermination(1, TimeUnit.SECONDS)) break
-                            } catch (ie: InterruptedException) {
-                                Unit
-                            }
                         }
-                        throw e
                     }
-                    logger.debug("finished reducing $sourceFilePath")
-                } catch (e: Throwable) {
-                    logger.debug("Exception: ${e.javaClass.name}")
-                    logger.debug(if (e.message.isNullOrEmpty()) "no message" else e.message)
-                    logger.debug("$sourceFilePath not fully reduced")
-                    unreducedFiles += sourceFilePath
-                } finally {
-                    val reducedText = File("tmp/reduce_tmp.kt").readText()
-                    if (MultiCompilerCrashChecker(compiler).checkTest(reducedText, "tmp/check_tmp.kt")) {
-                        logger.debug("bug was preserved during reduction")
-                        File("tmp/tmp.kt").writeText(reducedText)
-                    } else {
-                        logger.debug("bug was not preserved during reduction")
-                    }
+                    results += sample to evaluation
+                    comparisons.sortByDescending { comparison -> comparison.similarity }
                 }
+                if (evaluation == null) unevaluated += sample.toString()
+                intermediateResults()
             }
-
-            logger.debug("")
-            logger.debug("started isolating $sourceFilePath")
-            logger.debug("code:\n${File("tmp/tmp.kt").readText()}")
-            logger.debug("")
-            try {
-                val ranking = BugIsolator.isolate("tmp/tmp.kt", BugType.BACKEND, listOf(compiler))
-                if (ranking != null) {
-                    isolationStats("$sample", ranking)
-                    rankings[sample] = ranking
-                    intermediateResults()
-                } else {
-                    filesWithNoBugs += sourceFilePath
-                }
-            } catch (e: Throwable) {
-                logger.debug("Exception: ${e.javaClass.name}")
-                logger.debug(if (e.message.isNullOrEmpty()) "no message" else e.message)
-                fuckedUpFiles += sourceFilePath
-            }
-            logger.debug("finished isolating $sourceFilePath")
-            logger.debug("")
         }
-    }
 
-    intermediateResults()
-    logger.debug("")
-    logger.debug("files with no bugs:")
-    for (fileWithNoBug in filesWithNoBugs) {
-        logger.debug(fileWithNoBug)
-    }
-    logger.debug("")
-    logger.debug("fucked up files:")
-    for (fuckedUpFile in fuckedUpFiles) {
-        logger.debug(fuckedUpFile)
-    }
+    // TODO write a threshold acquisition and F-value (+ other statistics) calculation
+}
+
+var reduceMode = true
+val unreducedFiles = mutableListOf<String>()
+val partiallyReducedFiles = mutableListOf<String>()
+
+fun isolateBug(sourceFilePath: String): RankedProgramEntities? {
+    val compiler = getCompiler()
+    File("tmp/tmp.kt").writeText(File(sourceFilePath).readText())
+
     if (reduceMode) {
-        logger.debug("")
-        logger.debug("not fully reduced files:")
-        for (unreducedFile in unreducedFiles) {
-            logger.debug(unreducedFile)
-        }
-    }
-}
-
-fun checkStability(file: File, numberOfSamples: Int, numberOfIterations: Int, outputPath: String) {
-    val regex = Regex("""/([^/]+)\.kt${'$'}""")
-    val comparisons = mutableMapOf<String, List<Double>>()
-    val allFailingMutants = mutableMapOf<String, List<Int>>()
-    val allPassingMutants = mutableMapOf<String, List<Int>>()
-    val filesWithNoBugs = mutableListOf<String>()
-    val fuckedUpFiles = mutableListOf<String>()
-    file.walk().filter { it.isFile }.toList().shuffled().take(numberOfSamples).forEach { sample ->
-        val sourceFilePath = sample.absolutePath
-        val matchResult = regex.find(sourceFilePath)
-        if (matchResult != null) {
-            val rankings = mutableListOf<RankedProgramEntities>()
-            val failingMutants = mutableListOf<Int>()
-            val passingMutants = mutableListOf<Int>()
-            for (x in 0 until numberOfIterations) {
-                logger.debug("started isolating $sourceFilePath")
-                try {
-                    val ranking = BugIsolator.isolate(sourceFilePath, BugType.BACKEND)
-                    if (ranking != null) {
-                        isolationStats("${sample.parentFile.name}/${sample.nameWithoutExtension}/$x", ranking)
-                        statistics()
-                        rankings += ranking
-                        failingMutants += BugIsolator.lastNumberOfFailingMutants
-                        passingMutants += BugIsolator.lastNumberOfPassingMutants
-                    } else {
-                        filesWithNoBugs += sourceFilePath
-                    }
-                } catch (e: Throwable) {
-                    logger.debug(e.message)
-                    fuckedUpFiles += sourceFilePath
-                }
-                logger.debug("finished isolating $sourceFilePath")
-                logger.debug("")
+        var isPartiallyReduced = false
+        try {
+            File("tmp/reduce_tmp.kt").writeText(File(sourceFilePath).readText())
+            val executor = Executors.newSingleThreadExecutor()
+            logger.debug("started reducing $sourceFilePath")
+            val future = executor.submit {
+                Reducer.reduce("tmp/reduce_tmp.kt", compiler)
             }
-            val localComparisons = mutableListOf<Double>()
-            for (i in 0 until rankings.size) {
-                for (j in i + 1 until rankings.size) {
-                    localComparisons += rankings[i].cosineSimilarity(rankings[j])
-                }
-            }
-            comparisons[sourceFilePath] = localComparisons
-            allFailingMutants[sourceFilePath] = failingMutants
-            allPassingMutants[sourceFilePath] = passingMutants
-        }
-    }
-    statistics()
-    File(outputPath.substringBeforeLast('/')).mkdirs()
-    File(outputPath).printWriter().use { writer ->
-        writer.println("Current coverage: ${CompilerInstrumentation.coverageType}")
-        writer.println()
-        for ((path, comparisonsList) in comparisons) {
-            writer.println(path)
-            writer.println("Numbers of failing mutants: ${allFailingMutants[path]}")
-            writer.println("Average number of failing mutants: ${allFailingMutants[path]!!.average()}")
-            writer.println("Numbers of passing mutants: ${allPassingMutants[path]}")
-            writer.println("Average number of passing mutants: ${allPassingMutants[path]!!.average()}")
-            writer.println("Mean similarity value: ${comparisonsList.average()}")
-            writer.println("Min similarity value: ${comparisonsList.min()}")
-            writer.println("Max similarity value: ${comparisonsList.max()}")
-            writer.println("Similarity value's range: ${comparisonsList.max()!! - comparisonsList.min()!!}")
-            writer.println()
-        }
-    }
-    logger.debug("")
-    logger.debug("files with no bugs:")
-    for (fileWithNoBug in filesWithNoBugs) {
-        logger.debug(fileWithNoBug)
-    }
-    logger.debug("")
-    logger.debug("fucked up files:")
-    for (fuckedUpFile in fuckedUpFiles) {
-        logger.debug(fuckedUpFile)
-    }
-}
-
-fun filterBadSamples(file: File) {
-    val regex = Regex("""(\d+/[^/]+)\.kt$""")
-    file.walk().sortedBy { it.absolutePath }.forEach {
-        val sourceFilePath = it.absolutePath
-        val matchResult = regex.find(sourceFilePath)
-        if (matchResult != null) {
             try {
-                BugIsolator.isolate(sourceFilePath, BugType.BACKEND)
-                statistics()
-            } catch (e: IllegalArgumentException) {
-                if (e.message == "A project should contain a bug in order to isolate it.") {
-                    logger.debug("$sourceFilePath does not contain a detectable bug!")
-                    logger.debug("")
-                    logger.debug("")
+                future.get(20, TimeUnit.MINUTES)
+            } catch (e: TimeoutException) {
+                logger.debug("timeout!!")
+                future.cancel(true)
+                executor.shutdownNow()
+                while (true) {
+                    try {
+                        if (executor.awaitTermination(1, TimeUnit.SECONDS)) break
+                    } catch (_: InterruptedException) {}
                 }
+                throw e
             }
+            logger.debug("finished reducing $sourceFilePath")
+        } catch (e: Throwable) {
+            logger.debug("Exception: ${e.javaClass.name}")
+            logger.debug(if (e.message.isNullOrEmpty()) "no message" else e.message)
+            logger.debug("$sourceFilePath not fully reduced")
+            isPartiallyReduced = true
+        } finally {
+            val reducedText = File("tmp/reduce_tmp.kt").readText()
+            if (checkBugPresence(reducedText)) {
+                logger.debug("bug was preserved during reduction => using reduced version")
+                File("tmp/tmp.kt").writeText(reducedText)
+                if (isPartiallyReduced) partiallyReducedFiles += sourceFilePath
+            } else {
+                logger.debug("bug was not preserved during reduction => back to original version")
+                unreducedFiles += sourceFilePath
+            }
+            logger.debug("")
         }
     }
-    statistics()
-}
 
-fun numerateDataSet(file: File) {
-    var counter = 0
-    val files = file.listFiles() ?: return
-    files.sortedBy { it.absolutePath }.forEach { childFile ->
-        if (childFile.isDirectory) {
-            numerateDataSet(childFile)
-        } else {
-            val content = childFile.readLines().joinToString("\n")
-            childFile.delete()
-            File("${file.absolutePath}/$counter.kt").writeText(content)
-            counter++
+    logger.debug("started isolating $sourceFilePath")
+    logger.debug("code:\n${File("tmp/tmp.kt").readText()}")
+    logger.debug("")
+    val ranking: RankedProgramEntities?
+    try {
+        ranking = BugIsolator.isolate("tmp/tmp.kt", BugType.BACKEND, listOf(compiler))
+        ranking?.let {
+            val sourceFile = File(sourceFilePath)
+            ranking.saveIsolationResults("${sourceFile.parentFile.name}/${sourceFile.nameWithoutExtension}")
+            printIsolationGlobalStatistics { logger.debug(it) }
+            logger.debug("")
         }
+    } catch (e: Throwable) {
+        logger.debug("Exception: ${e.javaClass.name}")
+        logger.debug(if (e.message.isNullOrEmpty()) "no message" else e.message)
+        return null
     }
+    logger.debug("finished isolating $sourceFilePath")
+    logger.debug("")
+    return ranking
 }
 
-//fun initialTests() {
-//    BugIsolator.rankingFormula = Ochiai2RankingFormula
+fun compareIsolationRankings(first: RankedProgramEntities, second: RankedProgramEntities): Double {
+    return first.cosineSimilarity(second)
+}
+
+fun fetchErrorData(sourceFilePath: String): String? =
+    getCompiler().getErrorMessage(sourceFilePath)
+        .split("Cause:")
+        .last()
+        .split("\n")
+        .map { it.trim() }
+        .filter { it.startsWith("at ") }
+        .joinToString("\n") { it.replaceFirst("at ", "") }
+
+private val diffMatchPatch = DiffMatchPatch()
+
+fun compareStacktraces(first: String, second: String): Double {
+    val normalizingDivider = first.length + second.length
+    if (normalizingDivider == 0) return 1.0
+    val diffs = diffMatchPatch.diffMain(first, second)
+    val similarity = diffs
+        .filter { diff -> diff.operation.name == "EQUAL" }
+        .fold(0) { acc, diff -> acc + diff.text.length }
+    return 2 * similarity.toDouble() / normalizingDivider
+}
+
+//fun compareRankings(file: File, outputPath: String, reduceMode: Boolean = false) {
+//    val regex = Regex("""([^/]+)/([^/]+)\.kt${'$'}""")
+//    val rankings = mutableMapOf<Sample, RankedProgramEntities>()
 //
-//    val ranking1 = BugIsolator.isolate("/home/fenstonsingel/kotlin-samples/set-a/3/BACKEND_bhugqgy_FILE.kt", BugType.BACKEND)
-//    statistics()
+//    fun intermediateResults() {
+//        printIsolationGlobalStatistics { logger.debug(it) }
+//        val comparisons = mutableListOf<Triple<Sample, Sample, Double>>()
+//        for ((sample1, ranking1) in rankings) {
+//            for ((sample2, ranking2) in rankings) {
+//                if (sample1 != sample2 && comparisons.find { (s1, s2, _) -> s1 == sample2 && s2 == sample1 } == null) {
+//                    comparisons += Triple(sample1, sample2, ranking1.cosineSimilarity(ranking2))
+//                }
+//            }
+//        }
+//        var uniquesComparisons = 0
+//        var duplicatesComparisons = 0
+//        var uniquesDivergence = 0.0
+//        var duplicatesDivergence = 0.0
+//        val threshold = 0.8
+//        var uniquesDivRelativeToT = 0
+//        var duplicatesDivRelativeToT = 0
+//        var firstUniques: Int? = null
+//        var firstUniquesValue = 0.0
+//        var lastDuplicates: Int? = null
+//        var lastDuplicatesValue = 0.0
+//        File(outputPath.substringBeforeLast('/')).mkdirs()
+//        File(outputPath).printWriter().use { writer ->
+//            var index = 1
+//            for ((sample1, sample2, similarity) in comparisons.sortedByDescending { (_, _, ranking) -> ranking }) {
+//                writer.print("$sample1 to $sample2: $similarity ")
+//                if (sample1.group == sample2.group) {
+//                    writer.println("(DUPLICATES)")
+//                    ++duplicatesComparisons
+//                    lastDuplicates = index
+//                    lastDuplicatesValue = similarity
+//                    duplicatesDivergence += 1 - similarity
+//                    if (similarity <= threshold) ++duplicatesDivRelativeToT
+//                } else {
+//                    writer.println()
+//                    ++uniquesComparisons
+//                    if (firstUniques == null) {
+//                        firstUniques = index
+//                        firstUniquesValue = similarity
+//                    }
+//                    uniquesDivergence += similarity
+//                    if (similarity > threshold) ++uniquesDivRelativeToT
+//                }
+//                ++index
+//            }
+//            writer.println()
+//            writer.println("Current coverage: ${CompilerInstrumentation.coverageType}")
+//            writer.println("Worst-ranked duplicates: $lastDuplicates")
+//            writer.println("(value: $lastDuplicatesValue)")
+//            writer.println("Worst-ranked uniques: $firstUniques")
+//            writer.println("(value: $firstUniquesValue)")
+//            writer.println("Range of mixed entries: ${(firstUniques?.let { lastDuplicates?.minus(it) }) ?: "none"}")
+//            writer.println("Absolute duplicates divergence: $duplicatesDivergence")
+//            writer.println("(normalized: ${duplicatesDivergence / duplicatesComparisons})")
+//            writer.println("Absolute uniques divergence: $uniquesDivergence")
+//            writer.println("(normalized: ${uniquesDivergence / uniquesComparisons})")
+//            writer.println("Duplicates divergence relative to $threshold: $duplicatesDivRelativeToT")
+//            writer.println("(normalized: ${duplicatesDivRelativeToT.toDouble() / duplicatesComparisons})")
+//            writer.println("Uniques divergence relative to $threshold: $uniquesDivRelativeToT")
+//            writer.println("(normalized: ${uniquesDivRelativeToT.toDouble() / uniquesComparisons})")
+//            writer.println("Total divergence: ${duplicatesDivergence + uniquesDivergence}")
+//            writer.println("(normalized: ${(duplicatesDivergence + uniquesDivergence) / (duplicatesComparisons + uniquesComparisons)})")
+//        }
+//    }
 //
-//    val ranking2 = BugIsolator.isolate("/home/fenstonsingel/kotlin-samples/set-a/6/BACKEND_dooqtxk_FILE.kt", BugType.BACKEND)
-//    statistics()
-//
-//    logger.debug(ranking1.cosineSimilarity(ranking2))
+//    val unreducedFiles = mutableListOf<String>()
+//    val filesWithNoBugs = mutableListOf<String>()
+//    val fuckedUpFiles = mutableListOf<String>()
+//    file.walk().sortedBy { it.absolutePath }.forEach {
+//        val sourceFilePath = it.absolutePath
+//        val matchResult = regex.find(sourceFilePath)
+//        if (matchResult != null) {
+//            val ids = matchResult.groupValues
+//            val sample = Sample(ids[1], ids[2].toInt())
+//            // anything of interest got nuked from here during refactoring
+//        }
+//    }
+//}
+
+//fun checkStability(file: File, numberOfSamples: Int, numberOfIterations: Int, outputPath: String) {
+//    val regex = Regex("""/([^/]+)\.kt${'$'}""")
+//    val comparisons = mutableMapOf<String, List<Double>>()
+//    val allFailingMutants = mutableMapOf<String, List<Int>>()
+//    val allPassingMutants = mutableMapOf<String, List<Int>>()
+//    val filesWithNoBugs = mutableListOf<String>()
+//    val fuckedUpFiles = mutableListOf<String>()
+//    file.walk().filter { it.isFile }.toList().shuffled().take(numberOfSamples).forEach { sample ->
+//        val sourceFilePath = sample.absolutePath
+//        val matchResult = regex.find(sourceFilePath)
+//        if (matchResult != null) {
+//            val rankings = mutableListOf<RankedProgramEntities>()
+//            val failingMutants = mutableListOf<Int>()
+//            val passingMutants = mutableListOf<Int>()
+//            for (x in 0 until numberOfIterations) {
+//                logger.debug("started isolating $sourceFilePath")
+//                try {
+//                    val ranking = BugIsolator.isolate(sourceFilePath, BugType.BACKEND)
+//                    if (ranking != null) {
+//                        ranking.saveIsolationResults("${sample.parentFile.name}/${sample.nameWithoutExtension}/$x")
+//                        printIsolationGlobalStatistics { logger.debug(it) }
+//                        rankings += ranking
+//                        failingMutants += BugIsolator.lastNumberOfFailingMutants
+//                        passingMutants += BugIsolator.lastNumberOfPassingMutants
+//                    } else {
+//                        filesWithNoBugs += sourceFilePath
+//                    }
+//                } catch (e: Throwable) {
+//                    logger.debug(e.message)
+//                    fuckedUpFiles += sourceFilePath
+//                }
+//                logger.debug("finished isolating $sourceFilePath")
+//                logger.debug("")
+//            }
+//            val localComparisons = mutableListOf<Double>()
+//            for (i in 0 until rankings.size) {
+//                for (j in i + 1 until rankings.size) {
+//                    localComparisons += rankings[i].cosineSimilarity(rankings[j])
+//                }
+//            }
+//            comparisons[sourceFilePath] = localComparisons
+//            allFailingMutants[sourceFilePath] = failingMutants
+//            allPassingMutants[sourceFilePath] = passingMutants
+//        }
+//    }
+//    printIsolationGlobalStatistics { logger.debug(it) }
+//    File(outputPath.substringBeforeLast('/')).mkdirs()
+//    File(outputPath).printWriter().use { writer ->
+//        writer.println("Current coverage: ${CompilerInstrumentation.coverageType}")
+//        writer.println()
+//        for ((path, comparisonsList) in comparisons) {
+//            writer.println(path)
+//            writer.println("Numbers of failing mutants: ${allFailingMutants[path]}")
+//            writer.println("Average number of failing mutants: ${allFailingMutants[path]!!.average()}")
+//            writer.println("Numbers of passing mutants: ${allPassingMutants[path]}")
+//            writer.println("Average number of passing mutants: ${allPassingMutants[path]!!.average()}")
+//            writer.println("Mean similarity value: ${comparisonsList.average()}")
+//            writer.println("Min similarity value: ${comparisonsList.min()}")
+//            writer.println("Max similarity value: ${comparisonsList.max()}")
+//            writer.println("Similarity value's range: ${comparisonsList.max()!! - comparisonsList.min()!!}")
+//            writer.println()
+//        }
+//    }
 //    logger.debug("")
+//    logger.debug("files with no bugs:")
+//    for (fileWithNoBug in filesWithNoBugs) {
+//        logger.debug(fileWithNoBug)
+//    }
 //    logger.debug("")
+//    logger.debug("fucked up files:")
+//    for (fuckedUpFile in fuckedUpFiles) {
+//        logger.debug(fuckedUpFile)
+//    }
+//}
 //
-//    val ranking3 = BugIsolator.isolate("/home/fenstonsingel/kotlin-samples/set-a/3/BACKEND_pytmh.kt", BugType.BACKEND)
-//    statistics()
+//fun filterBadSamples(file: File) {
+//    val regex = Regex("""(\d+/[^/]+)\.kt$""")
+//    file.walk().sortedBy { it.absolutePath }.forEach {
+//        val sourceFilePath = it.absolutePath
+//        val matchResult = regex.find(sourceFilePath)
+//        if (matchResult != null) {
+//            try {
+//                BugIsolator.isolate(sourceFilePath, BugType.BACKEND)
+//                printIsolationGlobalStatistics { logger.debug(it) }
+//            } catch (e: IllegalArgumentException) {
+//                if (e.message == "A project should contain a bug in order to isolate it.") {
+//                    logger.debug("$sourceFilePath does not contain a detectable bug!")
+//                    logger.debug("")
+//                    logger.debug("")
+//                }
+//            }
+//        }
+//    }
+//    printIsolationGlobalStatistics { logger.debug(it) }
+//}
 //
-//    logger.debug(ranking1.cosineSimilarity(ranking3))
-//    logger.debug("")
-//    logger.debug("")
+//fun numerateDataSet(file: File) {
+//    var counter = 0
+//    val files = file.listFiles() ?: return
+//    files.sortedBy { it.absolutePath }.forEach { childFile ->
+//        if (childFile.isDirectory) {
+//            numerateDataSet(childFile)
+//        } else {
+//            val content = childFile.readLines().joinToString("\n")
+//            childFile.delete()
+//            File("${file.absolutePath}/$counter.kt").writeText(content)
+//            counter++
+//        }
+//    }
 //}
