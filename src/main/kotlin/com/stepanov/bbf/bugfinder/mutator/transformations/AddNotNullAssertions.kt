@@ -15,7 +15,7 @@ class AddNotNullAssertions : Transformation() {
     override fun transform() {
         log.debug("AddNotNullAssertions mutations")
         file.getAllPSIChildrenOfType<KtExpression>()
-            .filter { getRandomBoolean(3) }
+            .filter { random.getRandomBoolean(3) }
             .map { tryToAddNotNullAssertion(it) }
     }
 

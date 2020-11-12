@@ -5,7 +5,6 @@ import org.jetbrains.kotlin.lexer.KtTokens
 import org.jetbrains.kotlin.psi.KtClass
 import org.jetbrains.kotlin.psi.KtFunction
 import org.jetbrains.kotlin.psi.KtProperty
-import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import com.stepanov.bbf.bugfinder.util.getAllChildrenNodes
 import com.stepanov.bbf.bugfinder.util.getRandomBoolean
 import org.apache.log4j.Logger
@@ -23,7 +22,7 @@ class AddPossibleModifiers : Transformation() {
                 .asSequence()
                 .filter { it.elementType == KtNodeTypes.CLASS || it.elementType == KtNodeTypes.PROPERTY
                         || it.elementType == KtNodeTypes.FUN }
-                .filter { getRandomBoolean(4) }
+                .filter { random.getRandomBoolean(4) }
                 .toList()
         for (i in 0..randomConstant) {
             values.forEach {
@@ -39,7 +38,7 @@ class AddPossibleModifiers : Transformation() {
                         KtNodeTypes.PROPERTY -> it.psi as KtProperty
                         else -> it.psi as KtFunction
                     }
-                val num = Random().nextInt(curWorkingList.size)
+                val num = random.nextInt(curWorkingList.size)
                 val keyword = KtTokens.MODIFIER_KEYWORDS_ARRAY.find { it.value == curWorkingList[num] } ?: return@forEach
                 el.addModifier(keyword)
                 if (!checker.checkCompiling(file))

@@ -4,7 +4,6 @@ import org.jetbrains.kotlin.psi.*
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
 import com.stepanov.bbf.bugfinder.util.getRandomVariableName
 import org.apache.log4j.Logger
-import java.util.*
 
 class AddBlockToExpression : Transformation() {
 
@@ -26,21 +25,21 @@ class AddBlockToExpression : Transformation() {
         val varList = mutableListOf<String>()
         val names = mutableListOf<String>()
         val logicalOps = listOf("&&", "||")
-        repeat(Random().nextInt(randomConst) + 1) {
-            val name = Random().getRandomVariableName(randomConst)
-            val value = Random().nextBoolean()
+        repeat(random.nextInt(randomConst) + 1) {
+            val name = random.getRandomVariableName(randomConst)
+            val value = random.nextBoolean()
             names.add(name)
             varList.add("val $name = $value")
         }
         val expr = StringBuilder()
         names.forEach {
             if (it != names.last())
-                expr.append("$it ${logicalOps[Random().nextInt(2)]} ")
+                expr.append("$it ${logicalOps[random.nextInt(2)]} ")
             else
                 expr.append(it)
         }
-        try {
-            val res = when (Random().nextInt(3)) {
+        return try {
+            val res = when (random.nextInt(3)) {
                 0 -> psiFactory.createExpression("if (${expr}) {${exp.text}} else {${exp.text}}") as KtIfExpression
                 1 -> psiFactory.createExpression("when (${expr}) {\n true -> {${exp.text}}\n else -> {${exp.text}}\n}") as KtWhenExpression
                 else -> psiFactory.createExpression("try\n{${exp.text}}\ncatch(e: Exception){}\nfinally{}") as KtTryExpression
@@ -49,13 +48,12 @@ class AddBlockToExpression : Transformation() {
             //Remove braces
             block.deleteChildInternal(block.lBrace!!.node)
             block.deleteChildInternal(block.rBrace!!.node)
-            return block
+            block
         } catch (e: Exception) {
-            return null
+            null
         }
     }
 
     //!!!!
-//    private val randomConst = 5
     private val randomConst = 1
 }

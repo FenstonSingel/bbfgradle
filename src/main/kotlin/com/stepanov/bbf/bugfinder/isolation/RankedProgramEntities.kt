@@ -16,7 +16,9 @@ class RankedProgramEntities(val storage: Map<String, Double>, private val isRank
         ): RankedProgramEntities {
             val rawResult = statistics.storage.mapValues { (_, statistics) -> formula(statistics) }
             val result = if (numberOfEntities != null) {
-                val sortedResult = rawResult.toSortedMap()
+                val sortedResult = rawResult
+                    .map { (entity, rank) -> entity to rank }
+                    .sortedWith( Comparator { a, b -> compare(a, b, formula.isRankDescending) } )
                 val iterator = sortedResult.iterator()
                 val temp = mutableMapOf<String, Double>()
                 for (i in 0 until numberOfEntities) {
@@ -29,19 +31,19 @@ class RankedProgramEntities(val storage: Map<String, Double>, private val isRank
             }
             return RankedProgramEntities(result, formula.isRankDescending)
         }
-    }
 
-    private fun compare(pair1: Pair<String, Double>, pair2: Pair<String, Double>): Int {
-        val (entity1, rank1) = pair1
-        val (entity2, rank2) = pair2
-        val rankComparison = rank1.compareTo(rank2) * if (isRankDescending) -1 else 1
-        return if (rankComparison != 0) rankComparison else entity1.compareTo(entity2)
+        private fun compare(pair1: Pair<String, Double>, pair2: Pair<String, Double>, isRankDescending: Boolean): Int {
+            val (entity1, rank1) = pair1
+            val (entity2, rank2) = pair2
+            val rankComparison = rank1.compareTo(rank2) * if (isRankDescending) -1 else 1
+            return if (rankComparison != 0) rankComparison else entity1.compareTo(entity2)
+        }
     }
 
     fun toList(): List<Pair<String, Double>> {
         return storage
             .map { (entity, rank) -> entity to rank }
-            .sortedWith( Comparator { a, b -> compare(a, b) } )
+            .sortedWith( Comparator { a, b -> compare(a, b, isRankDescending) } )
     }
 
     fun cosineSimilarity(other: RankedProgramEntities): Double {

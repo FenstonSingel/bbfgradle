@@ -1,13 +1,13 @@
 package com.stepanov.bbf.bugfinder.mutator.transformations
 
 import com.stepanov.bbf.reduktor.util.replaceThis
-import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import com.stepanov.bbf.bugfinder.util.*
 import org.apache.log4j.Logger
 import org.jetbrains.kotlin.psi.KtNamedFunction
 import org.jetbrains.kotlin.psi.KtParameter
 import org.jetbrains.kotlin.resolve.BindingContext
 import java.util.*
+import kotlin.math.roundToInt
 
 class AddSameFunctions(private val ctx: BindingContext) : Transformation() {
 
@@ -17,7 +17,7 @@ class AddSameFunctions(private val ctx: BindingContext) : Transformation() {
 
     override fun transform() {
         log.debug("AddSameFunctions mutations")
-        val functions = file.getAllPSIChildrenOfType<KtNamedFunction>().filter { Random().nextBoolean() }
+        val functions = file.getAllPSIChildrenOfType<KtNamedFunction>().filter { random.nextBoolean() }
         for (func in functions) {
             val retType = func.typeReference?.text ?: func.getType(ctx).toString()
             val newRtv = generateDefValuesAsString(retType)
@@ -25,7 +25,7 @@ class AddSameFunctions(private val ctx: BindingContext) : Transformation() {
             val allParams = mutableListOf<List<Pair<KtParameter, Int>>>()
             //Adding to not create duplicates to function
             allParams.add(func.valueParameters.withIndex().map { it.value to it.index }.toList())
-            for (i in 0 until 25/*Random.nextInt(10)*/) {
+            for (i in 0 until 25/*random.nextInt(10)*/) {
                 val tmpParam = mutableListOf<Pair<KtParameter, Int>>()
                 for ((index, par) in func.valueParameters.withIndex()) {
                     val type = par?.typeReference ?: continue
@@ -61,14 +61,14 @@ class AddSameFunctions(private val ctx: BindingContext) : Transformation() {
 
 
     private fun generateRandomType(primitiveProb: Int = 50, res: String = ""): String {
-        val isPrimitive = getTrueWithProbability(primitiveProb)
+        val isPrimitive = random.getTrueWithProbability(primitiveProb)
         val resType = StringBuilder(res)
         if (isPrimitive) {
-            resType.append(primitiveTypes[Random().nextInt(primitiveTypes.size)])
+            resType.append(primitiveTypes[random.nextInt(primitiveTypes.size)])
             repeat(res.count { it == '<' }) { resType.append('>') }
         } else {
-            val container = containers[Random().nextInt(containers.size)]
-            val newProb = Math.round(primitiveProb * 1.25).toInt()
+            val container = containers[random.nextInt(containers.size)]
+            val newProb = (primitiveProb * 1.25).roundToInt()
             if (container.second == 2) {
                 val first = generateRandomType(newProb)
                 val second = generateRandomType(newProb)

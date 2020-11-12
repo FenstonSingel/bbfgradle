@@ -2,6 +2,9 @@ package com.stepanov.bbf.coverage
 
 import com.stepanov.bbf.coverage.impl.BranchBasedCoverage
 import com.stepanov.bbf.coverage.impl.MethodBasedCoverage
+import java.math.BigDecimal
+import java.math.MathContext
+import java.math.RoundingMode
 import kotlin.math.sqrt
 
 interface ProgramCoverage {
@@ -38,6 +41,8 @@ interface ProgramCoverage {
             }
             return BranchBasedCoverage(storage)
         }
+
+        private val twoBigDecimal = 2.toBigDecimal()
     }
 
     // In most cases it is probably more preferable to use ProgramCoverage.entities(),
@@ -50,33 +55,36 @@ interface ProgramCoverage {
 
     val isEmpty: Boolean get() = entities().isEmpty()
 
-    fun cosineSimilarity(other: ProgramCoverage): Double {
-        var dotProduct = 0.0
-        var firstNormSquared = 0.0
-        var secondNormSquared = 0.0
+    fun cosineSimilarity(other: ProgramCoverage): Double =
+        calculateCosineSimilarity(other, entities(this, other))
 
-        val entities = entities(this, other)
+    private fun calculateCosineSimilarity(other: ProgramCoverage, entities: List<String>): Double {
+        var dotProduct = BigDecimal.ZERO
+        var firstNormSquared = BigDecimal.ZERO
+        var secondNormSquared = BigDecimal.ZERO
+
         for (entity in entities) {
-            val firstNumberOfExecutions = this[entity]?.first?.toDouble() ?: 0.0
-            val secondNumberOfExecutions = other[entity]?.first?.toDouble() ?: 0.0
+            val firstNumberOfExecutions = this[entity]?.first?.toBigDecimal() ?: BigDecimal.ZERO
+            val secondNumberOfExecutions = other[entity]?.first?.toBigDecimal() ?: BigDecimal.ZERO
 
             dotProduct += firstNumberOfExecutions * secondNumberOfExecutions
             firstNormSquared += firstNumberOfExecutions * firstNumberOfExecutions
             secondNormSquared += secondNumberOfExecutions * secondNumberOfExecutions
-
-            /* It is most probably unwise to artificially increase the dimensionality of the vector space.
-             * However, maybe it would be more beneficial if we find
-             * a way to assign good weights to instances of entities being "skipped". */
-
-            // val firstNumberOfSkips = if (firstNumberOfExecutions == 0.0) secondNumberOfExecutions else 0.0
-            // val secondNumberOfSkips = if (secondNumberOfExecutions == 0.0) firstNumberOfExecutions else 0.0
-
-            // dotProduct += firstNumberOfSkips * secondNumberOfSkips
-            // firstNormSquared += firstNumberOfSkips * firstNumberOfSkips
-            // secondNormSquared += secondNumberOfSkips * secondNumberOfSkips
         }
 
-        return dotProduct / (sqrt(firstNormSquared) * sqrt(secondNormSquared))
+        return (dotProduct.setScale(16) / (firstNormSquared.sqrt(16) * secondNormSquared.sqrt(16))).toDouble()
+    }
+
+    private fun BigDecimal.sqrt(scale: Int): BigDecimal {
+        var x2 = BigDecimal.ZERO
+        var x1 = BigDecimal(sqrt(toDouble()))
+        while (x2 != x1) {
+            x2 = x1
+            x1 = divide(x2, scale, RoundingMode.HALF_UP)
+            x1 = x1.add(x2)
+            x1 = x1.divide(twoBigDecimal, scale, RoundingMode.HALF_UP)
+        }
+        return x1
     }
 
 }

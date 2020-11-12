@@ -3,15 +3,16 @@ package com.stepanov.bbf.bugfinder.mutator
 import com.stepanov.bbf.bugfinder.executor.CommonCompiler
 import com.stepanov.bbf.bugfinder.mutator.transformations.*
 import com.stepanov.bbf.bugfinder.util.checkCompilingForAllBackends
+import com.stepanov.bbf.bugfinder.util.utilRandom
 import org.apache.log4j.Logger
 import org.jetbrains.kotlin.psi.KtFile
 import org.jetbrains.kotlin.resolve.BindingContext
-import kotlin.random.Random
+import ru.spbstu.kotlin.generate.util.nextInRange
 
 class Mutator(val file: KtFile, val context: BindingContext?, private val compilers: List<CommonCompiler>) {
 
     private fun executeMutation(t: Transformation, probPercentage: Int = 50) {
-        if (Random.nextInt(0, 100) < probPercentage)
+        if (utilRandom.nextInRange(0, 100) < probPercentage)
             t.transform()
     }
 

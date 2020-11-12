@@ -1,6 +1,5 @@
 package com.stepanov.bbf.bugfinder.mutator.transformations
 
-import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import org.jetbrains.kotlin.lexer.KtTokens
 import org.jetbrains.kotlin.psi.KtArrayAccessExpression
 import org.jetbrains.kotlin.psi.KtBinaryExpression
@@ -34,7 +33,7 @@ class ChangeOperatorsToFunInvocations : Transformation() {
     private fun transformImpl() {
         for (psiNode in file.getAllPSIDFSChildrenOfType<KtExpression>()) {
             //Probablity!
-            if (Random().nextBoolean())
+            if (random.nextBoolean())
                 continue
 
             when (psiNode) {

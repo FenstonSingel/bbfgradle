@@ -4,7 +4,9 @@ import com.intellij.lang.ASTNode
 import com.intellij.psi.PsiElement
 import com.intellij.psi.impl.source.tree.TreeElement
 import com.stepanov.bbf.bugfinder.util.getAllParentsWithoutNode
+import com.stepanov.bbf.bugfinder.util.removeArbitraryChild
 import org.jetbrains.kotlin.psi.KtFile
+import org.jetbrains.kotlin.psi.psiUtil.siblings
 
 
 abstract class Checker {
@@ -59,6 +61,23 @@ abstract class Checker {
 
     fun addNodeIfPossible(file: KtFile, anchor: ASTNode, node: ASTNode, before: Boolean = false): Boolean =
         addNodeIfPossible(file, anchor.psi, node.psi, before)
+
+    fun removeNodeIfPossible(file: KtFile, node: ASTNode): Boolean {
+        if (node.text.isEmpty()) return checkCompiling(file)
+        try {
+            val parent = node.treeParent
+            val next = node.treeNext
+            parent.removeChild(node)
+            if (checkCompiling(file)) return true
+            parent.addChild(node, next)
+            return false
+        } catch (e: Throwable) {
+            return false
+        }
+    }
+
+    fun removeNodeIfPossible(file: KtFile, node: PsiElement): Boolean =
+        removeNodeIfPossible(file, node.node)
 
     private val DUMMY_HOLDER_INDEX: Short = 86
 }

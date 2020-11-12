@@ -4,8 +4,8 @@ import com.intellij.lang.ASTNode
 import org.jetbrains.kotlin.psi.psiUtil.parents
 import com.stepanov.bbf.bugfinder.util.getAllChildrenNodes
 import com.stepanov.bbf.bugfinder.util.replaceThis
-import kotlin.random.Random
 import org.apache.log4j.Logger
+import ru.spbstu.kotlin.generate.util.nextInRange
 
 class ChangeRandomASTNodes : Transformation() {
 
@@ -14,20 +14,20 @@ class ChangeRandomASTNodes : Transformation() {
     private val log: Logger = Logger.getLogger("mutatorLogger")
 
     override fun transform() {
-        val numOfSwaps = Random.nextInt(numOfSwaps.first, numOfSwaps.second)
+        val numOfSwaps = random.nextInRange(numOfSwaps.first, numOfSwaps.second)
         log.debug("ChangeRandomASTNodes mutations: $numOfSwaps swaps")
         for (i in 1 .. numOfSwaps) {
             val children = file.node.getAllChildrenNodes()
             //Swap random nodes
-            var randomNode1 = children[Random.nextInt(children.size)]
-            var randomNode2 = children[Random.nextInt(children.size)]
+            var randomNode1 = children[random.nextInt(children.size)]
+            var randomNode2 = children[random.nextInt(children.size)]
             while (true) {
                 if (randomNode1.text.trim().isEmpty() /*|| randomNode1.text.contains("\n")*/
                         || randomNode1.parents().contains(randomNode2))
-                    randomNode1 = children[Random.nextInt(children.size)]
+                    randomNode1 = children[random.nextInt(children.size)]
                 else if (randomNode2.text.trim().isEmpty() /*|| randomNode2.text.contains("\n")*/
                         || randomNode2.parents().contains(randomNode1))
-                    randomNode2 = children[Random.nextInt(children.size)]
+                    randomNode2 = children[random.nextInt(children.size)]
                 else break
             }
             val new = swap(randomNode1, randomNode2)
@@ -51,5 +51,5 @@ class ChangeRandomASTNodes : Transformation() {
         return randomNode2 to randomNode1
     }
 
-    private val numOfSwaps = 40 to 50
+    private val numOfSwaps = 10 to 20
 }

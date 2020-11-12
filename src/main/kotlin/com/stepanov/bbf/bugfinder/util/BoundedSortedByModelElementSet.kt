@@ -34,6 +34,8 @@ class BoundedSortedByModelElementSet<T>(
         if (data.size > bound) data.removeAt(data.size - 1)
     }
 
+    fun first(): T = data.first().first
+
     fun toList(): List<T> =
         data.map { it.first }
 
@@ -43,6 +45,10 @@ class BoundedSortedByModelElementSet<T>(
             result += elem.first
         }
         return result
+    }
+
+    fun clear() {
+        data.clear()
     }
 
 }

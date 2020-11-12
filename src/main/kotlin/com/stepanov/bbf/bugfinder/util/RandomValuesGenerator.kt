@@ -10,6 +10,12 @@ import java.util.*
 const val LINE_SIZE = 5
 const val RANDOM_CONST = 5
 
+val utilRandom = Random()
+
+fun reinitializeRandom(seed: Long) {
+    utilRandom.setSeed(seed)
+}
+
 fun generateDefValuesAsString(type: String): String {
     return when {
         type == "String" -> "\"${generateDefValuesForDefaultTypes<String>(type)}\""
@@ -60,7 +66,7 @@ fun generateDefValuesAsString(type: String): String {
             createDefaultValueWithToOperator(type, 1)
         }
         type.startsWith("Map") -> {
-            createDefaultValueWithToOperator(type, /*Random().nextInt(randomConst)*/5)
+            createDefaultValueWithToOperator(type, /*utilRandom.nextInt(randomConst)*/5)
         }
         else -> {
             //println("Unsupported type : $type")
@@ -73,10 +79,10 @@ fun generateDefValuesAsString(type: String): String {
 @Suppress("UNCHECKED_CAST")
 private fun <T> generateDefValuesForDefaultTypes(type: String): T =
         when (type) {
-            "Int" -> Random().nextInt()
-            "Double" -> Random().nextDouble()
-            "Boolean" -> Random().nextBoolean()
-            else -> Random().nextString(('a'..'z').asCharSequence(),
+            "Int" -> utilRandom.nextInt()
+            "Double" -> utilRandom.nextDouble()
+            "Boolean" -> utilRandom.nextBoolean()
+            else -> utilRandom.nextString(('a'..'z').asCharSequence(),
                 LINE_SIZE, LINE_SIZE + 1)
         } as T
 
@@ -121,7 +127,7 @@ private fun createDefaultValueForContainer(name: String, typeParam: String): Str
     if (typeParam.contains('{')) return ""
     val values = StringBuilder()
     values.append(name)
-    repeat(Random().nextInt(RANDOM_CONST) + 1) { values.append("${generateDefValuesAsString(
+    repeat(utilRandom.nextInt(RANDOM_CONST) + 1) { values.append("${generateDefValuesAsString(
         typeParam
     )}, ") }
     values.replace(values.length - 2, values.length, ")")

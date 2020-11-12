@@ -4,7 +4,6 @@ import org.jetbrains.kotlin.KtNodeTypes
 import org.jetbrains.kotlin.psi.KtNamedFunction
 import org.jetbrains.kotlin.psi.KtPsiFactory
 import org.jetbrains.kotlin.psi.KtReturnExpression
-import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import com.stepanov.bbf.bugfinder.util.getAllChildrenNodes
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
 import com.stepanov.bbf.bugfinder.util.getRandomBoolean
@@ -18,7 +17,7 @@ class ChangeReturnValueToConstant : Transformation() {
 
     override fun transform() {
         log.debug("ChangeReturnValueToConstant mutations")
-        val functions = file.getAllPSIChildrenOfType<KtNamedFunction>().filter { getRandomBoolean() }
+        val functions = file.getAllPSIChildrenOfType<KtNamedFunction>().filter { random.getRandomBoolean() }
         for (f in functions) {
             val key = typeConstants.keys.find { f.typeReference?.text?.startsWith(it) == true } ?: continue
             val returns = f.node.getAllChildrenNodes()

@@ -15,7 +15,7 @@ class AddBracketsToExpression : Transformation() {
     override fun transform() {
         log.debug("AddBracketsToExpression mutations")
         file.getAllPSIChildrenOfType<KtExpression>().filter {
-            getRandomBoolean(4)
+            random.getRandomBoolean(4)
         }.forEach {
             //KOSTYL'!!!!!!
             if (it is KtWhenExpression) return@forEach

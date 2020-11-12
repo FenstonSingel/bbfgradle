@@ -1,13 +1,11 @@
 package com.stepanov.bbf.bugfinder.mutator.transformations
 
 import com.intellij.lang.ASTNode
-import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import org.jetbrains.kotlin.KtNodeTypes
 import org.jetbrains.kotlin.lexer.KtTokens
 import com.stepanov.bbf.bugfinder.util.getAllChildrenNodes
 import com.stepanov.bbf.bugfinder.util.getRandomBoolean
 import org.apache.log4j.Logger
-import java.util.*
 
 class ChangeOperators : Transformation() {
 
@@ -47,14 +45,14 @@ class ChangeOperators : Transformation() {
     }
 
     private fun replaceOperator(replace: ASTNode, replacement: List<String>, isRandom: Boolean = true) {
-        if (isRandom && getRandomBoolean() || !isRandom) {
-            val index = Random().nextInt(replacement.size)
+        if (isRandom && random.getRandomBoolean() || !isRandom) {
+            val index = random.nextInt(replacement.size)
             replaceOperator(replace, replacement[index])
         }
     }
 
     private fun replaceOperator(replace: ASTNode, replacement: String, isRandom: Boolean = true) {
-        if (isRandom && getRandomBoolean() || !isRandom) {
+        if (isRandom && random.getRandomBoolean() || !isRandom) {
             val replacementNode =
                     if (replace.elementType == KtNodeTypes.OPERATION_REFERENCE)
                         psiFactory.createOperationName(replacement)

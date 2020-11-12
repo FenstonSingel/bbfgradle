@@ -4,7 +4,6 @@ import org.jetbrains.kotlin.psi.KtClass
 import org.jetbrains.kotlin.psi.KtNamedFunction
 import org.jetbrains.kotlin.psi.KtProperty
 import org.jetbrains.kotlin.psi.psiUtil.parents
-import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import com.stepanov.bbf.bugfinder.util.getAllChildrenOfTheLevel
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
 import com.stepanov.bbf.bugfinder.util.getRandomBoolean
@@ -20,7 +19,7 @@ class ChangeSmthToExtension : Transformation() {
     override fun transform() {
         log.debug("ChangeSmthToExtension mutations")
         file.getAllPSIChildrenOfType<KtProperty>()
-                .filter { it.parents.any { p -> p is KtClass } /*&& getRandomBoolean(2)*/ }
+                .filter { it.parents.any { p -> p is KtClass } /*&& random.getRandomBoolean(2)*/ }
                 .forEach {
                     val kl = it.parents.find { p -> p is KtClass } ?: return@forEach
                     val klass = kl as KtClass
@@ -48,7 +47,7 @@ class ChangeSmthToExtension : Transformation() {
                 }
         // Make functions as extensions
         file.getAllPSIChildrenOfType<KtNamedFunction>()
-                .filter { it.parents.any { p -> p is KtClass } && getRandomBoolean(2) }
+                .filter { it.parents.any { p -> p is KtClass } && random.getRandomBoolean(2) }
                 .forEach {
                     val kl = it.parents.find { p -> p is KtClass } ?: return@forEach
                     val klass = kl as KtClass

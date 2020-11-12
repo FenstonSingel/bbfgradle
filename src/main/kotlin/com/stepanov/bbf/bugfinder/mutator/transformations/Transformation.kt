@@ -3,6 +3,7 @@ package com.stepanov.bbf.bugfinder.mutator.transformations
 import com.stepanov.bbf.bugfinder.executor.Checker
 import org.jetbrains.kotlin.psi.KtFile
 import org.jetbrains.kotlin.psi.KtPsiFactory
+import com.stepanov.bbf.bugfinder.util.utilRandom
 
 abstract class Transformation {
 
@@ -16,6 +17,8 @@ abstract class Transformation {
         lateinit var file: KtFile
         lateinit var checker: Checker
         lateinit var currentMutation: String
+
+        val random = utilRandom
     }
 
 }

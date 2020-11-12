@@ -19,7 +19,7 @@ class ChangeModifiers : Transformation() {
     override fun transform() {
         log.debug("ChangeModifiers mutations")
         for (i in 0..RANDOM_CONST) {
-            val modifiersLists = file.getAllPSIChildrenOfType<KtModifierList>().filter { Random().nextBoolean() }
+            val modifiersLists = file.getAllPSIChildrenOfType<KtModifierList>().filter { random.nextBoolean() }
             for (modList in modifiersLists) {
                 val workingList =
                         when (modList.parent) {
@@ -39,7 +39,7 @@ class ChangeModifiers : Transformation() {
                 for (m in modifiers) {
                     val ind = workingList.indexOf(m.text)
                     if (ind == -1) continue
-                    val newModIndex = Random().nextInt(workingList.size)
+                    val newModIndex = random.nextInt(workingList.size)
                     val keyword = KtTokens.MODIFIER_KEYWORDS_ARRAY.find { it.value == workingList[newModIndex] }
                             ?: continue
                     val oldKeyword = KtTokens.MODIFIER_KEYWORDS_ARRAY.find { it.value == m.text } ?: continue

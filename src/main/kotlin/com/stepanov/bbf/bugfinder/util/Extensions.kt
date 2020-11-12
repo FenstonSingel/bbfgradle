@@ -11,6 +11,7 @@ import org.jetbrains.kotlin.KtNodeTypes
 import org.jetbrains.kotlin.lexer.KtTokens
 import org.jetbrains.kotlin.psi.*
 import org.jetbrains.kotlin.psi.psiUtil.allChildren
+import org.jetbrains.kotlin.psi.psiUtil.children
 import ru.spbstu.kotlin.generate.util.asCharSequence
 import ru.spbstu.kotlin.generate.util.nextString
 import java.io.BufferedReader
@@ -46,6 +47,18 @@ fun ASTNode.getAllChildrenNodes(): ArrayList<ASTNode> {
         childrens = this.getAllChildrenOfTheLevel(level).toTypedArray()
     }
     return result
+}
+
+fun ASTNode.removeArbitraryChild(node: ASTNode) {
+    val children = children()
+    if (children.any()) {
+        if (node in children()) {
+            removeChild(node)
+        } else {
+            children.forEach { child -> child.removeArbitraryChild(node) }
+        }
+    }
+
 }
 
 fun ASTNode.getAllParents(): ArrayList<ASTNode> {
@@ -261,13 +274,13 @@ fun PsiElement.debugPrint(indentation: Int) {
 fun PsiElement.isBlockExpr() = this.allChildren.first?.node?.elementType == KtTokens.LBRACE &&
         this.allChildren.last?.node?.elementType == KtTokens.RBRACE
 
-fun getRandomBoolean(n: Int = 1): Boolean {
+fun Random.getRandomBoolean(n: Int = 1): Boolean {
     var res = true
-    repeat(n) { res = res && Random().nextBoolean() }
+    repeat(n) { res = res && nextBoolean() }
     return res
 }
 
-fun getTrueWithProbability(probability: Int): Boolean = Random().nextInt(100) in 0..probability
+fun Random.getTrueWithProbability(probability: Int): Boolean = nextInt(100) in 0..probability
 
 fun Random.getRandomVariableName(length: Int): String =
         this.nextString(('a'..'z').asCharSequence(), length, length + 1)

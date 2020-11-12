@@ -6,7 +6,6 @@ import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
 import com.stepanov.bbf.bugfinder.util.getRandomBoolean
 import org.apache.log4j.Logger
 
-
 class AddDefaultValueToArg : Transformation() {
 
     override val name = "AddDefaultValueToArg"
@@ -18,14 +17,14 @@ class AddDefaultValueToArg : Transformation() {
         log.debug("AddDefaultValueToArg mutations")
         file.getAllPSIChildrenOfType<KtNamedFunction>()
                 .asSequence()
-                .filter { it.valueParameters.size != 0 && getRandomBoolean(randomConst) }
+                .filter { it.valueParameters.size != 0 && random.getRandomBoolean(randomConst) }
                 .map { it.valueParameters }
                 .toList()
                 .flatten()
                 .forEach { par ->
                     val typeText = par.typeReference?.text ?: return@forEach
                     val defaultKey = typeAndDefaultArgs.keys.find { typeText.startsWith(it) } ?: return@forEach
-                    val defaultValue = if (getRandomBoolean() /*false*/) {
+                    val defaultValue = if (random.getRandomBoolean() /*false*/) {
                         typeAndDefaultArgs[defaultKey]!!
                     } else {
                         generateDefValuesAsString(typeText)

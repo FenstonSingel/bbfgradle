@@ -4,12 +4,13 @@ import com.stepanov.bbf.bugfinder.executor.CommonCompiler
 import com.stepanov.bbf.bugfinder.executor.WitnessTestsCollector
 import com.stepanov.bbf.bugfinder.executor.compilers.JVMCompiler
 import com.stepanov.bbf.bugfinder.isolation.formulas.*
-import com.stepanov.bbf.bugfinder.manager.BugType
 import com.stepanov.bbf.bugfinder.mutator.transformations.*
 import com.stepanov.bbf.reduktor.parser.PSICreator
 import org.apache.log4j.Logger
 import org.jetbrains.kotlin.resolve.BindingContext
+import sun.security.krb5.internal.crypto.Des3
 import kotlin.math.sqrt
+import kotlin.random.Random
 
 object BugIsolator {
 
@@ -80,6 +81,24 @@ object BugIsolator {
     var lastNumberOfPassingMutants: Int = 0
         private set
 
+    private var allLastFailingMutants = mutableListOf<String>()
+    val lastFailingMutants: List<String> get() = allLastFailingMutants.toList()
+    private var allLastPassingMutants = mutableListOf<String>()
+    val lastPassingMutants: List<String> get() = allLastPassingMutants.toList()
+
+    fun clearStatistics() {
+        isolationTimes.clear()
+        numberOfIsolations = 0
+        instrPerformanceTimes.clear()
+        numberOfCompilations = 0
+        bugDistributionPerMutation.clear()
+        successDistributionPerMutation.clear()
+        lastNumberOfFailingMutants = 0
+        lastNumberOfFailingMutants = 0
+        allLastFailingMutants.clear()
+        allLastPassingMutants.clear()
+    }
+
     private fun updateStatistics(collector: WitnessTestsCollector, time: Long) {
         isolationTimes += time
         numberOfIsolations++
@@ -100,31 +119,54 @@ object BugIsolator {
 
         lastNumberOfFailingMutants = collector.numberOfBugs
         lastNumberOfPassingMutants = collector.numberOfSuccesses
+
+        allLastFailingMutants.addAll(collector.bugMutants)
+        allLastPassingMutants.addAll(collector.successMutants)
     }
 
 
     fun isolate(
         path: String,
-        bugType: BugType,
-        compilers: List<CommonCompiler> = listOf(JVMCompiler()),
+        compiler: CommonCompiler = JVMCompiler(),
         formula: RankingFormula = rankingFormula
     ): RankedProgramEntities? {
         val timerStart = -System.currentTimeMillis()
 
+        allLastFailingMutants.clear()
+        allLastPassingMutants.clear()
+
         val creator = PSICreator("")
-        val file = creator.getPSIForFile(path)
-        Transformation.file = file
+        val initFile = creator.getPSIForFile(path)
+        Transformation.file = initFile
 
         val collector: WitnessTestsCollector?
         try {
-            collector = WitnessTestsCollector(bugType, compilers)
+            collector = WitnessTestsCollector(compiler)
         } catch (e: NoBugFoundException) {
             logger.debug(e.message)
             return null
         }
-
         Transformation.checker = collector
-        mutate(creator.ctx, collector)
+
+
+        tailrec fun mutateRecursively(haltChance: Int, maxOrder: Int, order: Int = 1, core: String = initFile.text) {
+            collector.clearCurrBugSamples()
+
+            logger.debug("order of mutants: $order")
+            logger.debug("current core:\n$core")
+            val file = creator.getPSIForText(core)
+            Transformation.file = file
+            mutate(creator.ctx, collector)
+
+            if (order >= maxOrder || Random.nextInt(1, 100) < haltChance) {
+                logger.debug("halting recursion")
+                logger.debug("")
+            } else {
+                mutateRecursively(haltChance, maxOrder, order + 1, collector.currBestFailingMutant)
+            }
+        }
+
+        mutateRecursively(0, 2)
 
         val executionStatistics = collector.executionStatistics
         val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, formula)
@@ -141,25 +183,26 @@ object BugIsolator {
                 AddDefaultValueToArg(),
                 AddNotNullAssertions(),
                 AddNullabilityTransformer(),
-                AddPossibleModifiers(),
-                AddReifiedToType(),
-                ChangeArgToAnotherValue(),
-                ChangeConstants(),
-                ChangeModifiers(),
+//                AddPossibleModifiers(),
+//                AddReifiedToType(),
+//                ChangeArgToAnotherValue(),
+//                ChangeConstants(),
+//                ChangeModifiers(),
                 ChangeOperators(),
                 ChangeOperatorsToFunInvocations(),
                 ChangeRandomASTNodes(),
                 ChangeRandomASTNodesFromAnotherTrees(),
                 ChangeRandomLines(),
-                ChangeReturnValueToConstant(),
-                ChangeSmthToExtension(),
-                ChangeVarToNull(),
+//                ChangeReturnValueToConstant(),
+//                ChangeSmthToExtension(),
+//                ChangeVarToNull(),
+                RemoveRandomASTNodes(),
                 RemoveRandomLines()
         )
-        if (context != null) {
-            mutations += AddSameFunctions(context)
-            mutations += ReinitProperties(context)
-        }
+//        if (context != null) {
+//            mutations += AddSameFunctions(context)
+//            mutations += ReinitProperties(context)
+//        }
         for (mutation in mutations) {
             collector.clearOverallCounters()
             try {

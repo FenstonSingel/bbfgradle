@@ -1,11 +1,9 @@
 package com.stepanov.bbf.bugfinder.mutator.transformations
 
 import org.jetbrains.kotlin.psi.*
-import com.stepanov.bbf.bugfinder.executor.MutationChecker
 import com.stepanov.bbf.bugfinder.util.getAllPSIChildrenOfType
 import com.stepanov.bbf.bugfinder.util.getRandomVariableName
 import org.apache.log4j.Logger
-import java.util.*
 
 class ChangeConstants : Transformation() {
 
@@ -39,20 +37,20 @@ class ChangeConstants : Transformation() {
 
     private fun changeExpression(exp: KtExpression, type: Type, isRandom: Boolean = true) {
         val replacement = when (type) {
-            Type.BOOLEAN -> psiFactory.createExpression("${Random().nextBoolean()}")
-            Type.DOUBLE -> psiFactory.createExpression("${Random().nextDouble()}")
-            Type.INTEGER -> psiFactory.createExpression("${Random().nextInt()}")
+            Type.BOOLEAN -> psiFactory.createExpression("${random.nextBoolean()}")
+            Type.DOUBLE -> psiFactory.createExpression("${random.nextDouble()}")
+            Type.INTEGER -> psiFactory.createExpression("${random.nextInt()}")
         }
-        if (isRandom && Random().nextBoolean() || !isRandom)
+        if (isRandom && random.nextBoolean() || !isRandom)
             checker.replacePSINodeIfPossible(file, exp, replacement)
     }
 
 
     private fun changeStringConst(exp: KtStringTemplateEntry, isRandom: Boolean = true) =
-            if (isRandom && Random().nextBoolean() || !isRandom)
+            if (isRandom && random.nextBoolean() || !isRandom)
                 checker.replacePSINodeIfPossible(
                     file, exp,
-                        psiFactory.createExpression(Random().getRandomVariableName(NAME_SIZE)))
+                        psiFactory.createExpression(random.getRandomVariableName(NAME_SIZE)))
             else false
 
     private val NAME_SIZE = 5
