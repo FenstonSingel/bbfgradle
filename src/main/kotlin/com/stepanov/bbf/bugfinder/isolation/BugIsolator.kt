@@ -8,10 +8,10 @@ import com.stepanov.bbf.bugfinder.mutator.transformations.*
 import com.stepanov.bbf.reduktor.parser.PSICreator
 import org.apache.log4j.Logger
 import org.jetbrains.kotlin.resolve.BindingContext
-import sun.security.krb5.internal.crypto.Des3
 import kotlin.math.sqrt
 import kotlin.random.Random
 
+// deprecated lol
 object BugIsolator {
 
     var rankingFormula: RankingFormula = OchiaiRankingFormula
@@ -124,7 +124,6 @@ object BugIsolator {
         allLastPassingMutants.addAll(collector.successMutants)
     }
 
-
     fun isolate(
         path: String,
         compiler: CommonCompiler = JVMCompiler(),
@@ -216,7 +215,6 @@ object BugIsolator {
     }
 
     private fun executeMutation(t: Transformation) {
-        Transformation.currentMutation = t.name
         t.transform()
     }
 

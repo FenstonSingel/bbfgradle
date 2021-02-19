@@ -1,9 +1,11 @@
 package com.stepanov.bbf.coverage.impl
 
 import com.stepanov.bbf.coverage.ProgramCoverage
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
+@SerialName("branchBasedCoverage")
 class BranchBasedCoverage(private val branchProbes: Map<String, BranchProbesResults>) : ProgramCoverage {
 
     @Serializable

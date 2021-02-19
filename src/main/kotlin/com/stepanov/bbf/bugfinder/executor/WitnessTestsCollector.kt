@@ -1,6 +1,5 @@
 package com.stepanov.bbf.bugfinder.executor
 
-import com.stepanov.bbf.bugfinder.isolation.ExcessiveMutationException
 import com.stepanov.bbf.bugfinder.isolation.ExecutionStatistics
 import com.stepanov.bbf.bugfinder.isolation.NoBugFoundException
 import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation
@@ -13,6 +12,7 @@ import org.apache.log4j.Logger
 import org.jetbrains.kotlin.psi.KtFile
 import java.io.File
 
+// deprecated lol
 class WitnessTestsCollector(
     val compiler: CommonCompiler
 ) : Checker() {
@@ -78,7 +78,7 @@ class WitnessTestsCollector(
     private var tempCosineDistance: Double = 0.0
 
     override fun checkCompiling(file: KtFile): Boolean {
-        logger.debug("Mutants by ${Transformation.currentMutation}: $overallMutants")
+//        logger.debug("Mutants by ${Transformation.currentMutation}: $overallMutants")
 
         compile(Transformation.file.text, saveResult = false)
         val (status, coverage) = compile(file.text)
@@ -91,24 +91,21 @@ class WitnessTestsCollector(
             tempCosineDistance = 1 - originalCoverage.cosineSimilarity(coverage)
 
             // Mutation usefulness statistics.
-            (if (status) bugDistributionPerMutation else successDistributionPerMutation)
-                    .merge(Transformation.currentMutation, (tempCosineDistance * 10E7).toLong() to 1L) {
-                        (prevSum, prevNum), (newCD, one) -> prevSum + newCD to prevNum + one
-                    }
+//            (if (status) bugDistributionPerMutation else successDistributionPerMutation)
+//                    .merge(Transformation.currentMutation, (tempCosineDistance * 10E7).toLong() to 1L) {
+//                        (prevSum, prevNum), (newCD, one) -> prevSum + newCD to prevNum + one
+//                    }
 
             overallMutants++
             if (status) {
                 bugDatabase.add(coverage.copy())
-                bugCodeDatabase.add(file.text)
-                currBugCodeDatabase.add(file.text)
             } else {
                 successDatabase.add(coverage.copy())
-                successCodeDatabase.add(file.text)
             }
 
-            if (overallMutants >= maxMutationIterations) {
-                throw ExcessiveMutationException("Mutation ${Transformation.currentMutation} was producing too much mutants.")
-            }
+//            if (overallMutants >= maxMutationIterations) {
+//                throw ExcessiveMutationException("Mutation ${Transformation.currentMutation} was producing too much mutants.")
+//            }
         }
         return false // This is fine, no bugs.
     }
@@ -125,51 +122,32 @@ class WitnessTestsCollector(
     private val bugDatabase = BoundedSortedByModelElementSet(
         originalCoverage.copy(),
         databaseCapacity,
-        Comparator { _, _ -> (tempCosineDistance * 10E7).toInt() },
+        ::coverageDistanceFunction,
         isSortingReversed = true
     )
 
-    private val bugCodeDatabase = BoundedSortedByModelElementSet(
-        file.text,
-        databaseCapacity,
-        Comparator { _, _ -> (tempCosineDistance * 10E7).toInt() },
-        isSortingReversed = true
-    )
-
-    val bugMutants get() = bugCodeDatabase.toList()
+    val bugMutants get() = listOf<String>()
 
     val numberOfBugs get() = bugDatabase.size
 
     private val successDatabase = BoundedSortedByModelElementSet(
         originalCoverage.copy(),
         databaseCapacity,
-        Comparator { _, _ -> (tempCosineDistance * 10E7).toInt() },
+        ::coverageDistanceFunction,
         isSortingReversed = false
     )
 
-    private val successCodeDatabase = BoundedSortedByModelElementSet(
-        file.text,
-        databaseCapacity,
-        Comparator { _, _ -> (tempCosineDistance * 10E7).toInt() },
-        isSortingReversed = true
-    )
-
-    val successMutants get() = successCodeDatabase.toList()
+    val successMutants get() = listOf<String>()
 
     val numberOfSuccesses get() = successDatabase.size
 
-    private val currBugCodeDatabase = BoundedSortedByModelElementSet(
-        file.text,
-        databaseCapacity,
-        Comparator { _, _ -> (tempCosineDistance * 10E7).toInt() },
-        isSortingReversed = true
-    )
+    // a distance function for BoundedSortedByModelElementSet instances
+    private fun coverageDistanceFunction(model: ProgramCoverage, other: ProgramCoverage) =
+            ((1 - model.cosineSimilarity(other)) * 1E8).toInt()
 
-    fun clearCurrBugSamples() {
-        currBugCodeDatabase.clear()
-    }
+    fun clearCurrBugSamples() {}
 
-    val currBestFailingMutant: String get() = currBugCodeDatabase.first()
+    val currBestFailingMutant: String get() = ""
 
     val executionStatistics: ExecutionStatistics
         get() = ExecutionStatistics.compose(originalCoverage, bugDatabase.toList(), successDatabase.toList())

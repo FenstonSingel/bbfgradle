@@ -1,6 +1,9 @@
 package com.stepanov.bbf.bugfinder.isolation
 
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonConfiguration
+import java.io.File
 import kotlin.Comparator
 import kotlin.math.sign
 import kotlin.math.sqrt
@@ -9,11 +12,7 @@ import kotlin.math.sqrt
 class RankedProgramEntities(val storage: Map<String, Double>, private val isRankDescending: Boolean) {
 
     companion object {
-        fun rank(
-            statistics: ExecutionStatistics,
-            formula: RankingFormula,
-            numberOfEntities: Int? = null
-        ): RankedProgramEntities {
+        fun rank(statistics: ExecutionStatistics, formula: RankingFormula, numberOfEntities: Int? = null): RankedProgramEntities {
             val rawResult = statistics.storage.mapValues { (_, statistics) -> formula(statistics) }
             val result = if (numberOfEntities != null) {
                 val sortedResult = rawResult
@@ -32,12 +31,22 @@ class RankedProgramEntities(val storage: Map<String, Double>, private val isRank
             return RankedProgramEntities(result, formula.isRankDescending)
         }
 
+        fun import(filePath: String): RankedProgramEntities {
+            return json.parse(serializer(), File(filePath).readText())
+        }
+
         private fun compare(pair1: Pair<String, Double>, pair2: Pair<String, Double>, isRankDescending: Boolean): Int {
             val (entity1, rank1) = pair1
             val (entity2, rank2) = pair2
             val rankComparison = rank1.compareTo(rank2) * if (isRankDescending) -1 else 1
             return if (rankComparison != 0) rankComparison else entity1.compareTo(entity2)
         }
+
+        private val json = Json(JsonConfiguration.Stable)
+    }
+
+    fun export(filePath: String) {
+        File(filePath).writeText(json.stringify(serializer(), this))
     }
 
     fun toList(): List<Pair<String, Double>> {
@@ -94,6 +103,21 @@ class RankedProgramEntities(val storage: Map<String, Double>, private val isRank
         }
 
         return discordantPairs
+    }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as RankedProgramEntities
+
+        if (storage != other.storage) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return storage.hashCode()
     }
 
 }

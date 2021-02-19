@@ -1,9 +1,11 @@
 package com.stepanov.bbf.coverage.impl
 
 import com.stepanov.bbf.coverage.ProgramCoverage
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
+@SerialName("methodBasedCoverage")
 class MethodBasedCoverage(private val methodProbes: Map<String, Int>) : ProgramCoverage {
 
     override val entities: Set<String> get() = methodProbes.keys

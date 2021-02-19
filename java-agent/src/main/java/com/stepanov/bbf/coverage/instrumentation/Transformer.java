@@ -12,7 +12,7 @@ import com.stepanov.bbf.coverage.CompilerInstrumentation;
 public class Transformer implements ClassFileTransformer {
 
     // TODO Look into blocking (even) more supposedly auxiliary packages.
-    List<String> blocklist = Arrays.asList("cli", "diagnostics", "utils", "container");
+    List<String> blocklist = Arrays.asList("cli", "diagnostics", "utils", "util", "container", "config");
 //    List<String> allowlist = Arrays.asList("backend", "frontend", "fir");
 
     private boolean isTransformationUnnecessary(String className) {

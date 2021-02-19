@@ -1,16 +1,16 @@
 package com.stepanov.bbf.bugfinder.util
 
-class BoundedSortedByModelElementSet<T>(
-    private val modelEl: T,
-    private val bound: Int,
-    private val comparator: Comparator<T>,
-    private val isSortingReversed: Boolean = false
-) {
+/*
+ * Distance function returns 0 if the objects are equal.
+ * If the objects are not equal, the more different they are, the greater the result of the comparison.
+ */
 
-    /*
-     * Comparator returns 0 if the objects are equal.
-     * If the objects are not equal, the more different they are, the greater the result of the comparison.
-     */
+class BoundedSortedByModelElementSet<T>(
+        private val modelEl: T,
+        private val bound: Int,
+        private val distanceFunction: (T, T) -> Int,
+        private val isSortingReversed: Boolean = false
+) {
 
     val data = mutableListOf<Pair<T, Int>>()
 
@@ -50,5 +50,7 @@ class BoundedSortedByModelElementSet<T>(
     fun clear() {
         data.clear()
     }
+
+    private val comparator = Comparator<T> { modelEl, el -> distanceFunction(modelEl, el) }
 
 }

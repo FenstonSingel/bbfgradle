@@ -3,7 +3,6 @@ package com.stepanov.bbf.coverage
 import com.stepanov.bbf.coverage.impl.BranchBasedCoverage
 import com.stepanov.bbf.coverage.impl.MethodBasedCoverage
 import java.math.BigDecimal
-import java.math.MathContext
 import java.math.RoundingMode
 import kotlin.math.sqrt
 
@@ -53,7 +52,9 @@ interface ProgramCoverage {
 
     fun copy(): ProgramCoverage
 
-    val isEmpty: Boolean get() = entities().isEmpty()
+    val isEmpty: Boolean get() = entities.isEmpty()
+
+    val size: Int get() = entities.size
 
     fun cosineSimilarity(other: ProgramCoverage): Double =
         calculateCosineSimilarity(other, entities(this, other))

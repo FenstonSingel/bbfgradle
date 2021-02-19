@@ -110,19 +110,23 @@ open class MultiCompilerCrashChecker(private val compiler: CommonCompiler?) : Co
         return if (sameNum == 0) Double.MAX_VALUE else difNum.toDouble() / sameNum.toDouble()
     }
 
+    // change this property from the outside in order to tweak this behavior
+    var filterInvalidCode: Boolean = true
+
     fun isAlreadyCheckedOrWrong(text: String): Pair<Boolean, Boolean> {
         val hash = text.hashCode()
         if (alreadyChecked.containsKey(hash)) {
             log.debug("ALREADY CHECKED!!!")
-            // TODO A null check *might* be necessary: a NPE was caught in the same place at a similar-looking function
+            // TODO a null check *might* be necessary: a NPE was caught in the same place at a similar-looking function
             return true to alreadyChecked[hash]!!
         }
-        // TODO This functionality should be abstracted away instead of commented in the future.
-//        if (psiFactory.createFile(text).node.getAllChildrenNodes().any { it.psi is PsiErrorElement }) {
-//            log.debug("Not correct syntax")
-//            alreadyChecked[hash] = false
-//            return true to false
-//        }
+        if (filterInvalidCode) {
+            if (psiFactory.createFile(text).node.getAllChildrenNodes().any { it.psi is PsiErrorElement }) {
+                log.debug("Not correct syntax")
+                alreadyChecked[hash] = false
+                return true to false
+            }
+        }
         return false to false
     }
 
@@ -131,17 +135,6 @@ open class MultiCompilerCrashChecker(private val compiler: CommonCompiler?) : Co
     override fun checkTest(text: String, pathToFile: String): Boolean {
         val firstCheck = isAlreadyCheckedOrWrong(text)
         if (firstCheck.first) return firstCheck.second
-//        val hash = text.hashCode()
-//        if (alreadyChecked.containsKey(hash)) {
-//            log.debug("ALREADY CHECKED!!!")
-//            return alreadyChecked[hash]!!
-//        }
-//        //Check for syntax correctness
-//        if (psiFactory.createFile(text).node.getAllChildrenNodes().any { it.psi is PsiErrorElement }) {
-//            log.debug("Not correct syntax")
-//            alreadyChecked[hash] = false
-//            return false
-//        }
         val file = File(pathToFile)
         if (!file.exists()) file.createNewFile()
         val oldText = file.bufferedReader().readText()

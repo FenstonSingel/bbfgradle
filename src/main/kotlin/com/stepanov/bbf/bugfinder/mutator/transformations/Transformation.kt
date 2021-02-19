@@ -16,7 +16,6 @@ abstract class Transformation {
     companion object {
         lateinit var file: KtFile
         lateinit var checker: Checker
-        lateinit var currentMutation: String
 
         val random = utilRandom
     }

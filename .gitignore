@@ -5,6 +5,8 @@
 
 src/main/resources/kotlinc-instrumenter.jar
 
+/src/test/resources/samples/
+
 /logs
 /tmp/lib
 tmp/trash
