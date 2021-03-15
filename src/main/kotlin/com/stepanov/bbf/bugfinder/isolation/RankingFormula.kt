@@ -1,6 +1,5 @@
 package com.stepanov.bbf.bugfinder.isolation
 
-// TODO Implement more formulas.
 interface RankingFormula {
 
     val name: String

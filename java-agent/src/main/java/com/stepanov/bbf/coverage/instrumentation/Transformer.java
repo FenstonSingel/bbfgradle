@@ -3,6 +3,7 @@ package com.stepanov.bbf.coverage.instrumentation;
 import java.lang.instrument.ClassFileTransformer;
 import java.security.ProtectionDomain;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
@@ -11,8 +12,8 @@ import com.stepanov.bbf.coverage.CompilerInstrumentation;
 
 public class Transformer implements ClassFileTransformer {
 
-    // TODO Look into blocking (even) more supposedly auxiliary packages.
-    List<String> blocklist = Arrays.asList("cli", "diagnostics", "utils", "util", "container", "config");
+    List<String> blocklist = Collections.emptyList();
+//    List<String> blocklist = Arrays.asList("cli", "diagnostics", "utils", "util", "container", "config");
 //    List<String> allowlist = Arrays.asList("backend", "frontend", "fir");
 
     private boolean isTransformationUnnecessary(String className) {

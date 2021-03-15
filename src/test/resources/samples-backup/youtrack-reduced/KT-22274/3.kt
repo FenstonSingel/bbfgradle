@@ -1,0 +1,5 @@
+
+fun 
+() {
+    lit@ return@lit
+}

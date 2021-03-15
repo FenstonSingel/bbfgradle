@@ -89,6 +89,7 @@ class JVMCompiler(private val arguments: String = "") : CommonCompiler() {
         val services = Services.EMPTY
         MsgCollector.clear()
 
+        // TODO Compilation timeouts (deleted in this branch) are a potential problem in the future.
         CompilerInstrumentation.clearRecords()
         CompilerInstrumentation.shouldProbesBeRecorded = true
         compiler.exec(MsgCollector, services, compilerArgs)
@@ -143,6 +144,7 @@ class JVMCompiler(private val arguments: String = "") : CommonCompiler() {
         val services = Services.EMPTY
         MsgCollector.clear()
 
+        // Compilation timeouts (deleted in this branch) are a potential problem in the future.
         CompilerInstrumentation.clearRecords()
         CompilerInstrumentation.shouldProbesBeRecorded = true
         compiler.exec(MsgCollector, services, compilerArgs)

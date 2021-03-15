@@ -1,223 +1,270 @@
 package com.stepanov.bbf.bugfinder.isolation
 
-import com.stepanov.bbf.bugfinder.executor.CommonCompiler
-import com.stepanov.bbf.bugfinder.executor.WitnessTestsCollector
-import com.stepanov.bbf.bugfinder.executor.compilers.JVMCompiler
-import com.stepanov.bbf.bugfinder.isolation.formulas.*
+import com.stepanov.bbf.bugfinder.executor.*
+import com.stepanov.bbf.bugfinder.manager.BugType
 import com.stepanov.bbf.bugfinder.mutator.transformations.*
+import com.stepanov.bbf.coverage.CompilerInstrumentation
+import com.stepanov.bbf.coverage.ProgramCoverage
+import com.stepanov.bbf.reduktor.executor.CompilerTestChecker
 import com.stepanov.bbf.reduktor.parser.PSICreator
 import org.apache.log4j.Logger
-import org.jetbrains.kotlin.resolve.BindingContext
-import kotlin.math.sqrt
-import kotlin.random.Random
+import org.jetbrains.kotlin.psi.KtFile
+import java.io.File
 
-// deprecated lol
-object BugIsolator {
-
-    var rankingFormula: RankingFormula = OchiaiRankingFormula
-
-    private val isolationTimes = mutableListOf<Long>()
-    var numberOfIsolations = 0L
-        private set
-
-    val totalIsolationTime: Long get() = isolationTimes.sum()
-    val meanIsolationTime: Long get() = if (numberOfIsolations != 0L) totalIsolationTime / numberOfIsolations else 0L
-    val isolationTimeSD: Long
-        get() {
-            val mean = meanIsolationTime
-            val sum = isolationTimes.fold(0L) { acc, l -> acc + (l - mean) * (l - mean) }.toDouble()
-            return sqrt(sum / if (numberOfIsolations == 1L) numberOfIsolations else numberOfIsolations - 1).toLong()
-        }
-    val minIsolationTime: Long get() = isolationTimes.min() ?: 0
-    val maxIsolationTime: Long get() = isolationTimes.max() ?: 0
-
-    private val instrPerformanceTimes = mutableListOf<Long>()
-    var numberOfCompilations = 0L
-        private set
-
-    val totalInstrPerformanceTime: Long get() = instrPerformanceTimes.sum()
-    val meanInstrPerformanceTime: Long get() =
-        if (numberOfCompilations != 0L) totalInstrPerformanceTime / numberOfCompilations else 0L
-
-    private val bugDistributionPerMutation = mutableMapOf<String, Pair<Long, Long>>()
-    private val successDistributionPerMutation = mutableMapOf<String, Pair<Long, Long>>()
-
-    val codeSampleQualityPerMutation: Map<String, Pair<Long, Long>>
-        get() {
-            val mutations = (bugDistributionPerMutation.keys + successDistributionPerMutation.keys).toSet()
-            val distribution = mutableMapOf<String, Pair<Long, Long>>()
-            for (mutation in mutations) {
-                val (cosDistSumF, numOfFails) = bugDistributionPerMutation[mutation] ?: -1L to 1L
-                val (cosDistSumP, numOfPasses) = successDistributionPerMutation[mutation] ?: -1L to 1L
-                distribution[mutation] = cosDistSumF / numOfFails to cosDistSumP / numOfPasses
-            }
-            return distribution
-        }
-
-    val codeSampleDistributionPerMutation: Map<String, Pair<Double, Double>>
-        get() {
-            val mutations = (bugDistributionPerMutation.keys + successDistributionPerMutation.keys).toSet()
-            val totalBugs = totalFailingCodeSamples
-            val totalSuccesses = totalPassingCodeSamples
-            val distribution = mutableMapOf<String, Pair<Double, Double>>()
-            for (mutation in mutations) {
-                val createdBugs = (bugDistributionPerMutation[mutation]?.second ?: 0).toDouble()
-                val createdSuccesses = (successDistributionPerMutation[mutation]?.second ?: 0).toDouble()
-                distribution[mutation] = createdBugs / totalBugs to createdSuccesses / totalSuccesses
-            }
-            return distribution
-        }
-
-    val totalFailingCodeSamples: Long get() = bugDistributionPerMutation.values.fold(0L) { acc, (_, x) -> acc + x }
-    val meanFailingCodeSamples: Long get() =
-        if (numberOfIsolations != 0L) totalFailingCodeSamples / numberOfIsolations.toInt() else 0
-
-    val totalPassingCodeSamples: Long get() = successDistributionPerMutation.values.fold(0L) { acc, (_, x) -> acc + x }
-    val meanPassingCodeSamples: Long get() =
-        if (numberOfIsolations != 0L) totalPassingCodeSamples / numberOfIsolations.toInt() else 0
-
-    var lastNumberOfFailingMutants: Int = 0
-        private set
-    var lastNumberOfPassingMutants: Int = 0
-        private set
-
-    private var allLastFailingMutants = mutableListOf<String>()
-    val lastFailingMutants: List<String> get() = allLastFailingMutants.toList()
-    private var allLastPassingMutants = mutableListOf<String>()
-    val lastPassingMutants: List<String> get() = allLastPassingMutants.toList()
-
-    fun clearStatistics() {
-        isolationTimes.clear()
-        numberOfIsolations = 0
-        instrPerformanceTimes.clear()
-        numberOfCompilations = 0
-        bugDistributionPerMutation.clear()
-        successDistributionPerMutation.clear()
-        lastNumberOfFailingMutants = 0
-        lastNumberOfFailingMutants = 0
-        allLastFailingMutants.clear()
-        allLastPassingMutants.clear()
-    }
-
-    private fun updateStatistics(collector: WitnessTestsCollector, time: Long) {
-        isolationTimes += time
-        numberOfIsolations++
-
-        instrPerformanceTimes += collector.instrPerformanceTimes
-        numberOfCompilations += collector.numberOfCompilations
-
-        collector.bugDistributionPerMutation.forEach { (key, value) ->
-            bugDistributionPerMutation.merge(key, value) {
-                (oldSum, oldNum), (newSum, newNum) -> oldSum + newSum to oldNum + newNum
-            }
-        }
-        collector.successDistributionPerMutation.forEach { (key, value) ->
-            successDistributionPerMutation.merge(key, value) {
-                (oldSum, oldNum), (newSum, newNum) -> oldSum + newSum to oldNum + newNum
-            }
-        }
-
-        lastNumberOfFailingMutants = collector.numberOfBugs
-        lastNumberOfPassingMutants = collector.numberOfSuccesses
-
-        allLastFailingMutants.addAll(collector.bugMutants)
-        allLastPassingMutants.addAll(collector.successMutants)
-    }
+class BugIsolator(
+        private val mutations: List<Transformation>,
+        private val rankingFormula: RankingFormula,
+        private val shouldResultsBeSerialized: Boolean
+) : Checker() {
 
     fun isolate(
-        path: String,
-        compiler: CommonCompiler = JVMCompiler(),
-        formula: RankingFormula = rankingFormula
-    ): RankedProgramEntities? {
-        val timerStart = -System.currentTimeMillis()
+            sampleFilePath: String, bugInfo: BugInfo,
+            createChecker: (() -> CompilerTestChecker)? = null
+    ): RankedProgramEntities {
+        currentChecker = createChecker?.invoke() ?: constructChecker(bugInfo)
 
-        allLastFailingMutants.clear()
-        allLastPassingMutants.clear()
-
-        val creator = PSICreator("")
-        val initFile = creator.getPSIForFile(path)
-        Transformation.file = initFile
-
-        val collector: WitnessTestsCollector?
+        // sometimes PSICreator trips up badly and there's nothing we can do about it
+        val initialFile: KtFile
         try {
-            collector = WitnessTestsCollector(compiler)
-        } catch (e: NoBugFoundException) {
-            logger.debug(e.message)
-            return null
+            initialFile = psiCreator.getPSIForFile(sampleFilePath)
+        } catch (e: Throwable) {
+            throw PSICreatorException(e)
         }
-        Transformation.checker = collector
 
+        // getting rid of possible leftovers from somewhere else
+        CompilerInstrumentation.clearRecords()
 
-        tailrec fun mutateRecursively(haltChance: Int, maxOrder: Int, order: Int = 1, core: String = initFile.text) {
-            collector.clearCurrBugSamples()
+        // since Kotlin compiler is stateful,
+        // we spend some small amount of time finding the minimal original coverage
+        val initCoverages = mutableListOf<ProgramCoverage>()
+        for (i in 0 until originalSampleRecompilationTimes) {
+            val currentCheckerRef = createChecker?.invoke() ?: constructChecker(bugInfo)
+            val (isBugPresent, coverage) = compile(initialFile.text, currentCheckerRef)
+            if (!isBugPresent) throw NoBugFoundException("$sampleFilePath contains no described bugs on used compiler version.")
+            if (coverage != null) initCoverages.add(coverage)
+        }
+        val originalCoverage = initCoverages.minBy { c -> c.size } ?: throw IllegalStateException("No coverage was generated for $sampleFilePath for unknown reason.")
 
-            logger.debug("order of mutants: $order")
-            logger.debug("current core:\n$core")
-            val file = creator.getPSIForText(core)
-            Transformation.file = file
-            mutate(creator.ctx, collector)
+        // setting up the Transformation environment
+        // the checker ref should not change throughout the entire bug isolation process
+        Transformation.file = initialFile
+        Transformation.checker = this
 
-            if (order >= maxOrder || Random.nextInt(1, 100) < haltChance) {
-                logger.debug("halting recursion")
-                logger.debug("")
-            } else {
-                mutateRecursively(haltChance, maxOrder, order + 1, collector.currBestFailingMutant)
+        // setting up this class's environment
+        buggedCoverages = mutableSetOf()
+        bugFreeCoverages = mutableSetOf()
+        mutantsCatalog = mutableListOf()
+
+        // generating mutants and their coverages for following fault localization
+        for (mutation in mutations) {
+            try {
+                currentMutation = mutation.name
+                mutation.transform()
+            } catch (e: Throwable) {
+                // if something bad happens when we mutate, we just
+                // halt a particular mutation and turn to the next one
+                logger.debug(e.message)
             }
         }
 
-        mutateRecursively(0, 2)
+        val executionStatistics = ExecutionStatistics.compose(originalCoverage, buggedCoverages, bugFreeCoverages)
+        val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, rankingFormula)
 
-        val executionStatistics = collector.executionStatistics
-        val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, formula)
+        // serializing intermediate and final results for later use if necessary
+        if (shouldResultsBeSerialized) {
+            File("$serializationDirPath/$sampleFilePath").parentFile.mkdirs()
+            MutantsForIsolation(sampleFilePath, mutantsExportTag, initialFile.text, mutantsCatalog).export(
+                    "$serializationDirPath/$sampleFilePath-mutants-$mutantsExportTag"
+            )
+            val coveragesFullExportTag = "$mutantsExportTag-$coveragesExportTag"
+            CoveragesForIsolation(
+                    sampleFilePath, coveragesFullExportTag,
+                    originalCoverage, buggedCoverages.toList(), bugFreeCoverages.toList()
+            ).export(
+                    "$serializationDirPath/$sampleFilePath-coverages-$coveragesFullExportTag"
+            )
+            val resultsFullExportTag = "$coveragesFullExportTag-$resultsExportTag"
+            rankedProgramEntities.export(
+                    "$serializationDirPath/$sampleFilePath-results-$resultsFullExportTag"
+            )
+        }
 
-        updateStatistics(collector, timerStart + System.currentTimeMillis())
+        currentChecker = null // just introducing some consistency
 
         return rankedProgramEntities
     }
 
-    private fun mutate(context: BindingContext?, collector: WitnessTestsCollector) {
-        val mutations = mutableListOf(
+    fun isolate(
+            mutants: MutantsForIsolation, bugInfo: BugInfo,
+            createChecker: (() -> CompilerTestChecker)? = null
+    ): RankedProgramEntities {
+        // we don't need to use mutations so we can just use a local checker object
+        val checker = createChecker?.invoke() ?: constructChecker(bugInfo)
+
+        // sometimes PSICreator trips up badly and there's nothing we can do about it
+        val initialFile: KtFile
+        try {
+            initialFile = psiCreator.getPSIForText(mutants.originalSample)
+        } catch (e: Throwable) {
+            throw PSICreatorException(e)
+        }
+
+        // getting rid of possible leftovers from somewhere else
+        CompilerInstrumentation.clearRecords()
+
+        // since Kotlin compiler is stateful,
+        // we spend some small amount of time finding the minimal original coverage
+        val initCoverages = mutableListOf<ProgramCoverage>()
+        for (i in 0 until originalSampleRecompilationTimes) {
+            val (isBugPresent, coverage) = compile(initialFile.text, checker)
+            if (!isBugPresent) throw NoBugFoundException("Original sample contains no described bugs on used compiler version.")
+            if (coverage != null) initCoverages.add(coverage)
+        }
+        val originalCoverage = initCoverages.minBy { c -> c.size } ?: throw IllegalStateException("No coverage was generated for original sample for unknown reason.")
+
+        // setting up this class's environment
+        val localBuggedCoverages = mutableSetOf<ProgramCoverage>()
+        val localBugFreeCoverages = mutableSetOf<ProgramCoverage>()
+
+        // generating mutants' coverages for following fault localization
+        for (mutant in mutants.mutants) {
+            val (isBugPresent, coverage) = compile(initialFile.text, checker)
+            if (coverage != null) {
+                if (isBugPresent)
+                    localBuggedCoverages.add(coverage)
+                else
+                    localBugFreeCoverages.add(coverage)
+            }
+        }
+
+        val executionStatistics = ExecutionStatistics.compose(originalCoverage, buggedCoverages, bugFreeCoverages)
+        val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, rankingFormula)
+
+        // serializing intermediate and final results for later use if necessary
+        if (shouldResultsBeSerialized) {
+            File("$serializationDirPath/${mutants.id}").parentFile.mkdirs()
+            val coveragesFullExportTag = "${mutants.exportTag}-$coveragesExportTag"
+            CoveragesForIsolation(
+                    mutants.id, coveragesFullExportTag,
+                    originalCoverage, buggedCoverages.toList(), bugFreeCoverages.toList()
+            ).export(
+                    "$serializationDirPath/${mutants.id}-coverages-$coveragesFullExportTag"
+            )
+            val resultsFullExportTag = "$coveragesFullExportTag-$resultsExportTag"
+            rankedProgramEntities.export(
+                    "$serializationDirPath/${mutants.id}-results-$resultsFullExportTag"
+            )
+        }
+
+        return rankedProgramEntities
+    }
+
+    fun isolate(
+            coverages: CoveragesForIsolation
+    ): RankedProgramEntities {
+        val executionStatistics = ExecutionStatistics.compose(coverages)
+        val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, rankingFormula)
+
+        // serializing final results for later use if necessary
+        if (shouldResultsBeSerialized) {
+            File("$serializationDirPath/${coverages.id}").parentFile.mkdirs()
+            val resultsFullExportTag = "${coverages.exportTag}-$resultsExportTag"
+            rankedProgramEntities.export(
+                    "$serializationDirPath/${coverages.id}-results-$resultsFullExportTag"
+            )
+        }
+
+        return rankedProgramEntities
+    }
+
+    override fun checkCompiling(file: KtFile): Boolean = checkTextCompiling(file.text)
+
+    override fun checkTextCompiling(text: String): Boolean {
+        val checker = currentChecker ?: throw IllegalStateException("Do not call checks from FaultLocalizer directly.")
+        val (isBugPresent, coverage) = compile(text, checker)
+
+        if (coverage != null) {
+            val wasAdded = if (isBugPresent)
+                buggedCoverages.add(coverage)
+            else
+                bugFreeCoverages.add(coverage)
+            if (wasAdded) mutantsCatalog.add(text)
+        }
+
+        return false // keeping original sample mutating
+    }
+
+    // collections of coverages for until all mutations finish their execution
+    private lateinit var buggedCoverages: MutableSet<ProgramCoverage>
+    private lateinit var bugFreeCoverages: MutableSet<ProgramCoverage>
+
+    // a collection of all interesting mutants in case we want to serialize them
+    private lateinit var mutantsCatalog: MutableList<String>
+
+    private val psiCreator = PSICreator("")
+
+    // an oracle to determine whether a code mutant has a bug or not
+    private var currentChecker: CompilerTestChecker? = null
+
+    // a mutation's name, saved for debug purposes
+    private lateinit var currentMutation: String
+
+    // a distance function for BoundedSortedByModelElementSet instances
+    private fun coverageDistanceFunction(model: ProgramCoverage, other: ProgramCoverage) =
+            ((1 - model.cosineSimilarity(other)) * 1E8).toInt()
+
+    private val logger = Logger.getLogger("isolationLogger")
+
+    companion object {
+        // different bugs need different oracles for fault localization
+        // this function attempts to provide them
+        fun constructChecker(bugInfo: BugInfo, filterInvalidCode: Boolean = false): CompilerTestChecker {
+            val checker = when (bugInfo.type) {
+                BugType.BACKEND, BugType.FRONTEND -> MultiCompilerCrashChecker(bugInfo.firstCompiler)
+                // TODO check if next two checkers work correctly with this localizer
+                BugType.DIFFBEHAVIOR -> DiffBehaviorChecker(bugInfo.compilers)
+                BugType.DIFFCOMPILE -> DiffCompileChecker(bugInfo.compilers)
+                BugType.UNKNOWN -> throw IllegalArgumentException("Unknown bug type detected.")
+            }
+            checker.filterInvalidCode = filterInvalidCode
+            return checker
+        }
+
+        val typicalMutations = listOf(
                 AddBlockToExpression(),
                 AddBracketsToExpression(),
                 AddDefaultValueToArg(),
                 AddNotNullAssertions(),
                 AddNullabilityTransformer(),
-//                AddPossibleModifiers(),
-//                AddReifiedToType(),
-//                ChangeArgToAnotherValue(),
-//                ChangeConstants(),
-//                ChangeModifiers(),
                 ChangeOperators(),
                 ChangeOperatorsToFunInvocations(),
                 ChangeRandomASTNodes(),
                 ChangeRandomASTNodesFromAnotherTrees(),
                 ChangeRandomLines(),
-//                ChangeReturnValueToConstant(),
-//                ChangeSmthToExtension(),
-//                ChangeVarToNull(),
                 RemoveRandomASTNodes(),
                 RemoveRandomLines()
         )
-//        if (context != null) {
-//            mutations += AddSameFunctions(context)
-//            mutations += ReinitProperties(context)
-//        }
-        for (mutation in mutations) {
-            collector.clearOverallCounters()
-            try {
-                executeMutation(mutation)
-            } catch (e: ExcessiveMutationException) {
-                logger.debug(e.message)
-            } catch (e: Throwable) {
-                logger.debug(e.message)
+
+        var serializationDirPath = "tmp/isolation/serialized-results/tests"
+        var mutantsExportTag: String = "default"
+        var coveragesExportTag: String = "default"
+        var resultsExportTag: String = "default"
+
+        // magical constants which I don't know what to do with
+        var originalSampleRecompilationTimes: Int = 4
+
+        private fun compile(text: String, checker: CompilerTestChecker): Pair<Boolean, ProgramCoverage?> {
+            val isBugPresent = checker.checkTest(text, "tmp/localization_tmp.kt")
+
+            // absence of coverage should indicate we already stumbled upon this mutant before
+            return if (!CompilerInstrumentation.isEmpty) {
+                val coverage = ProgramCoverage.createFromProbes()
+                CompilerInstrumentation.clearRecords() // making sure the previous comment holds
+                isBugPresent to coverage
+            } else {
+                isBugPresent to null
             }
         }
     }
-
-    private fun executeMutation(t: Transformation) {
-        t.transform()
-    }
-
-    private val logger: Logger = Logger.getLogger("isolationTestbedLogger")
 
 }

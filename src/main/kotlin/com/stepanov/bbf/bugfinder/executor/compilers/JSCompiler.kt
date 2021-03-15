@@ -50,6 +50,7 @@ class JSCompiler(private val arguments: String = "") : CommonCompiler() {
         compilerArgs.libraries = CompilerArgs.jsStdLibPaths.joinToString(separator = ":")
         val services = Services.EMPTY
 
+        // TODO Compilation timeouts (deleted in this branch) are a potential problem in the future.
         CompilerInstrumentation.clearRecords()
         CompilerInstrumentation.shouldProbesBeRecorded = true
         compiler.exec(MsgCollector, services, compilerArgs)
@@ -88,6 +89,7 @@ class JSCompiler(private val arguments: String = "") : CommonCompiler() {
             K2JSCompilerArguments().apply { K2JSCompiler().parseArguments(args.split(" ").toTypedArray(), this) }
         val services = Services.EMPTY
 
+        // Compilation timeouts (deleted in this branch) are a potential problem in the future.
         CompilerInstrumentation.clearRecords()
         CompilerInstrumentation.shouldProbesBeRecorded = true
         compiler.exec(MsgCollector, services, compilerArgs)

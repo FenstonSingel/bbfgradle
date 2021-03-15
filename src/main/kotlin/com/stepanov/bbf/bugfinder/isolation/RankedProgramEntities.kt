@@ -73,8 +73,7 @@ class RankedProgramEntities(val storage: Map<String, Double>, private val isRank
         return dotProduct / (sqrt(firstNormSquared) * sqrt(secondNormSquared))
     }
 
-    // TODO If this is a good idea, fix the O(n^2) complexity.
-    // TODO Write tests for this function.
+    // Seems like not a very good idea after all.
     fun kendallTauDistance(other: RankedProgramEntities): Int {
         var discordantPairs = 0
         var deltaOfTies = 0

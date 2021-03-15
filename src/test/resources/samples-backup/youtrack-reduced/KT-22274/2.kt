@@ -1,0 +1,5 @@
+
+fun 
+() {
+    loop@ return@loop
+}
