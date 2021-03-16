@@ -12,7 +12,7 @@ class SerializationTests {
     @Test
     fun mutantsTest() {
         val mutants = MutantsForIsolation(
-            "originalSample.kt", "default",
+            "default",
                 "originalSample", listOf("mutantA, mutantB, mutantC")
         )
         File("tmp/trash/mutants").parentFile.mkdir()
@@ -29,7 +29,7 @@ class SerializationTests {
                 "two" to BranchBasedCoverage.BranchProbesResults(mapOf("A" to 5, "B" to 5))
         ))
         val coverages = CoveragesForIsolation(
-                "originalSample.kt", "default-default",
+                "default-default",
                 originalCoverage, listOf(coverageForMutantWithBug), listOf(coverageForMutantWithoutBug)
         )
         File("tmp/trash/coverages").parentFile.mkdir()

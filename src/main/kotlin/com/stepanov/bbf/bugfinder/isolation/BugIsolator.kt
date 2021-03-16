@@ -14,13 +14,26 @@ import java.io.File
 class BugIsolator(
         private val mutations: List<Transformation>,
         private val rankingFormula: RankingFormula,
-        private val shouldResultsBeSerialized: Boolean
+        val shouldResultsBeSerialized: Boolean = false,
+        private val serializationDirPath: String? = null
 ) : Checker() {
+
+    var mutantsExportTag: String = "default"
+    var coveragesExportTag: String = "default"
+    var resultsExportTag: String = "default"
 
     fun isolate(
             sampleFilePath: String, bugInfo: BugInfo,
-            createChecker: (() -> CompilerTestChecker)? = null
+            createChecker: (() -> CompilerTestChecker)? = null,
+            serializationTag: String? = null
     ): RankedProgramEntities {
+        require(!shouldResultsBeSerialized || serializationTag != null) {
+            "An ID-tag has to be provided if results of the isolation are to be serialized."
+        }
+        if (!shouldResultsBeSerialized && serializationTag != null) {
+            logger.debug("A serialization ID-tag was provided even though results will not be serialized.")
+        }
+
         currentChecker = createChecker?.invoke() ?: constructChecker(bugInfo)
 
         // sometimes PSICreator trips up badly and there's nothing we can do about it
@@ -72,20 +85,20 @@ class BugIsolator(
 
         // serializing intermediate and final results for later use if necessary
         if (shouldResultsBeSerialized) {
-            File("$serializationDirPath/$sampleFilePath").parentFile.mkdirs()
-            MutantsForIsolation(sampleFilePath, mutantsExportTag, initialFile.text, mutantsCatalog).export(
-                    "$serializationDirPath/$sampleFilePath-mutants-$mutantsExportTag"
+            File("$serializationDirPath/$serializationTag").mkdirs()
+            MutantsForIsolation(mutantsExportTag, initialFile.text, mutantsCatalog).export(
+                    "$serializationDirPath/$serializationTag/mutants-$mutantsExportTag.cbor"
             )
             val coveragesFullExportTag = "$mutantsExportTag-$coveragesExportTag"
             CoveragesForIsolation(
-                    sampleFilePath, coveragesFullExportTag,
+                    coveragesFullExportTag,
                     originalCoverage, buggedCoverages.toList(), bugFreeCoverages.toList()
             ).export(
-                    "$serializationDirPath/$sampleFilePath-coverages-$coveragesFullExportTag"
+                    "$serializationDirPath/$serializationTag/coverages-$coveragesFullExportTag.cbor"
             )
             val resultsFullExportTag = "$coveragesFullExportTag-$resultsExportTag"
             rankedProgramEntities.export(
-                    "$serializationDirPath/$sampleFilePath-results-$resultsFullExportTag"
+                    "$serializationDirPath/$serializationTag/results-$resultsFullExportTag.json"
             )
         }
 
@@ -96,8 +109,16 @@ class BugIsolator(
 
     fun isolate(
             mutants: MutantsForIsolation, bugInfo: BugInfo,
-            createChecker: (() -> CompilerTestChecker)? = null
+            createChecker: (() -> CompilerTestChecker)? = null,
+            serializationTag: String? = null
     ): RankedProgramEntities {
+        require(!shouldResultsBeSerialized || serializationTag != null) {
+            "An ID-tag has to be provided if results of the isolation are to be serialized."
+        }
+        if (!shouldResultsBeSerialized && serializationTag != null) {
+            logger.debug("A serialization ID-tag was provided even though results will not be serialized.")
+        }
+
         // we don't need to use mutations so we can just use a local checker object
         val checker = createChecker?.invoke() ?: constructChecker(bugInfo)
 
@@ -137,22 +158,22 @@ class BugIsolator(
             }
         }
 
-        val executionStatistics = ExecutionStatistics.compose(originalCoverage, buggedCoverages, bugFreeCoverages)
+        val executionStatistics = ExecutionStatistics.compose(originalCoverage, localBuggedCoverages, localBugFreeCoverages)
         val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, rankingFormula)
 
         // serializing intermediate and final results for later use if necessary
         if (shouldResultsBeSerialized) {
-            File("$serializationDirPath/${mutants.id}").parentFile.mkdirs()
+            File("$serializationDirPath/$serializationTag").mkdirs()
             val coveragesFullExportTag = "${mutants.exportTag}-$coveragesExportTag"
             CoveragesForIsolation(
-                    mutants.id, coveragesFullExportTag,
-                    originalCoverage, buggedCoverages.toList(), bugFreeCoverages.toList()
+                    coveragesFullExportTag,
+                    originalCoverage, localBuggedCoverages.toList(), localBugFreeCoverages.toList()
             ).export(
-                    "$serializationDirPath/${mutants.id}-coverages-$coveragesFullExportTag"
+                    "$serializationDirPath/$serializationTag/coverages-$coveragesFullExportTag.cbor"
             )
             val resultsFullExportTag = "$coveragesFullExportTag-$resultsExportTag"
             rankedProgramEntities.export(
-                    "$serializationDirPath/${mutants.id}-results-$resultsFullExportTag"
+                    "$serializationDirPath/$serializationTag/results-$resultsFullExportTag.json"
             )
         }
 
@@ -160,17 +181,25 @@ class BugIsolator(
     }
 
     fun isolate(
-            coverages: CoveragesForIsolation
+            coverages: CoveragesForIsolation,
+            serializationTag: String? = null
     ): RankedProgramEntities {
+        require(!shouldResultsBeSerialized || serializationTag != null) {
+            "An ID-tag has to be provided if results of the isolation are to be serialized."
+        }
+        if (!shouldResultsBeSerialized && serializationTag != null) {
+            logger.debug("A serialization ID-tag was provided even though results will not be serialized.")
+        }
+
         val executionStatistics = ExecutionStatistics.compose(coverages)
         val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, rankingFormula)
 
         // serializing final results for later use if necessary
         if (shouldResultsBeSerialized) {
-            File("$serializationDirPath/${coverages.id}").parentFile.mkdirs()
+            File("$serializationDirPath/$serializationTag").mkdirs()
             val resultsFullExportTag = "${coverages.exportTag}-$resultsExportTag"
             rankedProgramEntities.export(
-                    "$serializationDirPath/${coverages.id}-results-$resultsFullExportTag"
+                    "$serializationDirPath/$serializationTag/results-$resultsFullExportTag.json"
             )
         }
 
@@ -215,6 +244,15 @@ class BugIsolator(
 
     private val logger = Logger.getLogger("isolationLogger")
 
+    init {
+        require(!shouldResultsBeSerialized || serializationDirPath != null) {
+            "A directory path has to be provided if results of the isolation are to be serialized."
+        }
+        if (!shouldResultsBeSerialized && serializationDirPath != null) {
+            logger.debug("A serialization directory path was provided even though results will not be serialized.")
+        }
+    }
+
     companion object {
         // different bugs need different oracles for fault localization
         // this function attempts to provide them
@@ -244,11 +282,6 @@ class BugIsolator(
                 RemoveRandomASTNodes(),
                 RemoveRandomLines()
         )
-
-        var serializationDirPath = "tmp/isolation/serialized-results/tests"
-        var mutantsExportTag: String = "default"
-        var coveragesExportTag: String = "default"
-        var resultsExportTag: String = "default"
 
         // magical constants which I don't know what to do with
         var originalSampleRecompilationTimes: Int = 4

@@ -3,7 +3,7 @@ package com.stepanov.bbf.isolation.testbed
 import org.bitbucket.cowwoc.diffmatchpatch.DiffMatchPatch
 import java.io.File
 
-fun getStacktrace(sourceFilePath: String): String? {
+fun getStacktrace(sourceFilePath: String, sample: Sample): String? {
     isolationTestbedLogger.debug("compiling $sourceFilePath to get stacktrace data")
     isolationTestbedLogger.debug("code:\n${File("tmp/tmp.kt").readText()}")
     isolationTestbedLogger.debug("")

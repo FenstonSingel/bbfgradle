@@ -136,7 +136,8 @@ fun reduceAllSamplesInDataset(datasetPath: String, defaultBugInfo: BugInfo) {
 
 @Serializable
 data class Sample(val group: String, val id: String) {
-    override fun toString(): String = "$group/$id"
+    fun joinToString(separator: String) = "$group$separator$id"
+    override fun toString(): String = joinToString("::")
 }
 
 @Serializable
@@ -148,7 +149,7 @@ class SampleComparison(val first: Sample, val second: Sample, val similarity: Do
 fun <T> estimateSimilaritiesForSamplesInDataset(
     datasetPath: String,
     estimationTag: String,
-    evaluateDataForSample: (String) -> T?,
+    evaluateDataForSample: (String, Sample) -> T?,
     estimateSamplesSimilarities: (T, T) -> Double
 ) {
     val unevaluatedSamples = mutableListOf<String>()
@@ -165,7 +166,7 @@ fun <T> estimateSimilaritiesForSamplesInDataset(
             File("tmp/tmp.kt").writeText(File(sourceFilePath).readText())
 
             val evaluationResult: T? = try {
-                evaluateDataForSample(sourceFilePath)
+                evaluateDataForSample(sourceFilePath, sample)
             } catch (e: Exception) {
                 isolationTestbedLogger.debug(e)
                 isolationTestbedLogger.debug("")

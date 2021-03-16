@@ -9,8 +9,7 @@ import java.io.File
 
 @Serializable
 data class MutantsForIsolation(
-        val id: String, // for the purposes of following serializations
-        val exportTag: String, // same as id
+        val exportTag: String, // for the purposes of following serializations
         val originalSample: String,
         val mutants: List<String>
 ) {
@@ -27,8 +26,7 @@ data class MutantsForIsolation(
 
 @Serializable
 data class CoveragesForIsolation(
-        val id: String, // for the purposes of following serializations
-        val exportTag: String, // same as id
+        val exportTag: String, // for the purposes of following serializations
         val originalSampleCoverage: ProgramCoverage,
         val mutantsWithBugCoverages: List<ProgramCoverage>,
         val mutantsWithoutBugCoverages: List<ProgramCoverage>
