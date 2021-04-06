@@ -22,6 +22,6 @@ class RemoveRandomASTNodes : Transformation() {
         }
     }
 
-    private val numOfSwaps = 10 to 20
+    private val numOfSwaps = 400 to 600
 
 }

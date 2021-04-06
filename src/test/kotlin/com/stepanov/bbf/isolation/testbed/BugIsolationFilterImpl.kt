@@ -65,6 +65,9 @@ fun isolateBug(sourceFilePath: String, sample: Sample): RankedProgramEntities? {
     return ranking
 }
 
+// TODO implement this
+var currentNumberOfRanksConsidered: Int? = null
+
 fun compareIsolationRankings(first: RankedProgramEntities, second: RankedProgramEntities): Double {
     return first.cosineSimilarity(second)
 }

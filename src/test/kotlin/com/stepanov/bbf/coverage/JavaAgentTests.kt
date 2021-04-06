@@ -62,19 +62,20 @@ fun performTests() {
             o.testTableSwitchCoverage(i)
         }
     }
-//    checkIfIgnored {
-//        val o = AnotherUselessTestKlass()
-//        for (i in 0 until 100) {
-//            if (i < 75) o.testMethodCoverage1() else o.testMethodCoverage2()
-//        }
-//        for (i in 0 until 10) {
-//            o.testUnaryRefCmpCoverage(if (i < 5) null else i)
-//            o.testBinaryRefCmpCoverage(i)
-//            o.testIntCmpCoverage(i)
-//            o.testLookUpSwitchCoverage(i)
-//            o.testTableSwitchCoverage(i)
-//        }
-//    }
+
+    checkIfIgnored {
+        val o = AnotherUselessTestKlass()
+        for (i in 0 until 100) {
+            if (i < 75) o.testMethodCoverage1() else o.testMethodCoverage2()
+        }
+        for (i in 0 until 10) {
+            o.testUnaryRefCmpCoverage(if (i < 5) null else i)
+            o.testBinaryRefCmpCoverage(i)
+            o.testIntCmpCoverage(i)
+            o.testLookUpSwitchCoverage(i)
+            o.testTableSwitchCoverage(i)
+        }
+    }
 }
 
 fun main() {

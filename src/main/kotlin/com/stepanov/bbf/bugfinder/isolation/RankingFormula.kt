@@ -16,6 +16,4 @@ interface RankingFormula {
 
     val isRankDescending: Boolean
 
-    // TODO Might be helpful to combine different methods (e.g. O/set intersection/set intersection + other formula)?
-
 }

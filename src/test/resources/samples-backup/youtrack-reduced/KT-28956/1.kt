@@ -1,6 +1,0 @@
-
-fun 
-() {
-    lit@
-    return@lit
-}

@@ -2,7 +2,7 @@ package com.stepanov.bbf.bugfinder.isolation
 
 import com.stepanov.bbf.coverage.ProgramCoverage
 
-class ExecutionStatistics(val storage: Map<String, EntityExecutionStatistics>) {
+class ExecutionStatistics(val storage: List<Pair<String, EntityExecutionStatistics>>) {
 
     companion object {
         fun compose(
@@ -10,9 +10,8 @@ class ExecutionStatistics(val storage: Map<String, EntityExecutionStatistics>) {
                 bugCoverages: Iterable<ProgramCoverage>,
                 successCoverages: Iterable<ProgramCoverage>
         ): ExecutionStatistics {
-            val entities = ProgramCoverage.entities(origCoverage)
-            val result = mutableMapOf<String, EntityExecutionStatistics>()
-            for (entity in entities) {
+            val result = mutableListOf<Pair<String, EntityExecutionStatistics>>()
+            for (entity in ProgramCoverage.entities(origCoverage)) {
                 var (execsInFails, skipsInFails) = origCoverage[entity] ?: 0 to 1
                 for (bugCoverage in bugCoverages) {
                     val (execs, skips) = bugCoverage[entity] ?: 0 to 1
@@ -26,7 +25,7 @@ class ExecutionStatistics(val storage: Map<String, EntityExecutionStatistics>) {
                     execsInSuccesses += execs
                     skipsInSuccesses += skips
                 }
-                result[entity] = EntityExecutionStatistics(
+                result += entity to EntityExecutionStatistics(
                         execsInFails, skipsInFails, execsInSuccesses, skipsInSuccesses
                 )
             }
@@ -34,9 +33,11 @@ class ExecutionStatistics(val storage: Map<String, EntityExecutionStatistics>) {
         }
 
         fun compose(coverages: CoveragesForIsolation): ExecutionStatistics =
-                compose(coverages.originalSampleCoverage,
-                        coverages.mutantsWithBugCoverages,
-                        coverages.mutantsWithoutBugCoverages)
+                compose(
+                    coverages.originalSampleCoverage,
+                    coverages.mutantsWithBugCoverages,
+                    coverages.mutantsWithoutBugCoverages
+                )
     }
 
 }

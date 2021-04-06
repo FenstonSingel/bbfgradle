@@ -1,5 +1,0 @@
-
-fun 
-() {
-  hh@  return@hh
-}

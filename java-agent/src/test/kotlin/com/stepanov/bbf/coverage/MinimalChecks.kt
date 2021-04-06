@@ -13,7 +13,7 @@ class MinimalChecks {
     fun minimalChecks() {
         checkIfTransforms("org/jetbrains/kotlin/fir/RelevantTestKlass")
         checkIfPreserves("org/jetbrains/not/kotlin/UselessTestKlass")
-        checkIfTransforms("org/jetbrains/kotlin/cli/AnotherUselessTestKlass")
+        checkIfPreserves("org/jetbrains/kotlin/cli/AnotherUselessTestKlass")
     }
 
     private fun getClassFiles(className: String): Pair<ByteArray, ByteArray> {

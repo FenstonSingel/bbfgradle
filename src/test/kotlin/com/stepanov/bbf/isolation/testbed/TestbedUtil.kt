@@ -1,14 +1,17 @@
 package com.stepanov.bbf.isolation.testbed
 
 import com.stepanov.bbf.bugfinder.Reducer
-import com.stepanov.bbf.bugfinder.isolation.BugInfo
-import com.stepanov.bbf.bugfinder.isolation.BugIsolator
+import com.stepanov.bbf.bugfinder.executor.Checker
+import com.stepanov.bbf.bugfinder.isolation.*
 import com.stepanov.bbf.bugfinder.manager.BugType
+import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation
+import com.stepanov.bbf.reduktor.executor.CompilerTestChecker
 import com.stepanov.bbf.reduktor.parser.PSICreator
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.cbor.Cbor
 import kotlinx.serialization.list
 import org.apache.log4j.Logger
+import org.jetbrains.kotlin.psi.KtFile
 import java.io.File
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
@@ -186,7 +189,7 @@ fun <T> estimateSimilaritiesForSamplesInDataset(
 
     sampleComparisons.sortByDescending { sampleComparison -> sampleComparison.similarity }
 
-    val resultsDirPath = "${datasetPath.substringBeforeLast('/')}/\$results-${datasetPath.substringAfterLast('/')}"
+    val resultsDirPath = datasetPath.replaceFirst("samples", "results")
 
     File(resultsDirPath).mkdirs()
 
@@ -266,4 +269,104 @@ fun List<SampleComparison>.calculateAllPossibleFScores(beta: Double): List<Thres
     }
 
     return performances.sortedByDescending { performance -> performance.calculateFScore() }
+}
+
+class MutantGenerator private constructor(
+    private val mutations: List<Transformation>,
+    private val serializationDirPath: String,
+    private val mutantsExportTag: String
+) : Checker() {
+
+    private fun generate(
+        sampleFilePath: String, bugInfo: BugInfo, serializationTag: String,
+        createChecker: (() -> CompilerTestChecker)? = null
+    ) {
+        isolationTestbedLogger.debug("started mutating $sampleFilePath")
+        isolationTestbedLogger.debug("")
+
+        currentChecker = createChecker?.invoke() ?: BugIsolator.constructChecker(bugInfo)
+
+        // sometimes PSICreator trips up badly and there's nothing we can do about it
+        val initialFile: KtFile
+        try {
+            initialFile = psiCreator.getPSIForFile(sampleFilePath)
+        } catch (e: Throwable) {
+            throw PSICreatorException(e)
+        }
+
+        // setting up the Transformation environment
+        // the checker ref should not change throughout the entire mutation process
+        Transformation.file = initialFile
+        Transformation.checker = this
+
+        // setting up this class's environment
+        mutantsCatalog = mutableSetOf()
+
+        // generating mutants (duh)
+        for (mutation in mutations) {
+            try {
+                mutation.transform()
+            } catch (e: Throwable) {
+                // if something bad happens when we mutate, we just
+                // halt a particular mutation and turn to the next one
+                isolationTestbedLogger.debug(e.message)
+            }
+        }
+
+        // serializing mutants for later use
+        File("$serializationDirPath/$serializationTag").mkdirs()
+        MutantsForIsolation(mutantsExportTag, initialFile.text, mutantsCatalog.toList()).export(
+            "$serializationDirPath/$serializationTag/mutants-$mutantsExportTag.cbor"
+        )
+
+        isolationTestbedLogger.debug("finished mutating $sampleFilePath")
+        isolationTestbedLogger.debug("")
+
+        currentChecker = null // just introducing some consistency
+    }
+
+    override fun checkCompiling(file: KtFile): Boolean = checkTextCompiling(file.text)
+
+    override fun checkTextCompiling(text: String): Boolean {
+        mutantsCatalog.add(text)
+        return false // keeping original sample mutating
+    }
+
+    private val psiCreator = PSICreator("")
+
+    // an oracle to determine whether a code mutant has a bug or not
+    private var currentChecker: CompilerTestChecker? = null
+
+    // a collection of all interesting mutants in case we want to serialize them
+    private lateinit var mutantsCatalog: MutableSet<String>
+
+    companion object {
+        fun generate(
+            datasetDirPath: String, defaultBugInfo: BugInfo,
+            createChecker: (() -> CompilerTestChecker)? = null,
+            mutations: List<Transformation>,
+            mutantsExportTag: String
+        ) {
+            val generator = MutantGenerator(
+                mutations, datasetDirPath.replace("samples", "serialization"), mutantsExportTag
+            )
+
+            File(datasetDirPath).walk().sortedBy { it.absolutePath }.forEach { sourceFile ->
+                val sourceFilePath = sourceFile.absolutePath
+                kotlinSampleRegex.find(sourceFilePath)?.let { matchResult ->
+                    val sampleID = matchResult.groupValues
+                    val sample = Sample(sampleID[1], sampleID[2])
+
+                    generator.generate(
+                        sourceFilePath, defaultBugInfo,
+                        serializationTag = sample.joinToString("/"),
+                        createChecker = createChecker
+                    )
+                }
+            }
+
+            isolationTestbedLogger.debug("mutations done!")
+        }
+    }
+
 }

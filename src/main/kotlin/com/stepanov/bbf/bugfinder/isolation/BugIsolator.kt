@@ -66,7 +66,7 @@ class BugIsolator(
         // setting up this class's environment
         buggedCoverages = mutableSetOf()
         bugFreeCoverages = mutableSetOf()
-        mutantsCatalog = mutableListOf()
+        mutantsCatalog = mutableSetOf()
 
         // generating mutants and their coverages for following fault localization
         for (mutation in mutations) {
@@ -86,7 +86,7 @@ class BugIsolator(
         // serializing intermediate and final results for later use if necessary
         if (shouldResultsBeSerialized) {
             File("$serializationDirPath/$serializationTag").mkdirs()
-            MutantsForIsolation(mutantsExportTag, initialFile.text, mutantsCatalog).export(
+            MutantsForIsolation(mutantsExportTag, initialFile.text, mutantsCatalog.toList()).export(
                     "$serializationDirPath/$serializationTag/mutants-$mutantsExportTag.cbor"
             )
             val coveragesFullExportTag = "$mutantsExportTag-$coveragesExportTag"
@@ -149,7 +149,7 @@ class BugIsolator(
 
         // generating mutants' coverages for following fault localization
         for (mutant in mutants.mutants) {
-            val (isBugPresent, coverage) = compile(initialFile.text, checker)
+            val (isBugPresent, coverage) = compile(mutant, checker)
             if (coverage != null) {
                 if (isBugPresent)
                     localBuggedCoverages.add(coverage)
@@ -209,7 +209,7 @@ class BugIsolator(
     override fun checkCompiling(file: KtFile): Boolean = checkTextCompiling(file.text)
 
     override fun checkTextCompiling(text: String): Boolean {
-        val checker = currentChecker ?: throw IllegalStateException("Do not call checks from FaultLocalizer directly.")
+        val checker = currentChecker ?: throw IllegalStateException("Do not call checks from BugIsolator directly.")
         val (isBugPresent, coverage) = compile(text, checker)
 
         if (coverage != null) {
@@ -228,7 +228,7 @@ class BugIsolator(
     private lateinit var bugFreeCoverages: MutableSet<ProgramCoverage>
 
     // a collection of all interesting mutants in case we want to serialize them
-    private lateinit var mutantsCatalog: MutableList<String>
+    private lateinit var mutantsCatalog: MutableSet<String>
 
     private val psiCreator = PSICreator("")
 
@@ -237,10 +237,6 @@ class BugIsolator(
 
     // a mutation's name, saved for debug purposes
     private lateinit var currentMutation: String
-
-    // a distance function for BoundedSortedByModelElementSet instances
-    private fun coverageDistanceFunction(model: ProgramCoverage, other: ProgramCoverage) =
-            ((1 - model.cosineSimilarity(other)) * 1E8).toInt()
 
     private val logger = Logger.getLogger("isolationLogger")
 

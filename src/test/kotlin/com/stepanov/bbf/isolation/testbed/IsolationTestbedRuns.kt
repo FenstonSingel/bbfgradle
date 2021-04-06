@@ -6,7 +6,7 @@ import com.stepanov.bbf.bugfinder.isolation.MutantsForIsolation
 import com.stepanov.bbf.bugfinder.isolation.formulas.OchiaiRankingFormula
 
 fun isolationRefactoringInitialTest() {
-    val serializationDirPath = "src/test/resources/serialization"
+    val serializationDirPath = "isolation-evaluation/serialization"
 
     val bugIsolator = BugIsolator(
         BugIsolator.typicalMutations,
@@ -15,7 +15,7 @@ fun isolationRefactoringInitialTest() {
         serializationDirPath = serializationDirPath
     )
 
-    val sampleFilePath = "src/test/resources/samples/test.kt"
+    val sampleFilePath = "isolation-evaluation/samples/test.kt"
     val serializationTag = "testrun"
 
     // first run in its entirety
@@ -48,47 +48,49 @@ fun isolationRefactoringInitialTest() {
     println("results1 and results3 are ${if (results1 == results3) "equal" else "different"}!")
 }
 
-fun stacktraceEvaluation() {
+fun stacktraceEvaluation(datasetDirPath: String) {
     estimateSimilaritiesForSamplesInDataset(
-        "src/test/resources/samples/youtrack",
+        datasetDirPath,
         "stacktraces",
         ::getStacktrace,
         ::compareStacktraces
     )
 }
 
-fun bugIsolationEvaluation() {
-    val datasetPath = "src/test/resources/samples/testrun"
-
-    currentSourceType = BugIsolationSourceType.SAMPLE
-    currentMutantsImportTag = ""   // relevant if source type is MUTANTS OR COVERAGES
-    currentCoveragesImportTag = "" // relevant if source type is COVERAGES
-
-    val newMutantsExportTag = ""
-    val newCoveragesExportTag = ""
-    val newResultsExportTag = ""
+fun bugIsolationEvaluation(
+    datasetDirPath: String,
+    sourceType: BugIsolationSourceType,
+    mutantsImportTag: String,
+    coveragesImportTag: String,
+    mutantsExportTag: String,
+    coveragesExportTag: String,
+    resultsExportTag: String
+) {
+    currentSourceType = sourceType
+    currentMutantsImportTag = mutantsImportTag     // relevant if source type is MUTANTS OR COVERAGES
+    currentCoveragesImportTag = coveragesImportTag // relevant if source type is COVERAGES
 
     currentBugIsolator = BugIsolator(
         BugIsolator.typicalMutations,
         OchiaiRankingFormula,
         shouldResultsBeSerialized = true,
-        serializationDirPath = datasetPath.replaceFirst("samples", "serialization")
+        serializationDirPath = datasetDirPath.replaceFirst("samples", "serialization")
     ).apply {
-        mutantsExportTag = newMutantsExportTag
-        coveragesExportTag = newCoveragesExportTag
-        resultsExportTag = newResultsExportTag
+        this.mutantsExportTag = mutantsExportTag
+        this.coveragesExportTag = coveragesExportTag
+        this.resultsExportTag = resultsExportTag
     }
 
     fun composeActualExportTag(): String {
         return when (currentSourceType) {
-            BugIsolationSourceType.SAMPLE -> "$newMutantsExportTag-$newCoveragesExportTag-$newResultsExportTag"
-            BugIsolationSourceType.MUTANTS -> "$currentMutantsImportTag-$newCoveragesExportTag-$newResultsExportTag"
-            BugIsolationSourceType.COVERAGES -> "$currentMutantsImportTag-$currentCoveragesImportTag-$newResultsExportTag"
+            BugIsolationSourceType.SAMPLE -> "$mutantsExportTag-$coveragesExportTag-$resultsExportTag"
+            BugIsolationSourceType.MUTANTS -> "$currentMutantsImportTag-$coveragesExportTag-$resultsExportTag"
+            BugIsolationSourceType.COVERAGES -> "$currentMutantsImportTag-$currentCoveragesImportTag-$resultsExportTag"
         }
     }
 
     estimateSimilaritiesForSamplesInDataset(
-        datasetPath,
+        datasetDirPath,
         "FL-${composeActualExportTag()}",
         ::isolateBug,
         ::compareIsolationRankings

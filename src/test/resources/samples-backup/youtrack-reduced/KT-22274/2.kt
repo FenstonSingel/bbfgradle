@@ -1,5 +1,0 @@
-
-fun 
-() {
-    loop@ return@loop
-}

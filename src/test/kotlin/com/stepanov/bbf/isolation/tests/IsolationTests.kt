@@ -14,7 +14,7 @@ class IsolationTests {
     @Test
     fun factoryTest() {
         val firstStatistics = ExecutionStatistics(
-            mapOf(
+            listOf(
                 "1" to EntityExecutionStatistics(10, 0, 0, 10),
                 "2" to EntityExecutionStatistics(5, 5, 5, 5),
                 "3" to EntityExecutionStatistics(7, 3, 3, 7)
@@ -22,7 +22,7 @@ class IsolationTests {
         )
         val first = RankedProgramEntities.rank(firstStatistics, Ochiai2RankingFormula)
         val secondStatistics = ExecutionStatistics(
-            mapOf(
+            listOf(
                 "1" to EntityExecutionStatistics(10, 0, 0, 10),
                 "2" to EntityExecutionStatistics(5, 5, 5, 5),
                 "3" to EntityExecutionStatistics(7, 3, 3, 7)
@@ -30,27 +30,6 @@ class IsolationTests {
         )
         val second = RankedProgramEntities.rank(secondStatistics, Ochiai2RankingFormula)
         assertEquals(first.storage, second.storage)
-
-        val thirdStatistics = ExecutionStatistics(
-            mapOf(
-                "1" to EntityExecutionStatistics(10, 0, 0, 10),
-                "2" to EntityExecutionStatistics(5, 5, 5, 5),
-                "3" to EntityExecutionStatistics(7, 3, 3, 7),
-                "4" to EntityExecutionStatistics(0, 10, 10, 0)
-            )
-        )
-        val third = RankedProgramEntities.rank(thirdStatistics, Ochiai2RankingFormula, 3)
-        val fourthStatistics = ExecutionStatistics(
-            mapOf(
-                "1" to EntityExecutionStatistics(10, 0, 0, 10),
-                "2" to EntityExecutionStatistics(5, 5, 5, 5),
-                "3" to EntityExecutionStatistics(7, 3, 3, 7),
-                "4" to EntityExecutionStatistics(3, 7, 7, 3),
-                "4" to EntityExecutionStatistics(0, 10, 10, 0)
-            )
-        )
-        val fourth = RankedProgramEntities.rank(fourthStatistics, Ochiai2RankingFormula, 3)
-        assertEquals(third.storage, fourth.storage)
     }
 
     @Test

@@ -1,2 +1,0 @@
-
-val text = "".trimMargin("")

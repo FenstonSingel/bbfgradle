@@ -12,23 +12,17 @@ import kotlin.math.sqrt
 class RankedProgramEntities(val storage: Map<String, Double>, private val isRankDescending: Boolean) {
 
     companion object {
-        fun rank(statistics: ExecutionStatistics, formula: RankingFormula, numberOfEntities: Int? = null): RankedProgramEntities {
-            val rawResult = statistics.storage.mapValues { (_, statistics) -> formula(statistics) }
-            val result = if (numberOfEntities != null) {
-                val sortedResult = rawResult
-                    .map { (entity, rank) -> entity to rank }
-                    .sortedWith( Comparator { a, b -> compare(a, b, formula.isRankDescending) } )
-                val iterator = sortedResult.iterator()
-                val temp = mutableMapOf<String, Double>()
-                for (i in 0 until numberOfEntities) {
-                    val (entity, rank) = if (iterator.hasNext()) iterator.next() else break
-                    temp[entity] = rank
-                }
-                temp
-            } else {
-                rawResult
-            }
-            return RankedProgramEntities(result, formula.isRankDescending)
+        fun rank(statistics: ExecutionStatistics, formula: RankingFormula): RankedProgramEntities {
+            val result = statistics.storage.map { (entity, statistics) -> entity to formula(statistics) }
+            val (_, minRank) = result.minBy { (_, rank) -> rank } ?: "" to 0.0
+            val (_, maxRank) = result.maxBy { (_, rank) -> rank } ?: "" to 1.0
+            val rangeLength = maxRank - minRank
+            return RankedProgramEntities(
+                result.map { (entity, rank) ->
+                    entity to if (rangeLength != 0.0) (rank - minRank) / rangeLength else 0.5
+                }.associate { it },
+                formula.isRankDescending
+            )
         }
 
         fun import(filePath: String): RankedProgramEntities {

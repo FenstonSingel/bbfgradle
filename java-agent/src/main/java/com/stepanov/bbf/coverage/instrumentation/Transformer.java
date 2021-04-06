@@ -3,7 +3,6 @@ package com.stepanov.bbf.coverage.instrumentation;
 import java.lang.instrument.ClassFileTransformer;
 import java.security.ProtectionDomain;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
@@ -12,20 +11,16 @@ import com.stepanov.bbf.coverage.CompilerInstrumentation;
 
 public class Transformer implements ClassFileTransformer {
 
-    List<String> blocklist = Collections.emptyList();
-//    List<String> blocklist = Arrays.asList("cli", "diagnostics", "utils", "util", "container", "config");
-//    List<String> allowlist = Arrays.asList("backend", "frontend", "fir");
+    List<String> blocklist = Arrays.asList("cli", "diagnostics", "utils", "util", "container", "config");
 
     private boolean isTransformationUnnecessary(String className) {
         if (!className.startsWith("org/jetbrains/kotlin/")) return true;
+
         List<String> tokens = Arrays.asList(className.split("[/$]"));
         for (String blockedEntry : blocklist) {
             if (tokens.contains(blockedEntry)) return true;
         }
-//        for (String allowedEntry : allowlist) {
-//            if (tokens.contains(allowedEntry)) return false;
-//        }
-//        return true;
+
         return false;
     }
 

@@ -42,5 +42,5 @@ class ChangeRandomASTNodesFromAnotherTrees : Transformation() {
         }
     }
 
-    private val numOfTries = 10 to 20
+    private val numOfTries = 400 to 600
 }
