@@ -1,0 +1,671 @@
+¿iexportTaggdefaultnoriginalSamplex
+val text = "".trimMargin("")
+gmutantsŸxS
+
+val c = true
+try
+{val text = "".trimMargin("")}
+catch(e: Exception){}
+finally{}
+
+xb
+val text = 
+val r = true
+when (r) {
+ true -> {"".trimMargin("")}
+ else -> {"".trimMargin("")}
+}
+
+xT
+val text = 
+val r = false
+when (r) {
+ true -> {""}
+ else -> {""}
+}
+.trimMargin("")
+xT
+val text = "".
+val l = false
+try
+{trimMargin("")}
+catch(e: Exception){}
+finally{}
+
+xH
+val text = "".
+val w = true
+if (w) {trimMargin} else {trimMargin}
+("")
+xS
+val text = "".trimMargin(
+val h = true
+when (h) {
+ true -> {""}
+ else -> {""}
+}
+)
+x 
+val text = "".trimMargin!!("")
+x 
+val text = ""!!.trimMargin("")
+x
+val text = "".trimMargin("")
+x
+" text = val".trimMargin("")
+x
+val "".trimMargin("") = text
+x
+val text = "trimMargin."("")
+x
+val text = ").trimMargin("""
+x
+val text = """.trimMargin(")
+x
+val text = trimMargin.""("")
+x
+val text = "".""(trimMargin)
+x
+"".trimMargin("") text = val
+x
+val text = "".)(""trimMargin
+x
+val text = "".trimMargin""()
+x
+val trimMargin("") = "".text
+x
+"" text = "".trimMargin(val)
+x
+val text trimMargin "".=("")
+x
+val text = ""trimMargin("").
+x
+val text = trimMargin("")"."
+x
+val text = trimMargin("").""
+x
+val text "".trimMargin("") =
+x
+val text = trimMargin"."("")
+x
+val ) = "".trimMargin(""text
+x
+trimMargin("") text = "".val
+x
+val text " "".trimMargin(=")
+x
+val = text "".trimMargin("")
+x
+val text "" "".trimMargin(=)
+x
+val text ( "".trimMargin="")
+x
+val text = "".trimMargin(")"
+x
+val text = "."trimMargin("")
+x
+val text = ("")".trimMargin"
+x
+val ("") = "".trimMargintext
+x
+val text = """"trimMargin(.)
+x
+val text " "".trimMargin("=)
+x
+val text = ""."("trimMargin)
+x
+val text = (".trimMargin""")
+x
+val text = "".("")trimMargin
+x
+" text = "val.trimMargin("")
+x
+val text " "=.trimMargin("")
+x
+( text = "".trimMarginval"")
+x
+val ( = "".trimMargintext"")
+x
+val text = "trimMargin("")."
+x
+val " = text".trimMargin("")
+x
+val text "" =.trimMargin("")
+x
+val text = ("").trimMargin""
+x
+val "" = "".trimMargin(text)
+x
+val text = "".trimMargin()""
+x
+" text = "".trimMargin("val)
+x
+val text = """trimMargin(".)
+x
+val trimMargin = "".text("")
+x
+val text . ""=trimMargin("")
+x
+val "" = text.trimMargin("")
+x
+val text ("") "".trimMargin=
+x
+val text = ""."(trimMargin")
+x
+= text val "".trimMargin("")
+x
+trimMargin text = "".val("")
+x
+val " = "text.trimMargin("")
+x
+val text = "".(trimMargin"")
+x
+val " = "".trimMargin("text)
+x
+val text = )".trimMargin("""
+x
+val text = .""trimMargin("")
+x
+val text = "".trimMargin"(")
+x
+val text = "(.trimMargin""")
+x
+val text = ""("")trimMargin.
+x
+val text = ""(trimMargin."")
+x
+. text = ""valtrimMargin("")
+x
+val . = ""texttrimMargin("")
+x
+val text = """trimMargin(.")
+x
+val text = ""trimMargin.("")
+x
+val text = ).trimMargin(""""
+x
+val text ) "".trimMargin(""=
+x
+("") text = "".trimMarginval
+x
+) text = "".trimMargin(""val
+x
+val text trimMargin("") "".=
+x
+val text = "("").trimMargin"
+x
+"" text = val.trimMargin("")
+x
+" text = "".trimMargin(val")
+x
+val " = "".trimMargin(text")
+x
+val text = "".trimMargin)""(
+x
+val text = ".trimMargin(""")
+x
+val text " =".trimMargin("")
+x
+val text = "".trimMargin("1")
+x
+val text = "".toString("")
+x 
+val text = "OK".trimMargin("")
+x
+val x = C().foo("", 0)
+x
+val text = "".Unit("")
+x
+val text = "".result("")
+x
+val text = "O".trimMargin("")
+x
+val foo = "".trimMargin("")
+x6
+val text = "".assertEquals(-32768, shortPos.toInt())
+u
+val text = "".C("")
+x
+val text = "".trimMargin()
+x$
+val text = "".trimMargin({ "OK" })
+r
+val text = A().a
+x&
+val text = "".trimMargin("SCISSORS")
+x 
+val text = "".trimMargin("OK")
+x 
+val result = "".trimMargin("")
+x
+val text = "".trimMargin("d")
+x
+val text = "".trimMargin(0)
+x
+val text = "".trimMargin(1)
+x
+val bar = "".trimMargin("")
+x
+val text = s.add("foo")
+q
+val c = A().B()
+u
+val text = "".x("")
+x(
+val text = "Fail x: $x".trimMargin("")
+x(
+val ResultReceiver = "".trimMargin("")
+x
+val text = "".Impl("")
+x
+val d4 = "".trimMargin("")
+x5
+val text = "".unblock(delayedQueue.poll() ?: break)
+x
+val ONE = "".trimMargin("")
+x 
+val text = "".Delegate("Fail")
+x
+val text = "".listOf<Int>()
+v
+val text = "".T1("")
+x'
+val text = "".block("O", "fail", "K")
+x
+val text = "".Boolean("")
+x
+val text = "".Result("42")
+x
+val text = "".trimMargin("K")
+u
+val text = "".T("")
+x
+val b = "".trimMargin("")
+x
+val text = "".result()
+u
+val text = "".s("")
+x
+val text = "".this("")
+x
+val child = initChild(x)
+o
+val a = A(42)
+x
+val v2 = "".trimMargin("")
+x"
+val text = "".trimMargin("FAIL")
+xP
+val text = "".trimMargin("Wrong elements for (3 downTo 5).reversed(): $list1")
+x*
+val text = "".checkLess(0.toLong(), 0.5)
+x
+val y = "".trimMargin("")
+p
+val a = "FAIL"
+x
+val text = "".trimMargin("c")
+x
+val text = s.toString()
+x
+val text = "".String("")
+x2
+val x: Outer.Inner<String> = Outer().Inner("OK")
+x"
+val text = "".trimMargin("papa")
+x&
+val text = Nested().foo().toString()
+u
+val text = "".a("")
+x
+val text = "".L(1234L)
+x
+val text = it.toString()
+x
+val text = "".trimMargin(s)
+x
+val text = "".FloatArray(5)
+x
+val method : () -> Unit?
+x#
+val text = "".trimMargin("first")
+w
+val text = "".bar("")
+x
+val text = "".trimMargin("O")
+x
+val delayedQueue = MyQueue()
+u
+val text = "".foo()
+w
+val text = "".box("")
+w
+val text = "".foo("")
+x$
+val text = "".trimMargin("fail 4")
+w
+val text = "".Any("")
+x
+val text = "".downTo("")
+x
+val text = "".BooleanArray(3)
+n
+var seed = 0
+x0
+var result = (0..10).map(::foo).joinToString()
+u
+val text = "".Z("")
+w
+val range2 = 6u .. 1u
+x
+val l = ArrayList<Int>()
+x!
+val text = "".trimMargin(42.0F)
+x
+val text = kotlin.properties
+x
+val text = "".toDouble()
+w
+val a = FloatArray(5)
+x 
+val String = "".trimMargin("")
+x
+val text = "".ZImpl3()
+x
+val text = "".list1("")
+u
+val text = s.n(238)
+x
+val T = "".trimMargin("")
+x
+val box = "".trimMargin("")
+x
+val text = 1L.hashCode()
+x!
+val text = "".trimMargin({ 7 })
+x
+val Test = "".trimMargin("")
+x
+val text = "".trimMargin("L")
+x
+val s = """ foo \n bar """
+x
+val t = "".trimMargin("")
+t
+val text = t.cause
+w
+val text = "".Int("")
+m
+val z = Z()
+x
+val text = "".from("")
+u
+val text = "".K("")
+x;
+val text = ContentBoxDelegate<Content>().get().toString()
+l
+var x = ""
+l
+var s = ""
+x&
+val text = "".AssertionError("$rem")
+x
+val text = "".listOf("")
+x
+val text = "".ArrayList("")
+p
+val text = d.b
+k
+var i = 0
+m
+val a = A()
+x%
+val text = kotlin.reflect.KProperty
+x 
+private const val BUNDLE = "K"
+x
+val text = (1.toByte()).inc()
+x
+val x = f(1) { this+it+2 }
+x"
+val text = "".trimMargin(y = 16)
+x
+val count = "".trimMargin("")
+x
+val text = true.and(true)
+v
+val text = "".Box(f)
+u
+val text = l.add(1)
+x7
+val text = Father("fail").Child("OK").Child2().work()
+x
+val text = "".toLong("")
+x
+val text = "".test1(1)
+v
+val text = "".foo(1)
+x
+val text = "".Host("")
+x
+val text = "".indices("")
+u
+val text = "".S("")
+x 
+val text = "".trimMargin(true)
+x-
+val text = "".trimMargin("result: $result")
+v
+val text = "".ua("")
+x'
+val text = "".trimMargin(42.0F, 1.0F)
+s
+val en: En = En.A
+v
+val text = C().foo()
+x#
+val text = "".trimMargin(Bar.ONE)
+s
+val text = "".G()
+x'
+val mutableListOf = "".trimMargin("")
+x#
+val text = extension().toString()
+x"
+abstract val value: () -> String
+x"
+val text = "".runCrossInline("")
+x#
+const val MinUL = ULong.MIN_VALUE
+x 
+val text = "".trimMargin(this)
+t
+val text = F().foo
+x
+val text = Z(1).foo(Z(2))
+x
+val A = "".trimMargin("")
+n
+val a = "OK"
+x
+val text = "".trimMargin(i)
+x
+val text = "".trimMargin(10)
+u
+val text = "".z("")
+p
+var result = 0
+x,
+val text = "".gex(a as Comparable<Any>, b)
+x
+val text = "".zap(true)
+x
+val text = "".Direction("")
+x
+val Int = "".trimMargin("")
+x!
+val text = "".trimMargin(false)
+x
+val s = StringBuilder()
+w
+val text = "".res("")
+r
+var flag = false
+x
+val text = "".trimMargin(11)
+x"
+const val MinUI = UInt.MIN_VALUE
+x-
+val text = (0..3).map(::foo).joinToString()
+x
+val x = "".trimMargin("")
+x,
+val text = "".trimMargin(SnekDirection.Up)
+x-
+val text = (1..7).map(::foo).joinToString()
+x#
+val text = "".intArrayOf(1, 2, 3)
+x
+val X = "".trimMargin("")
+x
+val test = "".trimMargin("")
+p
+var c = from.i
+q
+val a = x1 ?: y
+x,
+val text = arrayOf("a", "c", "b").sorted()
+x
+val text = "".Exception1("")
+u
+val text = "".D("")
+x!
+val text = "".trimMargin(a + b)
+x
+val text = "".trimMargin(2)
+x
+val Z = "".trimMargin("")
+x
+private const val z = "OK";
+u
+val text = "".A("")
+x
+val text = "".trimMargin(B())
+x
+const val M = Char.MAX_VALUE
+t
+val text = 10L.ext
+x
+val text = Long.MAX_VALUE
+x"
+val text = "".trimMargin(this@B)
+x
+val list1 = "".trimMargin("")
+x
+val text = list2.add(i)
+x
+val text = "".list3("")
+o
+val ok = "OK"
+x/
+val text = KMutableProperty1Impl().returnType
+x 
+val list = ArrayList<String>()
+xF
+val x = when ("A") {
+        "B" -> foo()
+        else -> null
+    }
+x!
+val text = "".ArrayList<UInt>()
+x
+val text = Season.SPRING
+s
+val text = "".f()
+x
+val text = "".trimMargin(f)
+u
+val text = "".y("")
+x/
+val text = "".trimMargin((MaxL - 2).toLong())
+x)
+val text = "".trimMargin("OK", " Fail")
+x"
+const val MaxUI = UInt.MAX_VALUE
+n
+var test = 0
+k
+var c = 0
+x
+val text = "".doTest()
+r
+val x: Int? = 42
+x"
+val text = "".trimMargin(Base())
+x!
+val text = "".StringBuilder("")
+x
+val text = "".trimMargin(a)
+w
+val text = "".get("")
+x
+val e = "".trimMargin("")
+x
+val text = "".trimMargin(5u)
+u
+val text = "".i("")
+x
+val text = "".StringBuilder()
+w
+val text = "".and("")
+x&
+val text = "".trimMargin(other.name)
+q
+val text = to.i
+x!
+val text = "".trimMargin("123")
+x 
+val text = "".ArrayList<Int>()
+x
+val First = "".trimMargin("")
+x!
+val l = Array<Int>(3, {x -> x})
+x
+val text = "".ordinal("")
+x
+val text = "".trimMargin(")
+x
+val text = "".trimMargin
+x
+valtext = "".trimMargin("")
+x
+val text = ".trimMargin("")
+x
+val text = "".trimMargin"")
+x
+val text = .trimMargin("")
+x
+val text ="".trimMargin("")
+x
+val text = "".trimMargin("")p
+val text = "".
+m
+val text = 
+t
+val text = "".("")
+b
+
+x
+val text  "".trimMargin("")
+x
+val text = "".trimMargin(""
+x
+val  = "".trimMargin("")
+xval text = "".trimMargin("")
+x
+val text= "".trimMargin("")
+x
+val text = ""trimMargin("")
+x
+ text = "".trimMargin("")
+ÿÿ

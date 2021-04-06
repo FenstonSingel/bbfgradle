@@ -1,0 +1,2038 @@
+øiexportTaggdefaultnoriginalSamplex%
+class A : B<*>()
+class B<T>(
+ t: T)
+gmutantsüxh
+
+val h = true
+when (h) {
+ true -> {class A : B<*>()}
+ else -> {class A : B<*>()}
+}
+
+class B<T>(
+ t: T)
+x[
+class A : B<*>()
+
+val n = false
+try
+{class B<T>(
+ t: T)}
+catch(e: Exception){}
+finally{}
+
+x`
+class A : B<*>()
+class B<T>
+val l = true
+when (l) {
+ true -> {(
+ t: T)}
+ else -> {(
+ t: T)}
+}
+
+xG
+class A : B<*>()
+class B<
+val s = false
+if (s) {T} else {T}
+>(
+ t: T)
+xZ
+class A : 
+val d = true
+try
+{B<*>}
+catch(e: Exception){}
+finally{}
+()
+class B<T>(
+ t: T)
+xZ
+class A : B<*>()
+class B<T>(
+ 
+val h = true
+try
+{t: T}
+catch(e: Exception){}
+finally{}
+)
+xG
+class A : 
+val q = false
+if (q) {B} else {B}
+<*>()
+class B<T>(
+ t: T)
+x[
+class A : B<*>()
+class B<T>(
+ t: 
+val z = false
+try
+{T}
+catch(e: Exception){}
+finally{}
+)
+v
+(
+class B<T>(
+ t: T)
+x'
+class A : B<*>()
+class B<T>(
+ t: T!!)
+x(
+class A : (B<*>)?()
+class B<T>(
+ t: T)
+x(
+class A : B<*>()
+class B<T>(
+ t: (T)?)
+x%
+class A : B<*>B
+class ()<T>(
+ t: T)
+x%
+class A class B<*>()
+: B<T>(
+ t: T)
+x%
+class A : )
+class B<T>(
+ t: TB<*>()
+x%
+(
+ t: T)
+class B<T>class A : B<*>()
+x%
+class A : Bt()
+class B<T>(
+ <*>: T)
+x%
+class A : B<T>()
+class B<*>(
+ t: T)
+x%
+class A ( B<*>:)
+class B<T>(
+ t: T)
+x%
+: A : B<*>()
+class B<T>(
+ tclass T)
+x%
+class A : B<()
+class B<*>T>(
+ t: T)
+x%
+t: T A : B<*>()
+class B<T>(
+ class)
+x%
+class A : >()
+class B<TB<*>(
+ t: T)
+x%
+class A : BB*>()
+class <<T>(
+ t: T)
+x%
+class A : T<*>()
+class B<T>(
+ t: B)
+x%
+class A : B<class B<T>(
+ t: T)>()
+*
+x%
+class A : B<<T>>()
+class B*(
+ t: T)
+x%
+class A B<*>() :
+class B<T>(
+ t: T)
+x%
+class A : B<>*()
+class B<T>(
+ t: T)
+x%
+(
+class B<T>class A : B<*>()
+ t: T)
+x%
+class A : B<*>T
+class B<T>(
+ t: ())
+x%
+class A : B<*>(t: T
+class B<T>(
+ ))
+x%
+class A : class B<T>(
+ t: T)()
+B<*>
+x%
+class A : ()B<*>
+class B<T>(
+ t: T)
+x%
+class A : B(
+ t: T)*>()
+class B<T><
+x%
+class A : B<T>()
+class B<T>(
+ t: *)
+x%
+T
+class B<T>(
+ t: class A : B<*>())
+x%
+class A : B<*><T>
+class B()(
+ t: T)
+x%
+class A : B<)>()
+class B<T>(
+ t: T*
+x%
+class : A B<*>()
+class B<T>(
+ t: T)
+x%
+class A : class()
+B<*> B<T>(
+ t: T)
+x%
+class A : B<*>()
+class B<T>(
+ tT :)
+x%
+class A : B>*>()
+class B<T<(
+ t: T)
+x%
+( A : B<*>class)
+class B<T>(
+ t: T)
+x%
+class A : T
+class B<T>(
+ t: B<*>())
+x%
+class A : B<*>()
+class B<T>(
+ t: T)
+x%
+class A : Bclass B<T>(
+ t: T)*>()
+<
+x%
+class A : B<*>()
+class B<T>(
+ t) T:
+x%
+class A : B<*>()
+class ><TB(
+ t: T)
+x%
+class A B B<*>()
+class :<T>(
+ t: T)
+x%
+class A : B*<>()
+class B<T>(
+ t: T)
+x%
+class A : <T>()
+class BB<*>(
+ t: T)
+x%
+class A : <*>B()
+class B<T>(
+ t: T)
+x%
+class A : B<>>()
+class B<T*(
+ t: T)
+x%
+class A T B<*>()
+class B<:>(
+ t: T)
+x%
+class A B :<*>()
+class B<T>(
+ t: T)
+x%
+class A : T<*>()
+class B<B>(
+ t: T)
+x%
+class A : BT*>()
+class B<T>(
+ t: <)
+x%
+class A : B<*>()
+class B<>T(
+ t: T)
+x%
+class A : B<*>()
+class B)T>(
+ t: T<
+x%
+class A : B<*>()
+class Bt(
+ <T>: T)
+x%
+class A : B<*>()
+class (
+ t: T)<T>B
+x%
+class A : B<*>()
+class BT(
+ t: <T>)
+x%
+class A : ><*B()
+class B<T>(
+ t: T)
+x%
+class A : T
+class B<B<*>()>(
+ t: T)
+x%
+class A : B<*>()
+class BT<>(
+ t: T)
+x%
+class A : B<*>()
+class B(
+ t: T)<T>
+x%
+class A : ><*>()
+class B<TB(
+ t: T)
+x%
+class A : B<*>()
+class Bt: T(
+ <T>)
+x%
+class A : (
+ t: T)()
+class B<T>B<*>
+x%
+class A : *<B>()
+class B<T>(
+ t: T)
+x%
+class A : B<(>()
+class B<T>*
+ t: T)
+x%
+class A * B<:>()
+class B<T>(
+ t: T)
+x%
+class A : t<*>()
+class B<T>(
+ B: T)
+x%
+class A : t()
+class B<T>(
+ B<*>: T)
+x%
+class A : B<(
+ t: T)>()
+class B<T>*
+x%
+class A : T()
+class B<B<*>>(
+ t: T)
+x%
+class T : B<*>()
+class B<T>(
+ t: A)
+x%
+class A : B:*>()
+class B<T>(
+ t< T)
+x%
+class A : B<*>B)
+class (<T>(
+ t: T)
+x%
+class A : B<*>()
+class <BT>(
+ t: T)
+x%
+class A : B<*>()
+class B<T>(
+ t: )T
+x%
+class A : B>*<()
+class B<T>(
+ t: T)
+x%
+B<*> A : class()
+class B<T>(
+ t: T)
+x%
+class A : B<*>()
+class T<T>(
+ t: B)
+x%
+class A : BT()
+class B<T>(
+ t: <*>)
+x%
+class A : B<*>()
+class B<t>(
+ T: T)
+x%
+B<*>() A : class
+class B<T>(
+ t: T)
+x%
+class A : B<<>()
+class B*T>(
+ t: T)
+x%
+class A : B)*>()
+class B<T>(
+ t: T<
+x%
+:
+class B<T>(
+ tclass A : B<*>() T)
+x%
+class A : B<*>T)
+class B<T>(
+ t: ()
+x%
+class A : B<*t()
+class B<T>(
+ >: T)
+x%
+class A < B<*>()
+class B:T>(
+ t: T)
+x%
+class A : B<*>()
+class B<t: T>(
+ T)
+x%
+class A : B<*>()
+( B<T>class
+ t: T)
+x%
+class A : B<:>()
+class B<T>(
+ t* T)
+x%
+t
+class B<T>(
+ class A : B<*>(): T)
+x%
+class A : B<*>(<T>
+class B)(
+ t: T)
+x%
+t A : B<*>()
+class B<T>(
+ class: T)
+x%
+class A : B<*class B<T>(
+ t: T)()
+>
+x%
+class A : B<*>()
+class B<(
+ t: T)>T
+x%
+class A : Bt*>()
+class B<T>(
+ <: T)
+x%
+class A : B<B>()
+class *<T>(
+ t: T)
+x%
+class A : B<*>()
+T B<T>(
+ t: class)
+x%
+class A : )<*>(B
+class B<T>(
+ t: T)
+x%
+* A : B<class>()
+class B<T>(
+ t: T)
+x%
+class A : B()
+class B<*><T>(
+ t: T)
+x%
+class <T> : B<*>()
+class BA(
+ t: T)
+x%
+class A : B<*>()
+class B<(>T
+ t: T)
+x%
+>
+class B<Tclass A : B<*>()(
+ t: T)
+x%
+class A : Bclass*>()
+< B<T>(
+ t: T)
+x%
+class A : )()
+class B<T>(
+ t: TB<*>
+x%
+class A : B<*>((
+ t: T)
+class B<T>)
+x%
+class A : BT*>()
+class B<<>(
+ t: T)
+x%
+class A : :()
+class B<T>(
+ tB<*> T)
+x%
+class A : (B<*>)
+class B<T>(
+ t: T)
+x%
+class A : B<*>(:
+class B<T>(
+ t) T)
+x%
+class A : B>()
+class B<T<*>(
+ t: T)
+x%
+class A : T()
+class B<T>(
+ t: B<*>)
+x%
+class A : B<*>class B<T>(
+ t: T)
+()
+x%
+class A : BT()
+class B<<*>>(
+ t: T)
+x%
+class A : B<t>()
+class B<T>(
+ *: T)
+x%
+class A : :
+class B<T>(
+ tB<*>() T)
+x%
+class A : )(B<*>
+class B<T>(
+ t: T)
+x%
+class * : B<A>()
+class B<T>(
+ t: T)
+x%
+class A : B<*>((
+class B<T>)
+ t: T)
+x%
+class A : B<*>()
+class B<T>t: T
+ ()
+x%
+class class : B<*>()
+A B<T>(
+ t: T)
+x%
+class A : B<*>()
+T B<class>(
+ t: T)
+x%
+class A : B<*>()
+class B<T:(
+ t> T)
+x%
+class (
+ t: T) : B<*>()
+class B<T>A
+x%
+class A : B<*>()
+class B(
+ t: T)T><
+x%
+class A : t: T<*>()
+class B<T>(
+ B)
+x%
+class ( : B<*>()
+class B<T>A
+ t: T)
+x%
+class A : class
+B<*>() B<T>(
+ t: T)
+x%
+class A : (
+ t: T)<*>()
+class B<T>B
+x%
+class A : <()
+class BB<*>T>(
+ t: T)
+x%
+class A : B<*>(class B<T>(
+ t: T)
+)
+x%
+class A : B<*(()
+class B<T>>
+ t: T)
+x%
+class > : B<*A()
+class B<T>(
+ t: T)
+x%
+class A : (<*>()
+class B<T>B
+ t: T)
+x%
+T A : B<*>()
+class B<class>(
+ t: T)
+x%
+class T : B<*>()
+class B<A>(
+ t: T)
+x%
+class A : B(<*>)
+class B<T>(
+ t: T)
+x%
+class A class B<T>(
+ t: T) B<*>()
+:
+x%
+T
+class B<class A : B<*>()>(
+ t: T)
+x%
+class A : B<*>()
+class B<T(
+ t: T)>
+x%
+class ( : B<*>A)
+class B<T>(
+ t: T)
+x%
+class A : B<*>()
+class <T>B(
+ t: T)
+x%
+class A : B()*><
+class B<T>(
+ t: T)
+x%
+class A : B<*>()
+class B<T>(
+ T: t)
+x%
+class A : B<*><
+class B()T>(
+ t: T)
+x%
+class A : B<*>(T
+class B<T>(
+ t: ))
+x%
+class A : <
+class BB<*>()T>(
+ t: T)
+x%
+class A : class B<T>(
+ t: T)
+B<*>()
+x%
+class class B<T>(
+ t: T) : B<*>()
+A
+x%
+class A () B<*>:
+class B<T>(
+ t: T)
+x%
+class () : B<*>A
+class B<T>(
+ t: T)
+x%
+class A : B<*>(<
+class B)T>(
+ t: T)
+x%
+class A : B<*T()
+class B<T>(
+ t: >)
+x%
+class A : B<*>()
+class B<T>(
+ )t: T
+x%
+class A : )<*>()
+class B<T>(
+ t: TB
+x%
+class A : B<*t: T()
+class B<T>(
+ >)
+x%
+class A : >
+class B<TB<*>()(
+ t: T)
+x%
+class A : B<*>:
+class B<T>(
+ t() T)
+x%
+class A : (
+ t: T)
+class B<T>B<*>()
+x%
+class A : B<*>()
+class B(T><
+ t: T)
+x%
+class A : Bclass B<T>(
+ t: T)()
+<*>
+x%
+class A T B<*>()
+class B<T>(
+ t: :)
+x%
+class A : B<*>:)
+class B<T>(
+ t( T)
+x%
+class A : B)()
+class B<T>(
+ t: T<*>
+x%
+class A : B(*>()
+class B<T><
+ t: T)
+x%
+class B<*> : A()
+class B<T>(
+ t: T)
+x%
+class A : B<*>()
+class B>T<(
+ t: T)
+x%
+class A : B()<*>
+class B<T>(
+ t: T)
+x%
+class A : B<*B()
+class ><T>(
+ t: T)
+x%
+class A : B<*>(B
+class )<T>(
+ t: T)
+x%
+class A : B:()
+class B<T>(
+ t<*> T)
+x%
+class A : B<t: T>()
+class B<T>(
+ *)
+x%
+) A : B<*>(class
+class B<T>(
+ t: T)
+x%
+class A : (<*>B)
+class B<T>(
+ t: T)
+x%
+> A : B<*>()
+class B<Tclass(
+ t: T)
+x%
+class A : B<*(
+ t: T)()
+class B<T>>
+x%
+class A : B<*>()
+t: T B<T>(
+ class)
+x%
+class A : class B<T>(
+ t: T)<*>()
+B
+x%
+class A : B<*T()
+class B<>>(
+ t: T)
+x%
+class A : B<*>()
+class t<T>(
+ B: T)
+x%
+class B<T>(
+ t: T) A : B<*>()
+class
+x%
+class A : B<*>()
+class T<B>(
+ t: T)
+x%
+class A : B<*>()
+class (<T>B
+ t: T)
+x%
+B
+class class A : B<*>()<T>(
+ t: T)
+x%
+class A : t
+class B<T>(
+ B<*>(): T)
+x%
+class A : B<)>(*
+class B<T>(
+ t: T)
+x%
+class A ( B<*>()
+class B<T>:
+ t: T)
+x%
+class A : <B*>()
+class B<T>(
+ t: T)
+x%
+class A : B<*>(
+ t: T))
+class B<T>(
+x%
+class A : B<class>()
+* B<T>(
+ t: T)
+x%
+class A : B<*>()
+class BTT>(
+ t: <)
+x%
+class ) : B<*>(A
+class B<T>(
+ t: T)
+x%
+class A : <<*>()
+class BBT>(
+ t: T)
+x%
+class A : B<*>()
+B class<T>(
+ t: T)
+x%
+class A : B<*:()
+class B<T>(
+ t> T)
+x%
+class A : t: T
+class B<T>(
+ B<*>())
+x%
+class A : B<*>()
+class B<T>T
+ t: ()
+x%
+class A : B<*>)
+class B<T>(
+ t: T()
+x%
+class A : <T><*>()
+class BB(
+ t: T)
+x%
+class A : (()
+class B<T>B<*>
+ t: T)
+x%
+class A ) B<*>(:
+class B<T>(
+ t: T)
+x%
+class A : (
+class B<T>B<*>()
+ t: T)
+x%
+class A : B<*>(>
+class B<T)(
+ t: T)
+x%
+class A : B<*>class)
+( B<T>(
+ t: T)
+x%
+class A < B:*>()
+class B<T>(
+ t: T)
+x%
+class A : B<T>*>()
+class B<(
+ t: T)
+x%
+class A : ()<*>B
+class B<T>(
+ t: T)
+x%
+class A ) B<*>()
+class B<T>(
+ t: T:
+x%
+class A : B<*>T
+class B<()>(
+ t: T)
+x%
+class A <T> B<*>()
+class B:(
+ t: T)
+x%
+( A : B<*>()
+class B<T>class
+ t: T)
+x%
+class < : BA*>()
+class B<T>(
+ t: T)
+x%
+class A : B<*>()
+class B<T>(
+ :t T)
+x%
+class A > B<*>()
+class B<T:(
+ t: T)
+x%
+class A : B<*>t: T)
+class B<T>(
+ ()
+x%
+class t : B<*>()
+class B<T>(
+ A: T)
+x%
+class A : :<*>()
+class B<T>(
+ tB T)
+x'
+class A : B<Any>()
+class B<T>(
+ t: T)
+x&
+class A : B<*>()
+class B<T>(
+ t: my)
+x4
+class someSpecialValue : B<*>()
+class B<T>(
+ t: T)
+x*
+class A : B<String>()
+class B<T>(
+ t: T)
+x+
+class A : B<*>()
+class B<T>(
+ s: String?)
+x*
+class A : B<*>()
+class B<T>(
+ String: T)
+x'
+class A : B<*>()
+class B<T>(
+ t: Int)
+xB
+class A : B<*>()
+class B<T>private constructor(x: String = "OK")
+x'
+class A : String()
+class B<T>(
+ t: T)
+x,
+class A : B<*>()
+class B<T>(
+ toString: T)
+x)
+class A : B<Short>()
+class B<T>(
+ t: T)
+x)
+class A : B<*>(z[0])
+class B<T>(
+ t: T)
+y √
+class A : B<*>()
+inline class UInt(val a: Int) {
+    fun test() {
+        takeNullable(this)
+        takeAnyInside(this)
+
+        takeAnyInside(this.a)
+    }
+
+    fun takeAnyInside(a: Any) {}
+}
+x'
+class A : B<*>()
+class B<T>(
+ t: set)
+x%
+class A : a<*>()
+class B<T>(
+ t: T)
+x,
+class removeAt : B<*>()
+class B<T>(
+ t: T)
+x%
+class A : B<*>()
+class a<T>(
+ t: T)
+x(
+class A : B<*>()
+class B<T>(
+ t: Long)
+x/
+class A : ("O", { FOO.x })
+class B<T>(
+ t: T)
+x"
+class A : A()
+class B<T>(
+ t: T)
+y ◊
+class A : B<*>()
+class It(val from: C, val to: C) {
+    var c = from.i
+
+    operator fun next(): C {
+        val next = C(c)
+        c++
+        return next
+    }
+
+    operator fun hasNext(): Boolean = c <= to.i
+}
+x&
+class A : gt<*>()
+class B<T>(
+ t: T)
+x%
+class A : B<*>()
+enum class A { V }
+x0
+class A : HashSet<String>()
+class B<T>(
+ t: T)
+x%
+class b : B<*>()
+class B<T>(
+ t: T)
+x%
+class A : Base()
+class B<T>(
+ t: T)
+x*
+class A : B<*>()
+class B<T>(
+ Double: T)
+x
+class A : B<*>()
+class B<T>()
+x'
+class A : B<*>()
+class B<T>(s : Base)
+x(
+class A : B<*>()
+class B<T>(
+ Base: T)
+x%
+class A : B<T>()
+class B<T>(
+ t: T)
+x%
+class r : B<*>()
+class B<T>(
+ t: T)
+x*
+class A : IntArray?()
+class B<T>(
+ t: T)
+x'
+class A : B<*>()
+class B<T>(
+ set: T)
+xE
+class A : SomeClass(3.14, 42, "No", "OK", "Yes")
+class B<T>(
+ t: T)
+x,
+class A : B<*>()
+class B<T>(
+ t: toString)
+x,
+class A : B<*>()
+class Delegate<T>(
+ t: T)
+x,
+class A : Left, Right()
+class B<T>(
+ t: T)
+x*
+class A : B<*>()
+class String<T>(
+ t: T)
+x-
+class A : A<A<String>>()
+class B<T>(
+ t: T)
+x'
+class A : B<Int>()
+class B<T>(
+ t: T)
+x*
+class A : B<*>()
+class B<T>(
+ t: String)
+x"
+class A : C()
+class B<T>(
+ t: T)
+x'
+class A : Double()
+class B<T>(
+ t: T)
+x2
+class A : B<*>()
+class B<T>(a: Float?, b: Float)
+x%
+class A : B<*>()
+class B<T>(
+ A: T)
+x%
+class A : B<*>()
+class B<T>(
+ t: A)
+x$
+class A : Foo()
+class B<T>(
+ t: T)
+x"
+class A : B<*>()
+class B<T>(
+ i)
+x%
+class A : s<*>()
+class B<T>(
+ t: T)
+x'
+class A : B<*>()
+class B<T>(
+ box: T)
+x.
+class A : B<*>()
+class B<T>(
+ val rgba: Int)
+x%
+class A : B<*>()
+class B<T>(
+ a: T)
+x"
+class A : M()
+class B<T>(
+ t: T)
+x*
+class A : B<*>()
+class B<T>(
+ x: String)
+x%
+class A : B<*>()
+class B<T>(
+ e: T)
+x&
+class A : Base(s)
+class B<T>(
+ t: T)
+x-
+class A : Exception(msg)
+class B<T>(
+ t: T)
+x)
+class A : cycle<*>()
+class B<T>(
+ t: T)
+x'
+class A : B<*>()
+class B<T>(val x: S)
+x.
+class A : B<*>()
+class B<T>(
+ val s: String)
+y
+class Z {
+    fun Double.test(a: Int, b: Long, c: () -> String): String {
+        return "${this.toInt()}_${a}_${b}_${c()}"
+    }
+
+
+    fun test(): String {
+        var invokeOrder = "";
+        val expectedResult = "1_0_1_L"
+        val expectedInvokeOrder = "1_0_L"
+        var l = 1L
+        var i = 0
+
+        var result = 1.0.test(b = { invokeOrder += "1_"; l }(), a = { invokeOrder += "0_"; i }(), c = { invokeOrder += "L"; "L" })
+        if (invokeOrder != expectedInvokeOrder || result != expectedResult) return "fail 1: $invokeOrder != $expectedInvokeOrder or $result != $expectedResult"
+
+        invokeOrder = "";
+        result = 1.0.test(b = { invokeOrder += "1_"; l }(), c = { invokeOrder += "L"; "L" }, a = { invokeOrder += "0_"; i }())
+        if (invokeOrder != expectedInvokeOrder || result != expectedResult) return "fail 2: $invokeOrder != $expectedInvokeOrder or $result != $expectedResult"
+
+
+        invokeOrder = "";
+        result = 1.0.test(c = { invokeOrder += "L"; "L" }, b = { invokeOrder += "1_"; l }(), a = { invokeOrder += "0_"; i }())
+        if (invokeOrder != expectedInvokeOrder || result != expectedResult) return "fail 3: $invokeOrder != $expectedInvokeOrder or $result != $expectedResult"
+
+
+        invokeOrder = "";
+        result = 1.0.test(a = { invokeOrder += "0_"; i }(), c = { invokeOrder += "L"; "L" }, b = { invokeOrder += "1_"; l }())
+        if (invokeOrder != "0_1_L" || result != expectedResult) return "fail 4: $invokeOrder != 0_1_L or $result != $expectedResult"
+
+        return "OK"
+    }
+}
+class B<T>(
+ t: T)
+x(
+class A : B<*>()
+class B<T>(
+ that: A)
+x7
+class A : B<*>()
+class B<T>(index1: Int, index2: Int)
+x%
+class A : x<*>()
+class B<T>(
+ t: T)
+x&
+class A : ZImpl()
+class B<T>(
+ t: T)
+x)
+class A : value<*>()
+class B<T>(
+ t: T)
+x"
+class MyClass
+class B<T>(
+ t: T)
+x-
+class A : B<Container>()
+class B<T>(
+ t: T)
+x*
+class A : String<*>()
+class B<T>(
+ t: T)
+x(
+class A : Father(p)
+class B<T>(
+ t: T)
+x'
+class A : foo<*>()
+class B<T>(
+ t: T)
+xA
+class A : B<*>()
+class B<T>(val a: Int, val b: Any, val c: Int)
+xW
+class A() {
+    var x : Int = 0
+
+    var z = {
+        x++
+    }
+}
+class B<T>(
+ t: T)
+x7
+class A : AbstractFoo<String, E>()
+class B<T>(
+ t: T)
+xZ
+class A : B<*>()
+// !LANGUAGE: +InlineClasses
+// WITH_RUNTIME
+inline class Z(val x: Int)
+x)
+class A : Bar<Foo>()
+class B<T>(
+ t: T)
+x 
+class A : T
+class B<T>(
+ t: T)
+y è
+inline class R(private val r: Int) {
+    fun test() = ok()
+
+    companion object {
+        private fun ok() = "OK"
+    }
+}
+class B<T>(
+ t: T)
+x'
+class Int : B<*>()
+class B<T>(
+ t: T)
+x^
+class A : B<*>()
+sealed class Season {
+    object Warm: Season()
+    object Cold: Season()
+}
+x+
+class A : B<*>()
+class B<T>(
+ val x: Int)
+y@
+enum class Test : IFoo, IBar {
+    FOO {
+        // FOO referenced from inner class constructor with initialized 'this'
+        inner class Inner {
+            val fooFoo = FOO.foo()
+        }
+
+        val z = Inner()
+
+        override fun foo() = "OK"
+
+        override fun bar() = z.fooFoo
+    }
+}
+class B<T>(
+ t: T)
+xd
+class Delegate {
+    operator fun getValue(t: Any?, p: KProperty<*>): Int = 1
+}
+class B<T>(
+ t: T)
+x)
+class A : B<*>()
+class B<T>(var v: Int)
+x(
+class A : WaitFor()
+class B<T>(
+ t: T)
+x(
+class A : B<K, V>()
+class B<T>(
+ t: T)
+x/
+class A : B<*>()
+class B<T>(
+ val kind: Kind)
+x'
+class let : B<*>()
+class B<T>(
+ t: T)
+x$
+class A : Int()
+class B<T>(
+ t: T)
+x2
+class A : AssertionError<*>()
+class B<T>(
+ t: T)
+x%
+class a : B<*>()
+class B<T>(
+ t: T)
+x-
+class A : B<*>()
+class B<T>(var value: Int)
+x%
+class A : Intf()
+class B<T>(
+ t: T)
+x(
+class A : lazy<*>()
+class B<T>(
+ t: T)
+x.
+class A : B<*>()
+class B<T>(
+ val x: String)
+x8
+class A : DescriptorBasedProperty()
+class B<T>(
+ t: T)
+x,
+class A : B<*>()
+class B<T>(
+ val v: Any?)
+x%
+class T : B<*>()
+class B<T>(
+ t: T)
+x"
+class A : T()
+class B<T>(
+ t: T)
+x9
+class MyString(var content : String)
+class B<T>(
+ t: T)
+x$
+class A : Any()
+class B<T>(
+ t: T)
+x(
+class A : Long<*>()
+class B<T>(
+ t: T)
+x-
+class A : numberArg<*>()
+class B<T>(
+ t: T)
+x"
+class A : B()
+class B<T>(
+ t: T)
+x&
+class A : Local()
+class B<T>(
+ t: T)
+x)
+class A : B<*>()
+class B<T>(val x: Int)
+x*
+class A : A<String>()
+class B<T>(
+ t: T)
+y Õ
+private class C(val y: Int) {
+    val initChild = { ->
+        object {
+            override fun toString(): String {
+                return "child" + y
+            }
+        }
+    }
+}
+class B<T>(
+ t: T)
+x%
+class A : Any?()
+class B<T>(
+ t: T)
+x-
+class A : B<*>()
+class B<T>(val value: Int)
+x-
+class A : Bar<Foo>("OK")
+class B<T>(
+ t: T)
+x.
+class A : B<*>()
+class B<T>(
+ thisRef: Any?)
+x=
+interface T {
+    fun result(): String
+}
+class B<T>(
+ t: T)
+x*
+class String : B<*>()
+class B<T>(
+ t: T)
+x'
+class set : B<*>()
+class B<T>(
+ t: T)
+y ç
+class A : Base(
+            object : IFn {
+                override fun invoke(): String = Host.ok()
+            }
+    )
+class B<T>(
+ t: T)
+x0
+class A : Base(object: N{})
+class B<T>(
+ t: T)
+y+
+class A : B<*>()
+class A {
+    fun bar(): Any {
+        return {
+            {
+                class Local : Inner() {
+                    override fun toString() = foo()
+                }
+                Local()
+            }()
+        }()
+    }
+
+    open inner class Inner
+    fun foo() = "OK"
+}
+x"
+class A : B<*>()
+interface First
+x%
+class A : Your()
+class B<T>(
+ t: T)
+x*
+class A : result<*>()
+class B<T>(
+ t: T)
+x(
+class A : B<*>()
+class B<T>(
+ name: T)
+x+
+class Boolean : B<*>()
+class B<T>(
+ t: T)
+x-
+class A : B<*>()
+class B<T>(f : () -> Unit)
+x,
+class A : B<*>()
+class B<T>(
+ times : Int)
+x)
+class A : B<*>()
+class B<T>(
+ list1: T)
+x'
+class A : Father()
+class B<T>(
+ t: T)
+x&
+class A : Inner()
+class B<T>(
+ t: T)
+x)
+class A : B<*>()
+class B<T>(
+ arg: Int)
+y
+class A : Base(
+            object : Callback {
+                override fun invoke() =
+                        (object : Callback {
+                            override fun invoke() = ok
+                        }).invoke()
+            }
+    )
+class B<T>(
+ t: T)
+x,
+class A : toString<*>()
+class B<T>(
+ t: T)
+x*
+class A : B<*>()
+class B<T>(
+ (i, sarr))
+y
+// KJS_WITH_FULL_RUNTIME
+class M {
+  operator fun Long.component1() = this + 1
+  operator fun Long.component2() = this + 2
+
+  fun doTest(l : ArrayList<Long>): String {
+      var s = ""
+      for ((a, b) in l) {
+        s += "$a:$b;"
+      }
+      return s
+  }
+}
+class B<T>(
+ t: T)
+x&
+class A : B<*>()
+class B<T>(
+ a: A?)
+x&
+class sb : B<*>()
+class B<T>(
+ t: T)
+x(
+class A : B<Book>()
+class B<T>(
+ t: T)
+x1
+inline class NZ1(val nz: Z?)
+class B<T>(
+ t: T)
+x'
+class Str : B<*>()
+class B<T>(
+ t: T)
+x&
+interface Foo { }
+class B<T>(
+ t: T)
+x'
+class A : B<*>()
+class B<T>(
+ x: Int)
+x)
+class A : state<*>()
+class B<T>(
+ t: T)
+x%
+class A : B<*>()
+class B<T>(
+ s: T)
+x&
+class A : OK<*>()
+class B<T>(
+ t: T)
+x5
+class A : B<*>()
+class B<T>(
+ t: Throwable? = null)
+xH
+class A : B<*>()
+class B<T>(val x: String, val closure1: () -> String)
+x%
+class A : i<*>()
+class B<T>(
+ t: T)
+x'
+class A : Sealed()
+class B<T>(
+ t: T)
+x(
+class Host : B<*>()
+class B<T>(
+ t: T)
+x'
+class A : box<*>()
+class B<T>(
+ t: T)
+x&
+class b1 : B<*>()
+class B<T>(
+ t: T)
+xA
+class UnsupportedOperationException : B<*>()
+class B<T>(
+ t: T)
+x*
+class A : append<*>()
+class B<T>(
+ t: T)
+x.
+class A : B<*>()
+class B<T>(x: Int, y: Long)
+y É
+class A : Base(
+            object : Callback {
+                override fun invoke() = ok
+            }
+    )
+class B<T>(
+ t: T)
+xz
+class A : B<*>()
+class A {
+        var result: String = "Fail";
+        init {
+            result = "OK"
+        }
+    }
+x'
+class A : B<*>()
+class B<T>(
+ i: Int)
+x!
+class A : ()
+class B<T>(
+ t: T)
+x'
+class box : B<*>()
+class B<T>(
+ t: T)
+x%
+class x : B<*>()
+class B<T>(
+ t: T)
+x)
+class A : list3<*>()
+class B<T>(
+ t: T)
+x5
+interface Tr<T> {
+    val v: T
+}
+class B<T>(
+ t: T)
+x%
+class A : UInt()
+class B<T>(
+ t: T)
+x)
+class A : B<*>()
+class B<T>(
+ Array: T)
+y É
+class A : Table<String>(
+            Array(1, {
+                x-> Array(1, {y -> "OK"})
+            })
+    )
+class B<T>(
+ t: T)
+x}
+abstract class WaitFor {
+    init {
+        condition()
+    }
+
+    abstract fun condition() : Boolean;
+}
+class B<T>(
+ t: T)
+x5
+class A : B<*>()
+class B<T>(val intArray: IntArray)
+x&
+class A : my<*>()
+class B<T>(
+ t: T)
+x2
+class A : Outer<X>.Inner<Y>()
+class B<T>(
+ t: T)
+x8
+class A : InlineNullablePrimitive()
+class B<T>(
+ t: T)
+x(
+class Derived: Base
+class B<T>(
+ t: T)
+xY
+enum class Season {
+    WINTER,
+    SPRING,
+    SUMMER,
+    AUTUMN
+}
+class B<T>(
+ t: T)
+xY
+class A : B<*>()
+abstract class BaseGeneric<T>(val t: T) {
+    abstract fun iterate()
+}
+x%
+class A : Z<*>()
+class B<T>(
+ t: T)
+x<
+class A : B<*>()
+abstract class Base(val fn: () -> String)
+x%
+class A : B<*>()
+class B<T>(
+ x: T)
+x'
+class A : B<*>()
+class B<T>(
+ x: Any)
+x"
+class A : B<*>()
+class B<T>(
+ x)
+y Æ
+class Outer {
+    class Nested {
+        companion object {
+            val O = "O"
+            val K = "K"
+        }
+    }
+    
+    fun O() = Nested.O
+}
+class B<T>(
+ t: T)
+x&
+class A : Outer()
+class B<T>(
+ t: T)
+x`
+abstract class Your {
+    abstract val your: String
+
+    fun foo() = your
+}
+class B<T>(
+ t: T)
+xJ
+class ML : MutableList<String> by ArrayList<String>()
+class B<T>(
+ t: T)
+x(
+class A : peek<*>()
+class B<T>(
+ t: T)
+x,
+class contains : B<*>()
+class B<T>(
+ t: T)
+xN
+class A : B<*>()
+class CapturesX {
+        override fun toString() = x
+    }
+x%
+class A : y<*>()
+class B<T>(
+ t: T)
+x\
+class A : Base(k = { result = "O"; "K"}() , o = {result += "K"; "O"}())
+class B<T>(
+ t: T)
+x0
+class A : UseExperimental()
+class B<T>(
+ t: T)
+x%
+class A : O<*>()
+class B<T>(
+ t: T)
+y É
+class A : B<*>()
+public class Cls {
+    val string = "Cls"
+    val buffer = StringBuilder().with {
+        append(string)
+    }
+}
+x%
+class A : Long()
+class B<T>(
+ t: T)
+x(
+class A : Char<*>()
+class B<T>(
+ t: T)
+x5
+class A : B<*>()
+class B<T>(String, String, String)
+xS
+class A {
+    class Nested {
+        val result = "OK"
+    }
+}
+class B<T>(
+ t: T)
+x0
+class KHolderAlias : B<*>()
+class B<T>(
+ t: T)
+xK
+class A : B<*>()
+sealed class A {
+    object B : A()
+
+    class C : A()
+}
+x:
+class A : B<*>()
+class B<T>(
+ a: WithNullableReference?)
+y ∑
+class A : B<*>()
+class mInt(val i : Int) {
+    override fun toString() : String = "mint: $i"
+    operator fun plus(i : Int) = mInt(this.i + i)
+    operator fun inc() = mInt(i + 1)
+}
+x%
+class B<T>(
+class A : B<*>()
+ t: T)
+x$
+class A : B<*>()class B<T>(
+ t: T)
+x$
+class  : B<*>()
+class B<T>(
+ t: T)
+x$
+class A : B<*>()
+class B<T(
+ t: T)
+x$
+class A :B<*>()
+class B<T>(
+ t: T)
+x 
+ A : B<*>()
+class B<T>(
+ t: T)
+x$
+class A : B<*>()
+class B<T>(
+ t: )
+x$
+class A : B<*>()
+class B<>(
+ t: T)
+u
+
+class B<T>(
+ t: T)
+x$
+class A : B<*>()
+class B<T>
+ t: T)
+x#
+class A : B<*>()
+class B<T>(t: T)
+x$
+classA : B<*>()
+class B<T>(
+ t: T)
+s
+class A : B<*>()
+
+x$
+class A : B<*>()
+class B<T>(
+ : T)
+x"
+class A : B<*>()
+class B(
+ t: T)
+x$
+class A : B<*>()
+class BT>(
+ t: T)
+x$
+class A : <*>()
+class B<T>(
+ t: T)
+x$
+class A: B<*>()
+class B<T>(
+ t: T)
+x 
+class A : B<*>()
+ B<T>(
+ t: T)
+x!
+class A : B<*>()
+class B<T>(
+ )
+x$
+class A : B<*>()
+class <T>(
+ t: T)
+x$
+class A : B<*>()
+class B<T>(
+ t: T)x$
+class A : B<>()
+class B<T>(
+ t: T)
+x
+class A : 
+class B<T>(
+ t: T)
+x$
+class A : B<*>(
+class B<T>(
+ t: T)
+x$
+class A : B<*>()
+class B<T>(
+ t: T
+x$
+class A : B<*>()
+class B<T>(
+ t:T)
+x
+class A : B<*>()
+class B<T>
+x$
+class A : B<*>()
+classB<T>(
+ t: T)
+x#
+class A : B<*>
+class B<T>(
+ t: T)
+x$
+class A  B<*>()
+class B<T>(
+ t: T)
+x$class A : B<*>()
+class B<T>(
+ t: T)
+x$
+class A : B<*>()
+class B<T>(
+ t T)
+x$
+class A : B*>()
+class B<T>(
+ t: T)
+x$
+class A : B<*()
+class B<T>(
+ t: T)
+x$
+class A : B<*>)
+class B<T>(
+ t: T)
+ˇˇ

@@ -1,0 +1,2 @@
+
+typealias S = @S Suppress

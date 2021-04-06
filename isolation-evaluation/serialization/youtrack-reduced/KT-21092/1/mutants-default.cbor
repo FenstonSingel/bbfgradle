@@ -1,0 +1,1817 @@
+¿iexportTaggdefaultnoriginalSamplex0
+class A<T>(val b: T)
+val a = A(1).b::javaClass
+gmutantsŸxx
+
+val y = false
+when (y) {
+ true -> {class A<T>(val b: T)}
+ else -> {class A<T>(val b: T)}
+}
+
+val a = A(1).b::javaClass
+xe
+class A<T>(val b: T)
+
+val n = true
+try
+{val a = A(1).b::javaClass}
+catch(e: Exception){}
+finally{}
+
+xn
+class A<T>
+val a = false
+when (a) {
+ true -> {(val b: T)}
+ else -> {(val b: T)}
+}
+
+val a = A(1).b::javaClass
+xb
+class A<T>(val b: T)
+val a = 
+val e = false
+if (e) {A(1).b::javaClass} else {A(1).b::javaClass}
+
+xQ
+class A<
+val x = true
+if (x) {T} else {T}
+>(val b: T)
+val a = A(1).b::javaClass
+xj
+class A<T>(val b: T)
+val a = 
+val n = false
+when (n) {
+ true -> {A(1).b}
+ else -> {A(1).b}
+}
+::javaClass
+xe
+class A<T>(val b: T)
+val a = A(1).b::
+val v = true
+try
+{javaClass}
+catch(e: Exception){}
+finally{}
+
+xY
+class A<T>(
+val g = false
+if (g) {val b: T} else {val b: T}
+)
+val a = A(1).b::javaClass
+xf
+class A<T>(val b: T)
+val a = 
+val u = false
+try
+{A(1)}
+catch(e: Exception){}
+finally{}
+.b::javaClass
+xR
+class A<T>(val b: T)
+val a = A(1).
+val n = false
+if (n) {b} else {b}
+::javaClass
+xQ
+class A<T>(val b: T)
+val a = 
+val i = true
+if (i) {A} else {A}
+(1).b::javaClass
+xe
+class A<T>(val b: 
+val y = true
+try
+{T}
+catch(e: Exception){}
+finally{}
+)
+val a = A(1).b::javaClass
+xd
+class A<T>(val b: T)
+val a = A(
+val q = true
+when (q) {
+ true -> {1}
+ else -> {1}
+}
+).b::javaClass
+x2
+class A<T>(val b: T)
+val a = (A(1).b)::javaClass
+x2
+class A<T>(val b: T)
+val a = A(1).b::javaClass!!
+x3
+class A<T>(val b: (T)?)
+val a = A(1).b::javaClass
+x0
+class A<(>Tval b: T)
+val a = A(1).b::javaClass
+x0
+A(1) A<T>(val b: T)
+val a = class.b::javaClass
+x0
+class A<T>(val b: T=
+val a ) A(1).b::javaClass
+x0
+class A<Ta(val b: T)
+val > = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = A(1)b.::javaClass
+x0
+class A<T>A(1)val b: T)
+val a = (.b::javaClass
+x0
+class A<T>(val b: T)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = A(1).javaClass::b
+x0
+class A<T>(val b: T)
+val 1 = A(a).b::javaClass
+x0
+class A<T>(val b: javaClass)
+val a = A(1).b::T
+x0
+class A<T>(val b: b)
+val a = A(1).T::javaClass
+x0
+class A<T>val
+(val b: T) a = A(1).b::javaClass
+x0
+class A<T>(val b: A(1))
+val a = T.b::javaClass
+x0
+class A<T>(val b: val a = A(1).b::javaClass)
+T
+x0
+class A<T>(val b: T)
+val a . A(1)=b::javaClass
+x0
+class A<TT(val b: >)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+( a = Aval1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = javaClass(1).b::A
+x0
+1 A<T>(val b: T)
+val a = A(class).b::javaClass
+x0
+class A<A(1).b>(val b: T)
+val a = T::javaClass
+x0
+A A<T>(val b: T)
+val a = class(1).b::javaClass
+x0
+class A<::>(val b: T)
+val a = A(1).bTjavaClass
+x0
+class A<A>(val b: T)
+val a = T(1).b::javaClass
+x0
+class A<T>(val b: Tval a = A(1).b::javaClass
+)
+x0
+class A<val b: T>(T)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: (1))
+val a = AT.b::javaClass
+x0
+A
+val a = class A<T>(val b: T)(1).b::javaClass
+x0
+class A<T>(val b: T)
+:: a = A(1).bvaljavaClass
+x0
+class A<javaClass>(val b: T)
+val a = A(1).b::T
+x0
+1
+val a = A(class A<T>(val b: T)).b::javaClass
+x0
+class A<T>(val b: T)
+val javaClass = A(1).b::a
+x0
+class A<T>(b)
+val a = A(1).val b: T::javaClass
+x0
+class A::T>(val b: T)
+val a = A(1).b<javaClass
+x0
+class A<T>(val A(1).b::javaClass: T)
+val a = b
+x0
+class A<T>b
+val a = A(1).(val b: T)::javaClass
+x0
+class A<T>1
+val a = A((val b: T)).b::javaClass
+x0
+class A<T.(val b: T)
+val a = A(1)>b::javaClass
+x0
+class A<)>(val b: T)
+val a = A(1T.b::javaClass
+x0
+class A<T>(1)val b: T)
+val a = A(.b::javaClass
+x0
+class A<T>)val b: T(
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+1 a = A(val).b::javaClass
+x0
+class A<T>(val b: T)
+A a = val(1).b::javaClass
+x0
+class 1<T>(val b: T)
+val a = A(A).b::javaClass
+x0
+class AT<>(val b: T)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: a)
+val T = A(1).b::javaClass
+x0
+class A<TA(val b: T)
+val a = >(1).b::javaClass
+x0
+class A(1).b::javaClass<T>(val b: T)
+val a = A
+x0
+class A<TjavaClass(val b: T)
+val a = A(1).b::>
+x0
+class (1)<T>(val b: T)
+val a = AA.b::javaClass
+x0
+class A<T>(val b: T)
+val a javaClass A(1).b::=
+x0
+class A<T>())
+val a = A(1val b: T.b::javaClass
+x0
+class A<T>1val b: T)
+val a = A(().b::javaClass
+x0
+class A<T>(val T: b)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+. a = A(1)valb::javaClass
+x0
+javaClass A<T>(val b: T)
+val a = A(1).b::class
+x0
+class AT(val b: <T>)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = Ab1).(::javaClass
+x0
+class A<T>(val b: =)
+val a T A(1).b::javaClass
+x0
+class A<T>(val b: T1
+val a = A()).b::javaClass
+x0
+class A<T>Tval b: ()
+val a = A(1).b::javaClass
+x0
+class A<b>(val b: T)
+val a = A(1).T::javaClass
+x0
+class A<T>(val b: val)
+T a = A(1).b::javaClass
+x0
+(val b: T) A<T>class
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val ) = A(1a.b::javaClass
+x0
+class A<T>(val A(1): T)
+val a = b.b::javaClass
+x0
+class A<T>val b: T()
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = A1().b::javaClass
+x0
+class Aval a = A(1).b::javaClassT>(val b: T)
+<
+x0
+class )<T>(val b: T)
+val a = A(1A.b::javaClass
+x0
+=
+val a class A<T>(val b: T) A(1).b::javaClass
+x0
+A(1).b::javaClass
+val a = class A<T>(val b: T)
+x0
+class A<T>(val b. T)
+val a = A(1):b::javaClass
+x0
+class A<T>() b: Tval
+val a = A(1).b::javaClass
+x0
+)
+val a = A(1class A<T>(val b: T).b::javaClass
+x0
+class A<T>(val b: T)
+val a = b.A(1)::javaClass
+x0
+class A<T>(val b: T)
+) a = A(1val.b::javaClass
+x0
+class A<T>aval b: T)
+val ( = A(1).b::javaClass
+x0
+class A(val b: T)T><
+val a = A(1).b::javaClass
+x0
+class A<T>(val bA(1) T)
+val a = :.b::javaClass
+x0
+class AjavaClass(val b: T)
+val a = A(1).b::<T>
+x0
+class A<T>Aval b: T)
+val a = ((1).b::javaClass
+x0
+class A<T>(val b: T)
+javaClass a = A(1).b::val
+x0
+class AAT>(val b: T)
+val a = <(1).b::javaClass
+x0
+javaClass
+val a = A(1).b::class A<T>(val b: T)
+x0
+class A<T>(T b: val)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: A(1).b)
+val a = T::javaClass
+x0
+class A<T>A(1)
+val a = (val b: T).b::javaClass
+x0
+class A<T>(val b: A)
+val a = T(1).b::javaClass
+x0
+class A<T>bval (: T)
+val a = A(1).b::javaClass
+x0
+class A<Tval a = A(1).b::javaClass(val b: T)
+>
+x0
+class A<a>(val b: T)
+val T = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+A(1) a = val.b::javaClass
+x0
+class A<T>(val b: T)
+val a = Ab.(1)::javaClass
+x0
+class A<T>(()
+val a = Aval b: T1).b::javaClass
+x0
+class A<T>A(1).b::javaClass
+val a = (val b: T)
+x0
+class A<T>(val b: T)
+val a = AjavaClass.b::(1)
+x0
+class A<T>(val b: T)
+val a = A(1).bjavaClass::
+x0
+class A<T>(val b: T)
+val a = A(1javaClass.b::)
+x0
+class A<T>(val b: T)
+val a = A()1.b::javaClass
+x0
+class A<T>(val)
+val b: T a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a 1 A(=).b::javaClass
+x0
+class A<=>(val b: T)
+val a T A(1).b::javaClass
+x0
+class A<(1)>(val b: T)
+val a = AT.b::javaClass
+x0
+class A<T>(val ): Tb
+val a = A(1).b::javaClass
+x0
+b A<T>(val b: T)
+val a = A(1).class::javaClass
+x0
+class A<T>.
+val a = A(1)(val b: T)b::javaClass
+x0
+class A<val a = A(1).b::javaClass>(val b: T)
+T
+x0
+class A<>T(val b: T)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: .)
+val a = A(1)Tb::javaClass
+x0
+class A<T>(val b: T)
+val a = )(1A.b::javaClass
+x0
+class A<T>(val b: ))
+val a = A(1T.b::javaClass
+x0
+class A<T>=val b: T)
+val a ( A(1).b::javaClass
+x0
+class A<T>val a = A(1).b::javaClass
+(val b: T)
+x0
+class A<T>)
+val a = A(1(val b: T).b::javaClass
+x0
+class A<T>(
+val a = A(val b: T)1).b::javaClass
+x0
+class A<T>(val val: T)
+b a = A(1).b::javaClass
+x0
+class A<T>(A(1).b::javaClass)
+val a = val b: T
+x0
+class A<T>(val b: T)
+b a = A(1).val::javaClass
+x0
+class A<T>(val b: T)
+val a A(1).b::javaClass =
+x0
+class A<T>(val b: A(1).b::javaClass)
+val a = T
+x0
+class T<A>(val b: T)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: Tb
+val a = A(1).)::javaClass
+x0
+class Ab(val b: T)
+val a = A(1).<T>::javaClass
+x0
+class A<T>(val b: ()
+val a = AT1).b::javaClass
+x0
+b
+val a = A(1).class A<T>(val b: T)::javaClass
+x0
+class A<T>(val b: T)
+a val = A(1).b::javaClass
+x0
+class Ab(val <T>: T)
+val a = A(1).b::javaClass
+x0
+class Aval b: T(<T>)
+val a = A(1).b::javaClass
+x0
+class A<T>::
+val a = A(1).b(val b: T)javaClass
+x0
+class A1(val b: T)
+val a = A(<T>).b::javaClass
+x0
+class A<T>(val b: T)
+val a = ::A(1).bjavaClass
+x0
+class A<T>(val b: T)
+val a = b(1).A::javaClass
+x0
+class A<T>(val bjavaClass T)
+val a = A(1).b:::
+x0
+class A<T>(val 1: T)
+val a = A(b).b::javaClass
+x0
+class A<T>(val b: T)
+val a = A(::).b1javaClass
+x0
+class A<b>(val T: T)
+val a = A(1).b::javaClass
+x0
+class A<T>(1)
+val a = A(val b: T).b::javaClass
+x0
+class A<T>(val b: )T
+val a = A(1).b::javaClass
+x0
+class A<T>A
+val a = (val b: T)(1).b::javaClass
+x0
+class A<T>(val b: T.
+val a = A(1))b::javaClass
+x0
+b A<T>(val class: T)
+val a = A(1).b::javaClass
+x0
+class A<T>(A(1).b::javaClass b: T)
+val a = val
+x0
+class A<1>(val b: T)
+val a = A(T).b::javaClass
+x0
+class A<T>()val b: T
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a ( A=1).b::javaClass
+x0
+class ><TA(val b: T)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = javaClass::A(1).b
+x0
+class A<(val b: T)>T
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a :: A(1).b=javaClass
+x0
+T A<class>(val b: T)
+val a = A(1).b::javaClass
+x0
+class AA(1)(val b: T)
+val a = <T>.b::javaClass
+x0
+( A<T>classval b: T)
+val a = A(1).b::javaClass
+x0
+class A<TA(1).b(val b: T)
+val a = >::javaClass
+x0
+A(1)
+val a = class A<T>(val b: T).b::javaClass
+x0
+:: A<T>(val b: T)
+val a = A(1).bclassjavaClass
+x0
+class A<T>(val A(1).b: T)
+val a = b::javaClass
+x0
+T A<T>(val b: class)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = A(1).::bjavaClass
+x0
+class A<T>(a b: T)
+val val = A(1).b::javaClass
+x0
+A(1).b
+val a = class A<T>(val b: T)::javaClass
+x0
+class A<T::(val b: T)
+val a = A(1).b>javaClass
+x0
+class A<T>(b b: T)
+val a = A(1).val::javaClass
+x0
+class A<T>(javaClass)
+val a = A(1).b::val b: T
+x0
+<T> Aclass(val b: T)
+val a = A(1).b::javaClass
+x0
+class A(1)<T>(val b: T)
+val a = A.b::javaClass
+x0
+class val<T>(val b: T)
+A a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = A(b).1::javaClass
+x0
+class A<T>(val b: TA(1).b
+val a = )::javaClass
+x0
+class A:T>(val b< T)
+val a = A(1).b::javaClass
+x0
+class A<T>(val ): T)
+val a = A(1b.b::javaClass
+x0
+class A<T(val b: T)>
+val a = A(1).b::javaClass
+x0
+class A<T>(A b: T)
+val a = val(1).b::javaClass
+x0
+class A<T>(( b: T)
+val a = Aval1).b::javaClass
+x0
+class A<T>(val a = A(1).b::javaClass)
+val b: T
+x0
+class A)T>(val b: T<
+val a = A(1).b::javaClass
+x0
+class A1T>(val b: T)
+val a = A(<).b::javaClass
+x0
+class A.(val b: T)
+val a = A(1)<T>b::javaClass
+x0
+class A<Tb(val b: T)
+val a = A(1).>::javaClass
+x0
+A(1).b::javaClass A<T>(val b: T)
+val a = class
+x0
+class A<val>(val b: T)
+T a = A(1).b::javaClass
+x0
+class A<T>((1))
+val a = Aval b: T.b::javaClass
+x0
+class A<T>(A)
+val a = val b: T(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = A::.b(1)javaClass
+x0
+class A<T>(val b: Ta
+val ) = A(1).b::javaClass
+x0
+.
+val a = A(1)class A<T>(val b: T)b::javaClass
+x0
+class ATT>(val b: <)
+val a = A(1).b::javaClass
+x0
+a A<T>(val b: T)
+val class = A(1).b::javaClass
+x0
+class A<T1(val b: T)
+val a = A(>).b::javaClass
+x0
+class A(1).b<T>(val b: T)
+val a = A::javaClass
+x0
+class A<T>(val b: T)
+val a (1) A=.b::javaClass
+x0
+class A<T>(val .: T)
+val a = A(1)bb::javaClass
+x0
+class A<T>(val b: T)
+val . = A(1)ab::javaClass
+x0
+class A<A(1).b::javaClass>(val b: T)
+val a = T
+x0
+class A<T>(val b: T)
+val a A(1).b =::javaClass
+x0
+class A<T>(b val: T)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: 1)
+val a = A(T).b::javaClass
+x0
+class A<T>javaClass
+val a = A(1).b::(val b: T)
+x0
+class A<T>(val bT :)
+val a = A(1).b::javaClass
+x0
+class A<T>(val javaClass: T)
+val a = A(1).b::b
+x0
+class A<T>(val b1 T)
+val a = A(:).b::javaClass
+x0
+class A<T>(val b: T)
+val a = AjavaClass1).b::(
+x0
+class A<T>(A(1).b b: T)
+val a = val::javaClass
+x0
+val b: T A<T>(class)
+val a = A(1).b::javaClass
+x0
+class A)(val b: T)
+val a = A(1<T>.b::javaClass
+x0
+class A<TA(1).b::javaClass(val b: T)
+val a = >
+x0
+class A<A(1)>(val b: T)
+val a = T.b::javaClass
+x0
+class A<T>(val b: T)
+val A(1) = a.b::javaClass
+x0
+class AA(1).b::javaClassT>(val b: T)
+val a = <
+x0
+class A<T>(val b: T)
+val A = a(1).b::javaClass
+x0
+class A(val b: T)<T>
+val a = A(1).b::javaClass
+x0
+) A<T>(val b: Tclass
+val a = A(1).b::javaClass
+x0
+class A<T>=
+val a (val b: T) A(1).b::javaClass
+x0
+val a = A(1).b::javaClass A<T>(val b: T)
+class
+x0
+class A<T>(val :b T)
+val a = A(1).b::javaClass
+x0
+class T<T>(val b: A)
+val a = A(1).b::javaClass
+x0
+class AA(1).b::javaClass(val b: T)
+val a = <T>
+x0
+class A<T>(val bval a = A(1).b::javaClass T)
+:
+x0
+class A<T>(val b: T)
+val a = ::(1).bAjavaClass
+x0
+class (<T>(val b: T)
+val a = AA1).b::javaClass
+x0
+: A<T>(val bclass T)
+val a = A(1).b::javaClass
+x0
+A(1).b A<T>(val b: T)
+val a = class::javaClass
+x0
+class A<T>(val b: T)
+val a = A(javaClass).b::1
+x0
+class A<T>A(1).bval b: T)
+val a = (::javaClass
+x0
+class A<T>(=)
+val a val b: T A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = A(1.)b::javaClass
+x0
+class A<T>)val b: T)
+val a = A(1(.b::javaClass
+x0
+class A<T>(A(1))
+val a = val b: T.b::javaClass
+x0
+class A<T>() b: T)
+val a = A(1val.b::javaClass
+x0
+class A<T>(. b: T)
+val a = A(1)valb::javaClass
+x0
+class AA(1).bT>(val b: T)
+val a = <::javaClass
+x0
+class A<T>(val b: T)
+val a ) A(1=.b::javaClass
+x0
+class A<T>(val b: T)
+val a = ::.bA(1)javaClass
+x0
+class A<T>(val b) T:
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = A(1)javaClassb::.
+x0
+class A<T>(val b: T)
+val a = A(.)1b::javaClass
+x0
+class AjavaClassT>(val b: T)
+val a = A(1).b::<
+x0
+class A<T>(val b: T)
+A(1).b::javaClass a = val
+x0
+class A<)>(val b: TT
+val a = A(1).b::javaClass
+x0
+class A<T>(javaClass b: T)
+val a = A(1).b::val
+x0
+class AvalT>(< b: T)
+val a = A(1).b::javaClass
+x0
+class A<T>(val bA(1).b::javaClass T)
+val a = :
+x+
+class A<T>(val b: T)
+val a = A(1).b::uint
+x4
+class A<T>(val b: block)
+val a = A(1).b::javaClass
+x2
+class A<T>(val b: T)
+val prop: Int by Delegate()
+xI
+class A<T>(val b: T)
+val a = arrayOf("a", "c", "b").sorted()::javaClass
+x3
+class A<T>(val b: UInt)
+val a = A(1).b::javaClass
+x1
+class pv<T>(val b: T)
+val a = A(1).b::javaClass
+x8
+class A<T>(val b: T)
+val removeAll = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val I = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = s(1).b::javaClass
+x2
+class box<T>(val b: T)
+val a = A(1).b::javaClass
+x'
+class A<T>(val b: T)
+val a = ::public
+x/
+class A<T>(val b: T)
+val a = A().b::javaClass
+x(
+class A<T>()
+val a = A(1).b::javaClass
+x3
+class A<T>(val b: T)
+val a = A(Byte).b::javaClass
+x,
+class A<T>(val b: T)
+val a = A(1).b::list3
+y Ì
+internal class A(val result: Int) {
+    companion object {
+        fun foo(): Int = 1
+        val prop = 2
+        val C = 3
+    }
+
+    constructor() : this(foo() + prop + C)
+}
+val a = A(1).b::javaClass
+x2
+class A<T>(val b: Int)
+val a = A(1).b::javaClass
+x*
+class A<T>(val b: T)
+val a = A(1).b::Int
+x3
+class A<T>(val b: Long)
+val a = A(1).b::javaClass
+x.
+class A<T>(val b: T)
+val bar2 = A().bar("q")
+x0
+class A<T>(val b: T)
+val A = A(1).b::javaClass
+x0
+class A<T>(val A: T)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = t.test::javaClass
+x+
+class A<T>(val b: T)
+val count2 = a.count
+x9
+class A<T>(block: () -> Unit)
+val a = A(1).b::javaClass
+x3
+class A<T>(val b: T)
+val a = A(from).b::javaClass
+x4
+class A<T>(val b: T)
+val a = A(a = 2).b::javaClass
+x:
+class A<T>(private val r: Int)
+val a = A(1).b::javaClass
+x2
+class A<T>(val b: T)
+val a = A(123).b::javaClass
+x5
+class A<T>(val b: String)
+val a = A(1).b::javaClass
+x6
+class A<T>(val toFloat: T)
+val a = A(1).b::javaClass
+x2
+class A<T>(val b: T)
+val a = A(1).Int::javaClass
+x&
+class A<T>(val b: T)
+val bar: String
+x0
+class A<T>(val b: T)
+val T = A(1).b::javaClass
+x3
+class A<T>(val b: T)
+val a = A(1).Host::javaClass
+x,
+class A<T>(val b: T)
+var GUEST_USER_ID = 3
+x9
+class A<T>(val b: Array<Int>)
+val a = A(1).b::javaClass
+x5
+class String<T>(val b: T)
+val a = A(1).b::javaClass
+x)
+class A<T>(val b: T)
+val a = A(0)::lmao
+x1
+class A<T>(val b: T)
+val a = A(10).b::javaClass
+x0
+class A<T>(val T: T)
+val a = A(1).b::javaClass
+x,
+class A<T>(val b: T)
+val a = Int::is42With
+x0
+class A<T>(val b: s)
+val a = A(1).b::javaClass
+x3
+class List<T>(val b: T)
+val a = A(1).b::javaClass
+x)
+class A<T>(val b: T)
+val a = Local::foo
+x0
+class I<T>(val b: T)
+val a = A(1).b::javaClass
+x,
+class A<T>(val b: T)
+val a = A(1).b::field
+x5
+class A<T>(val b: T)
+val String = A(1).b::javaClass
+x5
+data class A(val x: Unit)
+val a = A(1).b::javaClass
+x2
+class A<T>(val b: box)
+val a = A(1).b::javaClass
+x=
+class A<T>(private val data: Int)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = R(1).b::javaClass
+x5
+class A<T>(val b: T)
+val a = Double(1).b::javaClass
+x1
+class A<T>(val b: T)
+val a = foo().b::javaClass
+x:
+class myNotEquals<T>(val b: T)
+val a = A(1).b::javaClass
+xt
+class A<T>(
+    val fieldAccessedInsideChild: Int,
+    val how: Environment.() -> Unit
+)
+val a = A(1).b::javaClass
+x9
+class A<T>(val b: T)
+val a = component2(1).b::javaClass
+x1
+class A<T>(val b: T)
+val a = Bar().b::javaClass
+x2
+class A<T>(val x: Int)
+val a = A(1).b::javaClass
+x/
+class A<T>(val b: T)
+val a = C.FOO::javaClass
+x)
+class A<T>(i)
+val a = A(1).b::javaClass
+x*
+class A<T>(val b: T)
+val a = A(1).b::box
+x(
+class A<T>(val b: T)
+val a = A(1).b::s
+x3
+class TODO<T>(val b: T)
+val a = A(1).b::javaClass
+x6
+class A<T>(val b: MyClass)
+val a = A(1).b::javaClass
+x-
+class A<T>(val b: T)
+val a = A(1).b::String
+x`
+open class B : A {
+    override fun f(cause: Int?): Boolean = true
+}
+val a = A(1).b::javaClass
+x,
+class A<T>(val b: T)
+val a = A(1).b::Array
+x0
+class A<T>(val E: T)
+val a = A(1).b::javaClass
+x2
+class A<T>(f: () -> R)
+val a = A(1).b::javaClass
+x,
+class A<T>(val b: T)
+val a = A(1).b::apply
+x3
+class A<T>(val b: T)
+val a = A(null).b::javaClass
+x^
+class A<T>(val b: T)
+val u = {
+        class B(val data : String)
+        B("OK").data
+    }
+x$
+class A<T>(val b: T)
+val a = ::foo
+x1
+class A<T>(val b: T)
+val a = A(1L).b::javaClass
+x!
+class A<T>(val b: T)
+var s = ""
+x0
+class A<T>(val b: T)
+val a = A(3).b::javaClass
+x,
+class A<T>(k: K)
+val a = A(1).b::javaClass
+x2
+class A<T>(val b: T)
+val a = box(1).b::javaClass
+x(
+class A<T>(val b: T)
+val result = "OK"
+x&
+class A<T>(val b: T)
+val r = A("OK")
+x)
+class A<T>(val b: T)
+var s: Any? = null
+x5
+class A<T>(val b: T)
+val a = String(1).b::javaClass
+x9
+class A<T>(val b: T)
+val a = A("SCISSORS").b::javaClass
+x0
+class A<T>(val b: T)
+val a = x(1).b::javaClass
+xA
+class A<T>(val b: T)
+val a = A(*arrayOf<String>()).b::javaClass
+x0
+class A<T>(val s: T)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val M = A(1).b::javaClass
+x0
+class A<T>(val b: B)
+val a = A(1).b::javaClass
+x2
+class A<T>(val b: T)
+val a = Inv(1).b::javaClass
+x;
+class A<T>(val b: T)
+val range1 = (5 downTo 3).reversed()
+x2
+class A<T>(val b: T)
+val a = Int(1).b::javaClass
+x;
+class A<T>(val b: T)
+val a = A("$index:$x;").b::javaClass
+x1
+class A<T>(a: Float?)
+val a = A(1).b::javaClass
+x4
+class A<T>(val b: T)
+val a = foo("K").b::javaClass
+x0
+class A<T>(val b: T)
+val a = a(1).b::javaClass
+x3
+class A<T>(val v: Any?)
+val a = A(1).b::javaClass
+x4
+class A<T>(arg1: String)
+val a = A(1).b::javaClass
+x3
+class A<T>(val b: T)
+val a = Base(1).b::javaClass
+x2
+class A<T>(val b: T)
+val a = test().b::javaClass
+x2
+class C(val x: String)
+val a = A(1).b::javaClass
+x:
+class A<T>(val b: T)
+val a = A({x -> C(x)}).b::javaClass
+xD
+class A<T>(val b: T)
+val a = A({ "def" }, { "oops" }).b::javaClass
+x6
+inline class Z(val x: Int)
+val a = A(1).b::javaClass
+x4
+class A<T>(val b: T)
+val ok = "Fail: Companion.ok"
+x0
+class A<T>(val b: T)
+val l = A(1).b::javaClass
+x7
+class A<T>(val str: String)
+val a = A(1).b::javaClass
+x<
+class A<T>(val b: T)
+val a = ArrayList<Int>().b::javaClass
+x#
+class A<T>(val b: T)
+val a = a::v
+x9
+class A<T>(val param: String)
+val a = A(1).b::javaClass
+x;
+class A<T>(prefix: String = "")
+val a = A(1).b::javaClass
+x2
+class A<T>(val b: foo)
+val a = A(1).b::javaClass
+x=
+class A<T>(val b: T)
+val AssertionError = A(1).b::javaClass
+x0
+class A<T>(val x: T)
+val a = A(1).b::javaClass
+x3
+class A<T>(val b: T)
+val a = Host(1).b::javaClass
+x-
+class A<T>(val b: T)
+val a = x.a::javaClass
+x0
+class A<T>(val b: T)
+val a = A(i).b::javaClass
+x5
+class A<T>(val member: M)
+val a = A(1).b::javaClass
+x.
+class A<T>(p: Int)
+val a = A(1).b::javaClass
+x=
+class A<T>(val b: T.() -> String)
+val a = A(1).b::javaClass
+x0
+class A<T>(val x: Z)
+val a = A(1).b::javaClass
+x-
+class A<T>(val b: T)
+val a = A(1).b::listOf
+x>
+class A<T>(val b: T)
+val a = SessionAccessor(1).b::javaClass
+x,
+class A<T>(val b: T)
+val a = A(1).b::AsAny
+x2
+class A<T>(val b: T)
+val a = fld(1).b::javaClass
+x"
+class A<T>(val b: T)
+val a = ::f
+xH
+class A<T>(a: Double = 1.0, b: Double = 1.0)
+val a = A(1).b::javaClass
+x=
+class A<T>(val b: T)
+val a = isNull(closure()).b::javaClass
+xY
+class A<T>(val b: T)
+val a = testGenericTypeArgumentInReturnType3(42)[0].x.y::javaClass
+x-
+class A<T>(val b: T)
+val a = A<String>::foo
+x:
+class A<T>(val b: T)
+val a = Range(this, c).b::javaClass
+x2
+class A<T>(val b: T)
+val a = get(1).b::javaClass
+x/
+class A<T>(x: Any?)
+val a = A(1).b::javaClass
+x,
+class A<T>(val b: T)
+var pr = Box("first")
+x=
+class A<T>(val b: T)
+val a = AssertionError(1).b::javaClass
+x2
+class foo<T>(val b: T)
+val a = A(1).b::javaClass
+x7
+class A<T>(val b: T)
+val a = map.put(k, v)::javaClass
+x0
+class A<T>(val B: T)
+val a = A(1).b::javaClass
+x*
+class A<T>(val b: T)
+val a = A(1).b::FOO
+x1
+class A<T>(val b: ax)
+val a = A(1).b::javaClass
+x9
+class A<T>(val b: T)
+val a = pr.set(200, 39)::javaClass
+x0
+class A<T>(val b: T)
+val z = A(1).b::javaClass
+x1
+class A<T>(a: A<Int>)
+val a = A(1).b::javaClass
+x7
+class A<T>(s: CharSequence)
+val a = A(1).b::javaClass
+xE
+class A<T>(val b: T)
+val a = kotlin.properties.Delegates::javaClass
+x4
+class A<T>(val b: T)
+val value = A(1).b::javaClass
+x=
+class A<T>(val b: AssertionError)
+val a = A(1).b::javaClass
+x#
+class A<T>(val b: T)
+val a = ::ok
+x5
+class A<T>(val b: T)
+val a = A("papa").b::javaClass
+x0
+class A<T>(val b: Z)
+val a = A(1).b::javaClass
+x0
+class A<T>(val Z: T)
+val a = A(1).b::javaClass
+x*
+class A<T>(val b: T)
+val a = A(1).b::foo
+x3
+class body<T>(val b: T)
+val a = A(1).b::javaClass
+x0
+class p<T>(val b: T)
+val a = A(1).b::javaClass
+x4
+class A<T>(val order: T)
+val a = A(1).b::javaClass
+x&
+class A<T>(val b: T)
+var a: Int = 42
+x.
+class A<T>((a, b))
+val a = A(1).b::javaClass
+x.
+class A<T>(x: Int)
+val a = A(1).b::javaClass
+x2
+class A<T>(val b: Any)
+val a = A(1).b::javaClass
+x*
+class A<T>(val b: T)
+val a = A(1).b::get
+x2
+class A<T>(val b: T)
+val a = peek().b::javaClass
+x3
+class A<T>(val left: T)
+val a = A(1).b::javaClass
+x5
+class A<T>(val b: T)
+val a = A({ 23 }).b::javaClass
+x0
+class A<T>(var t: T)
+val a = A(1).b::javaClass
+x8
+class A<T>(i: Inv<out Any?>)
+val a = A(1).b::javaClass
+xG
+class A<T>(val b: T)
+val a = (3uL..9uL step 2L).reversed()::javaClass
+x-
+class A<T>(val b: T)
+val a = A(1).b::string
+x2
+class A<T>(val foo: T)
+val a = A(1).b::javaClass
+xE
+class A<T>(val b: T)
+val a = (A<String>::foo)(A("OK")).b::javaClass
+x)
+class A<T>(val b: T)
+val a = A(1).b::ss
+x4
+class A<T>(val b: Float)
+val a = A(1).b::javaClass
+x'
+class A<T>(val b: T)
+val a = ::sparse
+x:
+class A<T>(val b: Array<Int?>)
+val a = A(1).b::javaClass
+x-
+class A<T>(val b: T)
+val a = A(1).b::toByte
+x(
+class A<T>(val b: T)
+val a = A(1).b::x
+x5
+class A<T>(val b: Double)
+val a = A(1).b::javaClass
+x8
+class A<T>(val b: Exception)
+val a = A(1).b::javaClass
+x'
+class A<T>(val b: T)
+val a = A::Inner
+x-
+class A<T>(val b: T)
+val a = C.g::javaClass
+x1
+class A<T>(val b: T)
+val a = A(42).b::javaClass
+x5
+class A<T>(val b: T)
+val a = B("K").prop::javaClass
+x5
+class Tester<T>(val b: T)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: A)
+val a = A(1).b::javaClass
+x$
+class A<T>(val b: T)
+val a = ::bar
+x1
+class A<T>(val b: T)
+val aa = ArrayList<Int> ()
+x1
+class A<T>(val b: Z1)
+val a = A(1).b::javaClass
+x3
+class A<T>(val x: Long)
+val a = A(1).b::javaClass
+x3
+class A<T>(val b: T)
+val a = A(this).b::javaClass
+xP
+class T2 : Trait2{
+    override fun bar()  = "bbb"
+}
+val a = A(1).b::javaClass
+x4
+class A<T>(val b: count)
+val a = A(1).b::javaClass
+x5
+class A<T>(val getExt: T)
+val a = A(1).b::javaClass
+x:
+class A<T>(val b: T)
+val a = getFromClass().b::javaClass
+x]
+class A<T>(val b: T)
+val a = A(listOf(1).map { it.toString() }.joinToString()).b::javaClass
+x`
+interface Test<T> {
+    fun test(p: T): T {
+        return p
+    }
+}
+val a = A(1).b::javaClass
+x6
+class Test(val ok: String)
+val a = A(1).b::javaClass
+xF
+interface B<T> {
+    fun foo(t: T) = "B"
+}
+val a = A(1).b::javaClass
+x3
+class A<T>(val b: Char)
+val a = A(1).b::javaClass
+x#
+class A<T>(val b: T)
+var res = ""
+y ö
+class M {
+  operator fun Int.component1() = this + 1
+  operator fun Int.component2() = this + 2
+
+  fun doTest(): String {
+      var s = ""
+      for ((a, b) in 0..2) {
+        s += "$a:$b;"
+      }
+      return s
+  }
+}
+val a = A(1).b::javaClass
+x5
+class A<T>(other: String)
+val a = A(1).b::javaClass
+x=
+class A<T>(val b: T)
+val a = SimpleTextField().b::javaClass
+x.
+class A<T>(s: Any)
+val a = A(1).b::javaClass
+x(
+class A<T>(val b: T)
+val a = A(1).b::B
+xf
+public abstract class AbstractClass<T> {
+    public abstract val some: T
+}
+val a = A(1).b::javaClass
+x%
+class A<T>(val b: T)
+val a = 1::foo
+x)
+class A<T>(val b: T)
+val a = ::topLevel
+x2
+class A<T>(val b: T)
+val box = A(1).b::javaClass
+x0
+class A<T>(val b: T)
+val a = A(2).b::javaClass
+x1
+class A<T>(val b: T)
+val a = A(17).b::javaClass
+x0
+class A<T>(val b: T)
+val c = A(1).b::javaClass
+xM
+open class Base(val addr: Long, val name: String)
+val a = A(1).b::javaClass
+x0
+class A<T>(val l: T)
+val a = A(1).b::javaClass
+x8
+class A<T>(val b: ArrayList)
+val a = A(1).b::javaClass
+x5
+class A<T>(val b: result)
+val a = A(1).b::javaClass
+x5
+class A<T>(thisRef: Any?)
+val a = A(1).b::javaClass
+x7
+class A<T>(f: T.() -> Unit)
+val a = A(1).b::javaClass
+x(
+class A<T>(val b: T)
+val a = A(1).b::r
+x6
+class A<T>(val b: T)
+override var v: String = "Fail"
+xB
+class A {
+      val test = local()
+  }
+val a = A(1).b::javaClass
+x-
+class A<T>(val b: T)
+val a = A.V::javaClass
+x0
+class A<T>(val b: C)
+val a = A(1).b::javaClass
+x+
+class A<T>(val b: T)
+val a = A(1).b::Long
+xE
+class A<T>(val b: T)
+val a = A("O", run { { FOO.x } }).b::javaClass
+x:
+class A<T>(val b: T)
+val a = A(ExtProvider).b::javaClass
+x*
+class A<T>(val b: T)
+val a = A(1).b::Any
+x9
+class A<T>(val b: T)
+val a = A(2.toLong()).b::javaClass
+x7
+class A<T>(val b: getValue)
+val a = A(1).b::javaClass
+x;
+class A<T>(args: Array<String>)
+val a = A(1).b::javaClass
+x2
+class A<T>(val b: T)
+const val M = Int.MIN_VALUE
+x1
+class A<T>(val b: En)
+val a = A(1).b::javaClass
+x2
+class A<T>(val b: T)
+val a = A("k").b::javaClass
+x0
+class A<T>(val b: T)
+val a = A(5).b::javaClass
+x6
+class A<T>(val b: T)
+val a = A("O").value::javaClass
+xP
+inline class L(val x: Long) {
+    val xx get() = x
+}
+val a = A(1).b::javaClass
+xC
+class A<T>(val b: T)
+val a = Inner().Inner2().Inner3()::javaClass
+x)
+class A<T>(val b: T)
+val a = A(1).b::NZ
+xN
+class A<T>(val b: T)
+val a = (-5..10).map(::dense).joinToString()::javaClass
+x4
+class A<T>(val b: Outer)
+val a = A(1).b::javaClass
+x4
+class A<T>(val b: toInt)
+val a = A(1).b::javaClass
+x2
+class A<T>(a: Tr<Int>)
+val a = A(1).b::javaClass
+x3
+class A<T>(val b: T)
+val long = A(1).b::javaClass
+x4
+class A<T>(e: Exception)
+val a = A(1).b::javaClass
+x5
+class A<T>(val b: T)
+val testIt = A(1).b::javaClass
+x,
+class A<T>(val b: T)
+val a = a::component2
+x3
+class A<T>(val b: left)
+val a = A(1).b::javaClass
+x+
+class A<T>(val b: T)
+val a = A(1).b::IFoo
+x:
+class A<T>(val b: T)
+val a = result.exception::javaClass
+x+
+class A<T>(val b: T)
+val a = A(1).b::UInt
+x5
+class A<T>(val b: T)
+val string = A(1).b::javaClass
+x(
+class A<T>(val b: T)
+val a = A(1).b::o
+x6
+class A<T>(val b: T)
+val a = MyObject().b::javaClass
+x7
+class A<T>(val b: Delegate)
+val a = A(1).b::javaClass
+x5
+class A<T>(val s: String)
+val a = A(1).b::javaClass
+xG
+class Local {
+        fun foo() = str
+    }
+val a = A(1).b::javaClass
+x(
+class A<T>(val b: T)
+val a = A(1).b::f
+x8
+class A<T>(a : One, b : Two)
+val a = A(1).b::javaClass
+x,
+class A<T>(b: B)
+val a = A(1).b::javaClass
+x6
+class A<T>(val b: T)
+val a = C().foo("O")::javaClass
+x(
+class A<T>(val b: T)
+val a = A(1).b::T
+x(
+class A<T>(val b: T)
+val a = ::compare
+xB
+class A<T>(val b: T)
+val a = A(3, 4, 5, 6, 7, 8, 9).b::javaClass
+x+
+class A<T>(val b: T)
+val a = String::plus
+x5
+class A<T>(val b: T)
+val a = A(second).b::javaClass
+x=
+class A<T>(val b: T)
+val a = TestClass({}).run()::javaClass
+x:
+class A<T>(val b: Set<String>)
+val a = A(1).b::javaClass
+x0
+class A<T>(val b: r)
+val a = A(1).b::javaClass
+x(
+class A<T>(val b: T)
+val a = A(1).b::z
+x0
+class A<T>(val b: b)
+val a = A(1).b::javaClass
+x5
+class A<T>(val z: String)
+val a = A(1).b::javaClass
+x/
+class A<T>(val b: T)
+val e = GameError("foo")
+x2
+class A<T>(val b: T)
+val add = A(1).b::javaClass
+x=
+class A<T>(val b: Array<Boolean>)
+val a = A(1).b::javaClass
+x*
+class A<T>(val b: T)
+val a = A(1).b::Foo
+x@
+class A<T>(index1: Int, index2: Int)
+val a = A(1).b::javaClass
+x0
+val a = A(1).b::javaClass
+class A<T>(val b: T)
+x/
+class A<T(val b: T)
+val a = A(1).b::javaClass
+x-
+class A<T>( b: T)
+val a = A(1).b::javaClass
+x/
+class A<>(val b: T)
+val a = A(1).b::javaClass
+x/
+class A<T>(val b: T)
+val a = A1).b::javaClass
+x&
+class A<T>
+val a = A(1).b::javaClass
+x/
+class A<T>(val b T)
+val a = A(1).b::javaClass
+x.
+class A<T>(val b: T)
+val a = A(1).bjavaClass
+x/
+class A<T>(val b: T)
+val a = (1).b::javaClass
+x*
+class A<T>(val b: T)
+val a = ::javaClass
+x/
+class A<T>(val b: )
+val a = A(1).b::javaClass
+x-
+class A<T>(val b: T)
+val a = A.b::javaClass
+x/
+class AT>(val b: T)
+val a = A(1).b::javaClass
+x/
+class A<T>(val b: T)
+val a = A(1.b::javaClass
+x/
+class A<T>(val b: T)
+val a = A(1).::javaClass
+x/
+class A<T>(val b: T)
+val a= A(1).b::javaClass
+x/
+class A<T>(val b: T)
+val  = A(1).b::javaClass
+x/
+class A<T>(val b:T)
+val a = A(1).b::javaClass
+x/
+class A<T>(val b: T)
+val a =A(1).b::javaClass
+x/
+class A<T>(val b: T
+val a = A(1).b::javaClass
+x
+
+val a = A(1).b::javaClass
+x'
+class A<T>(val b: T)
+val a = A(1).b::
+x/
+class A<T>(val b: T)
+val a  A(1).b::javaClass
+x+
+ A<T>(val b: T)
+val a = A(1).b::javaClass
+x-
+class A(val b: T)
+val a = A(1).b::javaClass
+x/
+class A<T>(val b: T)val a = A(1).b::javaClass
+x/class A<T>(val b: T)
+val a = A(1).b::javaClass
+x/
+class A<T>(val : T)
+val a = A(1).b::javaClass
+x
+class A<T>(val b: T)
+val a = 
+x/
+class A<T>val b: T)
+val a = A(1).b::javaClass
+x-
+class A<T>(val b: T)
+ a = A(1).b::javaClass
+x/
+class A<T>(val b: T)
+val a = A(1).b::javaClassx/
+classA<T>(val b: T)
+val a = A(1).b::javaClass
+w
+class A<T>(val b: T)
+
+x/
+class A<T>(val b: T)
+val a = A(1)b::javaClass
+x/
+class A<T>(valb: T)
+val a = A(1).b::javaClass
+x/
+class <T>(val b: T)
+val a = A(1).b::javaClass
+x,
+class A<T>(val b: T)
+val a = .b::javaClass
+x/
+class A<T>(val b: T)
+vala = A(1).b::javaClass
+ÿÿ

@@ -1,0 +1,5749 @@
+øiexportTaggdefaultnoriginalSampley.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+gmutantsüyd// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+
+val e = false
+try
+{inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}}
+catch(e: Exception){}
+finally{}
+
+y[// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass
+val b = false
+if (b) {(val x: Int)} else {(val x: Int)}
+ {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    
+val e = true
+if (e) {companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }} else {companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }}
+
+}
+yc// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(
+val q = true
+try
+{val x: Int}
+catch(e: Exception){}
+finally{}
+) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yÜ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        
+val d = false
+when (d) {
+ true -> {val superHashCode = super.hashCode()}
+ else -> {val superHashCode = super.hashCode()}
+}
+
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y^// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = 
+val j = true
+if (j) {super.hashCode()} else {super.hashCode()}
+
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+ye// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: 
+val u = false
+when (u) {
+ true -> {Int}
+ else -> {Int}
+}
+) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yc// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = 
+val m = true
+try
+{super}
+catch(e: Exception){}
+finally{}
+.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yk// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.
+val m = true
+when (m) {
+ true -> {hashCode()}
+ else -> {hashCode()}
+}
+
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yT// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = 
+val h = false
+if (h) {super} else {super}
+.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yd// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.
+val i = false
+try
+{hashCode}
+catch(e: Exception){}
+finally{}
+()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y0// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.(hashCode)()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y1// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: (Int)?) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y0// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super!!.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int{
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    } {
+    companion object )
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: super) {
+    companion object {
+        val superHashCode = Int.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val ( = super.hashCodesuperHashCode)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: {) {
+    companion object Int
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: {) Int
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    } x: Int) {
+    val
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: //        val superEquals = super.equals(Any()) // two others calls) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+Int
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass{
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}val x: Int) (
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline companion InlineClass(val x: Int) {
+    class object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion val {
+        object superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+val class InlineClass(inline x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: }) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+Int
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }) {
+    val x: Int
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.(hashCode)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val xInt :) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class val(val x: Int) {
+    companion object {
+        InlineClass superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClassval x: Int() {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+(val x: Int) class InlineClassinline {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(//        val superEquals = super.equals(Any()) // two others calls x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+val
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val ): Int) {
+    companion object {
+        val superHashCode = super.hashCode(x
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int= {
+    companion object {
+        val superHashCode ) super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}) Int
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) ()
+    companion object {
+        val superHashCode = super.hashCode{
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = //        val superToString = super.toString()  // the same for
+super.hashCode()
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    object companion {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(companion) {
+    val x: Int object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = //        val superEquals = super.equals(Any()) // two others calls
+//        val superToString = super.toString()  // the same for
+super.hashCode()
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+= class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode inline super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+. class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = superinlinehashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClasssuper {
+    companion object {
+        val superHashCode = (val x: Int).hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+( class InlineClassinlineval x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(= x: Int) {
+    companion object {
+        val superHashCode val super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class (val x: Int)InlineClass {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClasshashCode {
+    companion object {
+        val superHashCode = super.(val x: Int)()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+super class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = inline.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass//        val superToString = super.toString()  // the same for {
+    companion object {
+        val superHashCode = super.hashCode()
+(val x: Int)
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion ( {
+        val superHashCode = super.hashCodeobject)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: object) {
+    companion Int {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: hashCode) {
+    companion object {
+        val superHashCode = super.Int()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) super
+    companion object {
+        val superHashCode = {.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+Int
+
+inline class InlineClass(val x: // Duplicated bug: KT-35725) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object hashCode
+        val superHashCode = super.{()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.{
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) // Original bug: KT-28499
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(super.hashCode() x: Int) {
+    companion object {
+        val superHashCode = val
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: ()) {
+    companion object {
+        val superHashCode = super.hashCodeInt
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+
+// Duplicated bug: KT-35725
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val xval superHashCode = super.hashCode() Int) {
+    companion object {
+        :
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+    companion object {
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }) {
+    companion object Int
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    ( object {
+        val superHashCode = super.hashCodecompanion)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: companion) {
+    Int object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) super.hashCode()
+    companion object {
+        val superHashCode = {
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(hashCode() x: Int) {
+    companion object {
+        val superHashCode = super.val
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        super.hashCode() superHashCode = val
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = ().hashCodesuper
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = hashCode().super
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClasscompanion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    } {
+    (val x: Int)
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: val superHashCode = super.hashCode()) {
+    companion object {
+        Int
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: =) {
+    companion object {
+        val superHashCode Int super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+// Duplicated bug: KT-35725
+
+// Original bug: KT-28499
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}: Int) x
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline { InlineClass(val x: Int) class
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int() {
+    companion object {
+        val superHashCode = super.hashCode)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val }: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    x
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline } InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    class
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass= {
+    companion object {
+        val superHashCode (val x: Int) super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    } object companion
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode)(
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+val x: Int class InlineClass(inline) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline val x: Int InlineClass(class) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        } superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+val
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(x val: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+superHashCode class InlineClass(val x: Int) {
+    companion object {
+        val inline = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super(hashCode.)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }: Int) {
+    x
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    } object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    companion
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+hashCode class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.inline()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass{
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }val x: Int) {
+    companion object (
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = //        val superEquals = super.equals(Any()) // two others calls.hashCode()
+//        val superToString = super.toString()  // the same for
+super
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass()) {
+    companion object {
+        val superHashCode = super.hashCode(val x: Int
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode}
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+()
+y.{
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object // Original bug: KT-28499
+}
+y.// Original bug: KT-28499
+val superHashCode = super.hashCode()
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        // Duplicated bug: KT-35725
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val superHashCode = super.hashCode()) {
+    companion object {
+        val x: Int
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+hashCode() class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.inline
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClassobject {
+    companion (val x: Int) {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val object: Int) {
+    companion x {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val) {
+    companion object {
+        val x: Int superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass({
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    } x: Int) {
+    companion object val
+}
+y.// Original bug: KT-28499
+)
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode(// Duplicated bug: KT-35725
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.}()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    hashCode
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: InthashCode() {
+    companion object {
+        val superHashCode = super.)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    } class InlineClass(val x: Int) {
+    inline
+}
+y.x
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val // Original bug: KT-28499: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.{
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object // Original bug: KT-28499
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+(val x: Int)
+
+inline class InlineClass// Duplicated bug: KT-35725 {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super()hashCode.
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+super.hashCode() class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = inline
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    val object {
+        companion superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(super x: Int) {
+    companion object {
+        val superHashCode = val.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass{
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+} (val x: Int)
+y.val
+// Duplicated bug: KT-35725
+
+inline class InlineClass(// Original bug: KT-28499 x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass{ {
+    companion object (val x: Int)
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) hashCode
+    companion object {
+        val superHashCode = super.{()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+companion class InlineClass(val x: Int) {
+    inline object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass({) val x: Int
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+{
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+
+inline class InlineClass(val x: Int) {
+    companion object // Duplicated bug: KT-35725
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline superHashCode InlineClass(val x: Int) {
+    companion object {
+        val class = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    }
+companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+}
+//        val superEquals = super.equals(Any()) // two others calls
+    //        val superToString = super.toString()  // the same for
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion hashCode {
+        val superHashCode = super.object()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline { InlineClass(val x: Int) {
+    companion object class
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) val
+    companion object {
+        { superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.super.hashCode()
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = // Original bug: KT-28499
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = }.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+super
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class {(val x: Int) {
+    companion object InlineClass
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+=
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode // Duplicated bug: KT-35725 super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Intcompanion {
+    ) object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val super = superHashCode.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass{
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    } {
+    companion object (val x: Int)
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline val InlineClass(val x: Int) {
+    companion object {
+        class superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val ): Intx {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+    {
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode super =.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val //        val superToString = super.toString()  // the same for: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+x
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline val superHashCode = super.hashCode() InlineClass(val x: Int) {
+    companion object {
+        class
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        hashCode superHashCode = super.val()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    val superHashCode = super.hashCode() object {
+        companion
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Duplicated bug: KT-35725
+// Original bug: KT-28499
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+{
+
+inline class InlineClass(val x: Int) // Duplicated bug: KT-35725
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(Int x: val) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class super.hashCode()(val x: Int) {
+    companion object {
+        val superHashCode = InlineClass
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(}) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+val x: Int
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass=val x: Int) {
+    companion object {
+        val superHashCode ( super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline } InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+class
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline () InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCodeclass
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = //        val superToString = super.toString()  // the same for.hashCode()
+super
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+()
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode// Duplicated bug: KT-35725
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(: xval Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) .
+    companion object {
+        val superHashCode = super{hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: superHashCode) {
+    companion object {
+        val Int = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.superHashCode
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val // Original bug: KT-28499 = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline (val x: Int) InlineClassclass {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass} {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    (val x: Int)
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass} {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+(val x: Int)
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: .) {
+    companion object {
+        val superHashCode = superInthashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    // Original bug: KT-28499
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x{ Int) {
+    companion object :
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClasssuperval x: Int) {
+    companion object {
+        val superHashCode = (.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: () {
+    companion object {
+        val superHashCode = super.hashCodeInt)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: //        val superToString = super.toString()  // the same for) {
+    companion object {
+        val superHashCode = super.hashCode()
+Int
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass. {
+    companion object {
+        val superHashCode = super(val x: Int)hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+{
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+
+inline class InlineClass(val x: Int) // Duplicated bug: KT-35725
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class val(InlineClass x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = (.hashCodesuper)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    hashCode() object {
+        val superHashCode = super.companion
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class //        val superEquals = super.equals(Any()) // two others calls(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+InlineClass
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object (
+        val superHashCode = super.hashCode{)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+Int class InlineClass(val x: inline) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.()hashCode
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass({
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}) val x: Int
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = }.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    super
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: super.hashCode()) {
+    companion object {
+        val superHashCode = Int
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline val InlineClass(class x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClasssuper.hashCode() {
+    companion object {
+        val superHashCode = (val x: Int)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClasssuperHashCode {
+    companion object {
+        val (val x: Int) = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int( {
+    companion object {
+        val superHashCode = super.hashCode))
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }(val x: Int) {
+    InlineClass
+}
+y.// Original bug: KT-28499
+superHashCode
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val // Duplicated bug: KT-35725 = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val hashCode: Int) {
+    companion object {
+        val superHashCode = super.x()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x= Int) {
+    companion object {
+        val superHashCode : super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val val superHashCode = super.hashCode(): Int) {
+    companion object {
+        x
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClasshashCodeval x: Int) {
+    companion object {
+        val superHashCode = super.(()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode super.hashCode() =
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val =: Int) {
+    companion object {
+        val superHashCode x super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val ) = super.hashCode(superHashCode
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClasshashCode() {
+    companion object {
+        val superHashCode = super.(val x: Int)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(object) {
+    companion val x: Int {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    { object companion
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: }) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    Int
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) //        val superToString = super.toString()  // the same for
+    companion object {
+        val superHashCode = super.hashCode()
+{
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val xhashCode Int) {
+    companion object {
+        val superHashCode = super.:()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+} InlineClass(val x: Int) class
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass({
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }) {
+    companion object val x: Int
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val (): Int) {
+    companion object {
+        val superHashCode = super.hashCodex
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass() {
+    companion object {
+        val superHashCode = super.hashCode(val x: Int)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object //        val superEquals = super.equals(Any()) // two others calls
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+{
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Intcompanion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    } {
+    )
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(hashCode) {
+    companion object {
+        val superHashCode = super.val x: Int()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val //        val superEquals = super.equals(Any()) // two others calls: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+x
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Intval {
+    companion object {
+        ) superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val super.hashCode() = superHashCode
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+}
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    // Duplicated bug: KT-35725
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object super
+        val superHashCode = {.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline ( InlineClassclassval x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    . object {
+        val superHashCode = supercompanionhashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClassIntval x: () {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(companion x: Int) {
+    val object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClasscompanion {
+    (val x: Int) object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x//        val superEquals = super.equals(Any()) // two others calls Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+:
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        }
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    val superHashCode = super.hashCode()
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int} {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+)
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x) Int) {
+    companion object {
+        val superHashCode = super.hashCode(:
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: )) {
+    companion object {
+        val superHashCode = super.hashCode(Int
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+val
+
+inline class InlineClass(// Duplicated bug: KT-35725 x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion () {
+        val superHashCode = super.hashCodeobject
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object }
+{
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.//        val superEquals = super.equals(Any()) // two others calls()
+//        val superToString = super.toString()  // the same for
+hashCode
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode})
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+(
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline InlineClass class(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = superhashCode().
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val Int: x) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion ) {
+        val superHashCode = super.hashCode(object
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val superHashCode = super.hashCode() x: Int) {
+    companion object {
+        val
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(super) {
+    companion object {
+        val superHashCode = val x: Int.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class {(val x: Int) InlineClass
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val super: Int) {
+    companion object {
+        val superHashCode = x.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }) {
+    Int
+}
+y.// Original bug: KT-28499
+inline
+
+// Duplicated bug: KT-35725 class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        }
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+val superHashCode = super.hashCode()
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline super InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = class.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+//        val superEquals = super.equals(Any()) // two others calls class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+inline
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline hashCode InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.class()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = ).hashCode(super
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    hashCode object {
+        val superHashCode = super.companion()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+(
+
+inline class InlineClass// Duplicated bug: KT-35725val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(//        val superEquals = super.equals(Any()) // two others calls) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+val x: Int
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(.) {
+    companion object {
+        val superHashCode = superval x: InthashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(} x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    val
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline : InlineClass(val xclass Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val super.hashCode(): Int) {
+    companion object {
+        val superHashCode = x
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode () super.hashCode=
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.super
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = // Original bug: KT-28499.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+) class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode(inline
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass()val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode(
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+x class InlineClass(val inline: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode hashCode super.=()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+class
+
+inline // Duplicated bug: KT-35725 InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int//        val superEquals = super.equals(Any()) // two others calls {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+)
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline object InlineClass(val x: Int) {
+    companion class {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: val) {
+    companion object {
+        Int superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val }: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+x
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    super.hashCode() object {
+        val superHashCode = companion
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(. x: Int) {
+    companion object {
+        val superHashCode = supervalhashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+//        val superToString = super.toString()  // the same for class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+inline
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline Int InlineClass(val x: class) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x( Int) {
+    companion object {
+        val superHashCode = super.hashCode:)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x} Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+:
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class hashCode()(val x: Int) {
+    companion object {
+        val superHashCode = super.InlineClass
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+hashCode()
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.// Duplicated bug: KT-35725
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.val x: Int
+// Duplicated bug: KT-35725
+
+inline class InlineClass(// Original bug: KT-28499) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        ( superHashCode = super.hashCodeval)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        superHashCode val = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super}hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+.
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val xsuperHashCode Int) {
+    companion object {
+        val : = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode(//        val superEquals = super.equals(Any()) // two others calls
+//        val superToString = super.toString()  // the same for
+)
+    }
+}
+y.// Original bug: KT-28499
+companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+
+inline class InlineClass(val x: Int) {
+    // Duplicated bug: KT-35725
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion //        val superEquals = super.equals(Any()) // two others calls {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+object
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class ()(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCodeInlineClass
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClasscompanionval x: Int) {
+    ( object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+{
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+} class InlineClass(val x: Int) inline
+y$// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass() {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y$// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class x(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: a) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y*// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = M.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y*// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val checkLess = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y1// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: String) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Ÿ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inner class Inner {
+            inner class Inner2 {
+                inner class Inner3 {
+                    val y = x
+                }
+            }
+        }
+y%// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class my(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yP// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val fn1: () -> String, val fn2: () -> String) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y/// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = String.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yt// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+    fun Double.test(a: Int, b: Long, c: () -> String): String {
+        return "${this.toInt()}_${a}_${b}_${c()}"
+    }
+
+
+    fun test(): String {
+        var invokeOrder = "";
+        val expectedResult = "1_0_1_L"
+        val expectedInvokeOrder = "1_0_L"
+        var l = 1L
+        var i = 0
+
+        var result = 1.0.test(b = { invokeOrder += "1_"; l }(), a = { invokeOrder += "0_"; i }(), c = { invokeOrder += "L"; "L" })
+        if (invokeOrder != expectedInvokeOrder || result != expectedResult) return "fail 1: $invokeOrder != $expectedInvokeOrder or $result != $expectedResult"
+
+        invokeOrder = "";
+        result = 1.0.test(b = { invokeOrder += "1_"; l }(), c = { invokeOrder += "L"; "L" }, a = { invokeOrder += "0_"; i }())
+        if (invokeOrder != expectedInvokeOrder || result != expectedResult) return "fail 2: $invokeOrder != $expectedInvokeOrder or $result != $expectedResult"
+
+
+        invokeOrder = "";
+        result = 1.0.test(c = { invokeOrder += "L"; "L" }, b = { invokeOrder += "1_"; l }(), a = { invokeOrder += "0_"; i }())
+        if (invokeOrder != expectedInvokeOrder || result != expectedResult) return "fail 3: $invokeOrder != $expectedInvokeOrder or $result != $expectedResult"
+
+
+        invokeOrder = "";
+        result = 1.0.test(a = { invokeOrder += "0_"; i }(), c = { invokeOrder += "L"; "L" }, b = { invokeOrder += "1_"; l }())
+        if (invokeOrder != "0_1_L" || result != expectedResult) return "fail 4: $invokeOrder != 0_1_L or $result != $expectedResult"
+
+        return "OK"
+    }
+}
+}
+y ∞// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    val result = "OK"
+
+    inner class Inner {
+        fun foo() = result
+    }
+}
+y%// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class id(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y$// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = Host.x
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Ç// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+open class JClass() {
+    fun test(): String {
+        return "OK"
+    }
+}
+yt// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val prop = "O"
+        const val constVal = 1
+        fun funInCompanion(): String = "K"
+    }
+
+    fun simple() {
+        prop
+        constVal
+        funInCompanion()
+    }
+
+    fun asResult(): String = prop + constVal + funInCompanion() + c
+}
+y@// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode("a", "b", "c", "d")
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: C) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.IcAny(5)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y'// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val String = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val s: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.toString()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y>// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//KT-3927 Inner class cannot be instantiated with child instance of outer class
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y/// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = result.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y*// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = list2.add(i)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y*// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = o.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y]// TODO: muted automatically, investigate should it be ran for JS or not
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Ó// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+class MyRange1() : ClosedRange<Int> {
+    override val start: Int
+        get() = 0
+    override val endInclusive: Int
+        get() = 0
+    override fun contains(item: Int) = true
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val i: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ì// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+open class Local(val ok: Boolean) {
+        fun result() = if (ok) result else "Fail"
+    }
+y&// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class Int(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y1// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super<A>.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y/// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Long) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.foo()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y'// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class Long(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y/// Original bug: KT-28499
+// !LANGUAGE: +InlineClasses
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y2// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super<Tr>.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xC// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+interface B
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: P) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xU// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+sealed class Sealed(val x: S)
+yB// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(private val intArray: IntArray) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = size.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ®// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+    WINTER,
+    SPRING,
+    SUMMER,
+    AUTUMN
+}
+}
+y"// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val T = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val x = 1
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.listOf()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xW// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class IcAny(val x: Any?)
+y(// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(x: T) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y<// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = ArrayList<String>().iterator()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y&// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class log(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y@// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: String, val y: String) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.Test("OK")
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y*// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    const object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y // Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val a6: Float = 1f + 1
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y#// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val l = ArrayList<Long>()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y7// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+override public class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yD// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.listOf<ULong>(MaxUL - 2u, MaxUL)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y*// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = B(11).result
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ’// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    private companion object {
+        private fun foo() = on { this }
+
+        override fun toString() = "OK"
+    }
+}
+y>// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.fieldAccessedInsideChild()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+// KJS_WITH_FULL_RUNTIME
+    }
+}
+y ö// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class R(private val r: Long) {
+    fun test() = run { ok() }
+
+    private fun ok() = "OK"
+}
+y ä// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+class A(p: String) {
+    var pp = p
+
+    init {
+        log += "init($p);"
+    }
+}
+y ˛// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+// WITH_RUNTIME
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xr// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    object : B {}
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    enum object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+// TARGET_BACKEND: JVM
+    }
+}
+y+// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(n : Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inner class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+x// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    object F {
+    var u = 0
+}
+}
+ym// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val o = object : T {
+    val a = "OK"
+    val f = {
+        a
+    }()
+
+    override fun foo() = f
+}
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// KJS_WITH_FULL_RUNTIME
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.String()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yQ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+// Auto-generated by org.jetbrains.kotlin.generators.tests.GenerateRangesCodegenTestData. DO NOT EDIT!
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    abstract object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.toByte()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y(// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(n: N) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y0// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(e: Throwable) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y8// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val fn: () -> String) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+// no local optimizations
+    }
+}
+y0// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(e: Exception) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y*// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val KProperty = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+// !LANGUAGE: +InlineClasses
+    }
+}
+y.// Original bug: KT-28499
+// SKIP_SOURCEMAP_REMAPPING
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y+// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.toInt()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val L.xx get() = x
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y%// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(i) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yG// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Array<String> = emptyArray()) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y%// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class It(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y+// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    inline object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y'// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.B()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ﬂ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        private val dx = intArrayOf(0, 1, 0, -1)
+        private val dy = intArrayOf(-1, 0, 1, 0)
+    }
+}
+y&// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class sum(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// IGNORE_BACKEND: JVM_IR
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y"// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val b = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    operator object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y&// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val value = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y'// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class UInt(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y"// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val R = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+data class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y —// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+  operator fun Long.component1() = this + 1
+  operator fun Long.component2() = this + 2
+}
+}
+y ⁄// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+    operator fun getValue(thisRef: Any?, prop: KProperty<*>): String {
+        return "OK"
+    }
+}
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    open object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y µ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    object: Your() {
+        override val your = "K"
+            get() = field
+    }
+}
+xl// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+abstract class Base(val s: String, vararg ints: Int)
+y+// Original bug: KT-28499
+// KJS_WITH_FULL_RUNTIME
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Ç// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object : Factory(1)
+}
+y3// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.valueOf("BLUE")
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y3// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val range3 = 5u.toUShort()..5u.toUShort()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class String(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xt// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    object: A(b) {}
+}
+y Œ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        fun ok() = "OK"
+        val x = run { Test.ok() }
+        fun test() = x
+    }
+}
+y/// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        var isOpen = true
+        private set
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y*// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+in class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xl// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class L(val x: Long) {
+    val xx get() = x
+}
+y §// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    operator fun component1() = 1
+    operator fun component2() = 2
+}
+y$// WITH_RUNTIME
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y$// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class p(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yC// CHECK_CASES_COUNT: function=charFoo count=3
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ¶// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    val x = "O"
+    inner class Inner {
+        val y = x + "K"
+    }
+}
+y"// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val N = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xv// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    fun foo(): String
+}
+y(// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class Color(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ‹// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+    lateinit var x: String
+        private set
+
+    protected fun set(value: String) { x = value }
+}
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+// IGNORE_BACKEND: JVM_IR
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.setMyStr()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y&// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = s.length
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xr// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    var value = t
+}
+y?// CHECK_CASES_COUNT: function=box count=0
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y §// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        protected val F: String = "OK"
+    }
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+open class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Û// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+    constructor(x: String, y: String, z: Int): this(x, y + "#" + z.toString())
+    
+    override fun toString() = "$x#$y"
+}
+}
+yÕ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+    fun Double.foo(a: Double = 1.0, b: Double = 1.0): Double {
+        return a + b
+    }
+
+    fun test(): String {
+        if (1.0.foo() != 2.0) return "fail"
+        if (1.0.foo(2.0, 2.0) != 4.0) return "fail"
+        if (1.0.foo(a = 2.0) != 3.0) return "fail"
+        if (1.0.foo(b = 2.0) != 3.0) return "fail"
+        return "OK"
+    }
+}
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.add(item)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y'// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.a()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Ø// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val bar = "OK";
+        var boo = "FAIL";
+    }
+}
+y&// Original bug: KT-28499
+// See also KT-7801
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y$// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = t.test
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y!// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val c1 = C.Foo.create()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.Int()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+enum class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y'// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = t.message
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yE// Original bug: KT-28499
+//KT-3772 Invoke and overload resolution ambiguity
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Ÿ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    object X {
+    public var O: String
+        by Delegates.observable("O") { prop, old, new -> }
+        private set
+}
+}
+y<// !LANGUAGE: +ProperIeee754Comparisons
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y œ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    val content = 1
+    inner class A {
+        val v = object {
+            fun f() = content
+        }
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val b = Box<Long>(-1)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y&// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val Float = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yj// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val localResult = doCall {
+        try { "1" } catch (e: Exception) { "2" }
+        return
+    }
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+// KJS_WITH_FULL_RUNTIME
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    data object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y8// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.ArrayList<String>(1)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ú// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+enum class Foo(val a: Int = 1, val b: String = "a") {
+  A(),
+  B(2, "b"),
+  C(b = "b"),
+  D(a = 2)
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+// !LANGUAGE: +InlineClasses
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y4// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.(A::Inner)(this)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ≠// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+enum class Foo(val a: Double = 1.0, val b: Double = 1.0) {
+    A(),
+    B(2.0, 2.0),
+    C(b = 2.0),
+    D(a = 2.0)
+}
+y"// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val i = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y%// FILE: util.kt
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y1// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+companion class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y*// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.init()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y&// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val Empty = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y(// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class test1(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ±// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    object : Inner(realResult) {
+            override fun result() = s
+        }
+}
+y$// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class i(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xu// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object
+}
+y$// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class n(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yq// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    object A {
+    private var r: Int = 1;
+
+    fun test() : Int {
+        r++
+        ++r
+        return r
+    }
+
+    var holder: String = ""
+
+    var r2: Int = 1
+        get() {
+            holder += "getR2"
+            return field
+        }
+
+    fun test2() : Int {
+        r2++
+        ++r2
+        return r2
+    }
+
+    var r3: Int = 1
+        set(p: Int) {
+            holder += "setR3"
+            field = p
+        }
+
+    fun test3() : Int {
+        r3++
+        ++r3
+        return r3
+    }
+
+    var r4: Int = 1
+        get() {
+            holder += "getR4"
+            return field
+        }
+        set(p: Int) {
+            holder += "setR4"
+            field = p
+        }
+
+    fun test4() : Int {
+        r4++
+        holder += ":"
+        ++r4
+        return r4
+    }
+}
+}
+xu// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    val name: String
+}
+y'// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.r()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+x|// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+enum class Season {
+    WINTER,
+    SPRING,
+    SUMMER,
+    AUTUMN
+}
+y Õ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    object : SomeTrait {
+        override fun foo() {
+            res.add("anonymous.foo()")
+        }
+    }
+}
+y0// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+lateinit class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Ò// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+
+    B {
+        val value2 = "OK"
+        override val value = { value2 }
+    };
+
+    abstract val value: () -> String
+}
+}
+y(// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = list3.size
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y(// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val MyAlias = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y*// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.size()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yU// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+// Auto-generated by org.jetbrains.kotlin.generators.tests.GenerateRangesCodegenTestData. DO NOT EDIT!
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class Double(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xy// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    object : First {   }
+}
+y"// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val O = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y0// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+operator class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+yw// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.call {
+        object {
+            fun run() = prop + test()
+        }.run()
+    }
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Ï// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+// FILE: Foo.kt
+open class Foo {
+    init {
+        log.append("Foo.<init>;")
+    }
+
+    companion object {
+        init {
+            log.append("Foo.<clinit>;")
+        }
+    }
+}
+y+// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = Season.Warm()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+class M {
+  operator fun Int.component1() = this + 1
+  operator fun Int.component2() = this + 2
+
+  fun doTest(): String {
+      var s = ""
+      for ((a, b) in 0.rangeTo(2)) {
+        s += "$a:$b;"
+      }
+      return s
+  }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        var x = X()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y+// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.list4()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class longStorage(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y'// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val result = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y(// See also KT-6299
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+    private constructor(s1: String, s2: String) : this(s1 + s2)
+
+    companion object {
+        fun p1(s: String) = Composed("O", s)
+    }
+}
+}
+x[// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class Name(val name: String)
+y ˙// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+// WITH_RUNTIME
+    }
+}
+y"// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val B = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ∏// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+
+    fun test(): Int = a()
+
+    operator fun invoke(): Int = 2
+}
+}
+y"// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val x = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xu// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    val ordinal: Int
+}
+y/// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val AssertionError = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xV// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class IcInt(val x: Int)
+y7// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        // IGNORE_BACKEND: NATIVE
+var result = "Fail"
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xz// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    object Warm: Season()
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    private object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ‰// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+
+    private fun test() {
+        result = "OK"
+    }
+
+    class Z {
+        fun ztest(b: B) {
+            b.test()
+        }
+    }
+}
+y;// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.A("test", "OK", "fail")
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y*// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.UInt()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+    override val start: Int
+        get() = 0
+    override val endInclusive: Int
+        get() = 0
+    override fun contains(item: Int) = true
+}
+}
+y&// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class get(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        var x = 1
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Å// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    fun a(): A = object: A(b) {}
+}
+y'// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.A()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Ÿ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    object ExtProvider {
+    operator fun Long.get(i: Int) = this
+    operator fun Long.set(i: Int, newValue: Long) {}
+}
+}
+y|// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+class A {
+    fun foo() = o_plus_f_plus_k {""}
+
+    companion object {
+        private val o = "O"
+        private val k = "K"
+
+        private inline fun o_plus_f1_plus_f2(f1: () -> String, f2: () -> String) = o + f1() + f2()
+        private inline fun o_plus_f_plus_k(f: () -> String) = o_plus_f1_plus_f2(f) { k }
+
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+// !LANGUAGE: +NewInference
+    }
+}
+y"// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val A = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y4// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val testValueParameter2 = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xQ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+data class A(val a: Long)
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        var inner = 1
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ∏// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+    fun bar(a: String = "abc"): String = a + " from interface"
+}
+}
+y6// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = kotlin.reflect.KProperty
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y1// !LANGUAGE: +InlineClasses
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class listOf(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = z1a.foo("")
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y1// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.foo(2, "239")
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y ñ// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+        fun result() = if (ok) result else "Fail"
+    }
+xz// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+        val ok = "OK"
+    }
+y ª// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+class A {
+    private fun foo(result: String = "OK"): String = result
+
+    companion object {
+        fun bar() = A().foo()
+    }
+}
+y ê// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    val x = "OK"
+
+    operator fun invoke() = x
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.doTest()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y#// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val ys = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y †// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        protected fun foo() = "OK"
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val a = A(0)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y*// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.Long()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class ArrayList(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+// DONT_TARGET_EXACT_BACKEND: JS_IR
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        var count = i
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y6// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    private companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y //        }
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+inline class InlineClass(val x: Int) {
+
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y.// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+
+}
+    }y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int){
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = .hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val : Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode= super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Ô// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object{
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inlineclass InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(valx: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y"// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xv// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object 
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object 
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y Î// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClassval x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y+// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass( x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = 
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companionobject {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y+// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: ) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode =super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}y(// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion  {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y(// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+ class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y$// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y%// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y#// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class (val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y&// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+x]// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) 
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline classInlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y%// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+     object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y!// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val  = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls}
+}
+y,// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+xe// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode  super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    
+}
+y-// Original bug: KT-28499// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode(
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x:Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode)
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = superhashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y
+// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y+// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+         superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+x8// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) 
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y)// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline  InlineClass(val x: Int) {
+    companion object {
+        val superHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+y-// Original bug: KT-28499
+// Duplicated bug: KT-35725
+
+inline class InlineClass(val x: Int) {
+    companion object {
+        valsuperHashCode = super.hashCode()
+//        val superToString = super.toString()  // the same for
+//        val superEquals = super.equals(Any()) // two others calls
+    }
+}
+ˇˇ

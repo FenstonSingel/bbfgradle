@@ -1,0 +1,680 @@
+¿iexportTaggdefaultnoriginalSamplex!
+typealias R<T: List<R>> = ListT
+gmutantsŸxV
+
+val q = true
+try
+{typealias R<T: List<R>> = ListT}
+catch(e: Exception){}
+finally{}
+
+x^
+typealias R<
+val u = true
+when (u) {
+ true -> {T: List<R>}
+ else -> {T: List<R>}
+}
+> = ListT
+xV
+typealias R<T: List<R>> = 
+val m = true
+try
+{ListT}
+catch(e: Exception){}
+finally{}
+
+xE
+typealias R<T: 
+val q = true
+if (q) {List} else {List}
+<R>> = ListT
+xU
+typealias R<T: List<
+val d = true
+when (d) {
+ true -> {R}
+ else -> {R}
+}
+>> = ListT
+x$
+typealias R<T: List<R>> = (ListT)?
+x$
+typealias R<T: (List<R>)?> = ListT
+x$
+typealias R<T: List<(R)?>> = ListT
+x!
+typealias R<T: List<R>> = ListT
+x!
+typealias R<T: ListR<>> = ListT
+x!
+typealias R<T: List<ListT>> = R
+x!
+typealias RRT: List<<>> = ListT
+x!
+typealias R<T: R<List>> = ListT
+x!
+typealias <<T: ListRR>> = ListT
+x!
+typealias R<T: List<R>> ListT =
+x!
+typealias R<=> T: List<R> ListT
+x!
+typealias R<>T: List<R> = ListT
+x!
+typealias =<T: List<R>> R ListT
+x!
+typealias R<T: ListT> = List<R>
+x!
+typealias R=T: List<R>> < ListT
+x!
+typealias R<T: List>R>< = ListT
+x!
+typealias R<TR List<:>> = ListT
+x!
+typealias R<T= List<R>> : ListT
+x!
+: R<Ttypealias List<R>> = ListT
+x!
+typealias R<T: ListT<R>> = List
+x!
+typealias R<ListT> = T: List<R>
+x!
+typealias R<T< List:R>> = ListT
+x!
+typealias R<T: List<R=> > ListT
+x!
+T: List<R> R<typealias> = ListT
+x!
+typealias R<T: List<>>R = ListT
+x!
+typealias R<T: >List<R> = ListT
+x!
+typealias <R><T: ListR> = ListT
+x!
+typealias List<R><T: R> = ListT
+x!
+typealias R<:T List<R>> = ListT
+x!
+< R<T: ListtypealiasR>> = ListT
+x!
+typealias R<T: <R>List> = ListT
+x!
+typealias ListT<T: List<R>> = R
+x!
+typealias R<T: => List<R> ListT
+x!
+ListT R<T: List<R>> = typealias
+x!
+typealias R<List<R>: T> = ListT
+x!
+<R> R<T: Listtypealias> = ListT
+x!
+typealias R<T: List<RListT> = >
+x!
+typealias R>T: List<R<> = ListT
+x!
+typealias R<T: List<>R> = ListT
+x!
+typealias RListTT: List<R>> = <
+x!
+typealias RList<R>T: <> = ListT
+x!
+typealias T: List<R><R> = ListT
+x!
+> R<T: List<R>typealias = ListT
+x!
+typealias R<T: ><R>List = ListT
+x!
+typealias R<T<R> List:> = ListT
+x!
+typealias R<List: T<R>> = ListT
+x!
+typealias R<T> List<R:> = ListT
+x!
+typealias R<T: List<=>> R ListT
+x!
+typealias R<T: ListListT> = <R>
+x!
+typealias R<T: ListListTR>> = <
+x!
+typealias R<T: List><R> = ListT
+x!
+typealias R<<R>: ListT> = ListT
+x!
+typealias R<>: List<R>T = ListT
+x!
+typealias R= <T: List<R>> ListT
+x!
+typealias R<ListT: List<R>> = T
+x!
+typealias R<R: List<T>> = ListT
+x!
+typealias T<R: List<R>> = ListT
+x!
+= R<T: List<R>> typealias ListT
+x!
+typealias RListT = <T: List<R>>
+x!
+List<R> R<T: typealias> = ListT
+x!
+R R<T: List<typealias>> = ListT
+x!
+typealias ><T: List<R>R = ListT
+x!
+typealias R<=: List<R>> T ListT
+x!
+typealias R<TListT List<R>> = :
+x!
+typealias R<T: =<R>> List ListT
+x!
+typealias R<T: List=> <R> ListT
+x!
+typealias R<T: ><RList> = ListT
+x!
+typealias R<T> List<R>: = ListT
+x!
+R typealias<T: List<R>> = ListT
+x!
+typealias <RT: List<R>> = ListT
+x!
+typealias R<T: <ListR>> = ListT
+x!
+typealias R<<: ListTR>> = ListT
+x!
+typealias R<T: List<R>= > ListT
+x!
+List R<T: typealias<R>> = ListT
+x!
+typealias R<TList<R> :> = ListT
+x!
+typealias RT<: List<R>> = ListT
+x!
+typealias R:T< List<R>> = ListT
+x!
+> R<T: List<Rtypealias> = ListT
+x!
+<T: List<R>> Rtypealias = ListT
+x!
+typealias ><T: List<RR> = ListT
+x!
+typealias RListT: <<R>> = ListT
+x!
+typealias R<TList :<R>> = ListT
+x!
+typealias <T: List<R>>R = ListT
+x!
+T R<typealias: List<R>> = ListT
+x!
+typealias List<T: R<R>> = ListT
+x!
+typealias R<T: List<R>ListT = >
+x!
+typealias R<T: List>R<> = ListT
+x!
+typealias R>T: List<R>< = ListT
+x!
+typealias R<T: List=R>> < ListT
+x!
+typealias R<R>T: List<> = ListT
+x
+typealias R<T: List<R>> = Int
+x$
+typealias R<T: List<UInt>> = ListT
+v
+typealias S = String
+x#
+typealias R<T: String<R>> = ListT
+x
+typealias R<T> = ListT
+x#
+typealias R<T: List<R>> = Boolean
+x 
+typealias R<T: String> = ListT
+x
+typealias R<T: OK<R>> = ListT
+x
+typealias R<T: M<R>> = ListT
+x!
+typealias R<T: List<R>> = UInt?
+x%
+typealias Float<T: List<R>> = ListT
+x#
+typealias R<T: List<Z1?>> = ListT
+x&
+typealias toByte<T: List<R>> = ListT
+x
+typealias R<T: Int> = ListT
+x!
+typealias R<T: List<R>> = toInt
+x&
+typealias R<T: List<String>> = ListT
+x"
+typealias R<T: List<R>> = String
+x#
+typealias R<T: List<Int>> = ListT
+x$
+typealias R<T: List<R>> = delegate
+x
+typealias R<T: A> = ListT
+x&
+typealias R<T: List<AsAny?>> = ListT
+x'
+typealias R<T: privateFun<R>> = ListT
+x
+typealias R<T: ok<R>> = ListT
+x
+typealias R<T: List<R>> = B
+x
+typealias R<T: z2<R>> = ListT
+x&
+typealias R<String: List<R>> = ListT
+x.
+typealias R<AssertionError: List<R>> = ListT
+x%
+typealias R<T: List<ULong>> = ListT
+x
+typealias R<T: List<R>> = d
+x#
+typealias R<T: List<R>> = arrayOf
+x!
+typealias R<T: Test<R>> = ListT
+q
+typealias A = O
+x"
+typealias R<T : IFoo<T>> = ListT
+x 
+typealias R<T: List<R>> = Long
+x-
+typealias R<T: String.() -> String> = ListT
+x!
+typealias R<T: List<*>> = ListT
+x
+typealias R<T: List<R>> = box
+x-
+typealias R<T: List<R>> = FunDependencyEdge
+x"
+typealias R<T: Inner<R>> = ListT
+x%
+typealias R<T: List<Outer>> = ListT
+x!
+typealias R<T: List<B>> = ListT
+x
+typealias OI = Outer.Inner
+x,
+typealias AddLastDesc<T> = AddLastDesc2<T>
+x!
+typealias R<A: List<R>> = ListT
+x,
+typealias R<T: (String) -> String> = ListT
+x&
+typealias value2<T: List<R>> = ListT
+x$
+typealias test<T: List<R>> = ListT
+x
+typealias R<T: List<R>> = map
+x#
+typealias ST<T> = Pair<String, T>
+x#
+typealias R<T: List<R>> = MINUS0F
+x!
+typealias R<T: List<C>> = ListT
+x%
+typealias R<T: List<IcInt>> = ListT
+x 
+typealias R<reified T> = ListT
+x
+typealias R<T: ULong> = ListT
+x$
+typealias R<T: List<size>> = ListT
+x
+typealias R<T: List<R>> = T
+q
+typealias B = A
+xD
+typealias R<T: List<UninitializedPropertyAccessException>> = ListT
+x!
+typealias A<T: List<R>> = ListT
+x+
+typealias R<T: List<SlashPlayer>> = ListT
+x
+typealias R<T: List<R>> = D
+x!
+typealias R<T: List<A>> = ListT
+x#
+typealias R<T: UIntArray> = ListT
+x#
+typealias Int<T: List<R>> = ListT
+x"
+typealias ArrayS = Array<String>
+x#
+typealias box<T: List<R>> = ListT
+x"
+typealias fn<T: List<R>> = ListT
+x(
+typealias Callback<T: List<R>> = ListT
+x(
+typealias R<T: List<Boolean?>> = ListT
+x!
+typealias R<T: List<T>> = ListT
+x!
+typealias R<T: List<R>> = until
+x$
+typealias R<T: List<Any?>> = ListT
+x#
+typealias R<T: List<Any>> = ListT
+x
+typealias R<T: List<R>> = V
+x
+typealias R<R> = ListT
+x
+typealias R<T: List<R>> = foo
+x%
+typealias StringCell = Cell<String>
+x#
+typealias R<Int: List<R>> = ListT
+x!
+typealias R<T: List<x>> = ListT
+x#
+typealias R<box: List<R>> = ListT
+x
+typealias R<T: List<R>> = el
+x
+typealias R<T: List<R>> = A
+x
+typealias R<T: Long> = ListT
+x#
+typealias Any<T: List<R>> = ListT
+x'
+typealias R<T: List<myArray>> = ListT
+x
+typealias R<T: s<R>> = ListT
+x
+typealias R<T: IFn> = ListT
+x 
+typealias R<T: List<R>> = plus
+x
+typealias R<T: t<R>> = ListT
+x
+typealias R<T: IFoo> = ListT
+x
+typealias R<T: List<R>> = x
+x 
+typealias R<T: List<R>> = bar0
+x$
+typealias R<T: List<Long>> = ListT
+x
+typealias R<E : T> = ListT
+x!
+typealias R<T: Byte<R>> = ListT
+x!
+typealias R<T: List<R>> = list2
+x$
+typealias R<bar3: List<R>> = ListT
+x 
+typealias R<T: Map<R>> = ListT
+x 
+typealias R<T: Int<R>> = ListT
+x 
+typealias R<T: Any<R>> = ListT
+x
+typealias R<T: A<R>> = ListT
+x"
+typealias R<T: List<t2>> = ListT
+x!
+typealias R<T: List<R>> = local
+x
+typealias R<T: i<R>> = ListT
+x&
+typealias R<T: List<Float?>> = ListT
+x"
+typealias R<T: MyString> = ListT
+x
+typealias R<T: List<R>> = L
+x
+typealias R<K, V> = ListT
+x&
+typealias String<T: List<R>> = ListT
+x
+typealias R<T: List<R>> = Box
+x$
+typealias R<T: Derived<R>> = ListT
+x#
+typealias R<T: List<ref>> = ListT
+x!
+typealias R<T : Number> = ListT
+x!
+typealias Z<T: List<R>> = ListT
+x"
+typealias R<T: List<a2>> = ListT
+x
+typealias R<out A> = ListT
+x
+typealias MyAlias = MyEnum
+x 
+typealias R<T: foo<R>> = ListT
+x
+typealias R<T: List<R>> = a
+x!
+typealias R<x: List<R>> = ListT
+x
+typealias R<T: List<R>> = Any
+x!
+typealias R<b: List<R>> = ListT
+x3
+typealias R<T: List<MutableList<String>>> = ListT
+x
+typealias R<K: Any> = ListT
+x&
+typealias R<T: List<Number>> = ListT
+x 
+typealias R<T: box<R>> = ListT
+x"
+typealias R<T: List<R>> = downTo
+x
+typealias R<T: C> = ListT
+x&
+typealias R<T: charRange<R>> = ListT
+x%
+typealias R<T: List<R>> = Exception
+x
+typealias R<T: Byte> = ListT
+x#
+typealias R<T: List<foo>> = ListT
+x'
+typealias R<T: List<String?>> = ListT
+x
+typealias R<T: nn<R>> = ListT
+x%
+typealias first<T: List<R>> = ListT
+x!
+typealias R<T: List<Y>> = ListT
+x
+typealias R<T: List<R>> = fz
+x,
+typealias R<T: List<arrayOfNulls>> = ListT
+x&
+typealias Nested<T: List<R>> = ListT
+x"
+typealias R<T: List<R>> = JClass
+x
+typealias R<T: S> = ListT
+x$
+typealias R<T: List<R>> = SCISSORS
+x!
+typealias R<T: Boolean> = ListT
+x)
+typealias KProperty<T: List<R>> = ListT
+x,
+typealias R<T: List<R>> = Array<in String>
+x%
+typealias R<T: List<count>> = ListT
+x$
+typealias R<T: List<R>> = fromBoth
+x
+typealias R<C : Any> = ListT
+x!
+typealias R<T: size<R>> = ListT
+x 
+typealias R<T: Double> = ListT
+x*
+typealias R<T: List<R>> = AssertionError
+x#
+typealias R<T: List<R>> = () -> T
+x$
+typealias R<T: List<K, V>> = ListT
+x
+typealias R<T: List<R>> = Foo
+x
+typealias R<X> = ListT
+x!
+typealias y<T: List<R>> = ListT
+x
+typealias R<T: List<R>> = i
+x#
+typealias R<T: List<R>> = String?
+u
+typealias Alias = C
+x%
+typealias R<value: List<R>> = ListT
+x,
+typealias R<T: List<A.() -> Unit>> = ListT
+x!
+typealias L<T: List<R>> = ListT
+x!
+typealias R<T: List<i>> = ListT
+x'
+typealias R<T: Comparable<T>> = ListT
+x!
+typealias R<T: List<R>> = test5
+x%
+typealias R<T: setValue<R>> = ListT
+x
+typealias Alias = A.Companion
+x
+typealias R<T: b<R>> = ListT
+x
+typealias R<T: a1<R>> = ListT
+x!
+typealias s<T: List<R>> = ListT
+x!
+typealias B<T: List<R>> = ListT
+x!
+typealias R<T: List<m>> = ListT
+x&
+typealias R<T: () -> String> = ListT
+x"
+typealias OHolderAlias = OHolder
+x%
+typealias R<list1: List<R>> = ListT
+x
+typealias R<in I> = ListT
+x
+typealias R<T: List<R>> = C
+x!
+typealias R<T: Stub<R>> = ListT
+x
+typealias R<T: List<R>> = D2
+x
+typealias R<T: List<R>> = a2
+x'
+typealias R<T: List<Nothing>> = ListT
+x#
+typealias msg<T: List<R>> = ListT
+x 
+typealias R<T: List<R>> = Name
+x'
+typealias R<T: Array<String>> = ListT
+x%
+typealias R<test2: List<R>> = ListT
+x#
+typealias Foo<T: List<R>> = ListT
+x%
+typealias R<T: List<Byte?>> = ListT
+x#
+typealias foo<T: List<R>> = ListT
+x&
+typealias BoolArray = Array<Boolean>
+x
+typealias R<T: T> = ListT
+x#
+typealias R<arr: List<R>> = ListT
+x&
+typealias result<T: List<R>> = ListT
+x 
+typealias R<T: Float?> = ListT
+x!
+typealias R<T: p043<R>> = ListT
+x
+typealias R<T: It> = ListT
+x!
+typealias R<T: List<R>> = list3
+x
+typealias R<T: List<R>> = b
+x-
+typealias R<T: RuntimeException<R>> = ListT
+x'
+typealias R<T: List<Boolean>> = ListT
+x$
+typealias Cell<T: List<R>> = ListT
+x"
+typealias R<T: ITest<R>> = ListT
+x!
+typealias t<T: List<R>> = ListT
+x!
+typealias r<T: List<R>> = ListT
+x
+typealias R<T: List<R>> = add
+x#
+typealias R<T: List<IFn>> = ListT
+x 
+typealias FooStr = Foo<String>
+x
+typealias R<T: x<R>> = ListT
+x
+typealias L<T> = List<T>
+x#
+typealias R<T: List<run>> = ListT
+x 
+typealias R<T: ListR>> = ListT
+x 
+typealias <T: List<R>> = ListT
+x 
+typealias R<: List<R>> = ListT
+x 
+typealias R<T: List<R>> =ListT
+x 
+typealias R<T: List<>> = ListT
+x 
+typealias R<T: List<R> = ListT
+x
+typealias R<T: <R>> = ListT
+w
+typealias R<> = ListT
+x 
+typealias R<T:List<R>> = ListT
+b
+
+x
+typealias R<T: List<R>> = 
+x
+ R<T: List<R>> = ListT
+x
+typealias R<T: List> = ListT
+x
+typealias R<T: > = ListT
+x 
+typealias RT: List<R>> = ListT
+x 
+typealiasR<T: List<R>> = ListT
+x typealias R<T: List<R>> = ListT
+u
+typealias R = ListT
+x 
+typealias R<T: List<R>> = ListTx 
+typealias R<T: List<R>>  ListT
+x 
+typealias R<T: List<R>>= ListT
+x 
+typealias R<T List<R>> = ListT
+ÿÿ

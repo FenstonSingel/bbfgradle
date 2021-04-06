@@ -1,0 +1,2987 @@
+¿iexportTaggdefaultnoriginalSamplex8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+gmutantsŸxo
+
+val x = true
+if (x) {class Foo(var bar: Int)} else {class Foo(var bar: Int)}
+
+val baz = Foo(TODO()
+)
+?.bar++
+xn
+class Foo(var bar: Int)
+
+val e = false
+try
+{val baz = Foo(TODO()
+)
+?.bar++}
+catch(e: Exception){}
+finally{}
+
+xf
+class Foo
+val r = true
+if (r) {(var bar: Int)} else {(var bar: Int)}
+
+val baz = Foo(TODO()
+)
+?.bar++
+xm
+class Foo(var bar: Int)
+val baz = 
+val o = true
+try
+{Foo(TODO()
+)
+?.bar++}
+catch(e: Exception){}
+finally{}
+
+x}
+class Foo(var bar: Int)
+val baz = 
+val i = true
+when (i) {
+ true -> {Foo(TODO()
+)
+?.bar}
+ else -> {Foo(TODO()
+)
+?.bar}
+}
+++
+xm
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar
+val m = true
+try
+{++}
+catch(e: Exception){}
+finally{}
+
+xe
+class Foo(
+val m = false
+if (m) {var bar: Int} else {var bar: Int}
+)
+val baz = Foo(TODO()
+)
+?.bar++
+xx
+class Foo(var bar: Int)
+val baz = 
+val p = false
+when (p) {
+ true -> {Foo(TODO()
+)}
+ else -> {Foo(TODO()
+)}
+}
+
+?.bar++
+xm
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.
+val r = true
+try
+{bar}
+catch(e: Exception){}
+finally{}
+++
+x\
+class Foo(var bar: Int)
+val baz = 
+val g = false
+if (g) {Foo} else {Foo}
+(TODO()
+)
+?.bar++
+xo
+class Foo(var bar: 
+val p = false
+when (p) {
+ true -> {Int}
+ else -> {Int}
+}
+)
+val baz = Foo(TODO()
+)
+?.bar++
+xr
+class Foo(var bar: Int)
+val baz = Foo(
+val v = false
+when (v) {
+ true -> {TODO()}
+ else -> {TODO()}
+}
+
+)
+?.bar++
+x]
+class Foo(var bar: Int)
+val baz = Foo(
+val u = false
+if (u) {TODO} else {TODO}
+()
+)
+?.bar++
+x;
+class Foo(var bar: (Int)?)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar--
+x<
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar.inc()
+x8
+class Foo(var bar: Int)
+val Foo(TODO()
+) = baz
+?.bar++
+x8
+class Foo(var bar: Int)
+( baz = Foo(TODOval)
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo++
+?.bar(TODO()
+)
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO++)
+)
+?.bar(
+x8
+class Foo(var bar: Int)
+val baz = Foobar
+?.(TODO()
+)++
+x8
+class Foobaz
+val (var bar: Int) = Foo(TODO()
+)
+?.bar++
+x8
+class Foo=var bar: Int)
+val baz ( Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val ++ = Foo(TODO()
+)
+?.barbaz
+x8
+()
+val baz = Foo(TODOclass Foo(var bar: Int)
+)
+?.bar++
+x8
+class Foo()
+val baz = Foo(TODO(var bar: Int)
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = (TODO()
+)Foo
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(?.
+)
+TODO()bar++
+x8
+( Foo(var bar: Int)
+val baz = Foo(TODOclass)
+)
+?.bar++
+x8
+class Foo(var bar: TODO())
+val baz = Foo(Int
+)
+?.bar++
+x8
+Int Foo(var bar: class)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO(++
+)
+?.bar)
+x8
+class Foo(
+val baz = Foo(var bar: Int)TODO()
+)
+?.bar++
+x8
+class Foo(var bar) Int:
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo=
+val baz (var bar: Int) Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var barFoo(TODO()
+)
+?.bar++ Int)
+val baz = :
+x8
+class FooFoo(TODO()
+)
+?.bar++
+val baz = (var bar: Int)
+x8
+class Foo(Foo(TODO()
+)
+?.bar)
+val baz = var bar: Int++
+x8
+class Foo(Foo bar: Int)
+val baz = var(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo()(TODO
+)
+?.bar++
+x8
+TODO() Foo(var bar: Int)
+val baz = Foo(class
+)
+?.bar++
+x8
+class Foo(var bar: ()
+val baz = Foo(TODOInt)
+)
+?.bar++
+x8
+( Fooclassvar bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class FooFoo(TODO()
+)
+?.bar
+val baz = (var bar: Int)++
+x8
+TODO Foo(var bar: Int)
+val baz = Foo(class()
+)
+?.bar++
+x8
+(TODO()
+)
+val baz = Fooclass Foo(var bar: Int)
+?.bar++
+x8
+class )(var bar: IntFoo
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+val
+class Foo(var bar: Int) baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo)
+val baz = Foo(TODO((var bar: Int)
+)
+?.bar++
+x8
+class Foo(var bar: Foo)
+val baz = Int(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODObar
+)
+?.()++
+x8
+class (Foovar bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var Int: bar)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Foo(TODO()
+)
+?.bar++)
+val baz = Int
+x8
+class Foo(var bar: Int)
+val Foo = baz(TODO()
+)
+?.bar++
+x8
+class Foo(var bar( Int)
+val baz = Foo:TODO()
+)
+?.bar++
+x8
+class Foo(var (TODO()
+): Int)
+val baz = Foobar
+?.bar++
+x8
+class Foo(var bar: =)
+val baz Int Foo(TODO()
+)
+?.bar++
+x8
+class Foo?.
+val baz = Foo(TODO()
+)
+(var bar: Int)bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(++
+)
+?.barTODO()
+x8
+class ((var bar: Int)
+val baz = FooFooTODO()
+)
+?.bar++
+x8
+class Foo(var ++: Int)
+val baz = Foo(TODO()
+)
+?.barbar
+x8
+class Foo(var bar: Int)
+val baz = bar
+?.Foo(TODO()
+)++
+x8
+class Foo() bar: Intvar
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: IntTODO()
+val baz = Foo()
+)
+?.bar++
+x8
+class Foo(var barTODO Int)
+val baz = Foo(:()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz ) Foo(TODO()
+=
+?.bar++
+x8
+class Foobar
+val baz = Foo(TODO()
+)
+?.(var bar: Int)++
+x8
+class Foo(var bar: ++)
+val baz = Foo(TODO()
+)
+?.barInt
+x8
+TODO
+val baz = Foo(class Foo(var bar: Int)()
+)
+?.bar++
+x8
+(
+val baz = Foo(TODOclass Foo(var bar: Int))
+)
+?.bar++
+x8
+class Foo(var bar: TODO)
+val baz = Foo(Int()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO++
+)
+?.bar()
+x8
+class Foo(var bar: Int)
+val baz = ?.(TODO()
+)
+Foobar++
+x8
+class Foo(: barvar Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(TODO() bar: Int)
+val baz = Foo(var
+)
+?.bar++
+x8
+class Foo(var bar: IntFoo
+val baz = )(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Foo(TODO()
+)
+?.bar)
+val baz = Int++
+x8
+?.
+val baz = Foo(TODO()
+)
+class Foo(var bar: Int)bar++
+x8
+class FooTODOvar bar: Int)
+val baz = Foo((()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = ()(TODOFoo
+)
+?.bar++
+x8
+class ((var bar: Int)
+val baz = Foo(TODOFoo)
+)
+?.bar++
+x8
+class Foo(
+val baz = Foo(TODO(var bar: Int))
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+Foo(TODO()
+)
+?.bar++ baz = val
+x8
+class Foo(var bar: Int)
+val baz Foo =(TODO()
+)
+?.bar++
+x8
+class FooIntvar bar: ()
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var TODO(): Int)
+val baz = Foo(bar
+)
+?.bar++
+x8
+class Fooval
+(var bar: Int) baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(bar
+)
+?.TODO()++
+x8
+class Foo(var bar: Int)
+val baz = ++(TODO()
+)
+?.barFoo
+x8
+class FooFoo
+val baz = (var bar: Int)(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int()
+val baz = Foo(TODO)
+)
+?.bar++
+x8
+class )(var bar: Int)
+val baz = Foo(TODO()
+Foo
+?.bar++
+x8
+class Foo(var bar: (TODO()
+))
+val baz = FooInt
+?.bar++
+x8
+class =(var bar: Int)
+val baz Foo Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(++()
+)
+?.barTODO
+x8
+class Foo(var bar: Int=
+val baz ) Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var (: Int)
+val baz = FoobarTODO()
+)
+?.bar++
+x8
+class Foo(val baz = Foo(TODO()
+)
+?.bar++)
+var bar: Int
+x8
+class Foo(var bar: )Int
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(bar()
+)
+?.TODO++
+x8
+class Foo(baz)
+val var bar: Int = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(TODO()
+)
+val baz = Foo(var bar: Int)
+?.bar++
+x8
+class Foo(TODO bar: Int)
+val baz = Foo(var()
+)
+?.bar++
+x8
+class Foo(var barval Int)
+: baz = Foo(TODO()
+)
+?.bar++
+x8
+class FooFoo(TODO()
+)var bar: Int)
+val baz = (
+?.bar++
+x8
+class FooFoo(TODO()
+)
+?.bar++var bar: Int)
+val baz = (
+x8
+class FooTODO()
+val baz = Foo((var bar: Int)
+)
+?.bar++
+x8
+class )(var bar: Int)
+val baz = Foo(TODO(Foo
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val TODO = Foo(baz()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(()TODO
+)
+?.bar++
+x8
+class Foo(var bar: ))
+val baz = Foo(TODO()
+Int
+?.bar++
+x8
+class Foo(var bar: Foo(TODO()
+))
+val baz = Int
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = ++Foo(TODO()
+)
+?.bar
+x8
+class Foo(var bar: ))
+val baz = Foo(TODO(Int
+)
+?.bar++
+x8
+class Foo(var bar) Int)
+val baz = Foo(TODO()
+:
+?.bar++
+x8
+class Fooval baz = Foo(TODO()
+)
+?.bar++
+(var bar: Int)
+x8
+class Foo(++ bar: Int)
+val baz = Foo(TODO()
+)
+?.barvar
+x8
+class FooFoo(TODO()
+)
+val baz = (var bar: Int)
+?.bar++
+x8
+class baz(var bar: Int)
+val Foo = Foo(TODO()
+)
+?.bar++
+x8
+++
+val baz = Foo(TODO()
+)
+?.barclass Foo(var bar: Int)
+x8
+Foo(TODO()
+)
+?.bar
+val baz = class Foo(var bar: Int)++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.++bar
+x8
+class Foo(baz bar: Int)
+val var = Foo(TODO()
+)
+?.bar++
+x8
+class (var bar: Int)Foo
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class var(Foo bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: ())
+val baz = Foo(TODOInt
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo()()
+TODO
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = bar(TODO()
+)
+?.Foo++
+x8
+TODO()
+val baz = Foo(class Foo(var bar: Int)
+)
+?.bar++
+x8
+class ()(var bar: Int)
+val baz = Foo(TODOFoo
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+Foo baz = val(TODO()
+)
+?.bar++
+x8
+class Foo(TODO())
+val baz = Foo(var bar: Int
+)
+?.bar++
+x8
+class Foo(bar)
+val baz = Foo(TODO()
+)
+?.var bar: Int++
+x8
+class Foo(var bar: Int)
+val baz = Foo((TODO)
+)
+?.bar++
+x8
+Foo(TODO()
+) Foo(var bar: Int)
+val baz = class
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo()
+TODO()
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = FoobarTODO()
+)
+?.(++
+x8
+class Foo(var bar: Int)
+val baz = Foo)TODO()
+(
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO(bar
+)
+?.)++
+x8
+class Foo(Foo(TODO()
+)
+?.bar++)
+val baz = var bar: Int
+x8
+class FooFoovar bar: Int)
+val baz = ((TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+bar?.++
+x8
+class Foo(var bar: Intbar
+val baz = Foo(TODO()
+)
+?.)++
+x8
+class Foo(var barbaz Int)
+val : = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = ++
+?.barFoo(TODO()
+)
+x8
+class Foo(var bar: Int)
+TODO() baz = Foo(val
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = )(TODO(Foo
+)
+?.bar++
+x8
+class Foo(var ?.: Int)
+val baz = Foo(TODO()
+)
+barbar++
+x8
+class Foo(Foo(TODO()
+)
+?.bar bar: Int)
+val baz = var++
+x8
+class Foo(var bar: Int)
+bar baz = Foo(TODO()
+)
+?.val++
+x8
+class Foo(var bar: Int)
+Foo(TODO()
+)
+?.bar baz = val++
+x8
+) Foo(var bar: Intclass
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foobazvar bar: Int)
+val ( = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+(TODO()
+) baz = Fooval
+?.bar++
+x8
+class Foo((TODO()
+) bar: Int)
+val baz = Foovar
+?.bar++
+x8
+class Foo(var bar: Int?.
+val baz = Foo(TODO()
+)
+)bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+?.
+)bar++
+x8
+class Foo(var bar: Int)
+val baz = TODO()(Foo
+)
+?.bar++
+x8
+class Foo(var Foo(TODO()
+)
+?.bar: Int)
+val baz = bar++
+x8
+class Foo(val bar: Int)
+var baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(Foo(TODO()
+) bar: Int)
+val baz = var
+?.bar++
+x8
+bar Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.class++
+x8
+class Foo()var bar: Int
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int(TODO()
+)
+val baz = Foo)
+?.bar++
+x8
+class Foo()var bar: Int)
+val baz = Foo(TODO(
+)
+?.bar++
+x8
+class Foo(var Foo(TODO()
+): Int)
+val baz = bar
+?.bar++
+x8
+) Foo(var bar: Int)
+val baz = Foo(TODO()
+class
+?.bar++
+x8
+class Foo(var bar: IntFoo(TODO()
+)
+val baz = )
+?.bar++
+x8
+class Foovar( bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+)
+val baz = Foo(TODO()
+class Foo(var bar: Int)
+?.bar++
+x8
+class Foo(var barInt :)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+() Foo(var bar: Int)
+val baz = Foo(TODOclass
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO(?.
+)
+)bar++
+x8
+Foo(TODO()
+)
+?.bar Foo(var bar: Int)
+val baz = class++
+x8
+class ++(var bar: Int)
+val baz = Foo(TODO()
+)
+?.barFoo
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODObar)
+)
+?.(++
+x8
+class Foo(var bar: val)
+Int baz = Foo(TODO()
+)
+?.bar++
+x8
+val Foo(var bar: Int)
+class baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz TODO() Foo(=
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val () = Foo(TODObaz
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+Foo(TODO()
+) baz = val
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz Foo(TODO()
+) =
+?.bar++
+x8
+class Foo(val)
+var bar: Int baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: ()
+val baz = FooIntTODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz (TODO()
+) Foo=
+?.bar++
+x8
+class Foo(var bar: Int)
+val Foo(TODO()
+)
+?.bar = baz++
+x8
+class Foo(var bar: bar)
+val baz = Foo(TODO()
+)
+?.Int++
+x8
+class Foo(var bar: Int)
+val ( = Foo(TODObaz)
+)
+?.bar++
+x8
+class Foo(var bar(TODO()
+) Int)
+val baz = Foo:
+?.bar++
+x8
+class Foo(var bar) Int)
+val baz = Foo(TODO(:
+)
+?.bar++
+x8
+class TODO(var bar: Int)
+val baz = Foo(Foo()
+)
+?.bar++
+x8
+class FooTODO
+val baz = Foo((var bar: Int)()
+)
+?.bar++
+x8
+class Int(var bar: Foo)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+Foo(TODO()
+)
+val baz = class Foo(var bar: Int)
+?.bar++
+x8
+class Foo(var ): Int)
+val baz = Foo(TODO()
+bar
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = FooTODO(()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz Foo(TODO()
+)
+?.bar++ =
+x8
+class Foo(var bar: Int)
+val baz = Foo++TODO()
+)
+?.bar(
+x8
+class Foo)var bar: Int)
+val baz = Foo(TODO()
+(
+?.bar++
+x8
+class FooFoo(TODO()
+)
+?.barvar bar: Int)
+val baz = (++
+x8
+class Foo(var bar: ?.)
+val baz = Foo(TODO()
+)
+Intbar++
+x8
+var bar: Int Foo(class)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+++ Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.barclass
+x8
+class TODO()(var bar: Int)
+val baz = Foo(Foo
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val ?. = Foo(TODO()
+)
+bazbar++
+x8
+class Foo:var bar( Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var barFoo Int)
+val baz = :(TODO()
+)
+?.bar++
+x8
+class Foo(Foo(TODO()
+)
+?.bar++ bar: Int)
+val baz = var
+x8
+class Foo(var bar: Int++
+val baz = Foo(TODO()
+)
+?.bar)
+x8
+class Foo(TODO)
+val baz = Foo(var bar: Int()
+)
+?.bar++
+x8
+class Foo)
+val baz = Foo(TODO()
+(var bar: Int)
+?.bar++
+x8
+class Foobarvar (: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var baz: Int)
+val bar = Foo(TODO()
+)
+?.bar++
+x8
+class Foo++var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar(
+x8
+class Foo(Int bar: var)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo++
+val baz = Foo(TODO()
+)
+?.bar(var bar: Int)
+x8
+val baz = Foo(TODO()
+)
+?.bar++ Foo(var bar: Int)
+class
+x8
+class Foo(var bar: Int)
+) baz = Foo(TODO(val
+)
+?.bar++
+x8
+class Foo(var ): Int)
+val baz = Foo(TODO(bar
+)
+?.bar++
+x8
+class Foo(()
+val baz = Foovar bar: IntTODO()
+)
+?.bar++
+x8
+(TODO()
+) Foo(var bar: Int)
+val baz = Fooclass
+?.bar++
+x8
+val baz = Foo(TODO()
+)
+?.bar++
+class Foo(var bar: Int)
+x8
+class :(var barFoo Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+?. Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+classbar++
+x8
+class FooTODO()var bar: Int)
+val baz = Foo((
+)
+?.bar++
+x8
+class Foo(TODO()
+)
+?.bar++(var bar: Int)
+val baz = Foo
+x8
+baz
+val class Foo(var bar: Int) = Foo(TODO()
+)
+?.bar++
+x8
+class Foobarvar bar: Int)
+val baz = Foo(TODO()
+)
+?.(++
+x8
+Foo(TODO()
+)
+?.bar++
+val baz = class Foo(var bar: Int)
+x8
+class Foo(var bar: Int)
+val baz = )(TODO()
+Foo
+?.bar++
+x8
+class var bar: Int(Foo)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+bar Foo(var class: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz ( Foo=TODO()
+)
+?.bar++
+x8
+(
+val baz = Fooclass Foo(var bar: Int)TODO()
+)
+?.bar++
+x8
+(var bar: Int) Fooclass
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+( Foo(var bar: Int)
+val baz = FooclassTODO()
+)
+?.bar++
+x8
+class Foo(var barFoo(TODO()
+)
+?.bar Int)
+val baz = :++
+x8
+class Foo(var bar: val baz = Foo(TODO()
+)
+?.bar++)
+Int
+x8
+class val baz = Foo(TODO()
+)
+?.bar++(var bar: Int)
+Foo
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+++bar?.
+x8
+class Foo(var bar: Int)
+val Foo(TODO()
+)
+?.bar++ = baz
+x8
+class Foo(var bar: Int)
+val TODO() = Foo(baz
+)
+?.bar++
+x8
+class Foo(TODO()
+)(var bar: Int)
+val baz = Foo
+?.bar++
+x8
+class Foo(var barTODO() Int)
+val baz = Foo(:
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO?.)
+)
+(bar++
+x8
+class Foo(var barbar Int)
+val baz = Foo(TODO()
+)
+?.:++
+x8
+: Foo(var barclass Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var Foo: Int)
+val baz = bar(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO)(
+)
+?.bar++
+x8
+class Foo(var bar: IntTODO
+val baz = Foo()()
+)
+?.bar++
+x8
+var Foo(class bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = FooImpl()
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar==
+x9
+class Foo(var bar: Base)
+val baz = Foo(TODO()
+)
+?.bar++
+xC
+class Foo(val value: String = "C")
+val baz = Foo(TODO()
+)
+?.bar++
+x=
+class Foo(var bar: Int)
+val baz = l.iterator()?.hasNext()++
+xG
+class Foo(var bar: Int)
+val baz = (0.toLong() as Number?)?.toByte()++
+x6
+class Foo(var bar: i)
+val baz = Foo(TODO()
+)
+?.bar++
+x9
+class Foo(var bar: Int)
+val baz = test(TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar+
+x,
+class Foo()
+val baz = Foo(TODO()
+)
+?.bar++
+x4
+class Foo(a32: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x4
+class Foo(a: Float)
+val baz = Foo(TODO()
+)
+?.bar++
+x*
+class Foo(var bar: Int)
+val baz = null!!
+x*
+class Foo(var bar: Int)
+val actual = f()
+x9
+class Foo(var bar: size)
+val baz = Foo(TODO()
+)
+?.bar++
+x<
+class Foo(var bar: Int)
+val baz = Foo(A("O", "K"))
+?.bar++
+x/
+class Foo(var bar: Int)
+val baz = a?.result++
+xB
+class Foo(val x1: T1, val x2: T2)
+val baz = Foo(TODO()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = Foo(s()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = hasNext()
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(foo(0)
+)
+?.bar++
+x6
+class Foo(var bar: a)
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: o)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class box(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x2
+class Foo(x: Any)
+val baz = Foo(TODO()
+)
+?.bar++
+xQ
+data class Test(val z1: Double, val z2: Double?)
+val baz = Foo(TODO()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = eq1(1, 1)
+?.bar++
+x?
+class Foo(var bar: Int)
+val baz = greater2(0.0, -0.0)
+?.bar++
+y Ë
+class Delegate<T>(var inner: T) {
+    operator fun getValue(t: Any?, p: KProperty<*>): T = inner
+    operator fun setValue(t: Any?, p: KProperty<*>, i: T) { inner = i }
+}
+val baz = Foo(TODO()
+)
+?.bar++
+x;
+class Foo(var logged: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(peek()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar!=
+x'
+class Foo(var bar: Int)
+val ok = "OK"
+x1
+class Foo(var bar: Int)
+val baz = Foo()
+?.bar++
+x2
+class Foo(a: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = y(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.baris
+xA
+class Foo(var bar: Int)
+val baz = Foo(Outer().Inner()
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.listOf++
+x6
+class Foo(var s: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val e = Foo(TODO()
+)
+?.bar++
+x3
+class Foo(var bar: Int)
+val baz = Foo(2
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = S(TODO()
+)
+?.bar++
+x.
+class Foo(var bar: Int)
+val baz = "K"?.f()++
+x0
+class Foo(var bar: Int)
+private var pr = S("")
+x;
+class Foo(var bar: String)
+val baz = Foo(TODO()
+)
+?.bar++
+x2
+class Foo((a, b))
+val baz = Foo(TODO()
+)
+?.bar++
+xC
+class Foo(val from : C, val to: C)
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: O)
+val baz = Foo(TODO()
+)
+?.bar++
+x(
+class Foo(var bar: Int)
+val baz = a4!!
+x>
+class Foo(p: Boolean = false)
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(val x: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x<
+class Foo(var bar: Boolean)
+val baz = Foo(TODO()
+)
+?.bar++
+x-
+class Foo(var bar: Int)
+val baz = Test?.a++
+x:
+class Foo(var bar: Int)
+val baz = Foo(-0.0, 0.0)
+?.bar++
+xb
+interface Z<T> {
+    fun test(p: T): T {
+        return p
+    }
+}
+val baz = Foo(TODO()
+)
+?.bar++
+x5
+class Foo(val z: T?)
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = Foo(null
+)
+?.bar++
+xF
+class Foo(var bar: Int)
+val baz = o?.let {
+        state = 1
+    }++
+x6
+class Foo(var A: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x2
+class Foo(var bar: Int)
+val baz = materializer!!
+x6
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.Z++
+x9
+class Foo(var bar: Int)
+val size = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var b: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.result++
+x2
+class Foo(var bar: Int)
+val baz = Foo(3)
+?.bar++
+x6
+class Foo(var bar: c)
+val baz = Foo(TODO()
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val baz = String(TODO()
+)
+?.bar++
+xC
+class Foo(var bar: Int)
+val baz = Foo(ArrayList<UInt>()
+)
+?.bar++
+x:
+class Foo(suffix: String)
+val baz = Foo(TODO()
+)
+?.bar++
+x:
+class Foo(var bar: Int)
+val baz = Outer(TODO()
+)
+?.bar++
+xA
+class Foo(var bar: Int)
+val baz = plusZero?.equals(minusZero)++
+x9
+class Foo(var bar: Int)
+val args = Foo(TODO()
+)
+?.bar++
+x>
+class Foo(var bar: A<T, Int>)
+val baz = Foo(TODO()
+)
+?.bar++
+x<
+class Foo(val prop: String)
+val baz = Foo(TODO()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = Foo(p()
+)
+?.bar++
+x@
+class Foo(var bar: Int)
+val arr = Array(4) { arrayOf("x$it") }
+xO
+class Foo(val a: Int = 0, val b: String = "a")
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = hashCode()
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.Int++
+x6
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.a++
+x6
+class Foo(var T: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x9
+class Foo(var bar: Int)
+val baz = Foo((::A)()
+)
+?.bar++
+x6
+class C(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x-
+class Foo(var bar: Int)
+var result = "fail"
+x:
+class Foo(val value: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x=
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.contents++
+x5
+class Foo(var bar: Int)
+val baz = toUByte()
+?.bar++
+x+
+class Foo(var bar: Int)
+val baz = prop4++
+x2
+class Foo(i: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var set: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x:
+class Foo(var bar: Int)
+val baz = Foo(toUInt()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = x(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = str(TODO()
+)
+?.bar++
+x+
+class Foo(var bar: Int)
+val result = "OK"
+x0
+class Foo(var bar: Int)
+val baz = A[1, 2, 3]++
+x6
+class u(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x>
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.ArrayList++
+x6
+class Foo(var bar: Int)
+val baz = T(TODO()
+)
+?.bar++
+xC
+class Foo(var bar: Int)
+val baz = Foo(A<Int>(arrayOf())
+)
+?.bar++
+x0
+class Foo(o: T)
+val baz = Foo(TODO()
+)
+?.bar++
+x1
+class Foo(var bar: Int)
+val baz = obj?.test()++
+x8
+class Int(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x9
+class Foo(var bar: Int)
+val baz = Foo(Outer()
+)
+?.bar++
+x6
+class l(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val baz = result(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.s++
+x8
+class Foo(var bar: Int)
+val baz = sum(TODO()
+)
+?.bar++
+xC
+class Foo(val code: String = "OK")
+val baz = Foo(TODO()
+)
+?.bar++
+x:
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.count++
+x+
+class Foo(var bar: Int)
+val baz = aByte--
+x9
+class Foo(var prop: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x,
+class Foo(var bar: Int)
+val baz = member!!
+x6
+class Foo(var bar: Int)
+val baz = a(TODO()
+)
+?.bar++
+y û
+class Delegate(val value: String) {
+    operator fun provideDelegate(instance: A, property: KProperty<*>): Delegate = Delegate(instance.value)
+    operator fun getValue(instance: Any?, property: KProperty<*>) = value
+}
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = box(TODO()
+)
+?.bar++
+xH
+class Foo(var bar: Int)
+val baz = Array(4) { arrayOf("x$it") }
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(Int()
+)
+?.bar++
+x$
+class Foo(var bar: Int)
+var s = ""
+x;
+class Foo(var String: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+xD
+class Foo(var bar: Int)
+val baz = myNotEquals0(0.0F, 0.0F)
+?.bar++
+x9
+class Foo(var Long: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x9
+class Foo(var bar: Long)
+val baz = Foo(TODO()
+)
+?.bar++
+x)
+class Foo(var bar: Int)
+val l = Local()
+x-
+class Foo(var bar: Int)
+val baz = counter++
+x>
+class Foo(var bar: Int)
+val baz = Foo("1", "3", "2")
+?.bar++
+x9
+class Foo(var bar: I32?)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val foo = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar+=
+x<
+class Foo(var bar: Int)
+val baz = Foo(-0.0F, 0.0F)
+?.bar++
+xj
+class Foo(
+        private val x: String,
+        private var y: Double
+)
+val baz = Foo(TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val ax = Foo(TODO()
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.String++
+x;
+class Foo(var bar: Int)
+val baz = Foo(toUByte()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = Foo("OK"
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = foo(TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar-
+xP
+inline class InlineNotNullReference(val a: Any)
+val baz = Foo(TODO()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = Foo(B()
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.aValue++
+xM
+class Foo(var bar: Int)
+val baz = getUserIdFromEnvironment(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.p++
+x%
+class Foo(var bar: Int)
+val Z = 0.0
+xF
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.NEGATIVE_INFINITY++
+x3
+class Foo(var bar: Int)
+val baz = Foo(x
+)
+?.bar++
+x-
+class Foo(i)
+val baz = Foo(TODO()
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val String = Foo(TODO()
+)
+?.bar++
+xC
+class Foo(numberArg: Number = 0.0)
+val baz = Foo(TODO()
+)
+?.bar++
+xL
+class Foo(var bar: Int)
+val my: String = "O"
+    get() = { field }() + "K"
+x6
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.A++
+x'
+class Foo(var bar: Int)
+val baz = p!!
+x9
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.UInt++
+x7
+class uc(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x,
+class Foo(var bar: Int)
+val f = E::valueOf
+x>
+class Foo(val a: Foo<String>)
+val baz = Foo(TODO()
+)
+?.bar++
+x;
+class Foo(var kotlin: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x1
+class Foo(value)
+val baz = Foo(TODO()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = Foo(A()
+)
+?.bar++
+x*
+class Foo(var bar: Int)
+val baz = l[0]--
+x4
+class Foo(other: B)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.barin
+xA
+class Foo(var bar: Int)
+val baz = Foo(testLongArray()
+)
+?.bar++
+xB
+class Foo(val from: C, val to: C)
+val baz = Foo(TODO()
+)
+?.bar++
+x1
+class Foo(var bar: Int)
+val baz = foo()
+?.bar++
+x8
+class Foo(var bar: Int)
+val box = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = Foo(true
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val a = Foo(TODO()
+)
+?.bar++
+x;
+class Foo(var result: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+xJ
+class Foo(var bar: Int)
+val baz = Foo("Should be executed once")
+?.bar++
+x9
+class Foo(var bar: Int)
+val baz = Foo(Bar.ONE
+)
+?.bar++
+x?
+open class B : A<String>() {
+}
+val baz = Foo(TODO()
+)
+?.bar++
+x;
+class String(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = maxBy { it }
+?.bar++
+x<
+class Foo(val default: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.T++
+x<
+class Foo(var bar: Int)
+val baz = Foo(Delegate()
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val baz = Foo(arrayOf()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(Foo()
+)
+?.bar++
+x6
+class Foo(value: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = l[0]?.plus("K")++
+x:
+class Foo(var bar: Long?)
+val baz = Foo(TODO()
+)
+?.bar++
+x9
+class Foo(val p: String)
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.x++
+x<
+class Foo(var bar: Int)
+val toUByte = Foo(TODO()
+)
+?.bar++
+x_
+class Foo(var bar: Int)
+val baz = x?.myLet {
+        takeUInt(it)
+        takeUInt(x)
+    }++
+x8
+class Foo(var bar: Int)
+val baz = testR1xE23()
+?.bar++
+x:
+class Foo(var bar: Int)
+val baz = list5(TODO()
+)
+?.bar++
+x4
+class Foo(var bar: Int)
+val baz = toChar()
+?.bar++
+x6
+class Foo(var i: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var box: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = add(TODO()
+)
+?.bar++
+x>
+class Foo(x: Double, y: Long)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar?:
+x>
+class Foo(var bar: Int)
+val baz = Foo(ne(ONEL, 1L)
+)
+?.bar++
+xH
+class Foo(var bar: Int)
+val baz = Foo(myNotEquals1(0.0, 0.0)
+)
+?.bar++
+x7
+class Foo(key: String)
+val baz = Foo(TODO()
+)
+?.bar++
+xF
+class Foo(var bar: Int)
+val baz = Outer(null).Inner().fn?.invoke()++
+xD
+class Foo(var bar: Int)
+val baz = Foo(f(Outer().Inner())
+)
+?.bar++
+xh
+enum class A {
+    ONE,
+    TWO;
+
+    operator fun invoke(i: Int) = i
+}
+val baz = Foo(TODO()
+)
+?.bar++
+x(
+class Foo(var bar: Int)
+val baz = a6!!
+x0
+class Foo(p: T)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var get: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+xI
+class Foo(var bar: Int)
+val baz = Foo(arrayOfNulls<String>(0)
+)
+?.bar++
+x@
+class Foo(var bar: Int)
+val baz = (f() as? Inv<T>)?.result()++
+xC
+class Foo(var AssertionError: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = (x as? Bar)?.bar()++
+xl
+abstract class Your {
+    abstract val your: String
+
+    fun foo() = your
+}
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(f: () -> T)
+val baz = Foo(TODO()
+)
+?.bar++
+xA
+class Foo(var bar: Int)
+val baz = Foo("abc", "de", "f")
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.sum++
+x=
+class contains(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = z(TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val list2 = ArrayList<UInt>()
+x8
+class Foo(val int: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x?
+class Foo(private val i: UInt)
+val baz = Foo(TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(A(42)
+)
+?.bar++
+x=
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.getValue++
+x0
+class Foo(var bar: Int)
+val l = ArrayList<C>()
+xF
+class Foo(var bar: Int)
+val baz = Foo(forceContains("cde")
+)
+?.bar++
+xb
+class Foo(
+        var state : Int,
+        val f : (Int) -> Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x'
+class Foo(var bar: Int)
+val baz = i++
+x?
+class Foo(var bar: Int)
+val range2 = 3.toUByte()..5.toUByte()
+x8
+class Foo(var bar: Int)
+val Foo = Foo(TODO()
+)
+?.bar++
+x4
+class Foo(var bar: Int)
+val baz = (null as Int?)!!
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.res++
+xB
+class Foo(var bar: Int)
+val baz = Foo(AssertionError()
+)
+?.bar++
+xx
+class Foo(
+    private val position: Int,
+    private val uIntValue: KProperty0<UInt>
+)
+val baz = Foo(TODO()
+)
+?.bar++
+x:
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.list2++
+x9
+class Foo(var bar: Int)
+val baz = Foo(B("OK")
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.value2++
+xI
+class Foo(var bar: Int)
+val baz = Foo(MyArrayList<MyNumber>()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val Int = Foo(TODO()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = Foo(C()
+)
+?.bar++
+x4
+class Foo(var bar: Int)
+val baz = Foo(to
+)
+?.bar++
+x'
+class Foo(var bar: Int)
+var inner = 1
+x9
+class Foo(var lazy: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x3
+class Foo(var bar: Int)
+val minusZero: Any = -0.0
+x;
+class Foo(var bar: Int)
+val baz = string(TODO()
+)
+?.bar++
+xL
+class Foo(init_o: I, private val init_k: I)
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var a: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val s = Foo(TODO()
+)
+?.bar++
+x/
+class Foo(var bar: Int)
+val baz = x()
+?.bar++
+x@
+class Foo(val fn: () -> String)
+val baz = Foo(TODO()
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val baz = logged(TODO()
+)
+?.bar++
+x/
+class Foo(var bar: Int)
+val baz = s?.length++
+x<
+class Derived(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.Double++
+xD
+interface A {
+    fun foo(): Any?
+}
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = j(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = null?.toString()++
+x'
+class Foo(var bar: Int)
+val foo = Foo
+x:
+class Foo(var bar: Int)
+val baz = Foo(String()
+)
+?.bar++
+x9
+class Foo(var flip: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x:
+class Foo(var bar: Int)
+val baz = Foo(result()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = it(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Int(TODO()
+)
+?.bar++
+x:
+class Foo(var bar: Int)
+val Array = Foo(TODO()
+)
+?.bar++
+x3
+class Foo(var bar: Int)
+val baz = Foo(16)
+?.bar++
+xZ
+class Foo(var bar: Int)
+override val baseProp: String
+        get() = "Derived.baseProp"
+x+
+class Foo(var bar: Int)
+val baz = state++
+x8
+class Foo(var bar: Int)
+val baz = get(TODO()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = Foo("OK")
+?.bar++
+x/
+class Foo(var bar: Int)
+val baz = s?.get(0)++
+x6
+class Foo(var bar: Int)
+val A = Foo(TODO()
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val baz = Double(TODO()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(eqIF()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(foo()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = C(TODO()
+)
+?.bar++
+x;
+class Foo(var bar: Int)
+val Nested = Foo(TODO()
+)
+?.bar++
+x=
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.iterator++
+x4
+class Foo(value: V)
+val baz = Foo(TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.nn++
+x4
+class Foo(var bar: Int)
+val baz = Foo(42
+)
+?.bar++
+xE
+class Foo(var bar: Int)
+val baz = getShape()?.getShape2()?.result++
+x<
+class Foo(var bar: Int)
+val baz = Boolean(TODO()
+)
+?.bar++
+x9
+class Foo(var bar: Int)
+val body = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = Foo(Z(42))
+?.bar++
+x7
+class Foo(fn: () -> T)
+val baz = Foo(TODO()
+)
+?.bar++
+x;
+class Foo(var listOf: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x+
+class Foo(var bar: Int)
+val baz = c2?.x++
+x3
+class Foo(var bar: Int)
+val baz = plus(t)
+?.bar++
+x;
+class Foo(var bar: Int)
+val baz = range0(TODO()
+)
+?.bar++
+x1
+class Foo(var bar: Int)
+val baz = a?.plus(10)++
+x'
+class Foo(var bar: Int)
+val a = A(42)
+x4
+class Foo(var bar: Int)
+val baz = Foo(4u
+)
+?.bar++
+x9
+class Foo(val s: String)
+val baz = Foo(TODO()
+)
+?.bar++
+x@
+open class B : A<Int, Number>()
+val baz = Foo(TODO()
+)
+?.bar++
+x:
+class Foo(var bar: Int)
+val baz = Foo(add("2")
+)
+?.bar++
+x<
+class Foo(var rangeTo: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x3
+class Foo(var bar: Int)
+val baz = ONE(42)
+?.bar++
+x=
+class Foo(operation: String)
+val baz = Foo(TODO()
+)
+?.bar++
+x3
+class Foo(var bar: Int)
+val baz = Foo(b
+)
+?.bar++
+x:
+class Foo(var bar: Int)
+val aByte = arrayListOf<Byte>(1)
+x5
+class Foo(var bar: Int)
+val baz = Foo(x()
+)
+?.bar++
+y þ
+// !LANGUAGE: +ProperIeee754Comparisons
+class C {
+    operator fun Int.compareTo(c: Char) = 0
+
+    fun foo(x: Int, y: Char): String {
+        if (x < y) {
+            throw Error()
+        }
+        return "${y}K"
+    }
+}
+val baz = Foo(TODO()
+)
+?.bar++
+xI
+class Foo(var bar: Int)
+val baz = Foo({ line: String -> line })
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar*
+x6
+class Foo(var bar: Int)
+val baz = "123456"?.get(0)!!
+x>
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.KProperty++
+x-
+class Foo(var bar: Int)
+val baz = player2!!
+x7
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar=
+x7
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.It++
+x3
+class Foo(var bar: Int)
+val baz = Foo(0
+)
+?.bar++
+x9
+class Foo(var bar: Int)
+val baz = Foo(local()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = Foo(bar
+)
+?.bar++
+x4
+class Foo(var bar: Int)
+val baz = ok.getOrNull()!!
+x6
+class Foo(val u: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x=
+class Foo(var bar: Int)
+val baz = Foo(getLength()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = Foo(D()
+)
+?.bar++
+x8
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.get++
+x6
+class a(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz= Foo(TODO()
+)
+?.bar++
+x/
+class Foo(var bar: Int)
+val baz = Foo
+?.bar++
+x3
+ Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x*
+class Foo
+val baz = Foo(TODO()
+)
+?.bar++
+x!
+
+val baz = Foo(TODO()
+)
+?.bar++
+x4
+class Foo(var bar: Int)
+val baz = Foo(()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz  Foo(TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int)val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar
+x,
+class Foo(var bar: Int)
+val baz = 
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++x5
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.++
+x5
+class (var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val  = Foo(TODO()
+)
+?.bar++
+x7
+class Foo(var bar Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x5
+class Foo(var bar: )
+val baz = Foo(TODO()
+)
+?.bar++
+x5
+class Foo(var : Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x
+class Foo(var bar: Int)
+
+x7
+class Foo(var bar: Int)
+val baz = Foo(TODO(
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(TODO)
+)
+?.bar++
+x&
+class Foo(var bar: Int)
+val baz = ++
+x6
+class Foo(var bar: Int)
+val baz = Foo(TODO
+)
+?.bar++
+x2
+class Foo(var bar: Int)
+val baz = Foo(
+)
+?.bar++
+x7class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x7
+class Foo(var bar:Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)?.bar++
+x7
+classFoo(var bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+
+?.bar++
+x5
+class Foo(var bar: Int)
+ baz = Foo(TODO()
+)
+?.bar++
+x7
+class Foovar bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = Foo(TODO())
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz =Foo(TODO()
+)
+?.bar++
+x5
+class Foo(var bar: Int)
+val baz = (TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int)
+val baz = FooTODO()
+)
+?.bar++
+x7
+class Foo(varbar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x6
+class Foo(var bar: Int)
+val baz = Foo(TODO()
+)
+bar++
+x7
+class Foo(var bar: Int)
+valbaz = Foo(TODO()
+)
+?.bar++
+x5
+class Foo( bar: Int)
+val baz = Foo(TODO()
+)
+?.bar++
+x7
+class Foo(var bar: Int
+val baz = Foo(TODO()
+)
+?.bar++
+x$
+class Foo(var bar: Int)
+val baz = 
+ÿÿ

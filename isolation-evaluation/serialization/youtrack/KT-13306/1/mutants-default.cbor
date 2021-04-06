@@ -1,0 +1,10057 @@
+øiexportTaggdefaultnoriginalSampley// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+gmutantsüy// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+
+val c = false
+when (c) {
+ true -> {class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}}
+ else -> {class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}}
+}
+
+yM// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    
+val g = false
+when (g) {
+ true -> {fun outString() = ""}
+ else -> {fun outString() = ""}
+}
+
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y÷// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    
+val c = false
+when (c) {
+ true -> {fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }}
+ else -> {fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }}
+}
+
+}
+y;// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = 
+val z = false
+try
+{""}
+catch(e: Exception){}
+finally{}
+
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y«// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() 
+val e = true
+when (e) {
+ true -> {{
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }}
+ else -> {{
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }}
+}
+
+}
+y:// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        
+val u = true
+try
+{"abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }}
+catch(e: Exception){}
+finally{}
+
+    }
+}
+y*// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        
+val l = true
+if (l) {"abc"} else {"abc"}
+.let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y;// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".
+val v = false
+try
+{let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }}
+catch(e: Exception){}
+finally{}
+
+    }
+}
+y<// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".
+val n = false
+when (n) {
+ true -> {let}
+ else -> {let}
+}
+ {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+yö// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let 
+val o = true
+if (o) {{
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }} else {{
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }}
+
+    }
+}
+y≠// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let 
+val d = true
+when (d) {
+ true -> {{
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }}
+ else -> {{
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }}
+}
+
+    }
+}
+y:// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            
+val v = true
+try
+{class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()}
+catch(e: Exception){}
+finally{}
+
+        }
+    }
+}
+y:// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            
+val z = true
+try
+{class LocalLocal {
+                val v = outString()
+            }}
+catch(e: Exception){}
+finally{}
+
+            LocalLocal()
+        }
+    }
+}
+y1// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            
+val l = true
+if (l) {LocalLocal()} else {LocalLocal()}
+
+        }
+    }
+}
+y0// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            
+val l = false
+if (l) {LocalLocal} else {LocalLocal}
+()
+        }
+    }
+}
+y:// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                
+val p = true
+try
+{val v = outString()}
+catch(e: Exception){}
+finally{}
+
+            }
+            LocalLocal()
+        }
+    }
+}
+y:// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = 
+val e = true
+try
+{outString()}
+catch(e: Exception){}
+finally{}
+
+            }
+            LocalLocal()
+        }
+    }
+}
+yB// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = 
+val t = false
+when (t) {
+ true -> {outString}
+ else -> {outString}
+}
+()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal!!()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()!!
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() )
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal({
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    fun outString() = ""
+    fun crashMe() {
+        {
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal v
+                val { = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outStringLocalLocal()
+            }
+            ()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun (() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocalcrashMe)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString"" = ()
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc"{let .
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun }() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    crashMe
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 LocalLocal
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class { {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".( {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocallet)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        {.let "abc"
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "{".let {
+            class LocalLocal abc
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".} {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    let
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class fun {
+    CrashMe2 outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString(val v = outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                )
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "let".abc {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString(abc = ""
+    fun crashMe() {
+        ")".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        ).let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal("abc"
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = }"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        "
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".) {
+            class LocalLocal {
+                val v = outString(let
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()() = ""
+    fun crashMe() {
+        "abc".let {
+            outString
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            }
+        LocalLocal()
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        ")".let {
+            class LocalLocal {
+                val v = outString(abc
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            }()
+        }
+    }
+LocalLocal
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".LocalLocal {
+            class let {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    LocalLocal
+    fun crashMe() {
+        "abc".let {
+            class fun outString() = "" {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outStringLocalLocal = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            ()()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    fun outString() = ""
+    fun crashMe() {
+        "abc".{
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+v CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val class = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMeLocalLocal) {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            (()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+    "
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+) CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal(class
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+} CrashMe2
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    fun crashMe() {
+        "abc".fun outString() = ""
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class = {
+                val v LocalLocal outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe(() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun outString() {
+        "abc".let {
+            class LocalLocal {
+                val v = crashMe()
+            }
+            LocalLocal()
+        }
+    }
+}
+y{
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+// Duplicated bug: KT-13306
+
+class CrashMe2 // Original bug: KT-23425
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString(()
+            }
+            LocalLocal)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString"abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        } = ""
+    fun crashMe() {
+        ()
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 fun outString() = ""
+    {
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = )
+            }
+            LocalLocal(outString()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class crashMe {
+    fun outString() = ""
+    fun CrashMe2() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+                val v = outString()
+            }
+        "abc".let {
+            class LocalLocal {
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            val v = outString() LocalLocal {
+                class
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    ) outString(fun = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe(val {
+        "abc".let {
+            class LocalLocal {
+                ) v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    fun crashMe() {
+        "abc".let ""
+    }
+}
+yclass CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+// Duplicated bug: KT-13306
+
+// Original bug: KT-23425
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc"class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()let {
+            .
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        } crashMe() {
+        fun
+    }
+}
+youtString()
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = // Original bug: KT-23425
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "{
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+    fun crashMe() "
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class } {
+                val v = outString()
+            LocalLocal
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = }
+            outString()
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString"abc") = ""
+    fun crashMe() {
+        (.let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    " outString() = fun"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString) = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal(()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outStringfun) = ""
+    ( crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+
+// Duplicated bug: KT-13306
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""abc"
+    fun crashMe() {
+        ".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun }() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+crashMe
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val } = outString()
+            }
+            LocalLocal()
+        }
+    }
+v
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = {"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal "
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        let."abc" {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = }()
+            }
+            LocalLocal()
+        }
+    }
+outString
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class v {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val CrashMe2 = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 class
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            { LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() (
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal{)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    (
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outStringfun outString() = "")
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+" CrashMe2 {
+    fun outString() = "class
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    crashMe outString() = ""
+    fun fun() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe{
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }) {
+        "abc".let (
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun ()() = ""
+    fun crashMeoutString {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+class
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            // Duplicated bug: KT-13306 LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe} {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        ()
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() outString
+        "abc".let {
+            class LocalLocal {
+                val v = {()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v ) outString(=
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    outString outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = fun()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    = outString() fun ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "v".let {
+            class LocalLocal {
+                val abc = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v } outString()
+            }
+            LocalLocal()
+        }
+    }
+=
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }() {
+        "abc".crashMe
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe{ ()
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "}".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        abc
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe(class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal() {
+        "abc".let {
+            )
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v LocalLocal() outString()
+            }
+            =
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+    ""
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            LocalLocal LocalLocal {
+                val v = outString()
+            }
+            class()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    class LocalLocal {
+                val v = outString()
+            }
+    fun crashMe() {
+        "abc".let {
+            fun outString() = ""
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = ()
+            }
+            LocalLocaloutString()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    LocalLocal() crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            fun
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class . {
+    fun outString() = ""
+    fun crashMe() {
+        "abc"CrashMe2let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() outString() ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = =
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }abc"."
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "{
+    fun crashMe() "
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            (LocalLocal)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal val
+                { v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y"abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        // Original bug: KT-23425
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        }.let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        "abc"
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let }
+    {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+{
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+} CrashMe2 class
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc().let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal"
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+LocalLocal() CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            class
+        }
+    }
+}
+y// Original bug: KT-23425
+v
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val // Duplicated bug: KT-13306 = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v ( outString()
+            }
+            LocalLocal=)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            () LocalLocal {
+                val v = outString()
+            }
+            LocalLocalclass
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMeval) {
+        "abc".let {
+            class LocalLocal {
+                ( v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outStringfun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    } = ""
+    ()
+}
+y// Original bug: KT-23425
+{
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() // Duplicated bug: KT-13306
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }() {
+        crashMe
+    }
+}
+y// Original bug: KT-23425
+let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".// Duplicated bug: KT-13306
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        } outString() = ""
+    fun crashMe() {
+        "abc".let fun
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe(class {
+        "abc".let {
+            ) LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+.
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc"// Duplicated bug: KT-13306let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "()
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal"
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+crashMe CrashMe2 {
+    fun outString() = ""
+    fun class() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal(}
+        }
+    )
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 "
+    fun outString() = "{
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun ()() {
+        "abc".let {
+            class LocalLocal {
+                val v = outStringcrashMe
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".{
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        } let
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() =
+        "abc".let {
+            class LocalLocal {
+                val v { outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outStringLocalLocal())
+            }
+            (
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+= CrashMe2 {
+    fun outString() class ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y()
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString// Original bug: KT-23425
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = )"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal("
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+= CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v class outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "{
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }".let abc
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() ()
+        "abc".let {
+            class LocalLocal {
+                val v = outString{
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe(( {
+        "abc".let {
+            class LocalLocal {
+                val v = outString))
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let outString()
+            class LocalLocal {
+                val v = {
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun LocalLocal() {
+        "abc".let {
+            class crashMe {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "abc""
+    fun crashMe() {
+        ".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString(( = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString))
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outStringfun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }) = ""
+    (
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "
+    fun crashMe() {
+        ""abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal() ""
+    fun crashMe() {
+        "abc".let {
+            =
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".val v = outString() {
+            class LocalLocal {
+                let
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc"vallet {
+            class LocalLocal {
+                . v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe("abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        } {
+        )
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe{
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        } {
+        "abc".let ()
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class () {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outStringCrashMe2
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+""
+
+class CrashMe2 {
+    fun outString() = // Duplicated bug: KT-13306
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class val {
+                LocalLocal v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal }
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+{
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 fun
+    { outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() let
+        "abc".{ {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v ( outString=)
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        val.let {
+            class LocalLocal {
+                "abc" v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+    fun outString() = ""
+    fun crashMe() {
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMelet) {
+        "abc".( {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class ( {
+                val v = outStringLocalLocal)
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    {
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal fun outString() = ""
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe(outString {
+        "abc".let {
+            class LocalLocal {
+                val v = )()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+"abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        // Duplicated bug: KT-13306
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    "abc" crashMe() {
+        fun.let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString(LocalLocal
+            }
+            )()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString}) = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+(
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "outString()".let {
+            class LocalLocal {
+                val v = abc
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+"
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc// Duplicated bug: KT-13306.let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMeclass LocalLocal {
+                val v = outString()
+            } {
+        "abc".let {
+            ()
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMelet {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        } {
+        "abc".()
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = abc
+    fun crashMe() {
+        """".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = v
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val "" = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    fun crashMe() {
+        "abc".let fun outString() = ""
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    ( outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocalfun)
+        }
+    }
+}
+y()
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal// Original bug: KT-23425
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".outString {
+            class LocalLocal {
+                val v = let()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "outString".let {
+            class LocalLocal {
+                val v = abc()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() LocalLocal() ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            =
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = }"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+"
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString)( = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    " crashMe() {
+        funabc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal().let {
+            "abc"
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outStringlet = ""
+    fun crashMe() {
+        "abc".() {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outStringclass LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()) = ""
+    fun crashMe() {
+        "abc".let {
+            (
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        }
+    }
+"abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            }()
+        LocalLocal
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+    fun crashMe() {
+        "abc".let {
+            "
+        }
+    }
+}
+y{
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() // Original bug: KT-23425
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    () crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocalfun
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outStringoutString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = ()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "class
+    fun crashMe() {
+        "abc".let {
+            " LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+    fun outString() = ""
+}
+y// Original bug: KT-23425
+{
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+
+class CrashMe2 // Duplicated bug: KT-13306
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    outString crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = fun()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal)(
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() } ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            =
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal() {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            CrashMe2
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    .
+    fun crashMe() {
+        "abc"fun outString() = ""let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 }
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            {
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".LocalLocal {
+            class LocalLocal {
+                val v = outString()
+            }
+            let()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = (
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal"")
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun )() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString(crashMe
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".() {
+            class LocalLocal {
+                val v = outStringlet
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe(" {
+        )abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+yclass
+// Duplicated bug: KT-13306
+
+// Original bug: KT-23425 CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal() {
+            let
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+    fun crashMe() {
+        "abc".let {
+            ""
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    (
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocalfun outString() = "")
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal (
+            LocalLocal{
+                val v = outString()
+            })
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal val v = outString()
+                {
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc().let {
+            class LocalLocal {
+                val v = outString"
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class { LocalLocal
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString(} = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    )
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abcv.let {
+            class LocalLocal {
+                val " = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+    fun outString() = ""
+    {
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outStringval) = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                ( v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    val v = outString()
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                fun outString() = ""
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 outString
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = {()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = )()
+            }
+            LocalLocal(outString
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()".let {
+            abc
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    } outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+fun
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() v ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val = = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        }
+    "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe} {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            ()
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            }
+        class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abcLocalLocal.let {
+            class LocalLocal {
+                val v = outString()
+            }
+            "()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+( CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outStringclass)
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = )
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal(""
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        } {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".CrashMe2
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    outString() outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = fun
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".class {
+            let LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        } ""
+    fun crashMe() {
+        "abc".let =
+    }
+}
+y(
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe// Original bug: KT-23425) {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun (() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outStringoutString)
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 outString
+    fun {() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            ()
+            LocalLocalclass LocalLocal {
+                val v = outString()
+            }
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abcclass.let {
+            " LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    } {
+    fun outString() = ""
+    CrashMe2
+}
+y// Original bug: KT-23425
+"
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        // Duplicated bug: KT-13306abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    v outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val fun = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 }
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    {
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString{ = ""
+    fun crashMe() {
+        "abc".let ()
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val outString = v()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun (() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocaloutString)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    ()
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocalfun outString() = ""
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() { ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal =
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class outString {
+                val v = LocalLocal()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }() = ""
+    outString
+}
+y// Original bug: KT-23425
+}
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+// Duplicated bug: KT-13306
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+    fun crashMe() ""
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() class LocalLocal {
+                val v = outString()
+            }
+        "abc".let {
+            {
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 val
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                { v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+yclass LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            // Original bug: KT-23425
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "{
+                val v = outString()
+            }".let {
+            class LocalLocal abc
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ()"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString"
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let }
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    {
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun class() {
+        "abc".let {
+            crashMe LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+yfun
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    // Original bug: KT-23425 crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString= () ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe({ {
+        "abc".let {
+            class LocalLocal )
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abcoutString.let {
+            class LocalLocal {
+                val v = "()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = }"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    "
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun {() {
+        "abc".let crashMe
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                )
+            }
+            LocalLocal(val v = outString()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString()() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    outString
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = fun outString() = ""()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let }
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        {
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe(LocalLocal {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            )()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun "() = outString"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "LocalLocal
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            "()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class val {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                CrashMe2 v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal ()
+                val v = outString()
+            }
+            LocalLocal{
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+} CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            class
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+)
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal(// Duplicated bug: KT-13306
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal )
+                val v = outString()
+            }
+            LocalLocal({
+        }
+    }
+}
+y}
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+// Original bug: KT-23425
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }abc".let "
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString({ = ""
+    fun crashMe() )
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    () outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocalfun
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString}) = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            (
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe(let {
+        "abc".) {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun abc() {
+        "crashMe".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    }
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    fun outString() = ""
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = let"
+    fun crashMe() {
+        "abc"." {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun val v = outString()() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                outString
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+
+class CrashMe2 {
+    fun outString() = ""
+    // Duplicated bug: KT-13306
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }".abc
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+( CrashMe2 {
+    fun outString() = ""
+    fun crashMeclass) {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc{
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }.let "
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let LocalLocal
+            class { {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun {
+                val v = outString()
+            }() {
+        "abc".let {
+            class LocalLocal crashMe
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMeoutString) {
+        "abc".let {
+            class LocalLocal {
+                val v = (()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal() outString() = ""
+    fun crashMe() {
+        "abc".let {
+            fun
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString(v = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val ) = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            ) LocalLocal {
+                val v = outString()
+            }
+            LocalLocal(class
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() val v = outString()
+        "abc".let {
+            class LocalLocal {
+                {
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            }
+            LocalLocal()
+        }
+    }
+class LocalLocal {
+                val v = outString()
+            }
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abcclass LocalLocal {
+                val v = outString()
+            }.let {
+            "
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = {
+                val v = outString()
+            }"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal "
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = fun"
+    " crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    ) outString() = ""
+    fun crashMe(fun {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 (
+    fun outString{) = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = (
+            }
+            LocalLocaloutString())
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString({
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        } = ""
+    fun crashMe() {
+        "abc".let )
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() ( ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal=)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString{
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }) = ""
+    fun crashMe() {
+        "abc".let (
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class let {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".CrashMe2 {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "LocalLocal()
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            "
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString(class = ""
+    fun crashMe() {
+        "abc".let {
+            ) LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let LocalLocal
+            class LocalLocal {
+                val v = outString()
+            }
+            {()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    fun crashMe() {
+        fun outString() = ""
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = ()()
+            }
+            LocalLocaloutString
+        }
+    }
+}
+y=
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() // Original bug: KT-23425 ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    class LocalLocal {
+                val v = outString()
+            } outString() = ""
+    fun crashMe() {
+        "abc".let {
+            fun
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    outString fun() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe}) {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    (
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }() = ""
+    fun crashMe() {
+        outString
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun ()() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outStringoutString
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                () v = outString()
+            }
+            LocalLocalval
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val () = outString()
+            }
+            LocalLocalv
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class {
+                val v = outString()
+            } LocalLocal
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+    fun crashMe() fun outString() = ""
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    ( outStringfun) = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = LocalLocal
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            ""()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                LocalLocal
+            }
+            val v = outString()()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = LocalLocal
+            }
+            outString()()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString" = "()
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = class LocalLocal {
+                val v = outString()
+            }"
+    fun crashMe() {
+        "abc".let {
+            "
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = )
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString(""
+            }
+            LocalLocal()
+        }
+    }
+}
+ylet
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".// Original bug: KT-23425 {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = class
+    fun crashMe() {
+        "abc".let {
+            "" LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abcLocalLocal().let {
+            class LocalLocal {
+                val v = outString()
+            }
+            "
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    {
+                val v = outString()
+            } outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal fun
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() () ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal=
+        }
+    }
+}
+y ò// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { this }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal(ExtProvider)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe(a: String, b: String) {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun alf() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˇ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = foo()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ù// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun box() = if(A().test()[5].i == 5) "OK" else "fail"
+}
+y ñ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { it }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "Fail".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y?// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            concat(
+                    first(
+                            try { 
+                                try { 
+                                    "O" 
+                                } 
+                                finally { 
+                                    "1"
+                                } 
+                            } 
+                            catch (e: Exception) { 
+                                throw e 
+                            }
+                            finally {
+                                cleanup()
+                            }, 
+                            "2"
+                    ),
+                    first(
+                        try { 
+                            throws()
+                            throw Exception()
+                            "3"
+                        } 
+                        catch (e: Exception) { 
+                            "K" 
+                        } 
+                        finally {
+                            cleanup()
+                        },
+                        "4"
+                    )
+            )
+        }
+    }
+}
+y ˛// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        myConsumeEach {
+            myLaunch {
+                myDelay(period)
+            }
+        }
+    }
+    }
+}
+y ˆ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        var x = 0L
+        val y = x[0]++
+        return if (y == 0L) "OK" else "Failed, y=$y"
+    }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            toInt()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "OK".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class box {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˛// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            box()
+        }
+    }
+}
+y	// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal(null)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class iterator {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+    var a: Int = 42
+    var d by Delegate(0)
+}
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            String()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "fail 1".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun fooA() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val nn: Int? = null
+            }
+            LocalLocal()
+        }
+    }
+}
+y ∞// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class Foo {
+    fun bar(): String {
+        fun <T> foo(t:() -> T) : T = t()
+        foo { }
+        return "OK"
+    }
+}
+y ö// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".foo(Str("OK"))
+    }
+}
+yK// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun box(): String {
+  1 in 1.rangeTo(10)
+  1..10
+  'h' in 'A'.rangeTo('Z')
+  return "OK"
+}
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                const val MaxB = Byte.MAX_VALUE
+            }
+            LocalLocal()
+        }
+    }
+}
+y Ë// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            open class M() {
+    open var y = 500
+}
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// KT-4423 Enum with function not compiled
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˇ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            test()
+        }
+    }
+}
+xO// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class A(val a: Int = 0)
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = takeWithPrimitive(a!!)
+            }
+            LocalLocal()
+        }
+    }
+}
+y// !LANGUAGE: +InlineClasses
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y	// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString(true)
+            }
+            LocalLocal()
+        }
+    }
+}
+y ‰// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun box(): String {
+    val s = IntArray(1)
+    s[0] = 5
+    s[0] += 7
+    return if (s[0] == 12) "OK" else "Fail ${s[0]}"
+}
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val s = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "OK"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString(private val value: String) = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+yÁ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun box(): String {
+    val n: Any? = null
+
+    val intV: Any? = 23
+    val floatV: Any? = 23.4F
+    val doubleV: Any? = 23.45
+    val longV: Any? = 234L
+    val stringV: Any? = "foo"
+    val booleanV: Any? = true
+    val functionV: Any? = { x: Int -> x + 1 }
+
+    if (n !is Int?) return "fail: null !is Int?"
+    if (n !is Float?) return "fail: null !is Float?"
+    if (n !is Double?) return "fail: null !is Double?"
+    if (n !is String?) return "fail: null !is String?"
+    if (n !is Boolean?) return "fail: null !is Boolean?"
+    if (n !is Function1<*, *>?) return "fail: null !is Function?"
+
+    if (n is Int) return "fail: null is Int"
+    if (n is Float) return "fail: null is Float"
+    if (n is Double) return "fail: null is Double"
+    if (n is String) return "fail: null is String"
+    if (n is Boolean) return "fail: null is Boolean"
+    if (n is Function1<*, *>) return "fail: null is Function"
+
+    if (intV !is Int?) return "fail: 23 !is Int?"
+    if (intV is String?) return "fail: 23 is String?"
+
+    if (floatV !is Float?) return "fail: 23.4F !is Float?"
+    if (floatV is String?) return "fail: 23.4F is String?"
+
+    if (doubleV !is Double?) return "fail: 23.45 !is Double?"
+    if (doubleV is String?) return "fail: 23.45 is String?"
+
+    if (longV !is Long?) return "fail: 234L !is Long?"
+    if (longV is String?) return "fail: 234L is String?"
+
+    if (stringV !is String?) return "fail: 'foo' !is String?"
+    if (stringV is Double?) return "fail: 'foo' is Double?"
+
+    if (booleanV !is Boolean?) return "fail: true !is Boolean?"
+    if (booleanV is Double?) return "fail: true is Double?"
+
+    if (functionV !is Function1<*, *>?) return "fail: <function> !is Function?"
+    if (functionV is String?) return "fail: <function> is String?"
+
+    return "OK"
+}
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+yT// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+    fun getFromClass(): Boolean {
+        try {
+            val a = str
+            return false
+        } catch (e: RuntimeException) {
+            return true
+        }
+    }
+
+    fun getFromLambda(): Boolean {
+        try {
+            val a = { str }()
+            return false
+        } catch (e: RuntimeException) {
+            return true
+        }
+    }
+
+    companion object {
+        lateinit var str: String
+
+        fun getFromCompanion(): Boolean {
+            try {
+                val a = str
+                return false
+            } catch (e: RuntimeException) {
+                return true
+            }
+        }
+    }
+}
+            LocalLocal()
+        }
+    }
+}
+x`// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    var result = "OK"
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val r = Foo('2')
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            b()
+        }
+    }
+}
+y// KJS_WITH_FULL_RUNTIME
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+yk// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class Delegate<T>(var inner: T) {
+    operator fun getValue(t: Any?, p: KProperty<*>): T = inner
+    operator fun setValue(t: Any?, p: KProperty<*>, i: T) { inner = i }
+}
+            LocalLocal()
+        }
+    }
+}
+yF// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun testC(c: C) {
+    c.withDefaultImpl(Id("OK"))
+    c.withDefaultImpl(Name("OK"))
+}
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// !LANGUAGE: +InlineClasses
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ã// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    operator fun hasNext() : Boolean
+    operator fun next() : T
+}
+y// no local optimizations
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y˚// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun box(): String {
+    val list1 = ArrayList<UInt>()
+    val range1 = 1u until 5u
+    for (i in range1) {
+        list1.add(i)
+        if (list1.size > 23) break
+    }
+    if (list1 != listOf<UInt>(1u, 2u, 3u, 4u)) {
+        return "Wrong elements for 1u until 5u: $list1"
+    }
+
+    val list2 = ArrayList<UInt>()
+    val range2 = 1u.toUByte() until 5u.toUByte()
+    for (i in range2) {
+        list2.add(i)
+        if (list2.size > 23) break
+    }
+    if (list2 != listOf<UInt>(1u, 2u, 3u, 4u)) {
+        return "Wrong elements for 1u.toUByte() until 5u.toUByte(): $list2"
+    }
+
+    val list3 = ArrayList<UInt>()
+    val range3 = 1u.toUShort() until 5u.toUShort()
+    for (i in range3) {
+        list3.add(i)
+        if (list3.size > 23) break
+    }
+    if (list3 != listOf<UInt>(1u, 2u, 3u, 4u)) {
+        return "Wrong elements for 1u.toUShort() until 5u.toUShort(): $list3"
+    }
+
+    val list4 = ArrayList<ULong>()
+    val range4 = 1uL until 5uL
+    for (i in range4) {
+        list4.add(i)
+        if (list4.size > 23) break
+    }
+    if (list4 != listOf<ULong>(1u, 2u, 3u, 4u)) {
+        return "Wrong elements for 1uL until 5uL: $list4"
+    }
+
+    return "OK"
+}
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                var left = times
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString(a: Float?, b: Float?) = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˇ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun f() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = String()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ≠// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    operator fun setValue(t: Any?, p: KProperty<*>, i: Int) { inner = i }
+}
+xR// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+inline class Z(val x: Int)
+y ∆// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+// See also KT-6299
+public open class Outer private constructor() {
+    companion object {
+        internal inline fun foo() = Outer()
+    }
+}
+xq// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    val z: String
+        get() = "OK"
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString(val p: String) = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "K".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y Á// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            {
+        list1.add(i)
+        if (list1.size > 23) break
+    }
+        }
+    }
+}
+y ˝// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = p()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class equals {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// IGNORE_BACKEND: JVM_IR
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+yR// Auto-generated by org.jetbrains.kotlin.generators.tests.GenerateRangesCodegenTestData. DO NOT EDIT!
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y	// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal("OK")
+        }
+    }
+}
+yC// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+    companion object {
+        fun ok() = "OK"
+        val x = run { Test.ok() }
+        fun test() = x
+    }
+}
+            LocalLocal()
+        }
+    }
+}
+y ô// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+inline class R(private val r: Int) {
+    fun test() = run { ok() }
+
+    private fun ok() = "OK"
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun foo(o: Int, k: Int) = o + k
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ù// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun box() = if (Test().outer() == 1) "OK" else "fail"
+}
+y// Original bug: KT-23425
+// KJS_WITH_FULL_RUNTIME
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y•// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        try {
+            try {
+                a.value += ", try"
+                break
+            }
+            finally {
+                a.value += ", finally1"
+            }
+        }
+        finally {
+            a.value += ", finally2"
+            throw RuntimeException("fail")
+        }
+    }
+}
+y Ù// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun box(): String {
+    val t = Derived(listOf("", "", "", ""))
+    t.iterate()
+    return if (t.test == 1234) "OK" else "Fail: ${t.test}"
+}
+}
+y0// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "Wrong elements for MaxUS..MinUS step 1: $list3".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            for_int_range()
+        }
+    }
+}
+y ∞// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        throwIt("oops!")
+    }
+    }
+}
+y Ö// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun asValue(): String = value
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class C : B() {
+    override fun bar(): String = "C"
+    override fun boo(): String = "C"
+    inner class D {
+        val foo: String = super<B>@C.foo
+        fun bar() = super<B>@C.bar() + super<B>@C.boo()
+    }
+}
+y // Original bug: KT-23425
+//FAIL
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y|// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+    val b: Byte = 42
+    val c: Char = 'z'
+    val s: Short = 239
+    val i: Int = -1
+    val j: Long = -42L
+    val f: Float = 3.14f
+    val d: Double = -2.72
+    val z: Boolean = true
+
+    b.equals(b)
+    b == b
+    b.hashCode()
+    b.toString()
+    "$b"
+
+    c.equals(c)
+    c == c
+    c.hashCode()
+    c.toString()
+    "$c"
+
+    s.equals(s)
+    s == s
+    s.hashCode()
+    s.toString()
+    "$s"
+
+    i.equals(i)
+    i == i
+    i.hashCode()
+    i.toString()
+    "$i"
+
+    j.equals(j)
+    j == j
+    j.hashCode()
+    j.toString()
+    "$j"
+
+    f.equals(f)
+    f == f
+    f.hashCode()
+    f.toString()
+    "$f"
+
+    d.equals(d)
+    d == d
+    d.hashCode()
+    d.toString()
+    "$d"
+
+    z.equals(z)
+    z == z
+    z.hashCode()
+    z.toString()
+    "$z"
+
+    return "OK"
+}
+}
+y
+// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val toLong = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class s {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ï// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".set("OK")
+    }
+}
+y ˇ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class prop {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ñ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { -1 }
+    }
+}
+y ˘// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class B {
+    operator fun invoke(f: B.() -> Unit) = 2
+}
+            LocalLocal()
+        }
+    }
+}
+y ≤// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        mapUIntToULong(it)
+    }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val f = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun append() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val list3 = ArrayList<UInt>()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            createContainers1()
+        }
+    }
+}
+yx// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class Foo {
+    lateinit var p: String
+
+    fun test(): Boolean {
+        if (!::p.isInitialized) {
+            p = "OK"
+            return false
+        }
+        return true
+    }
+}
+            LocalLocal()
+        }
+    }
+}
+y ˛// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class A {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            I()
+        }
+    }
+}
+y §// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+    val x = A::foo
+    return x(A(), "OK")
+}
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = Derived()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            i()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+    val div = u / ua
+    if (div != ub) throw AssertionError("$div")
+
+    val divInt = u / uai
+    if (div != ub) throw AssertionError("$div")
+
+    return "OK"
+}
+}
+y ˛// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class x {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun value() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            A()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "getFun()->".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y î// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        result.content
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".delayedQueue {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ⁄// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun B.test(): String {
+        val value = object {
+            val z = x()
+        }
+        return value.z
+    }
+}
+y ˛// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class k {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+yR// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun box(): String {
+    return object : SomeClass(3.14, 42, "No", "OK", "Yes") {
+    }.result()
+}
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class String {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+yX// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            {
+    val a = DoubleArray(5)
+    val x = a.iterator()
+    var i = 0
+    while (x.hasNext()) {
+        if (a[i] != x.next()) return "Fail $i"
+        i++
+    }
+    return "OK"
+}
+        }
+    }
+}
+y ó// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        z.foo("", 0, 0.0)
+    }
+}
+y •// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {arg: String -> arg }
+    }
+}
+y ˝// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val z = Z()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class InlinedBase {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".Int {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            {
+    val f = "kotlin"::length
+    val result = f.get()
+    return if (result == 6) "OK" else "Fail: $result"
+}
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".o {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y î// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".block(a)
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun box() = A("OK").foo().result()
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ì// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {0}
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "Fail: ".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun String() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".Any {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y û// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        kotlin.reflect.KProperty
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val K = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ·// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { i ->
+        Data(Array(4) { j ->
+            (i + j).toUInt()
+        })
+    }
+    }
+}
+y †// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { t.toString() }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        class Local : Inner() {
+            val u = foo()
+        }
+        val u = Local().u
+        return if (u == 42) "OK" else "Fail $u"
+    }
+}
+yu// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            {
+    val a = arrayOfNulls<String>(3)
+    a[0] = "a"
+    a[1] = "b"
+    a[2] = "c"
+
+    var result = 0
+    for(i in a.indices) {
+      result += i
+    }
+    if (result != 3) return "FAIL"
+    return "OK"
+}
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun state() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            A(42, "OK")
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun array() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¢// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { DoubleArray(3) }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun box(): String {
+    var result = ""
+    result += Child().Inner().o()
+
+    fun Child.f() {
+        result += Inner().k()
+    }
+    Child().f()
+
+    return result
+}
+}
+y Ã// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun f() = object : ClassData {
+    val someInt: Int
+        get() {
+            return 5
+        }
+}
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val name = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ô// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        u1.toByte().toInt()
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".less2 {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y	// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "fail"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˝// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = x()
+            }
+            LocalLocal()
+        }
+    }
+}
+y §// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { throwIt("oops!") }
+    }
+}
+yf// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun box() : String {
+    if(C().foo(10) != 10) return "fail"
+    if(C().foo() != 240) return "fail"
+    return "OK"
+}
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+yw// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+    val collected = ArrayList<String>()
+
+    operator fun String.unaryPlus() {
+       collected.add(this@unaryPlus)
+    }
+
+    fun test() {
+        + "239"
+    }
+}
+            LocalLocal()
+        }
+    }
+}
+y
+// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val String = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        val x = object {
+            init {
+                38["Hello!"] = "OK"
+            }
+        }
+        result
+    }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class x {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y î// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        9.compareTo(4)
+    }
+}
+y ñ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { ok }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class CapturesX {
+        override fun toString() = x
+    }
+            LocalLocal()
+        }
+    }
+}
+y ˇ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun x() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class Int {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ⁄// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            {
+    when {}
+    when (A.X1) {}
+    return "OK"
+}
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                var result = ""
+            }
+            LocalLocal()
+        }
+    }
+}
+y í// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        239.toLong()
+    }
+}
+yc// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+    fun foo(arg: String): String {
+        class Local {
+            val work1 = run { outerProp + arg }
+            val work2 = inlineRun { outerProp + arg }
+            val obj = object : Any() {
+                override fun toString() = outerProp + arg
+            }
+
+            override fun toString() = "${work1}#${work2}#${obj.toString()}"
+        }
+
+        return Local().toString()
+    }
+}
+            LocalLocal()
+        }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class n {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y Ê// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+    ONE,
+    TWO
+}
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun test() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y Ã// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            {
+    number(true)
+    return "OK"
+}
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                const val MaxUI = UInt.MAX_VALUE
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˚// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun box(): String {
+    for ((index, x) in "".withIndex()) {
+        return "Loop over empty String should not be executed"
+    }
+    return "OK"
+}
+}
+y£// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+    fun foo(): String {
+        run {
+            val x = object : Callable {
+                override fun call(b: Boolean) {
+                    if (b) {
+                        x()
+                    } else {
+                        try {
+                            x()
+                        } catch(t: Throwable) {
+                        }
+                    }
+                }
+            }
+        }
+        return "OK"
+    }
+
+    private fun x() {}
+}
+            LocalLocal()
+        }
+    }
+}
+y ì// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        Season.Warm()
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = ArrayList<SomeTrait>()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            IntArray(1)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun two() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ≠// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        Derived1("OK").Derived2("fail").x.foo()
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            interface Callback {
+    fun invoke(): String
+}
+            LocalLocal()
+        }
+    }
+}
+y €// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            inline class Z(val z: Int)
+            LocalLocal()
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun P1() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ∞// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        return plus("K")
+    }
+    }
+}
+y ˝// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class a3 {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y á// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class A {
+    operator fun component1() = 1
+    operator fun component2() = 2
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            T()
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        xz = Z(42)
+        xl = L(1234L)
+        xs = Str("abc")
+        xo = Obj("def")
+    }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val Z = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val l5 = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¯// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+    open fun f(args : Array<T>) {}
+}
+            LocalLocal()
+        }
+    }
+}
+yF// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            {
+    val v1 = ArrayWrapper<String>()
+    v1.add("foo")
+    v1.add("bar")
+    val v2 = -v1
+    return if (v2[0] == "bar" && v2[1] == "foo") "OK" else "fail"
+}
+        }
+    }
+}
+y ¥// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        return "Wrong elements for 5 downTo 5: $list1"
+    }
+}
+y ˇ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun foo() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = IntArray()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class A {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = foo("OK")
+            }
+            LocalLocal()
+        }
+    }
+}
+yn// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            {
+    val n = EmptyMap as Map<Any?, Any?>
+
+    if (n.get(null) != null) return "fail 1"
+    if (n.containsKey(null)) return "fail 2"
+    if (n.containsValue(null)) return "fail 3"
+
+    return "OK"
+}
+        }
+    }
+}
+y
+// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = less4(-0.0, 0.0)
+            }
+            LocalLocal()
+        }
+    }
+}
+y ë// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".get()
+    }
+}
+y π// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        x += "O"
+        x += "K"
+    }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+    if (Cls().buffer.toString() != "Cls") return "Fail class"
+    if (Obj.buffer.toString() != "Obj") return "Fail object"
+    return "OK"
+}
+}
+y”// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun box(): String {
+    val list1 = ArrayList<UInt>()
+    val range1 = 5u downTo 10u
+    for (i in range1) {
+        list1.add(i)
+        if (list1.size > 23) break
+    }
+    if (list1 != listOf<UInt>()) {
+        return "Wrong elements for 5u downTo 10u: $list1"
+    }
+
+    val list2 = ArrayList<UInt>()
+    val range2 = 5u.toUByte() downTo 10u.toUByte()
+    for (i in range2) {
+        list2.add(i)
+        if (list2.size > 23) break
+    }
+    if (list2 != listOf<UInt>()) {
+        return "Wrong elements for 5u.toUByte() downTo 10u.toUByte(): $list2"
+    }
+
+    val list3 = ArrayList<UInt>()
+    val range3 = 5u.toUShort() downTo 10u.toUShort()
+    for (i in range3) {
+        list3.add(i)
+        if (list3.size > 23) break
+    }
+    if (list3 != listOf<UInt>()) {
+        return "Wrong elements for 5u.toUShort() downTo 10u.toUShort(): $list3"
+    }
+
+    val list4 = ArrayList<ULong>()
+    val range4 = 5uL downTo 10uL
+    for (i in range4) {
+        list4.add(i)
+        if (list4.size > 23) break
+    }
+    if (list4 != listOf<ULong>()) {
+        return "Wrong elements for 5uL downTo 10uL: $list4"
+    }
+
+    return "OK"
+}
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".y {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            arrayOf("OK")
+        }
+    }
+}
+y â// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        c.f
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = foo(null)
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val HashMap = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ñ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".toString()
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val foo = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+x]// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+interface A {
+    fun foo(): String
+}
+xj// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun hello(id: T) = "Hi $id"
+}
+y ˇ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            rec(5)
+        }
+    }
+}
+y è// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".B()
+    }
+}
+y.// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "Wrong elements for MaxB..MaxB step 1: $list2".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y9// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun box(): String =
+        charArrayOf('O', 'K').fold("", String::plus)
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ì// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { }
+    }
+}
+y …// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class A {
+    inner class Inner {
+        val o = 111
+        val k = 222
+    }
+    
+    fun result() = (A::Inner)(this).o + (A::Inner)(this).k
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class Z {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ©// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".ContentBoxDelegate<Content>()
+    }
+}
+y ⁄// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { index, uInt ->
+        sum = sum * 10 + (index + 1) * uInt.toInt()
+    }
+    }
+}
+y ˚// WITH_RUNTIME
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            (A::bar)(this, "OK")
+        }
+    }
+}
+y ˛// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class foo {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y µ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+    fun <T> foo(t:() -> T) : T = t()
+
+    return foo {"OK"}
+}
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class result {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y é// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        a.add(1)
+    }
+}
+y ˇ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = Any()
+            }
+            LocalLocal()
+        }
+    }
+}
+y&// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+    var foo: String
+        get() = result
+        set(value) { result = value }
+}
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun toString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y Á// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+    val result = ImplClass().run()
+
+    if (result != ("3" to false)) return "Fail: $result"
+
+    return "OK"
+}
+}
+y// Original bug: KT-23425
+// !LANGUAGE: +ProperIeee754Comparisons
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y í// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        5u.toUByte()
+    }
+}
+y"// Original bug: KT-23425
+//KT-3869 Loops and finally: outer finally block not run
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".Array {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ï// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+// KJS_WITH_FULL_RUNTIME
+data class Pair<First, Second>(val first: First, val second: Second)
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".Comparable {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            test3(c)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            A("$s + $i")
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class foo {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            f()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".v {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˛// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class box {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = ArrayList<C>()
+            }
+            LocalLocal()
+        }
+    }
+}
+y °// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        a
+    }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val a: Long = -(1 shl 31)
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            A(Dummy())
+        }
+    }
+}
+y// with possible local optimizations
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ’// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            a {
+                text = item
+            }
+        }
+    }
+}
+y Ë// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+
+        val x = object {
+            val y = 38["Hello!"]
+        }
+        x.y
+    }
+    }
+}
+y ≠// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        O.memExt = ""
+    }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val s = M().doTest()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            result()
+        }
+    }
+}
+y °// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { a, b -> a + b }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val n = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˝// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = C()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".foo {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "O"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            Password()
+        }
+    }
+}
+y …// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+                x-> Array(1, {y -> "OK"})
+            }
+    }
+}
+y á// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun invoke(f: A.() -> Unit) = 1
+}
+y è// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".A()
+    }
+}
+y ù// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+        constructor() : this("O")
+
+        val y: String
+            get() = z
+    }
+ys// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1"
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ï// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { 1 }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val d = DataClass("x")
+            }
+            LocalLocal()
+        }
+    }
+}
+y Á// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        run {
+            xl++
+            xd += 1.0
+            xi++
+        }
+    }
+    }
+}
+yì// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+    val c1: Char = Char.MIN_VALUE
+    val c2 = c1 - 1
+    if (c2 < c1) return "fail: Char.MIN_VALUE - 1 should overflow to positive."
+
+    val c3: Char = Char.MAX_VALUE
+    val c4 = c3 + 1
+    if (c4 > c3) return "fail: Char.MAX_VALUE + 1 should overflow to zero."
+
+    return "OK"
+}
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            c()
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class bar {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y «// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        z {
+            object : B {}
+        }
+    }
+    }
+}
+y ˛// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            Int()
+        }
+    }
+}
+y ß// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        (0..10).map(::foo).joinToString()
+    }
+}
+y ˇ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class a5 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// TARGET_BACKEND: JVM
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˇ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = ZZZ()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".S2 {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y §// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+        this
+    }
+    }
+}
+y Ï// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+  FIRST(),
+  SECOND(2)
+}
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".S {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class Outer {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ù// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { { FOO.x } }
+    }
+}
+y ö// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { a -> a }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class T {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".getUserIdFromEnvironment {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ò// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let { ok() }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = getUserIdFromEnvironment()
+            }
+            LocalLocal()
+        }
+    }
+}
+yï// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    inline fun test(crossinline z: () -> String): String {
+    return object : A(listOf(1).map { it.toString() }.joinToString()) {
+        val value = z()
+    }.value
+}
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".A {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˝// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                var bar = 1
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˇ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun box() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+yD// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            {
+    val tf = testF(-0.0F)
+    if (tf != "0.0") return "Fail 1: $tf"
+
+    val td = testD(-0.0)
+    if (td != "0.0") return "Fail 2: $td"
+
+    return "OK"
+}
+        }
+    }
+}
+y ì// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".Obj("")
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    operator fun Long.get(i: Int) = this
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".bar {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ê// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun foo() = StringBuilder("foo").first()
+}
+y ˇ// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun y() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            }
+                val v = outString()
+            class LocalLocal {
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                valv = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() 
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal 
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe) {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = "
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+xh// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v= outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = ()
+            }
+            LocalLocal()
+        }
+    }
+}
+y Ï
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y Ò// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+xv// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() 
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun () = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+     crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString( = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString) = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y Í// Original bug: KT-23425
+
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ®// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            classLocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                 v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+x8// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+
+y ˝// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class  {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y Ü// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        
+    }
+}
+y ¯// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val  = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¡// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    funcrashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v  outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc.let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc". {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+     outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+             LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()}
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal(
+        }
+    }
+}
+y “// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal 
+            LocalLocal()
+        }
+    }
+}
+y Ú// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˚// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            ()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal)
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˘// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+classCrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString()  ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ê// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let 
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe(){
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() =""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString(
+            }
+            LocalLocal()
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        .let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = 
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+
+y ¸// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {"abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v =outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y å// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let 
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString)
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let{
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˙// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = 
+            }
+            LocalLocal()
+        }
+    }
+}
+y ˚// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class  {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc"let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y Ù// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¯// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()}
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString()= ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }}
+}
+y ˛// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun () {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2{
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y // Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+ CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe( {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    funoutString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y ¯// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }LocalLocal()
+        }
+    }
+}
+y// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    
+}
+y// Original bug: KT-23425// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+            LocalLocal()
+        }
+    }
+}
+y Ì// Original bug: KT-23425
+// Duplicated bug: KT-13306
+
+class CrashMe2 {
+    fun outString() = ""
+    fun crashMe() {
+        "abc".let {
+            class LocalLocal {
+                val v = outString()
+            }
+
+        }
+    }
+}
+ˇˇ

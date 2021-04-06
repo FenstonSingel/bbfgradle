@@ -1,0 +1,765 @@
+¿iexportTaggdefaultnoriginalSamplex,
+typealias JagArray<E : JagArray
+> = ArrayE
+gmutantsŸxv
+
+val z = true
+if (z) {typealias JagArray<E : JagArray
+> = ArrayE} else {typealias JagArray<E : JagArray
+> = ArrayE}
+
+xl
+typealias JagArray<
+val m = false
+when (m) {
+ true -> {E : JagArray}
+ else -> {E : JagArray}
+}
+
+> = ArrayE
+xa
+typealias JagArray<E : JagArray
+> = 
+val q = true
+try
+{ArrayE}
+catch(e: Exception){}
+finally{}
+
+xa
+typealias JagArray<E : 
+val s = true
+try
+{JagArray}
+catch(e: Exception){}
+finally{}
+
+> = ArrayE
+x/
+typealias JagArray<E : JagArray
+> = (ArrayE)?
+x/
+typealias JagArray<E : (JagArray)?
+> = ArrayE
+x,
+typealias JagArray<E ArrayE JagArray
+> = :
+x,
+typealias JagArray<ArrayE
+> = E : JagArray
+x,
+typealias JagArrayArrayE = <E : JagArray
+>
+x,
+typealias JagArray<E : =
+> JagArray ArrayE
+x,
+< JagArraytypealiasE : JagArray
+> = ArrayE
+x,
+typealias JagArray<E : ArrayE
+> = JagArray
+x,
+<E : JagArray
+> JagArraytypealias = ArrayE
+x,
+typealias JagArray<JagArray : E
+> = ArrayE
+x,
+typealias JagArray<E JagArray :
+> = ArrayE
+x,
+typealias JagArray<E : JagArray
+> = ArrayE
+x,
+typealias JagArrayArrayEE : JagArray
+> = <
+x,
+typealias JagArray<: E JagArray
+> = ArrayE
+x,
+typealias JagArray<=
+> E : JagArray ArrayE
+x,
+typealias JagArray<ArrayE : JagArray
+> = E
+x,
+typealias JagArray<E : JagArray
+ArrayE = >
+x,
+typealias JagArrayJagArrayE : <
+> = ArrayE
+x,
+= JagArray<E : JagArray
+> typealias ArrayE
+x,
+JagArray JagArray<E : typealias
+> = ArrayE
+x,
+typealias JagArray<>
+E : JagArray = ArrayE
+x,
+typealias <E : JagArray
+>JagArray = ArrayE
+x,
+typealias ArrayE<E : JagArray
+> = JagArray
+x,
+typealias JagArray= <E : JagArray
+> ArrayE
+x,
+typealias JagArray<E : >
+JagArray = ArrayE
+x,
+typealias JagArray<E : JagArray
+> ArrayE =
+x,
+typealias JagArray<E > JagArray
+: = ArrayE
+x,
+typealias JagArrayE< : JagArray
+> = ArrayE
+x,
+ArrayE JagArray<E : JagArray
+> = typealias
+x,
+E JagArray<typealias : JagArray
+> = ArrayE
+x,
+typealias JagArrayE : JagArray<
+> = ArrayE
+x,
+typealias E<JagArray : JagArray
+> = ArrayE
+x,
+: JagArray<E typealias JagArray
+> = ArrayE
+x,
+typealias =<E : JagArray
+> JagArray ArrayE
+x,
+E : JagArray JagArray<typealias
+> = ArrayE
+x,
+typealias JagArray<= : JagArray
+> E ArrayE
+x,
+typealias <JagArrayE : JagArray
+> = ArrayE
+x,
+typealias :<E JagArray JagArray
+> = ArrayE
+x,
+typealias JagArray>E : JagArray
+< = ArrayE
+x,
+typealias E : JagArray<JagArray
+> = ArrayE
+x,
+JagArray typealias<E : JagArray
+> = ArrayE
+x,
+> JagArray<E : JagArray
+typealias = ArrayE
+x,
+typealias JagArray<E = JagArray
+> : ArrayE
+x,
+typealias JagArray<E : JagArray
+= > ArrayE
+x,
+typealias JagArray=E : JagArray
+> < ArrayE
+x,
+typealias JagArray:E < JagArray
+> = ArrayE
+x,
+typealias JagArray<> : JagArray
+E = ArrayE
+x,
+typealias ><E : JagArray
+JagArray = ArrayE
+x 
+typealias JagArray<T> = ArrayE
+x.
+typealias JagArray<E : Wrapper<T>
+> = ArrayE
+x/
+typealias JagArray<Test : JagArray
+> = ArrayE
+x'
+typealias JagArray<E : JagArray
+> = T
+x)
+typealias JagArray<E : JagArray
+> = Int
+x.
+typealias JagArray<bar : JagArray
+> = ArrayE
+x
+typealias OuterAlias = Outer
+x*
+typealias JagArray<E : String
+> = ArrayE
+x!
+typealias JagArray<T
+> = ArrayE
+x%
+typealias T<E : JagArray
+> = ArrayE
+x4
+typealias JagArray<E : JagArray
+> = AssertionError
+x,
+typealias JagArray<i : JagArray
+> = ArrayE
+x,
+typealias JagArray<T : JagArray
+> = ArrayE
+x0
+typealias JagArray<E : KProperty<*>
+> = ArrayE
+x'
+typealias JagArray<E : Int
+> = ArrayE
+x(
+typealias JagArray<E : UInt
+> = ArrayE
+x,
+typealias AddLastDesc<T> = AddLastDesc2<T>
+x,
+typealias JagArray<o : JagArray
+> = ArrayE
+x+
+typealias JagArray<E : JagArray
+> = list3
+x,
+typealias JagArray<E : JagArray
+> = String
+x,
+typealias JagArray<A : JagArray
+> = ArrayE
+x*
+typealias JagArray<E : JagArray
+> = newv
+x
+typealias CT<T> = Cell<T>
+x)
+typealias JagArray<E : Array
+> = ArrayE
+x'
+typealias JagArray<E : JagArray
+> = A
+x'
+typealias JagArray<E : JagArray
+> = a
+x)
+typealias JagArray<E : JagArray
+> = FOO
+x*
+typealias JagArray<E : JagArray
+> = test
+x%
+typealias JagArray<E : X
+> = ArrayE
+x%
+typealias JagArray<E : l
+> = ArrayE
+x-
+typealias JagArray<E : JagArray
+> = Flusher
+x,
+typealias JagArray<E : JagArray
+> = invoke
+x'
+typealias box<E : JagArray
+> = ArrayE
+x+
+typealias JagArray<E : toShort
+> = ArrayE
+x 
+typealias FooStr = Foo<String>
+x)
+typealias JagArray<reified T
+> = ArrayE
+x'
+typealias JagArray<E : JagArray
+> = s
+x
+typealias OI = Outer.Inner
+x6
+typealias JagArray<E : JagArray
+> = someSpecialValue
+x&
+typealias JagArray<E : En
+> = ArrayE
+x%
+typealias JagArray<E : T
+> = ArrayE
+x-
+typealias JagArray<E : Exception
+> = ArrayE
+v
+typealias S = String
+x%
+typealias JagArray<T : U
+> = ArrayE
+x.
+typealias JagArray<foo : JagArray
+> = ArrayE
+x%
+typealias JagArray<E : c
+> = ArrayE
+x'
+typealias JagArray<E : JagArray
+> = V
+x)
+typealias JagArray<T: Number?> = ArrayE
+x.
+typealias JagArray<box : JagArray
+> = ArrayE
+x%
+typealias A<E : JagArray
+> = ArrayE
+x-
+typealias JagArray<E : Augmented
+> = ArrayE
+x-
+typealias JagArray<E : JagArray
+> = backing
+x-
+typealias JagArray<E : JagArray
+> = Boolean
+x.
+typealias JagArray<E : JagArray
+> = Array<T>
+x2
+typealias JagArray<Boolean : JagArray
+> = ArrayE
+x+
+typealias storage<E : JagArray
+> = ArrayE
+x+
+typealias JagArray<E : JagArray
+> = MaxUL
+x%
+typealias JagArray<out T
+> = ArrayE
+x*
+typealias JagArray<E : JagArray
+> = UInt
+x+
+typealias JagArray<E : JagArray
+> = list4
+x
+typealias Alias = A.Companion
+x4
+typealias JagArray<Singleton : JagArray
+> = ArrayE
+x+
+typealias JagArray<E : Boolean
+> = ArrayE
+x/
+typealias JagArray<E : JagArray
+> = KProperty
+x#
+typealias JagArray<in R> = ArrayE
+x-
+typealias JagArray<K: Any, V: Any> = ArrayE
+x'
+typealias JagArray<E : JagArray
+> = b
+x,
+typealias JagArray<x : JagArray
+> = ArrayE
+x(
+typealias Test<E : JagArray
+> = ArrayE
+x-
+typealias JagArray<E : JagArray
+> = KHolder
+x&
+typealias JagArray<E : fx
+> = ArrayE
+x*
+typealias JagArray<E : Double
+> = ArrayE
+x*
+typealias String<E : JagArray
+> = ArrayE
+x/
+typealias JagArray<E : JagArray
+> = MAX_VALUE
+x,
+typealias JagArray<E : JagArray
+> = change
+x%
+typealias JagArray<E : s
+> = ArrayE
+x'
+typealias baz<E : JagArray
+> = ArrayE
+x(
+typealias JagArray<E : test
+> = ArrayE
+x5
+typealias JagArray<E : KMutableProperty0
+> = ArrayE
+x)
+typealias JagArray<E : JagArray
+> = Any
+q
+typealias B = A
+x(
+typealias JagArray<E : Base
+> = ArrayE
+x'
+typealias JagArray<E : JagArray
+> = S
+x*
+typealias JagArray<E : result
+> = ArrayE
+x,
+typealias JagArray<E : toString
+> = ArrayE
+x'
+typealias JagArray<E : JagArray
+> = D
+x/
+typealias nullableFun<E : JagArray
+> = ArrayE
+x'
+typealias JagArray<E : JagArray
+> = i
+x!
+typealias JagArray<U
+> = ArrayE
+x0
+typealias JagArray<value : JagArray
+> = ArrayE
+x0
+typealias JagArray<E : JagArray
+> = Array<Int>
+x%
+typealias JagArray<E : x
+> = ArrayE
+x,
+typealias JagArray<E : JagArray
+> = result
+x(
+typealias JagArray<T : First> = ArrayE
+x*
+typealias JagArray<E : JagArray
+> = Long
+x+
+typealias JagArray<E : aDouble
+> = ArrayE
+x!
+typealias JagArray<R
+> = ArrayE
+x1
+typealias JagArray<String : JagArray
+> = ArrayE
+x)
+typealias JagArray<E : JagArray
+> = eq1
+x%
+typealias JagArray<E : A
+> = ArrayE
+x
+typealias L<T> = List<T>
+x,
+typealias JagArray<E : JagArray
+> = logged
+x(
+typealias JagArray<reified T> = ArrayE
+x%
+typealias JagArray<E : J
+> = ArrayE
+x%
+typealias JagArray<E : S
+> = ArrayE
+x1
+typealias JagArray<append : JagArray
+> = ArrayE
+x(
+typealias JagArray<E : JagArray
+> = a2
+x 
+typealias JagArray<R> = ArrayE
+x-
+typealias JagArray<E : JagArray
+> = IFoo<Z>
+x+
+typealias JagArray<E : JagArray
+> = field
+x'
+typealias JagArray<E : Foo
+> = ArrayE
+x/
+typealias JagArray<E : DoubleArray
+> = ArrayE
+x(
+typealias peek<E : JagArray
+> = ArrayE
+x0
+typealias JagArray<Child : JagArray
+> = ArrayE
+x.
+typealias JagArray<E : JagArray
+> = toString
+x%
+typealias JagArray<E : V
+> = ArrayE
+x'
+typealias Int<E : JagArray
+> = ArrayE
+x)
+typealias times<E : JagArray
+> = ArrayE
+x+
+typealias JagArray<E : JagArray
+> = Outer
+x*
+typealias JagArray<E : JagArray
+> = next
+x'
+typealias JagArray<E : JagArray
+> = C
+x.
+typealias JagArray<E : () -> Unit
+> = ArrayE
+x!
+typealias OIB = Outer.InnerBase
+x2
+typealias JagArray<bottles : JagArray
+> = ArrayE
+x3
+typealias JagArray<commands : JagArray
+> = ArrayE
+x2
+typealias JagArray<E : JagArray
+> = ArrayList<C>
+x.
+typealias JagArray<E : JagArray
+> = contains
+x'
+typealias JagArray<E : JagArray
+> = Z
+x,
+typealias JagArray<E : JagArray
+> = Short?
+x%
+typealias StringCell = Cell<String>
+x*
+typealias JagArray<E : JagArray
+> = Test
+x!
+typealias JagArray<K
+> = ArrayE
+x%
+typealias p<E : JagArray
+> = ArrayE
+x%
+typealias JagArray<E : O
+> = ArrayE
+x'
+typealias JagArray<E : Any
+> = ArrayE
+x,
+typealias JagArray<Z : JagArray
+> = ArrayE
+x*
+typealias JagArray<E : JagArray
+> = size
+x+
+typealias JagArray<E : JagArray
+> = Local
+x(
+typealias JagArray<E : Long
+> = ArrayE
+x,
+typealias JagArray<B : JagArray
+> = ArrayE
+x,
+typealias JagArray<E : JagArray
+> = Double
+x5
+typealias JagArray<T: Comparable<Double>
+> = ArrayE
+x)
+typealias JagArray<E : ULong
+> = ArrayE
+x%
+typealias c<E : JagArray
+> = ArrayE
+x*
+typealias JagArray<E : JagArray
+> = prop
+x+
+typealias JagArray<E : JagArray
+> = Shape
+x)
+typealias JagArray<T : Any, R> = ArrayE
+x.
+typealias JagArray<res : JagArray
+> = ArrayE
+x+
+typealias JagArray<E : JagArray
+> = test4
+x%
+typealias O<E : JagArray
+> = ArrayE
+x0
+typealias JagArray<E : runInlineExt
+> = ArrayE
+x,
+typealias JagArray<E : JagArray
+> = actual
+x'
+typealias JagArray<E : JagArray
+> = z
+x%
+typealias x<E : JagArray
+> = ArrayE
+x%
+typealias t<E : JagArray
+> = ArrayE
+x.
+typealias JagArray<run : JagArray
+> = ArrayE
+q
+typealias A = O
+x)
+typealias JagArray<E : JagArray
+> = add
+x*
+typealias JagArray<E : JagArray
+> = Char
+x'
+typealias JagArray<E : FOO
+> = ArrayE
+x!
+typealias JagArray<X
+> = ArrayE
+x/
+typealias JagArray<E : JagArray
+> = compareTo
+u
+typealias Alias = C
+x%
+typealias a<E : JagArray
+> = ArrayE
+x-
+typealias JagArray<E : JagArray
+> = indices
+x)
+typealias JagArray<E : JagArray
+> = foo
+x.
+typealias JagArray<key : JagArray
+> = ArrayE
+x*
+typealias JagArray<T : Content> = ArrayE
+x'
+typealias JagArray<E : JagArray
+> = k
+x'
+typealias res<E : JagArray
+> = ArrayE
+x*
+typealias JagArray<E : toLong
+> = ArrayE
+x+
+typealias JagArray<E : () -> R
+> = ArrayE
+x+
+typealias JagArray<E : JagArray
+> = title
+x(
+typealias JagArray<E : Char
+> = ArrayE
+x*
+typealias JagArray<E : JagArray
+> = Unit
+x2
+typealias JagArray<Z1Class : JagArray
+> = ArrayE
+x&
+typealias BoolArray = Array<Boolean>
+x,
+typealias JagArray<y : JagArray
+> = ArrayE
+x'
+typealias JagArray<E : arg
+> = ArrayE
+x%
+typealias z<E : JagArray
+> = ArrayE
+x.
+typealias JagArray<E : JagArray
+> = reversed
+x"
+typealias OHolderAlias = OHolder
+x'
+typealias Any<E : JagArray
+> = ArrayE
+x+
+typealias JagArray<E : JagArray
+> = ArrayEx$
+typealias JagArray<E : 
+> = ArrayE
+x+
+typealias JagArray<E :JagArray
+> = ArrayE
+x+
+typealias JagArray<E : JagArray
+ = ArrayE
+x+typealias JagArray<E : JagArray
+> = ArrayE
+x+
+typealias JagArray<E: JagArray
+> = ArrayE
+b
+
+x&
+typealias JagArray<E : JagArray
+> = 
+x$
+typealias <E : JagArray
+> = ArrayE
+x+
+typealias JagArray<E : JagArray
+>  ArrayE
+x#
+ JagArray<E : JagArray
+> = ArrayE
+x+
+typealias JagArray<E : JagArray
+>= ArrayE
+x+
+typealias JagArray<E : JagArray
+> =ArrayE
+x+
+typealiasJagArray<E : JagArray
+> = ArrayE
+x+
+typealias JagArrayE : JagArray
+> = ArrayE
+x+
+typealias JagArray<E : JagArray> = ArrayE
+x 
+typealias JagArray<
+> = ArrayE
+x+
+typealias JagArray< : JagArray
+> = ArrayE
+x+
+typealias JagArray<E  JagArray
+> = ArrayE
+x
+typealias JagArray = ArrayE
+m
+
+> = ArrayE
+ÿÿ

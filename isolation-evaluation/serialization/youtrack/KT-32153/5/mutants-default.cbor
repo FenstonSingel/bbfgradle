@@ -1,0 +1,7464 @@
+¿iexportTaggdefaultnoriginalSampley*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+gmutantsŸy<// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+
+val h = true
+if (h) {/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}} else {/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}}
+
+y`// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() 
+val h = false
+try
+{{
+  suspend fun inner(): Int = run { inner() }
+}}
+catch(e: Exception){}
+finally{}
+
+yu// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  
+val x = false
+if (x) {suspend fun inner(): Int = run { inner() }} else {suspend fun inner(): Int = run { inner() }}
+
+}
+yZ// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = 
+val y = false
+if (y) {run { inner() }} else {run { inner() }}
+
+}
+y`// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = 
+val n = false
+try
+{run}
+catch(e: Exception){}
+finally{}
+ { inner() }
+}
+y`// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): 
+val e = false
+try
+{Int}
+catch(e: Exception){}
+finally{}
+ = run { inner() }
+}
+yh// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run 
+val s = true
+when (s) {
+ true -> {{ inner() }}
+ else -> {{ inner() }}
+}
+
+}
+yi// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run 
+val h = false
+when (h) {
+ true -> {{ inner() }}
+ else -> {{ inner() }}
+}
+
+}
+yQ// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { 
+val c = true
+if (c) {inner()} else {inner()}
+ }
+}
+yR// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { 
+val w = false
+if (w) {inner()} else {inner()}
+ }
+}
+yO// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { 
+val d = true
+if (d) {inner} else {inner}
+() }
+}
+y,// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run!! { inner() }
+}
+y-// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): (Int)? = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ }
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() *
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): inner() = run { Int }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun innerinner): Int = run { (() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ suspend fun inner(): Int = run { inner() }
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  *
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = { inner() } run
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *run { inner() }
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int =  Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ ()
+fun outer() {
+  suspend fun inner*/: Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ ) This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner(* }
+}
+y*/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+// Duplicated bug: KT-32153
+
+// Original bug: KT-32153
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(){ Int = run : inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int () run { inner= }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+  Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.*
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ { inner() } Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run *
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+Int
+fun outer() {
+  suspend fun inner(): /**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */ = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+{
+  suspend fun inner(): Int = run { inner() }
+} outer() fun
+y*// Original bug: KT-32153
+Int
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): // Duplicated bug: KT-32153 = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ } Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+*
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  run { inner() } fun inner(): Int = suspend
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun {
+  suspend fun inner(): Int = run { inner() }
+}() outer
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend run { inner() } inner(): Int = fun
+}
+y*Int
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): // Original bug: KT-32153 = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner()Int : = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ ()
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner* This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue. }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun { inner() }() {
+  suspend fun inner(): Int = run outer
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer}) {
+  suspend fun inner(): Int = run { inner() }
+(
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer}) {
+  suspend fun inner(): Int = run { inner() (
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *suspend fun inner(): Int = run { inner() }
+ */
+fun outer() {
+   Removing `run` also solves the issue.
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+()
+fun outer/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */ {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ inner
+ */
+fun outer() {
+  suspend fun inner(): Int = run { * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ { Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run * inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ fun Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend * inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+Int
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): /** = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ outer This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun *() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ ) This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer(* {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+
+// Duplicated bug: KT-32153
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outerrun { inner() } {
+  suspend fun inner(): Int = ()
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner}): Int = run { inner() }
+(
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { } }
+inner()
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  inner() fun inner(): Int = run { suspend }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = } { inner() run
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer)) {
+  suspend fun inner(): Int = run { inner(( }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *Int
+ */
+fun outer() {
+  suspend fun inner():  Removing `run` also solves the issue. = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): run = Int { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ ( This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner*): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun innerrun { inner() }): Int = (
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() ()
+  suspend fun inner(): Int = run { inner{ }
+}
+y*suspend
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  // Original bug: KT-32153 fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun inner() {
+  suspend fun outer(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ (
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer*) {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(Int: ) = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *(
+ */
+fun outer() {
+  suspend fun inner Removing `run` also solves the issue.): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ Int
+ */
+fun outer() {
+  suspend fun inner(): * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue. = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ run { inner() } This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = *
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner{ inner() }): Int = run (
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ inner() Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { * }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() )
+  suspend fun inner(): Int = run { inner({ }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ *()
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner This example is minified. }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ Int
+fun outer() {
+  suspend fun inner(): */ = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *inner()
+ */
+fun outer() {
+  suspend fun inner(): Int = run {  Removing `run` also solves the issue. }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ Int
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): * = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  inner fun suspend(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ inner()
+fun outer() {
+  suspend fun inner(): Int = run { */ }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *()
+ * Removing `run` also solves the issue.
+ */
+fun outer Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed. {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+*
+ * This example is minified.
+ *
+ /** Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+inner()
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { // Duplicated bug: KT-32153 }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *{ inner() }
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run  Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ inner This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { *() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+} outer() {
+  suspend fun inner(): Int = run { inner() }
+fun
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */ outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ ()
+fun outer() {
+  suspend fun inner(): Int = run { inner*/ }
+}
+y*{
+  suspend fun inner(): Int = run { inner() }
+}
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() // Original bug: KT-32153
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ suspend fun inner(): Int = run { inner() }
+ */
+fun outer() {
+  * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+{ inner() }
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run /**
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): { = run Int inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner({ inner() }: Int = run )
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun run() {
+  suspend fun inner(): Int = outer { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+  Removing `run` also solves the issue. This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ **
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*{ inner() }
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run // Original bug: KT-32153
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): inner = run { Int() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ *:
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner() This example is minified. Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  }
+suspend fun inner(): Int = run { inner() }
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *}
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner()  Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer)) {
+  suspend fun inner((: Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend { inner(): Int = run fun inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun }() {
+  suspend fun inner(): Int = run { inner() outer
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ ) Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner(* }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ Int Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): * = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outerinner {
+  suspend fun inner(): Int = run { ()() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ () Removing `run` also solves the issue.
+ */
+fun outer* {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outerInt) {
+  suspend fun inner(): ( = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() suspend
+  { fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ }
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+*/
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun innerinner()): Int = run { ( }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ () Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner*: Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+inner()
+fun outer() {
+  suspend fun inner(): Int = run { /**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */ }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun inner()() {
+  suspend fun inner(): Int = run { outer }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun innerinner(): Int = run { () }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer)( {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+= outer() {
+  suspend fun inner(): Int fun run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() =
+  suspend fun inner(): Int { run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer({ inner() } {
+  suspend fun inner(): Int = run )
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ () Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner*: Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ (
+fun outer*/) {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *)
+ */
+fun outer() {
+  suspend fun inner( Removing `run` also solves the issue.: Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ { inner() }
+ */
+fun outer() {
+  suspend fun inner(): Int = run * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+run { inner() }
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = /**
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  ) fun inner(suspend: Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ () Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer* {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ ( Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner*): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outersuspend) {
+  ( fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+{ inner() } outer() {
+  suspend fun inner(): Int = run fun
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = inner() { run }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner:)( Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): { inner() } = run Int
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer(: {
+  suspend fun inner()) Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ *run
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int =  This example is minified. { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outerrun {
+  suspend fun inner(): Int = () { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): } = run { inner() Int
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  : fun inner()suspend Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ {
+fun outer() */
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner()() Int = run { inner: }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ :
+fun outer() {
+  suspend fun inner()*/ Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ )
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer(* {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+*
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ /** Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer( {
+  suspend fun inner()): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ {
+  suspend fun inner(): Int = run { inner() }
+} Removing `run` also solves the issue.
+ */
+fun outer() *
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ run
+fun outer() {
+  suspend fun inner(): Int = */ { inner() }
+}
+y*// Original bug: KT-32153
+*
+
+/**
+ * This example is minified.
+ // Duplicated bug: KT-32153
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = inner { run() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ inner
+fun outer() {
+  suspend fun */(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *()
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed. }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner{ inner() }: Int = run ()
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun Int(): inner = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  inner fun inner(): Int = run { suspend() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ :
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner()* Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ { inner() }
+fun outer() {
+  suspend fun inner(): Int = run */
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run () inner{ }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+{ outer() fun
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun innerrun { inner() }: Int = ()
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun inner() {
+  suspend fun inner(): Int = run { outer() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int { inner() } run =
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): () = run { innerInt }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+()
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer/** {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ */ Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ *
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ **
+  This example is minified.
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *{ inner() }
+ */
+fun outer() {
+  suspend fun inner(): Int = run  Removing `run` also solves the issue.
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() inner
+  suspend fun inner(): Int = run { {() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun ()(): Int = run { innerinner }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer{
+  suspend fun inner(): Int = run { inner() }
+}) (
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun innerInt: () = run { inner() }
+}
+y*// Original bug: KT-32153
+()
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner// Duplicated bug: KT-32153 }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+{ inner() }
+fun outer() {
+  suspend fun inner(): Int = run /**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ ( Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner*) }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ (
+fun outer() {
+  suspend fun inner*/): Int = run { inner() }
+}
+y*fun
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend // Original bug: KT-32153 inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun :() {
+  suspend fun inner()outer Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner((: Int = run { inner)) }
+}
+y*run { inner() }
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = // Original bug: KT-32153
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+{ outer() {
+  suspend fun inner(): Int = run fun inner() }
+}
+y*// Original bug: KT-32153
+)
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner(// Duplicated bug: KT-32153 }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer(suspend fun inner(): Int = run { inner() } {
+  )
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ ()
+ */
+fun outer* This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue. {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ {
+fun outer() {
+  suspend fun inner(): Int = run */ inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): ) = run { inner(Int }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(run { inner() }: Int = )
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *{
+  suspend fun inner(): Int = run { inner() }
+}
+ */
+fun outer()  Removing `run` also solves the issue.
+y*// Original bug: KT-32153
+suspend fun inner(): Int = run { inner() }
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  // Duplicated bug: KT-32153
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int } run { inner() }
+=
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() run
+  suspend fun inner(): Int = { { inner() }
+}
+y*}
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() // Original bug: KT-32153
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+inner
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun /**(): Int = run { inner() }
+}
+y** This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+// Duplicated bug: KT-32153
+
+/**
+ // Original bug: KT-32153
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*(
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer// Original bug: KT-32153) {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  } fun inner(): Int = run { inner() }
+suspend
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ { Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run * inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() inner()
+  suspend fun inner(): Int = run { { }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): ( = run { innerInt) }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ suspend fun inner(): Int = run { inner() }
+fun outer() {
+  */
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ () This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner* }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ inner This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun *(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun run(): Int = inner { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ run
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = * { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *suspend fun inner(): Int = run { inner() }
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+   Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  { inner() } fun inner(): Int = run suspend
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+{
+  suspend fun inner(): Int = run { inner() }
+}
+fun outer() /**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+y*// Original bug: KT-32153
+{
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run // Duplicated bug: KT-32153 inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+=
+fun outer() {
+  suspend fun inner(): Int /**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */ run { inner() }
+}
+y**
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ // Original bug: KT-32153 Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ {
+  suspend fun inner(): Int = run { inner() }
+} Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() *
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ ) Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner(* }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  Int fun inner(): suspend = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ {
+ */
+fun outer() * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+inner
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { /**() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *fun
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend  Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed. inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ outer Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun *() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+()
+fun outer() {
+  suspend fun inner(): Int = run { inner/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */ }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+*
+ /** This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+run
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = /** { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner()run Int = : { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ {
+  suspend fun inner(): Int = run { inner() }
+}
+ */
+fun outer() * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ { inner() }
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run *
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ run { inner() } Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = *
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *suspend
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+   Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed. fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+inner
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { // Duplicated bug: KT-32153() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *{
+ * Removing `run` also solves the issue.
+ */
+fun outer()  Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer{) {
+  suspend fun inner(): Int = run ( inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run }
+{ inner() }
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = { run inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun =() {
+  suspend fun inner(): Int outer run { inner() }
+}
+y*run
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = // Original bug: KT-32153 { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): } = run { inner() }
+Int
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun innerInt): ( = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int ) run { inner(= }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *inner()
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {  Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed. }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ run { inner() }
+ */
+fun outer() {
+  suspend fun inner(): Int = * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int inner() run { = }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+suspend
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  /** fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ inner
+fun outer() {
+  suspend fun inner(): Int = run { */() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *Int
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner():  Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed. = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+)
+fun outer(/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */ {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ () This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer* {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun innerrun): Int = ( { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend run inner(): Int = fun { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner}: Int = run { inner() ()
+}
+y*// Original bug: KT-32153
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+
+// Duplicated bug: KT-32153
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): = Int run { inner() }
+}
+y*// Original bug: KT-32153
+* This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+
+/**
+ // Duplicated bug: KT-32153
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *fun
+ */
+fun outer() {
+  suspend  Removing `run` also solves the issue. inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+outer
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun /**() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ : Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner()* Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ suspend fun inner(): Int = run { inner() } This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  *
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { )(inner }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer(Int {
+  suspend fun inner(): ) = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+Int outer() {
+  suspend fun inner(): fun = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { ()inner }
+}
+y*// Original bug: KT-32153
+fun
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend // Duplicated bug: KT-32153 inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun Int() {
+  suspend fun inner(): outer = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ *{ inner() }
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run  This example is minified.
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+suspend outer() {
+  fun fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ inner
+ */
+fun outer() {
+  suspend fun * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() { inner() }
+  suspend fun inner(): Int = run {
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ *Int
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner():  This example is minified. = run { inner() }
+}
+y*// Original bug: KT-32153
+{
+  suspend fun inner(): Int = run { inner() }
+}
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() // Duplicated bug: KT-32153
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend () inner(): Int = run { innerfun }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ ) Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(*: Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ =
+ */
+fun outer() {
+  suspend fun inner(): Int * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue. run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ *fun
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+ This example is minified. outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+) outer() {
+  suspend fun inner(): Int = run { inner(fun }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+() outer() {
+  suspend fun inner(): Int = run { innerfun }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun suspend() {
+  outer fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ { Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() *
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  } fun inner(): Int = run { inner() suspend
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = } { inner() }
+run
+y*()
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer// Original bug: KT-32153 {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ ( This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer*) {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+suspend fun inner(): Int = run { inner() }
+fun outer() {
+  /**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer{ inner() } {
+  suspend fun inner(): Int = run ()
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { (inner) }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ */ This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ *
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outerInt {
+  suspend fun inner(): () = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner(} )
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+() outer() {
+  suspend fun innerfun: Int = run { inner() }
+}
+y*// Original bug: KT-32153
+(
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner// Duplicated bug: KT-32153) }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer(run { inner() } {
+  suspend fun inner(): Int = )
+}
+y*suspend fun inner(): Int = run { inner() }
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  // Original bug: KT-32153
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner()} Int = run { inner() :
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+)
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner(/** }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+  Removing `run` also solves the issue.*
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun :()inner Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outerrun { inner() }) {
+  suspend fun inner(): Int = (
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *)
+ */
+fun outer( Removing `run` also solves the issue. {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ { Removing `run` also solves the issue.
+ */
+fun outer() *
+  suspend fun inner(): Int = run { inner() }
+}
+y**
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ // Original bug: KT-32153 Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *:
+ */
+fun outer() {
+  suspend fun inner() Removing `run` also solves the issue. Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner{: Int = run () inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ { This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() *
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+)
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(/**: Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() Int
+  suspend fun inner(): { = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *()
+ */
+fun outer() {
+  suspend fun inner Removing `run` also solves the issue.: Int = run { inner() }
+}
+y*// Original bug: KT-32153
+run
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = // Duplicated bug: KT-32153 { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend { inner() } inner(): Int = run fun
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer} {
+  suspend fun inner(): Int = run { inner() }
+()
+y*inner
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun // Original bug: KT-32153(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): run { inner() } = Int
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+)
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer(/** {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+(
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer/**) {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun suspend fun inner(): Int = run { inner() }() {
+  outer
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+outer fun() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer{
+  suspend fun inner(): Int = run { inner() }
+} ()
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ inner Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { *() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *run
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int =  Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed. { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ *=
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int  This example is minified. run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ } Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() *
+}
+y*// Original bug: KT-32153
+(
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer// Duplicated bug: KT-32153) {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ *inner
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun  This example is minified.(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner()): Int = run { inner( }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+  Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ **
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ suspend fun inner(): Int = run { inner() } Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  *
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+( outer() {
+  suspend fun inner(): Int = run { innerfun) }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun innerrun: Int = () { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *suspend
+ */
+fun outer() {
+   Removing `run` also solves the issue. fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner()inner Int = run { :() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ run { inner() }
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = *
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+suspend fun inner(): Int = run { inner() }
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  /**
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = ) { inner(run }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() run { inner() }
+  suspend fun inner(): Int = {
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *)
+ * Removing `run` also solves the issue.
+ */
+fun outer( Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed. {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ *{
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer()  This example is minified.
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ { inner() } Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run *
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *
+ * This example is minified.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer(} {
+  suspend fun inner(): Int = run { inner() }
+)
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+{
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run /** inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ fun
+ */
+* This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue. outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+()
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner// Duplicated bug: KT-32153: Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int ( run { inner=) }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ run This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = * { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ )
+ */
+fun outer() {
+  suspend fun inner(* This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.: Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ Int This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): * = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+suspend
+fun outer() {
+  /**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */ fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ run Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = * { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+  This example is minified.*
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ *inner
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {  This example is minified.() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer(suspend {
+  ) fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun (outer) {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outerinner) {
+  suspend fun inner(): Int = run { (() }
+}
+yá// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { {
+    x[0] += 1
+    if (x[0] != 1) return "Fail 1: ${x[0]}"
+
+    x[0]++
+    if (x[0] != 2) return "Fail 2: ${x[0]}"
+
+    ++x[0]
+    if (x[0] != 3) return "Fail 3: ${x[0]}"
+
+    return "OK"
+} }
+}
+y-// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = String { inner() }
+}
+y ð// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * A parser can return one of two Results 
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y8// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * A parser can return one of two Results 
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y0// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  fun box(): String {
+    val fake: Any = FakeInt(42)
+
+    val int1 = 1
+    val int42 = 42
+
+    if (fake == int1) return "FakeInt(42) == 1"
+    if (fake != int42) return "FakeInt(42) != 42"
+    if (int1 == fake) return "1 == FakeInt(42)"
+    if (int42 == fake) return "42 == FakeInt(42)"
+
+    return "OK"
+}
+}
+y,// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): count = run { inner() }
+}
+y,// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = Outer { inner() }
+}
+y ¦// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+  A parser can return one of two Results 
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y-// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = append("<clinit>")
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = box { inner() }
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  open fun inner(): Int = run { inner() }
+}
+y.// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner("OK") }
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = It()
+}
+y2// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = containsAll { inner() }
+}
+y3// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { result = "O"; "K"}
+}
+ys// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+    val x = foo(A("OK", 1)) { (x, y) -> x + (y.toString()) }
+
+    if (x != "OK1") return "fail1: $x"
+
+    return "OK"
+}
+y ¢// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/** A parser can return one of two Results */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun box(): Int = run { inner() }
+}
+y,// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * A parser can return one of two Results 
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y!// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {}
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { ok() }
+}
+y.// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+    if (1L.foo() != "OK") throw AssertionError()
+}
+y&// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { C() }
+}
+y%// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = superFoo()
+}
+y,// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Outer = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { a -> a }
+}
+y// Original bug: KT-32153
+// KT-3581
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y§// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun box(): String {
+    val list1 = ArrayList<UInt>()
+    val range1 = (MaxUI - 2u)..MaxUI
+    for (i in range1) {
+        list1.add(i)
+        if (list1.size > 23) break
+    }
+    if (list1 != listOf<UInt>(MaxUI - 2u, MaxUI - 1u, MaxUI)) {
+        return "Wrong elements for (MaxUI - 2u)..MaxUI: $list1"
+    }
+
+    val list2 = ArrayList<ULong>()
+    val range2 = (MaxUL - 2u)..MaxUL
+    for (i in range2) {
+        list2.add(i)
+        if (list2.size > 23) break
+    }
+    if (list2 != listOf<ULong>(MaxUL - 2u, MaxUL - 1u, MaxUL)) {
+        return "Wrong elements for (MaxUL - 2u)..MaxUL: $list2"
+    }
+
+    return "OK"
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { this() }
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { f(1) }
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun pv() {
+  suspend fun inner(): Int = run { inner() }
+}
+y]// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { {
+    val ic = IC(10)
+    val i: I<IC> = C()
+    val i2: I2 = C()
+    val a: A<IC> = C()
+    val b: B = C()
+    val c: C = C()
+
+    val fooI = i.foo(ic).x
+    if (fooI != 30) return "Fail I"
+
+    // Test calling abstract fake override methods
+    // with signature specialized by inline class
+    val fooI2 = i2.foo(ic).x
+    if (fooI2 != 30) return "Fail I2"
+
+    val fooA = a.foo(ic).x
+    if (fooA != 30) return "Fail A"
+
+    val fooB = b.foo(ic).x
+    if (fooB != 30) return "Fail B"
+
+    val resC = c.foo(ic).x
+    if (resC != 30) return "Fail C"
+
+    return "OK"
+} }
+}
+y‰// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+        val hello: String? = "hello"
+        if (hello == null) {
+            false
+        }
+        else {
+            true
+        }
+    }
+y-// !LANGUAGE: +InlineClasses
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y&// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun A() {
+  suspend fun inner(): Int = run { inner() }
+}
+yÌ// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  fun box(): String {
+    val result = "OK"
+
+    open class Local(val ok: Boolean) {
+        fun result() = if (ok) result else "Fail"
+    }
+
+    class Derived : Local(true)
+
+    return Derived().result()
+}
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun task(): Int = run { inner() }
+}
+yý// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { {
+    var result = ""
+    // See KT-14399
+    listOf(Station("O", "K", 56)).forEachIndexed { i, (id, name, distance) -> result += "$id$name$distance" }
+    if (result != "OK56") return "fail: $result"
+    return "OK"
+} }
+}
+y0// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {res += "K"; "K"}
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { A(it) }
+}
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner(0) }
+}
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = Test { inner() }
+}
+y0// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { a, b -> a + b }
+}
+y<// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner(xs.size + 42, "OK") }
+}
+y$// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  fun runNoInline(f: () -> Unit) = f()
+}
+y%// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { it }
+}
+yB// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun UnsupportedOperationException() {
+  suspend fun inner(): Int = run { inner() }
+}
+y à// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun box(): String {
+    try {
+        if ((null as Int?)!! == 10) return "Fail #1"
+        return "Fail #2"
+    }
+    catch (e: Exception) {
+        return "OK"
+    }
+}
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = size { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = a1 { inner() }
+}
+y3// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { test(Derived1()) }
+}
+y9// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {
+    object : First { }
+}
+}
+y0// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {x -> x.toLong()}
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun box(): String {
+    val plusZero: Any = 0.0
+    val minusZero: Any = -0.0
+    val nullDouble: Double? = null
+    if (plusZero is Double) {
+        // Smart casts behavior in 1.2
+        when (plusZero) {
+            nullDouble -> {
+                return "fail 1"
+            }
+            -0.0 -> {
+                return "fail 2"
+            }
+            else -> {}
+        }
+
+        if (minusZero is Double) {
+            // Smart casts behavior in 1.2
+            when (plusZero) {
+                nullDouble -> {
+                    return "fail 3"
+                }
+                minusZero -> {
+                    return "fail 4"
+                }
+                else -> {}
+            }
+        }
+    }
+
+    return "OK"
+}
+y ˆ// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun box(): String {
+    val f = Outer.Inner::foo
+    return f(Outer().Inner())
+}
+y-// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { a : Int -> }
+}
+y¢// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { {
+    if(!(f === f)) return "fail 1"
+    if(!(f == f)) return "fail 2"
+    if(!(f.equals(f))) return "fail 3"
+    return "OK"
+} }
+}
+y2// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = Array<Int>(3, {x -> x})
+}
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { it.first }
+}
+yÈ// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { {
+    val z = Z()
+    val a: A<String> = z
+    return when {
+        z.foo("") != "Z" -> "Fail #1"
+        a.foo("") != "Z" -> "Fail #2"
+        else -> "OK"
+    }
+} }
+}
+y8// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): (Int, Int) -> Int = run { inner() }
+}
+xS// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun box() = Test.FOO.test()
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  override fun inner(): Int = run { inner() }
+}
+y5// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { ++subjectEvaluated }
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+    return Test().test()
+}
+y,// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  operator fun MyClass?.inc(): MyClass? = null
+}
+y-// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+            return@foo create<String>()
+        }
+y6// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+    if (minus is Double) {
+        if ((minus as Comparable<Double>) >= 0.0) return "fail 0"
+        if ((minus as Comparable<Double>) == 0.0) return "fail 1"
+        if (minus == (0.0 as Comparable<Double>)) return "fail 2"
+        if (minus == (0.0F as Comparable<Float>)) return "fail 3"
+    }
+    return "OK"
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { this }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { it + 1 }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { test() }
+}
+y#// Original bug: KT-32153
+// !API_VERSION: 1.0
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y@// Original bug: KT-32153
+// CHECK_CASES_COUNT: function=doTheThing count=2
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y4// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { it.key + it.value }
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { "OK" }
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {
+        val x = object {
+            init {
+                38["Hello!"] = "OK"
+            }
+        }
+        result
+    }
+}
+y9// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { i, xx -> Z(xx.int + i) }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  inline fun inner(): Int = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = e { inner() }
+}
+y%// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  fun isZeroULong(n: ULong?) = 0UL == n
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = OK()
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  fun box() = X.B.test
+}
+y Ã// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun box(): String {
+    val x: CharSequence = ""
+    val klass = x::class
+    return if (klass == String::class) "OK" else "Fail: $klass"
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun Foo(): Int = run { inner() }
+}
+yL// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { "reifiedIsNot<MutableCollection<*>>(set)" }
+}
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun toChar() {
+  suspend fun inner(): Int = run { inner() }
+}
+y3// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { AssertionError() }
+}
+y5// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { Exception("oops!") }
+}
+yo// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  val c = A()
+  if(c.prop != 1) return "fail get"
+  c.prop = 2
+  if (c.prop != 2) return "fail set"
+  return "OK"
+}
+y&// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { s() }
+}
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun result(): Int = run { inner() }
+}
+y9// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+        list4.add(i)
+        if (list4.size > 23) break
+    }
+y0// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = ArrayList { inner() }
+}
+yV// Original bug: KT-32153
+//NB: special ieee754 arithmetic logic is not applied to Int comparison
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  data fun inner(): Int = run { inner() }
+}
+y/// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun defaultRes() {
+  suspend fun inner(): Int = run { inner() }
+}
+y  // Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun box(): String {
+    if (Test().test() != 1) return "inner getter or setter failed"
+    return "OK"
+}
+yK// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { i, (x, y), v -> i.toString() + x + y + v }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = Any { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun Cell() {
+  suspend fun inner(): Int = run { inner() }
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  fun box() = A.X.test
+}
+y// Original bug: KT-32153
+//WITH_RUNTIME
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y Õ// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun test(
+        b: Boolean,
+        i: Int
+) {
+    if (b) {
+        when (i) {
+            0 -> foo(1)
+            else -> null
+        }
+    } else null
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = fn { inner() }
+}
+y'// Original bug: KT-32153
+// KJS_WITH_FULL_RUNTIME
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+xx// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun box() = if (42.foo == 42 && "OK".foo == 42) "OK" else "Fail"
+y-// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): String = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = ii { inner() }
+}
+y8// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {
+        ok = "OK"
+    }
+}
+y,// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { Test.ok() }
+}
+xp// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+inline fun <T, R> s0(x: T, fn: (Int, T) -> R) = fn(0, x)
+y&// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun A(): Int = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = z { inner() }
+}
+y[// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { i, (id, name, distance) -> result += "$id$name$distance" }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = foo { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): T = run { inner() }
+}
+y&// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun a(): Int = run { inner() }
+}
+yH// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { i -> Array(width) { j -> init(i, j) } }
+}
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  operator fun inner(): Int = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {o + "K"}
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): A = run { inner() }
+}
+xW// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+open fun value() = "$three$one"
+y<// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { transform<Int, Number>(f) }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = l { inner() }
+}
+y,// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Unit? = run { inner() }
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+    return Foo("K").obj.result()
+}
+y.// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun withIndex() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun Unit() {
+  suspend fun inner(): Int = run { inner() }
+}
+y$// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  fun box(): String {
+  return C.FOO
+}
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = A()
+}
+y)// KJS_WITH_FULL_RUNTIME
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+yS// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun box(): String {
+    val arr = Array<A>(5) {
+        i -> A(i, i.toString())
+    }
+    
+    var sum = 0
+    var str = ""
+    
+    for ((x, y) in arr) {
+        sum += x
+        str += y
+    }
+    
+    return if (sum == 0+1+2+3+4 && str == "01234") "OK" else "Fail ${sum} ${str}"
+}
+y‚// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  fun box(): String {
+    var i = 0
+    {
+        if (1 == 1) {
+            i++
+        } else {
+        }
+    }()
+    return "OK"
+}
+}
+ya// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  public override fun format(source: Collection<IN>): JsonArray {
+        return JsonArray();
+    }
+}
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Base = run { inner() }
+}
+y.// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = Derived { inner() }
+}
+y
+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+    return a
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = ls { inner() }
+}
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = test { inner() }
+}
+yA// Original bug: KT-32153
+// No 'getSize()' method should be generated in A2
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y // Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  fun test(arg: Int) {
+    if (arg == 1) {
+        result = "firstResult"
+        d
+    } else if (arg == 2) {
+        result = "secondResult"
+        arg
+    }
+}
+}
+y.// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {res+="O"; "O"}
+}
+y.// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun RgbaArray() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { Z("Z") }
+}
+y`// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+    class Local {
+        fun foo() = "OK"
+    }
+
+    val ref = Local::foo
+    return ref(Local())
+}
+yŠ// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {
+                it: Int -> inner(0) // <- invocation of literal itself is generated instead
+            }
+}
+yu// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+    val result = (A::Inner)((::A)()).o + (A::Inner)(A()).k
+    if (result != 333) return "Fail $result"
+    return "OK"
+}
+yB// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { UnsupportedOperationException() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { foo(4) }
+}
+xz// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun test(id: Id) {
+    if (id.id != "OK") throw AssertionError()
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun Any() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+    val x = f { this + it }
+    return "OK"
+}
+y_// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { {
+    if (minus is Double) {
+        if ((minus as Comparable<Double>) >= 0.0) return "fail 0"
+        if ((minus as Comparable<Double>) == 0.0) return "fail 1"
+        if (minus == (0.0 as Comparable<Double>)) return "fail 2"
+        if (minus == (0.0F as Comparable<Float>)) return "fail 3"
+    }
+    return "OK"
+} }
+}
+y&// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { fld }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = T { inner() }
+}
+y,// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = MinUL { inner() }
+}
+y3// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { (s as A).foo()() }
+}
+y9// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+    if (!condition())
+        throw AssertionError(message)
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Any = run { inner() }
+}
+yF// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+    val x = "OK"
+    fun bar(y: String = x): String = y
+    return bar()
+}
+y-// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { test("OK") }
+}
+y// Original bug: KT-32153
+// See KT-12865
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = f()
+}
+y,// !LANGUAGE: +NewInference
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y+// Original bug: KT-32153
+// !LANGUAGE: +InlineClasses
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y^// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun box(): String {
+    val list1 = ArrayList<Int>()
+    val range1 = (MaxI - 2)..MaxI
+    for (i in range1) {
+        list1.add(i)
+        if (list1.size > 23) break
+    }
+    if (list1 != listOf<Int>(MaxI - 2, MaxI - 1, MaxI)) {
+        return "Wrong elements for (MaxI - 2)..MaxI: $list1"
+    }
+
+    val list2 = ArrayList<Int>()
+    val range2 = (MaxB - 2).toByte()..MaxB
+    for (i in range2) {
+        list2.add(i)
+        if (list2.size > 23) break
+    }
+    if (list2 != listOf<Int>((MaxB - 2).toInt(), (MaxB - 1).toInt(), MaxB.toInt())) {
+        return "Wrong elements for (MaxB - 2).toByte()..MaxB: $list2"
+    }
+
+    val list3 = ArrayList<Int>()
+    val range3 = (MaxS - 2).toShort()..MaxS
+    for (i in range3) {
+        list3.add(i)
+        if (list3.size > 23) break
+    }
+    if (list3 != listOf<Int>((MaxS - 2).toInt(), (MaxS - 1).toInt(), MaxS.toInt())) {
+        return "Wrong elements for (MaxS - 2).toShort()..MaxS: $list3"
+    }
+
+    val list4 = ArrayList<Long>()
+    val range4 = (MaxL - 2).toLong()..MaxL
+    for (i in range4) {
+        list4.add(i)
+        if (list4.size > 23) break
+    }
+    if (list4 != listOf<Long>((MaxL - 2).toLong(), (MaxL - 1).toLong(), MaxL)) {
+        return "Wrong elements for (MaxL - 2).toLong()..MaxL: $list4"
+    }
+
+    val list5 = ArrayList<Char>()
+    val range5 = (MaxC - 2)..MaxC
+    for (i in range5) {
+        list5.add(i)
+        if (list5.size > 23) break
+    }
+    if (list5 != listOf<Char>((MaxC - 2), (MaxC - 1), MaxC)) {
+        return "Wrong elements for (MaxC - 2)..MaxC: $list5"
+    }
+
+    return "OK"
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun foo() {
+  suspend fun inner(): Int = run { inner() }
+}
+y/// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { It(from, to) }
+}
+y@// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { UInt(value + other.asValue()) }
+}
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun String() {
+  suspend fun inner(): Int = run { inner() }
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  fun <T> foo(x: T) {}
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun Int() {
+  suspend fun inner(): Int = run { inner() }
+}
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Char = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): B = run { inner() }
+}
+ys// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { result ->
+        val intResult = result.getOrThrow()
+        invoked = true
+    }
+}
+y/// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = listOf<Int>(8, 6, 4)
+}
+y/// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Foo<Any> = run { inner() }
+}
+yQ// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {
+        test("ok")
+        test("ok", 200)
+    }
+}
+yD// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = AssertionError("Should be executed once")
+}
+y$// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { y }
+}
+y>// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {
+        (x, y) -> x + y
+    }
+}
+y"// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { }
+}
+y+// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Any? = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun box() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = an { inner() }
+}
+yc// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  fun box(): String {
+    var log = ""
+
+    var s: Any? = null
+    for (t in arrayOf("1", "2", "3")) {
+        class A() {
+            fun foo() = { t }
+        }
+
+        if (s == null) {
+            s = A()
+        }
+
+        log += (s as A).foo()()
+    }
+
+    if (log != "111") return "fail1: ${log}"
+
+    s = null
+    log = ""
+    for (t in arrayOf("1", "2", "3")) {
+        class B() {
+            val y = t
+
+            fun foo() = { y }
+        }
+
+        if (s == null) {
+            s = B()
+        }
+
+        log += (s as B).foo()()
+    }
+
+    if (log != "111") return "fail2: ${log}"
+
+    return "OK"
+}
+}
+y ’// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+fun box(): String {
+    if (!(p!! == z!!)) {
+        return "OK"
+    }
+    return "fail"
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = Test(S("OK"))
+}
+y>// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {
+        x++
+        ++x
+    }
+}
+y,// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = list3 { inner() }
+}
+y@// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {
+            v = v + 1
+        }
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = equals("13")
+}
+y”// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { {
+    val outer = Outer.Inner()
+    val other = Outer.Other()
+    val another = Outer.Another()
+    return "OK"
+} }
+}
+y_// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {
+                val x = ok
+                { x }
+            }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+}
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+ * This example is minified.
+y* */
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+// Original bug: KT-32153
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y*// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ *
+ * This example is minified.
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y%// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun (): Int = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.*
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner( }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ 
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspendfun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int  run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int= run { inner() }
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend  inner(): Int = run { inner() }
+}
+y È// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ *
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y%// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { () }
+}
+y ú// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() 
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+ outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner():  = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() 
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer(){
+  suspend fun inner(): Int = run { inner() }
+}
+x~// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ 
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run 
+}
+y%// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun () {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner():Int = run { inner() }
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ *
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = 
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+  This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() 
+  suspend fun inner(): Int = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.*/
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {inner() }
+}
+y// Original bug: KT-32153
+
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer) {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+  Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/*** This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int =  { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+funouter() {
+  suspend fun inner(): Int = run { inner() }
+}
+y#// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+   fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ 
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+  Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run  inner() }
+}
+y// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ *
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.* Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run{ inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int =run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(: Int = run { inner() }
+}
+y#// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run {  }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y // Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer( {
+  suspend fun inner(): Int = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner: Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner()}
+}
+y)// Original bug: KT-32153// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+x8// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ ** Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y'// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend funinner(): Int = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner) }
+}
+xu// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner() Int = run { inner() }
+}
+y)// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}y
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner() }
+}
+y(// Original bug: KT-32153
+// Duplicated bug: KT-32153
+
+/**
+ * This example is minified.
+ *
+ * Moving `inner` outside `outer` or removing `suspend` modifier should make compilation to succeed.
+ * Removing `run` also solves the issue.
+ */
+fun outer() {
+  suspend fun inner(): Int = run { inner }
+}
+ÿÿ
