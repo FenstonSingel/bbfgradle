@@ -18,7 +18,7 @@ fun main() {
 //    reduceAllSamplesInDataset("isolation-evaluation/samples/youtrack", defaultBugInfo)
 
 //    MutantGenerator.generate(
-//        "isolation-evaluation/samples/youtrack", defaultBugInfo,
+//        "isolation-evaluation/samples/youtrack",
 //        mutantsExportTag = "default",
 //        mutations = BugIsolator.typicalMutations
 //    )

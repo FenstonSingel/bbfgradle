@@ -278,13 +278,10 @@ class MutantGenerator private constructor(
 ) : Checker() {
 
     private fun generate(
-        sampleFilePath: String, bugInfo: BugInfo, serializationTag: String,
-        createChecker: (() -> CompilerTestChecker)? = null
+        sampleFilePath: String, serializationTag: String
     ) {
         isolationTestbedLogger.debug("started mutating $sampleFilePath")
         isolationTestbedLogger.debug("")
-
-        currentChecker = createChecker?.invoke() ?: BugIsolator.constructChecker(bugInfo)
 
         // sometimes PSICreator trips up badly and there's nothing we can do about it
         val initialFile: KtFile
@@ -321,8 +318,6 @@ class MutantGenerator private constructor(
 
         isolationTestbedLogger.debug("finished mutating $sampleFilePath")
         isolationTestbedLogger.debug("")
-
-        currentChecker = null // just introducing some consistency
     }
 
     override fun checkCompiling(file: KtFile): Boolean = checkTextCompiling(file.text)
@@ -334,16 +329,12 @@ class MutantGenerator private constructor(
 
     private val psiCreator = PSICreator("")
 
-    // an oracle to determine whether a code mutant has a bug or not
-    private var currentChecker: CompilerTestChecker? = null
-
     // a collection of all interesting mutants in case we want to serialize them
     private lateinit var mutantsCatalog: MutableSet<String>
 
     companion object {
         fun generate(
-            datasetDirPath: String, defaultBugInfo: BugInfo,
-            createChecker: (() -> CompilerTestChecker)? = null,
+            datasetDirPath: String,
             mutations: List<Transformation>,
             mutantsExportTag: String
         ) {
@@ -357,11 +348,7 @@ class MutantGenerator private constructor(
                     val sampleID = matchResult.groupValues
                     val sample = Sample(sampleID[1], sampleID[2])
 
-                    generator.generate(
-                        sourceFilePath, defaultBugInfo,
-                        serializationTag = sample.joinToString("/"),
-                        createChecker = createChecker
-                    )
+                    generator.generate(sourceFilePath, serializationTag = sample.joinToString("/"))
                 }
             }
 
