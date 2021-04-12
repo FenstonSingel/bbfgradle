@@ -34,7 +34,10 @@ class BugIsolator(
             logger.debug("A serialization ID-tag was provided even though results will not be serialized.")
         }
 
+        logger.debug("Isolating a bug in $sampleFilePath ...")
+
         currentChecker = createChecker?.invoke() ?: constructChecker(bugInfo)
+        logger.debug("Bug checker of choice: $currentChecker")
 
         // sometimes PSICreator trips up badly and there's nothing we can do about it
         val initialFile: KtFile
@@ -58,6 +61,8 @@ class BugIsolator(
         }
         val originalCoverage = initCoverages.minBy { c -> c.size } ?: throw IllegalStateException("No coverage was generated for $sampleFilePath for unknown reason.")
 
+        logger.debug("Gathered coverage for original $sampleFilePath sample: ${originalCoverage.size} program entities")
+
         // setting up the Transformation environment
         // the checker ref should not change throughout the entire bug isolation process
         Transformation.file = initialFile
@@ -67,6 +72,8 @@ class BugIsolator(
         buggedCoverages = mutableSetOf()
         bugFreeCoverages = mutableSetOf()
         mutantsCatalog = mutableSetOf()
+
+        logger.debug("Gathering sample mutants and their coverages...")
 
         // generating mutants and their coverages for following fault localization
         for (mutation in mutations) {
@@ -80,29 +87,39 @@ class BugIsolator(
             }
         }
 
+        logger.debug("Gathered ${buggedCoverages.size} coverages of bugged mutants")
+        logger.debug("Gathered ${bugFreeCoverages.size} coverages of bug-free mutants")
+
+        logger.debug("Ranking program entities' suspiciousness ...")
         val executionStatistics = ExecutionStatistics.compose(originalCoverage, buggedCoverages, bugFreeCoverages)
         val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, rankingFormula)
 
+        logger.debug("Serializing results ...")
         // serializing intermediate and final results for later use if necessary
         if (shouldResultsBeSerialized) {
             File("$serializationDirPath/$serializationTag").mkdirs()
-            MutantsForIsolation(mutantsExportTag, initialFile.text, mutantsCatalog.toList()).export(
-                    "$serializationDirPath/$serializationTag/mutants-$mutantsExportTag.cbor"
+
+            exportMutants(
+                "$serializationDirPath/$serializationTag/mutants-$mutantsExportTag.cbor",
+                initialFile.text, mutantsCatalog.toList()
             )
+
             val coveragesFullExportTag = "$mutantsExportTag-$coveragesExportTag"
-            CoveragesForIsolation(
-                    coveragesFullExportTag,
-                    originalCoverage, buggedCoverages.toList(), bugFreeCoverages.toList()
-            ).export(
-                    "$serializationDirPath/$serializationTag/coverages-$coveragesFullExportTag.cbor"
+            exportCoverages(
+                "$serializationDirPath/$serializationTag/coverages-$coveragesFullExportTag.cbor",
+                originalCoverage, buggedCoverages.toList(), bugFreeCoverages.toList()
             )
+
             val resultsFullExportTag = "$coveragesFullExportTag-$resultsExportTag"
-            rankedProgramEntities.export(
-                    "$serializationDirPath/$serializationTag/results-$resultsFullExportTag.json"
-            )
+            val resultsPath = "$serializationDirPath/$serializationTag/results-$resultsFullExportTag.json"
+            logger.debug("Results go to $resultsPath")
+            rankedProgramEntities.export(resultsPath)
         }
 
         currentChecker = null // just introducing some consistency
+
+        logger.debug("$sampleFilePath's bug successfully isolated!")
+        logger.debug("")
 
         return rankedProgramEntities
     }
@@ -119,8 +136,11 @@ class BugIsolator(
             logger.debug("A serialization ID-tag was provided even though results will not be serialized.")
         }
 
+        logger.debug("Isolating a bug in the sample below using mutants\n${mutants.originalSample}")
+
         // we don't need to use mutations so we can just use a local checker object
         val checker = createChecker?.invoke() ?: constructChecker(bugInfo)
+        logger.debug("Bug checker of choice: $checker")
 
         // sometimes PSICreator trips up badly and there's nothing we can do about it
         val initialFile: KtFile
@@ -143,9 +163,13 @@ class BugIsolator(
         }
         val originalCoverage = initCoverages.minBy { c -> c.size } ?: throw IllegalStateException("No coverage was generated for original sample for unknown reason.")
 
+        logger.debug("Gathered coverage for original sample: ${originalCoverage.size} program entities")
+
         // setting up this class's environment
         val localBuggedCoverages = mutableSetOf<ProgramCoverage>()
         val localBugFreeCoverages = mutableSetOf<ProgramCoverage>()
+
+        logger.debug("Gathering sample mutants' coverages...")
 
         // generating mutants' coverages for following fault localization
         for (mutant in mutants.mutants) {
@@ -158,24 +182,32 @@ class BugIsolator(
             }
         }
 
+        logger.debug("Gathered ${buggedCoverages.size} coverages of bugged mutants")
+        logger.debug("Gathered ${bugFreeCoverages.size} coverages of bug-free mutants")
+
+        logger.debug("Ranking program entities' suspiciousness ...")
         val executionStatistics = ExecutionStatistics.compose(originalCoverage, localBuggedCoverages, localBugFreeCoverages)
         val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, rankingFormula)
 
+        logger.debug("Serializing results ...")
         // serializing intermediate and final results for later use if necessary
         if (shouldResultsBeSerialized) {
             File("$serializationDirPath/$serializationTag").mkdirs()
-            val coveragesFullExportTag = "${mutants.exportTag}-$coveragesExportTag"
-            CoveragesForIsolation(
-                    coveragesFullExportTag,
-                    originalCoverage, localBuggedCoverages.toList(), localBugFreeCoverages.toList()
-            ).export(
-                    "$serializationDirPath/$serializationTag/coverages-$coveragesFullExportTag.cbor"
+
+            val coveragesFullExportTag = "$mutantsExportTag-$coveragesExportTag"
+            exportCoverages(
+                "$serializationDirPath/$serializationTag/coverages-$coveragesFullExportTag.cbor",
+                originalCoverage, buggedCoverages.toList(), bugFreeCoverages.toList()
             )
+
             val resultsFullExportTag = "$coveragesFullExportTag-$resultsExportTag"
-            rankedProgramEntities.export(
-                    "$serializationDirPath/$serializationTag/results-$resultsFullExportTag.json"
-            )
+            val resultsPath = "$serializationDirPath/$serializationTag/results-$resultsFullExportTag.json"
+            logger.debug("Results go to $resultsPath")
+            rankedProgramEntities.export(resultsPath)
         }
+
+        logger.debug("Bug successfully isolated!")
+        logger.debug("")
 
         return rankedProgramEntities
     }
@@ -191,17 +223,25 @@ class BugIsolator(
             logger.debug("A serialization ID-tag was provided even though results will not be serialized.")
         }
 
+        logger.debug("Isolating a bug using coverages ...")
+
+        logger.debug("Ranking program entities' suspiciousness ...")
         val executionStatistics = ExecutionStatistics.compose(coverages)
         val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, rankingFormula)
 
+        logger.debug("Serializing results ...")
         // serializing final results for later use if necessary
         if (shouldResultsBeSerialized) {
             File("$serializationDirPath/$serializationTag").mkdirs()
+
             val resultsFullExportTag = "${coverages.exportTag}-$resultsExportTag"
-            rankedProgramEntities.export(
-                    "$serializationDirPath/$serializationTag/results-$resultsFullExportTag.json"
-            )
+            val resultsPath = "$serializationDirPath/$serializationTag/results-$resultsFullExportTag.json"
+            logger.debug("Results go to $resultsPath")
+            rankedProgramEntities.export(resultsPath)
         }
+
+        logger.debug("Bug successfully isolated!")
+        logger.debug("")
 
         return rankedProgramEntities
     }
@@ -221,6 +261,19 @@ class BugIsolator(
         }
 
         return false // keeping original sample mutating
+    }
+
+    private fun exportMutants(exportPath: String, originalSample: String, mutants: List<String>) {
+        logger.debug("Mutants go to $exportPath")
+        MutantsForIsolation(mutantsExportTag, originalSample, mutants).export(exportPath)
+    }
+
+    private fun exportCoverages(
+        exportPath: String, originalCoverage: ProgramCoverage,
+        buggedCoverages: List<ProgramCoverage>, bugFreeCoverages: List<ProgramCoverage>
+    ) {
+        logger.debug("Coverages go to $exportPath")
+        CoveragesForIsolation(exportPath, originalCoverage, buggedCoverages, bugFreeCoverages).export(exportPath)
     }
 
     // collections of coverages for until all mutations finish their execution
@@ -255,7 +308,7 @@ class BugIsolator(
         fun constructChecker(bugInfo: BugInfo, filterInvalidCode: Boolean = false): CompilerTestChecker {
             val checker = when (bugInfo.type) {
                 BugType.BACKEND, BugType.FRONTEND -> MultiCompilerCrashChecker(bugInfo.firstCompiler)
-                // TODO check if next two checkers work correctly with this localizer
+                // TODO check if next two checkers work correctly with this isolator
                 BugType.DIFFBEHAVIOR -> DiffBehaviorChecker(bugInfo.compilers)
                 BugType.DIFFCOMPILE -> DiffCompileChecker(bugInfo.compilers)
                 BugType.UNKNOWN -> throw IllegalArgumentException("Unknown bug type detected.")
