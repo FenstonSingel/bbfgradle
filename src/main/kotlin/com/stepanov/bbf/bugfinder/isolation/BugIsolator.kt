@@ -91,8 +91,10 @@ class BugIsolator(
         logger.debug("Gathered ${bugFreeCoverages.size} coverages of bug-free mutants")
 
         logger.debug("Ranking program entities' suspiciousness ...")
-        val executionStatistics = ExecutionStatistics.compose(originalCoverage, buggedCoverages, bugFreeCoverages)
-        val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, rankingFormula)
+        val rankedProgramEntities = RankedProgramEntities.rank(
+            originalCoverage, buggedCoverages, bugFreeCoverages,
+            rankingFormula
+        )
 
         logger.debug("Serializing results ...")
         // serializing intermediate and final results for later use if necessary
@@ -186,8 +188,10 @@ class BugIsolator(
         logger.debug("Gathered ${bugFreeCoverages.size} coverages of bug-free mutants")
 
         logger.debug("Ranking program entities' suspiciousness ...")
-        val executionStatistics = ExecutionStatistics.compose(originalCoverage, localBuggedCoverages, localBugFreeCoverages)
-        val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, rankingFormula)
+        val rankedProgramEntities = RankedProgramEntities.rank(
+            originalCoverage, buggedCoverages, bugFreeCoverages,
+            rankingFormula
+        )
 
         logger.debug("Serializing results ...")
         // serializing intermediate and final results for later use if necessary
@@ -226,8 +230,7 @@ class BugIsolator(
         logger.debug("Isolating a bug using coverages ...")
 
         logger.debug("Ranking program entities' suspiciousness ...")
-        val executionStatistics = ExecutionStatistics.compose(coverages)
-        val rankedProgramEntities = RankedProgramEntities.rank(executionStatistics, rankingFormula)
+        val rankedProgramEntities = RankedProgramEntities.rank(coverages, rankingFormula)
 
         logger.debug("Serializing results ...")
         // serializing final results for later use if necessary

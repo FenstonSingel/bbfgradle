@@ -1,5 +1,6 @@
 package com.stepanov.bbf.bugfinder.isolation
 
+import com.stepanov.bbf.coverage.ProgramCoverage
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration
@@ -12,8 +13,33 @@ import kotlin.math.sqrt
 class RankedProgramEntities(val storage: Map<String, Double>, private val isRankDescending: Boolean) {
 
     companion object {
-        fun rank(statistics: ExecutionStatistics, formula: RankingFormula): RankedProgramEntities {
-            val result = statistics.storage.map { (entity, statistics) -> entity to formula(statistics) }
+        fun rank(
+            origCoverage: ProgramCoverage,
+            bugCoverages: Iterable<ProgramCoverage>,
+            successCoverages: Iterable<ProgramCoverage>,
+            formula: RankingFormula
+        ): RankedProgramEntities {
+            val executionData = mutableListOf<Pair<String, EntityExecutionData>>()
+            for (entity in ProgramCoverage.entities(origCoverage)) {
+                var (execsInFails, skipsInFails) = origCoverage[entity] ?: 0 to 1
+                for (bugCoverage in bugCoverages) {
+                    val (execs, skips) = bugCoverage[entity] ?: 0 to 1
+                    execsInFails += execs
+                    skipsInFails += skips
+                }
+                var execsInSuccesses = 0
+                var skipsInSuccesses = 0
+                for (successCoverage in successCoverages) {
+                    val (execs, skips) = successCoverage[entity] ?: 0 to 1
+                    execsInSuccesses += execs
+                    skipsInSuccesses += skips
+                }
+                executionData += entity to EntityExecutionData(
+                    execsInFails, skipsInFails, execsInSuccesses, skipsInSuccesses
+                )
+            }
+
+            val result = executionData.map { (entity, statistics) -> entity to formula(statistics) }
             val (_, minRank) = result.minBy { (_, rank) -> rank } ?: "" to 0.0
             val (_, maxRank) = result.maxBy { (_, rank) -> rank } ?: "" to 1.0
             val rangeLength = maxRank - minRank
@@ -24,6 +50,16 @@ class RankedProgramEntities(val storage: Map<String, Double>, private val isRank
                 formula.isRankDescending
             )
         }
+
+        fun rank(
+            coverages: CoveragesForIsolation,
+            rankingFormula: RankingFormula
+        ): RankedProgramEntities = rank(
+            coverages.originalSampleCoverage,
+            coverages.mutantsWithBugCoverages,
+            coverages.mutantsWithoutBugCoverages,
+            rankingFormula
+        )
 
         fun import(filePath: String): RankedProgramEntities {
             return json.parse(serializer(), File(filePath).readText())

@@ -1,36 +1,12 @@
 package com.stepanov.bbf.isolation.tests
 
-import com.stepanov.bbf.bugfinder.isolation.EntityExecutionStatistics
-import com.stepanov.bbf.bugfinder.isolation.ExecutionStatistics
 import com.stepanov.bbf.bugfinder.isolation.RankedProgramEntities
-import com.stepanov.bbf.bugfinder.isolation.formulas.Ochiai2RankingFormula
 import org.junit.Test
 import kotlin.math.abs
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 class IsolationTests {
-
-    @Test
-    fun factoryTest() {
-        val firstStatistics = ExecutionStatistics(
-            listOf(
-                "1" to EntityExecutionStatistics(10, 0, 0, 10),
-                "2" to EntityExecutionStatistics(5, 5, 5, 5),
-                "3" to EntityExecutionStatistics(7, 3, 3, 7)
-            )
-        )
-        val first = RankedProgramEntities.rank(firstStatistics, Ochiai2RankingFormula)
-        val secondStatistics = ExecutionStatistics(
-            listOf(
-                "1" to EntityExecutionStatistics(10, 0, 0, 10),
-                "2" to EntityExecutionStatistics(5, 5, 5, 5),
-                "3" to EntityExecutionStatistics(7, 3, 3, 7)
-            )
-        )
-        val second = RankedProgramEntities.rank(secondStatistics, Ochiai2RankingFormula)
-        assertEquals(first.storage, second.storage)
-    }
 
     @Test
     fun cosineSimilarityTest() {
