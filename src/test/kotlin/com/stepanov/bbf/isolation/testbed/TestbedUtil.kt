@@ -5,7 +5,6 @@ import com.stepanov.bbf.bugfinder.executor.Checker
 import com.stepanov.bbf.bugfinder.isolation.*
 import com.stepanov.bbf.bugfinder.manager.BugType
 import com.stepanov.bbf.bugfinder.mutator.transformations.Transformation
-import com.stepanov.bbf.reduktor.executor.CompilerTestChecker
 import com.stepanov.bbf.reduktor.parser.PSICreator
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.cbor.Cbor
@@ -281,7 +280,6 @@ class MutantGenerator private constructor(
         sampleFilePath: String, serializationTag: String
     ) {
         isolationTestbedLogger.debug("started mutating $sampleFilePath")
-        isolationTestbedLogger.debug("")
 
         // sometimes PSICreator trips up badly and there's nothing we can do about it
         val initialFile: KtFile

@@ -201,7 +201,7 @@ class BugIsolator(
         if (shouldResultsBeSerialized) {
             File("$serializationDirPath/$serializationTag").mkdirs()
 
-            val coveragesFullExportTag = "$mutantsExportTag-$coveragesExportTag"
+            val coveragesFullExportTag = "${mutants.exportTag}-$coveragesExportTag"
             exportCoverages(
                 "$serializationDirPath/$serializationTag/coverages-$coveragesFullExportTag.cbor",
                 originalCoverage, localBuggedCoverages.toList(), localBugFreeCoverages.toList()
