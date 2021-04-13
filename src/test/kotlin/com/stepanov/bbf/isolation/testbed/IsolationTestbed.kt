@@ -25,15 +25,15 @@ fun main() {
 
 //    stacktraceEvaluation("isolation-evaluation/samples/youtrack-reduced")
 
-//    bugIsolationEvaluation(
-//        "isolation-evaluation/samples/testrun",
-//        sourceType = BugIsolationSourceType.MUTANTS,
-//        mutantsImportTag = "default",
-//        coveragesImportTag = "",
-//        mutantsExportTag = "",
-//        coveragesExportTag = "c2",
-//        resultsExportTag = "r"
-//    )
+    bugIsolationEvaluation(
+        "isolation-evaluation/samples/youtrack-reduced",
+        sourceType = BugIsolationSourceType.MUTANTS,
+        mutantsImportTag = "default",
+        coveragesImportTag = "",
+        mutantsExportTag = "",
+        coveragesExportTag = "",
+        resultsExportTag = ""
+    )
 
     // CALCULATING F-SCORES FOR STACKTRACE SIMILARITY RANKINGS
 //    val estimatesOriginal = loadEstimationResults("isolation-evaluation/samples/youtrack-results/stacktraces.cbor")

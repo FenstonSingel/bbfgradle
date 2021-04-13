@@ -177,19 +177,22 @@ class BugIsolator(
         for (mutant in mutants.mutants) {
             val (isBugPresent, coverage) = compile(mutant, checker)
             if (coverage != null) {
-                if (isBugPresent)
+                if (isBugPresent) {
+                    logger.debug("The sample is bugged!")
                     localBuggedCoverages.add(coverage)
-                else
+                } else {
+                    logger.debug("The sample is correct!")
                     localBugFreeCoverages.add(coverage)
+                }
             }
         }
 
-        logger.debug("Gathered ${buggedCoverages.size} coverages of bugged mutants")
-        logger.debug("Gathered ${bugFreeCoverages.size} coverages of bug-free mutants")
+        logger.debug("Gathered ${localBuggedCoverages.size} coverages of bugged mutants")
+        logger.debug("Gathered ${localBugFreeCoverages.size} coverages of bug-free mutants")
 
         logger.debug("Ranking program entities' suspiciousness ...")
         val rankedProgramEntities = RankedProgramEntities.rank(
-            originalCoverage, buggedCoverages, bugFreeCoverages,
+            originalCoverage, localBuggedCoverages, localBugFreeCoverages,
             rankingFormula
         )
 
@@ -201,7 +204,7 @@ class BugIsolator(
             val coveragesFullExportTag = "$mutantsExportTag-$coveragesExportTag"
             exportCoverages(
                 "$serializationDirPath/$serializationTag/coverages-$coveragesFullExportTag.cbor",
-                originalCoverage, buggedCoverages.toList(), bugFreeCoverages.toList()
+                originalCoverage, localBuggedCoverages.toList(), localBugFreeCoverages.toList()
             )
 
             val resultsFullExportTag = "$coveragesFullExportTag-$resultsExportTag"
@@ -256,14 +259,32 @@ class BugIsolator(
         val (isBugPresent, coverage) = compile(text, checker)
 
         if (coverage != null) {
-            val wasAdded = if (isBugPresent)
+            val wasAdded = if (isBugPresent) {
+                logger.debug("The sample is bugged!")
                 buggedCoverages.add(coverage)
-            else
+            } else {
+                logger.debug("The sample is correct!")
                 bugFreeCoverages.add(coverage)
+            }
             if (wasAdded) mutantsCatalog.add(text)
         }
 
         return false // keeping original sample mutating
+    }
+
+    private fun compile(text: String, checker: CompilerTestChecker): Pair<Boolean, ProgramCoverage?> {
+        logger.debug("Compiling the following sample:\n$text")
+        val isBugPresent = checker.checkTest(text, "tmp/localization_tmp.kt")
+
+        // absence of coverage should indicate we already stumbled upon this mutant before
+        return if (!CompilerInstrumentation.isEmpty) {
+            val coverage = ProgramCoverage.createFromProbes()
+            CompilerInstrumentation.clearRecords() // making sure the previous comment holds
+            isBugPresent to coverage
+        } else {
+            logger.debug("The sample was already compiled!")
+            isBugPresent to null
+        }
     }
 
     private fun exportMutants(exportPath: String, originalSample: String, mutants: List<String>) {
@@ -337,19 +358,6 @@ class BugIsolator(
 
         // magical constants which I don't know what to do with
         var originalSampleRecompilationTimes: Int = 4
-
-        private fun compile(text: String, checker: CompilerTestChecker): Pair<Boolean, ProgramCoverage?> {
-            val isBugPresent = checker.checkTest(text, "tmp/localization_tmp.kt")
-
-            // absence of coverage should indicate we already stumbled upon this mutant before
-            return if (!CompilerInstrumentation.isEmpty) {
-                val coverage = ProgramCoverage.createFromProbes()
-                CompilerInstrumentation.clearRecords() // making sure the previous comment holds
-                isBugPresent to coverage
-            } else {
-                isBugPresent to null
-            }
-        }
     }
 
 }

@@ -73,7 +73,7 @@ fun bugIsolationEvaluation(
     currentBugIsolator = BugIsolator(
         BugIsolator.typicalMutations,
         OchiaiRankingFormula,
-        shouldResultsBeSerialized = true,
+        shouldResultsBeSerialized = false,
         serializationDirPath = datasetDirPath.replaceFirst("samples", "serialization")
     ).apply {
         this.mutantsExportTag = mutantsExportTag
