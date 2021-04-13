@@ -9,23 +9,25 @@ import java.io.File
 var currentBugIsolator: BugIsolator? = null
 
 enum class BugIsolationSourceType {
-    SAMPLE, MUTANTS, COVERAGES;
+    SAMPLE, MUTANTS, COVERAGES, RESULTS;
 }
 var currentSourceType = BugIsolationSourceType.SAMPLE
 
 var currentMutantsImportTag = ""
 var currentCoveragesImportTag = ""
+var currentResultsImportTag = ""
 
 fun getActualSourceFilePath(path: String): String {
     val parentDir = path.replaceFirst("samples", "serialization").replace(".kt", "")
     return when (currentSourceType) {
-        BugIsolationSourceType.SAMPLE -> path
-        BugIsolationSourceType.MUTANTS -> {
+        BugIsolationSourceType.SAMPLE ->
+            path
+        BugIsolationSourceType.MUTANTS ->
             "$parentDir/mutants-$currentMutantsImportTag.cbor"
-        }
-        BugIsolationSourceType.COVERAGES -> {
+        BugIsolationSourceType.COVERAGES ->
             "$parentDir/coverages-$currentMutantsImportTag-$currentCoveragesImportTag.cbor"
-        }
+        BugIsolationSourceType.RESULTS ->
+            "$parentDir/results-$currentMutantsImportTag-$currentCoveragesImportTag-$currentResultsImportTag.json"
     }
 }
 
@@ -33,7 +35,6 @@ fun isolateBug(sourceFilePath: String, sample: Sample): RankedProgramEntities? {
     val bugIsolator = currentBugIsolator ?: throw IllegalStateException("isolator should be initialized before running isolations")
 
     isolationTestbedLogger.debug("started isolating ${getActualSourceFilePath(sourceFilePath)}")
-    isolationTestbedLogger.debug("")
 
     val ranking = when (currentSourceType) {
         BugIsolationSourceType.SAMPLE -> {
@@ -57,6 +58,9 @@ fun isolateBug(sourceFilePath: String, sample: Sample): RankedProgramEntities? {
                 serializationTag = if (bugIsolator.shouldResultsBeSerialized) sample.joinToString("/") else null
             )
         }
+        BugIsolationSourceType.RESULTS -> {
+            RankedProgramEntities.import(getActualSourceFilePath(sourceFilePath))
+        }
     }
 
     isolationTestbedLogger.debug("finished isolating ${getActualSourceFilePath(sourceFilePath)}")
@@ -65,9 +69,11 @@ fun isolateBug(sourceFilePath: String, sample: Sample): RankedProgramEntities? {
     return ranking
 }
 
-// TODO implement this
-var currentNumberOfRanksConsidered: Int? = null
+var currentFractionOfRankingsConsidered: Double? = null
 
 fun compareIsolationRankings(first: RankedProgramEntities, second: RankedProgramEntities): Double {
-    return first.cosineSimilarity(second)
+    val fraction = currentFractionOfRankingsConsidered
+    val actualFirst = fraction?.let { first.topFraction(fraction) } ?: first
+    val actualSecond = fraction?.let { second.topFraction(fraction) } ?: second
+    return actualFirst.cosineSimilarity(actualSecond)
 }

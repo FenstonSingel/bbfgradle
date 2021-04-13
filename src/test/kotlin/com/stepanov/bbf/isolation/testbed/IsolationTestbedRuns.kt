@@ -58,22 +58,20 @@ fun stacktraceEvaluation(datasetDirPath: String) {
 }
 
 fun bugIsolationEvaluation(
-    datasetDirPath: String,
-    sourceType: BugIsolationSourceType,
-    mutantsImportTag: String,
-    coveragesImportTag: String,
-    mutantsExportTag: String,
-    coveragesExportTag: String,
-    resultsExportTag: String
+    datasetDirPath: String, sourceType: BugIsolationSourceType, fractionOfRankingsConsidered: Double? = null,
+    mutantsImportTag: String = "", coveragesImportTag: String = "", resultsImportTag: String = "",
+    mutantsExportTag: String = "", coveragesExportTag: String = "", resultsExportTag: String = "",
+    comparisonsTag: String = "100%-ranking"
 ) {
     currentSourceType = sourceType
-    currentMutantsImportTag = mutantsImportTag     // relevant if source type is MUTANTS OR COVERAGES
-    currentCoveragesImportTag = coveragesImportTag // relevant if source type is COVERAGES
+    currentMutantsImportTag = mutantsImportTag     // relevant if source type is MUTANTS or COVERAGES or RESULTS
+    currentCoveragesImportTag = coveragesImportTag // relevant if source type is COVERAGES or RESULTS
+    currentResultsImportTag = resultsImportTag     // relevant if source type is RESULTS
 
     currentBugIsolator = BugIsolator(
         BugIsolator.typicalMutations,
         OchiaiRankingFormula,
-        shouldResultsBeSerialized = false,
+        shouldResultsBeSerialized = true,
         serializationDirPath = datasetDirPath.replaceFirst("samples", "serialization")
     ).apply {
         this.mutantsExportTag = mutantsExportTag
@@ -81,11 +79,18 @@ fun bugIsolationEvaluation(
         this.resultsExportTag = resultsExportTag
     }
 
+    currentFractionOfRankingsConsidered = fractionOfRankingsConsidered
+
     fun composeActualExportTag(): String {
         return when (currentSourceType) {
-            BugIsolationSourceType.SAMPLE -> "$mutantsExportTag-$coveragesExportTag-$resultsExportTag"
-            BugIsolationSourceType.MUTANTS -> "$currentMutantsImportTag-$coveragesExportTag-$resultsExportTag"
-            BugIsolationSourceType.COVERAGES -> "$currentMutantsImportTag-$currentCoveragesImportTag-$resultsExportTag"
+            BugIsolationSourceType.SAMPLE ->
+                "$mutantsExportTag-$coveragesExportTag-$resultsExportTag-$comparisonsTag"
+            BugIsolationSourceType.MUTANTS ->
+                "$currentMutantsImportTag-$coveragesExportTag-$resultsExportTag-$comparisonsTag"
+            BugIsolationSourceType.COVERAGES ->
+                "$currentMutantsImportTag-$currentCoveragesImportTag-$resultsExportTag-$comparisonsTag"
+            BugIsolationSourceType.RESULTS ->
+                "$currentMutantsImportTag-$currentCoveragesImportTag-$currentResultsImportTag-$comparisonsTag"
         }
     }
 

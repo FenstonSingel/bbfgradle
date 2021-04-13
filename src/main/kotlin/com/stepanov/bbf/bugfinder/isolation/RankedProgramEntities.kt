@@ -6,6 +6,7 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration
 import java.io.File
 import kotlin.Comparator
+import kotlin.math.roundToInt
 import kotlin.math.sign
 import kotlin.math.sqrt
 
@@ -40,15 +41,7 @@ class RankedProgramEntities(val storage: Map<String, Double>, private val isRank
             }
 
             val result = executionData.map { (entity, statistics) -> entity to formula(statistics) }
-            val (_, minRank) = result.minBy { (_, rank) -> rank } ?: "" to 0.0
-            val (_, maxRank) = result.maxBy { (_, rank) -> rank } ?: "" to 1.0
-            val rangeLength = maxRank - minRank
-            return RankedProgramEntities(
-                result.map { (entity, rank) ->
-                    entity to if (rangeLength != 0.0) (rank - minRank) / rangeLength else 0.5
-                }.associate { it },
-                formula.isRankDescending
-            )
+            return RankedProgramEntities(result.normalize().associate { it }, formula.isRankDescending)
         }
 
         fun rank(
@@ -65,6 +58,13 @@ class RankedProgramEntities(val storage: Map<String, Double>, private val isRank
             return json.parse(serializer(), File(filePath).readText())
         }
 
+        private fun List<Pair<String, Double>>.normalize(): List<Pair<String, Double>> {
+            val (_, minRank) = minBy { (_, rank) -> rank } ?: "" to 0.0
+            val (_, maxRank) = maxBy { (_, rank) -> rank } ?: "" to 1.0
+            val rangeLength = maxRank - minRank
+            return map { (entity, rank) -> entity to if (rangeLength != 0.0) (rank - minRank) / rangeLength else 0.5 }
+        }
+
         private fun compare(pair1: Pair<String, Double>, pair2: Pair<String, Double>, isRankDescending: Boolean): Int {
             val (entity1, rank1) = pair1
             val (entity2, rank2) = pair2
@@ -79,11 +79,18 @@ class RankedProgramEntities(val storage: Map<String, Double>, private val isRank
         File(filePath).writeText(json.stringify(serializer(), this))
     }
 
-    fun toList(): List<Pair<String, Double>> {
-        return storage
+    fun topFraction(fraction: Double): RankedProgramEntities {
+        return RankedProgramEntities(
+            toList()
+                .dropLast((storage.size * (1.0 - fraction)).roundToInt())
+                .normalize().associate { it },
+            isRankDescending
+        )
+    }
+
+    fun toList(): List<Pair<String, Double>> = storage
             .map { (entity, rank) -> entity to rank }
             .sortedWith( Comparator { a, b -> compare(a, b, isRankDescending) } )
-    }
 
     fun cosineSimilarity(other: RankedProgramEntities): Double {
         var dotProduct = 0.0
