@@ -26,16 +26,16 @@ fun main() {
 //    stacktraceEvaluation("isolation-evaluation/samples/youtrack-reduced")
 
     bugIsolationEvaluation(
-        "isolation-evaluation/samples/testrun", // choose original set or reduced one
-        BugIsolationSourceType.RESULTS,
-        fractionOfRankingsConsidered = 0.5, // also a variable, duh
+        "isolation-evaluation/samples/youtrack", // choose original set or reduced one
+        BugIsolationSourceType.MUTANTS,
+        fractionOfRankingsConsidered = 1.0, // also a variable, duh
         mutantsImportTag = "default",
-        coveragesImportTag = "methods",
-        resultsImportTag = "Ochiai",
+//        coveragesImportTag = "methods",
+//        resultsImportTag = "Ochiai",
 //        mutantsExportTag = "",
-//        coveragesExportTag = "methods", // mark coverage type (methods/branches)
-//        resultsExportTag = "Ochiai", // mark suspiciousness evaluation method)
-        comparisonsTag = "50%-ranking"
+        coveragesExportTag = "methods", // mark coverage type (methods/branches)
+        resultsExportTag = "Ochiai", // mark suspiciousness evaluation method)
+        comparisonsTag = "100%-ranking"
     )
 
     // CALCULATING F-SCORES FOR STACKTRACE SIMILARITY RANKINGS

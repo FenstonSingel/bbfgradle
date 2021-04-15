@@ -35,5 +35,7 @@ class SerializationTests {
         File("tmp/trash/coverages").parentFile.mkdir()
         coverages.export("tmp/trash/coverages")
         assertEquals(coverages, CoveragesForIsolation.import("tmp/trash/coverages"))
+        coverages.exportCompressed("tmp/trash/coverages")
+        assertEquals(coverages, CoveragesForIsolation.importCompressed("tmp/trash/coverages"))
     }
 }

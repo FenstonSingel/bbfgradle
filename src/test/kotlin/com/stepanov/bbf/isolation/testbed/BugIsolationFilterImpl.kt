@@ -25,7 +25,7 @@ fun getActualSourceFilePath(path: String): String {
         BugIsolationSourceType.MUTANTS ->
             "$parentDir/mutants-$currentMutantsImportTag.cbor"
         BugIsolationSourceType.COVERAGES ->
-            "$parentDir/coverages-$currentMutantsImportTag-$currentCoveragesImportTag.cbor"
+            "$parentDir/coverages-$currentMutantsImportTag-$currentCoveragesImportTag.cbor.gzip"
         BugIsolationSourceType.RESULTS ->
             "$parentDir/results-$currentMutantsImportTag-$currentCoveragesImportTag-$currentResultsImportTag.json"
     }
@@ -52,7 +52,7 @@ fun isolateBug(sourceFilePath: String, sample: Sample): RankedProgramEntities? {
             )
         }
         BugIsolationSourceType.COVERAGES -> {
-            val coverages = CoveragesForIsolation.import(getActualSourceFilePath(sourceFilePath))
+            val coverages = CoveragesForIsolation.importCompressed(getActualSourceFilePath(sourceFilePath))
             bugIsolator.isolate(
                 coverages,
                 serializationTag = if (bugIsolator.shouldResultsBeSerialized) sample.joinToString("/") else null

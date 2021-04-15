@@ -2,10 +2,11 @@ package com.stepanov.bbf.bugfinder.isolation
 
 import com.stepanov.bbf.coverage.ProgramCoverage
 import com.stepanov.bbf.coverage.coverageSerializationFormat
-import kotlinx.serialization.ImplicitReflectionSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.cbor.Cbor
 import java.io.File
+import java.util.zip.GZIPInputStream
+import java.util.zip.GZIPOutputStream
 
 @Serializable
 data class MutantsForIsolation(
@@ -35,9 +36,25 @@ data class CoveragesForIsolation(
         File(filePath).writeBytes(coverageSerializationFormat.dump(serializer(), this))
     }
 
+    fun exportCompressed(filePath: String) {
+        GZIPOutputStream(File(filePath).outputStream()).use {
+            it.write(coverageSerializationFormat.dump(serializer(), this))
+        }
+    }
+
     companion object {
         fun import(filePath: String): CoveragesForIsolation {
-            return coverageSerializationFormat.load(serializer(), File(filePath).readBytes())
+            return coverageSerializationFormat.load(
+                serializer(),
+                File(filePath).readBytes()
+            )
+        }
+
+        fun importCompressed(filePath: String): CoveragesForIsolation {
+            return coverageSerializationFormat.load(
+                serializer(),
+                GZIPInputStream(File(filePath).inputStream()).use { it.readBytes() }
+            )
         }
     }
 }

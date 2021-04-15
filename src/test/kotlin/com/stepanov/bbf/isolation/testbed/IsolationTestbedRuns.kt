@@ -36,8 +36,8 @@ fun isolationRefactoringInitialTest() {
 
     // third run starting from coverage
     bugIsolator.resultsExportTag = "testResultsTag"
-    val coveragesFilePath = "$serializationDirPath/$serializationTag/coverages-testMutantsTag-testCoveragesTag.cbor"
-    val coverages = CoveragesForIsolation.import(coveragesFilePath)
+    val coveragesFilePath = "$serializationDirPath/$serializationTag/coverages-testMutantsTag-testCoveragesTag.cbor.gzip"
+    val coverages = CoveragesForIsolation.importCompressed(coveragesFilePath)
     val results3 = bugIsolator.isolate(
         coverages,
         serializationTag = serializationTag

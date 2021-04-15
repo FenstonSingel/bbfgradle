@@ -103,13 +103,13 @@ class BugIsolator(
 
             exportMutants(
                 "$serializationDirPath/$serializationTag/mutants-$mutantsExportTag.cbor",
-                initialFile.text, mutantsCatalog.toList()
+                mutantsExportTag, initialFile.text, mutantsCatalog.toList()
             )
 
             val coveragesFullExportTag = "$mutantsExportTag-$coveragesExportTag"
             exportCoverages(
-                "$serializationDirPath/$serializationTag/coverages-$coveragesFullExportTag.cbor",
-                originalCoverage, buggedCoverages.toList(), bugFreeCoverages.toList()
+                "$serializationDirPath/$serializationTag/coverages-$coveragesFullExportTag.cbor.gzip",
+                coveragesFullExportTag, originalCoverage, buggedCoverages.toList(), bugFreeCoverages.toList()
             )
 
             val resultsFullExportTag = "$coveragesFullExportTag-$resultsExportTag"
@@ -174,14 +174,15 @@ class BugIsolator(
         logger.debug("Gathering sample mutants' coverages...")
 
         // generating mutants' coverages for following fault localization
-        for (mutant in mutants.mutants) {
+        for ((index, mutant) in mutants.mutants.withIndex()) {
+            logger.debug("Compiling mutant №${index + 1} / ${mutants.mutants.size}")
             val (isBugPresent, coverage) = compile(mutant, checker)
             if (coverage != null) {
                 if (isBugPresent) {
-                    logger.debug("The sample is bugged!")
+                    logger.debug("Compiler behaves correctly on this sample!")
                     localBuggedCoverages.add(coverage)
                 } else {
-                    logger.debug("The sample is correct!")
+                    logger.debug("Compiler is bugged on this sample!")
                     localBugFreeCoverages.add(coverage)
                 }
             }
@@ -203,8 +204,8 @@ class BugIsolator(
 
             val coveragesFullExportTag = "${mutants.exportTag}-$coveragesExportTag"
             exportCoverages(
-                "$serializationDirPath/$serializationTag/coverages-$coveragesFullExportTag.cbor",
-                originalCoverage, localBuggedCoverages.toList(), localBugFreeCoverages.toList()
+                "$serializationDirPath/$serializationTag/coverages-$coveragesFullExportTag.cbor.gzip",
+                coveragesFullExportTag, originalCoverage, localBuggedCoverages.toList(), localBugFreeCoverages.toList()
             )
 
             val resultsFullExportTag = "$coveragesFullExportTag-$resultsExportTag"
@@ -260,10 +261,10 @@ class BugIsolator(
 
         if (coverage != null) {
             val wasAdded = if (isBugPresent) {
-                logger.debug("The sample is bugged!")
+                logger.debug("Compiler behaves correctly on this sample!")
                 buggedCoverages.add(coverage)
             } else {
-                logger.debug("The sample is correct!")
+                logger.debug("Compiler is bugged on this sample!")
                 bugFreeCoverages.add(coverage)
             }
             if (wasAdded) mutantsCatalog.add(text)
@@ -287,17 +288,17 @@ class BugIsolator(
         }
     }
 
-    private fun exportMutants(exportPath: String, originalSample: String, mutants: List<String>) {
+    private fun exportMutants(exportPath: String, exportTag: String, originalSample: String, mutants: List<String>) {
         logger.debug("Mutants go to $exportPath")
-        MutantsForIsolation(mutantsExportTag, originalSample, mutants).export(exportPath)
+        MutantsForIsolation(exportTag, originalSample, mutants).export(exportPath)
     }
 
     private fun exportCoverages(
-        exportPath: String, originalCoverage: ProgramCoverage,
+        exportPath: String, exportTag: String, originalCoverage: ProgramCoverage,
         buggedCoverages: List<ProgramCoverage>, bugFreeCoverages: List<ProgramCoverage>
     ) {
         logger.debug("Coverages go to $exportPath")
-        CoveragesForIsolation(exportPath, originalCoverage, buggedCoverages, bugFreeCoverages).export(exportPath)
+        CoveragesForIsolation(exportTag, originalCoverage, buggedCoverages, bugFreeCoverages).exportCompressed(exportPath)
     }
 
     // collections of coverages for until all mutations finish their execution
