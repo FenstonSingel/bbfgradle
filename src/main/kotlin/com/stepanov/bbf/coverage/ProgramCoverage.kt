@@ -1,15 +1,19 @@
 package com.stepanov.bbf.coverage
 
 import com.stepanov.bbf.coverage.impl.BranchBasedCoverage
+import com.stepanov.bbf.coverage.impl.CompressedBranchBasedCoverage
 import com.stepanov.bbf.coverage.impl.MethodBasedCoverage
+import org.apache.log4j.Logger
 import java.math.BigDecimal
 import java.math.RoundingMode
+import kotlin.math.abs
 import kotlin.math.sqrt
 
 interface ProgramCoverage {
 
     companion object {
         var shouldCoverageBeBinary = true
+        var shouldBranchCoverageBeCompressed = true
 
         fun entities(coverages: Iterable<ProgramCoverage>): List<String> {
             val result = mutableSetOf<String>()
@@ -34,14 +38,32 @@ interface ProgramCoverage {
 
         private fun createFromBranchProbes(): ProgramCoverage {
             val branchProbes = CompilerInstrumentation.branchProbes.toMap()
-            val storage = mutableMapOf<String, BranchBasedCoverage.BranchProbesResults>()
-            for ((branchName, probeResults) in branchProbes) {
-                storage[branchName] = BranchBasedCoverage.BranchProbesResults(probeResults)
+            if (shouldBranchCoverageBeCompressed) {
+                assert(shouldCoverageBeBinary) { "Compressed branch coverage can only be binary." }
+                var totalEntries = 0
+                val storage = mutableSetOf<Int>()
+                for ((branchName, probeResults) in branchProbes) {
+                    for ((probeName, _) in probeResults) {
+                        totalEntries++
+                        storage += "$branchName#$probeName".hashCode()
+                    }
+                }
+                val hashCollisionPercent = (totalEntries - storage.size) * 100.0 / totalEntries
+                if (abs(hashCollisionPercent) > 10e-15)
+                    logger.debug("Compressed branch coverage's hash collision rate is $hashCollisionPercent%!")
+                return CompressedBranchBasedCoverage(storage)
+            } else {
+                val storage = mutableMapOf<String, BranchBasedCoverage.BranchProbesResults>()
+                for ((branchName, probeResults) in branchProbes) {
+                    storage[branchName] = BranchBasedCoverage.BranchProbesResults(probeResults)
+                }
+                return BranchBasedCoverage(storage)
             }
-            return BranchBasedCoverage(storage)
         }
 
         private val twoBigDecimal = 2.toBigDecimal()
+
+        private val logger = Logger.getLogger("isolationLogger")
     }
 
     // In most cases it is probably more preferable to use ProgramCoverage.entities(),
@@ -59,6 +81,8 @@ interface ProgramCoverage {
     fun cosineSimilarity(other: ProgramCoverage): Double =
         calculateCosineSimilarity(other, entities(this, other))
 
+    // comparisons between CompressedBranchBasedCoverage and others won't work properly,
+    // but comparing two different coverage types directly was never an actual need, so w/e
     private fun calculateCosineSimilarity(other: ProgramCoverage, entities: List<String>): Double {
         var dotProduct = BigDecimal.ZERO
         var firstNormSquared = BigDecimal.ZERO

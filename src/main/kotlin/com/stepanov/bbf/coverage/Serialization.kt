@@ -1,6 +1,7 @@
 package com.stepanov.bbf.coverage
 
 import com.stepanov.bbf.coverage.impl.BranchBasedCoverage
+import com.stepanov.bbf.coverage.impl.CompressedBranchBasedCoverage
 import com.stepanov.bbf.coverage.impl.MethodBasedCoverage
 import kotlinx.serialization.UpdateMode
 import kotlinx.serialization.cbor.Cbor
@@ -13,6 +14,7 @@ val coverageSerializationFormat = Cbor(
             polymorphic(ProgramCoverage::class) {
                 addSubclass(MethodBasedCoverage.serializer())
                 addSubclass(BranchBasedCoverage.serializer())
+                addSubclass(CompressedBranchBasedCoverage.serializer())
             }
         }
 )

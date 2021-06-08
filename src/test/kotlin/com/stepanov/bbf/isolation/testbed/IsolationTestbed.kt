@@ -26,14 +26,14 @@ fun main() {
 //    stacktraceEvaluation("isolation-evaluation/samples/youtrack-reduced")
 
     bugIsolationEvaluation(
-        "isolation-evaluation/samples/youtrack", // choose original set or reduced one
+        "isolation-evaluation/samples/youtrack-reduced", // choose original set or reduced one
         BugIsolationSourceType.MUTANTS,
         fractionOfRankingsConsidered = 1.0, // also a variable, duh
         mutantsImportTag = "default",
 //        coveragesImportTag = "methods",
 //        resultsImportTag = "Ochiai",
 //        mutantsExportTag = "",
-        coveragesExportTag = "methods", // mark coverage type (methods/branches)
+        coveragesExportTag = "branches", // mark coverage type (methods/branches)
         resultsExportTag = "Ochiai", // mark suspiciousness evaluation method)
         comparisonsTag = "100%-ranking"
     )
